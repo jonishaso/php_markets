@@ -1,3 +1,4 @@
 data/tpl_cache/
-data/tpl_compile/
+data/tpl_compile/*.htm.php
+data/tpl_compile/admin/*.htm.php
 data/upload
