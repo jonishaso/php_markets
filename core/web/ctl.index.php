@@ -17,8 +17,8 @@ class ctl_index extends cmsPage
 		}
 		
 		$accounttype = array();
-		// array_push($accounttype,unserialize($basic['content']));
-		// array_push($accounttype, unserialize($jigou['content']));
+		array_push($accounttype,unserialize($basic['content']));
+		array_push($accounttype, unserialize($jigou['content']));
 		$this->setData($hcv->getInfo(),'hcv');
 		// $this->setData($basic,'accounttype');
 
