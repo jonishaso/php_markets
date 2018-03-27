@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-13 insMain">
+		<div class="tradingTime">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/cusresource">Client Resources</a><em>&gt;</em><a href="<{$http_root_www}>../en/tradingTime">Holiday Trading Hours</a></p></div>
+				<{include file='cusHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainHd">
+						<div class="comTitle">Holiday Trading Hours</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="pdf-hd clearfix">
+							<span class="l"><a href="<{$UPLOAD_PATH}><{$pdf.files}>" target="_blank"><i class="fa fa-file-pdf-o"></i> Click to download this month's trading hour pdf document</a></span>
+							<span class="r">Market trading hour depends on all kinds of countries' holidays or activity</span>
+						</div>
+						<div class="pdf-bd">
+							<!--<div class="pdf-content" data-pdf-src="<{$STATIC_PATH}>ruizeanMarkets/images/sample-3pp.pdf"></div>-->
+							<div class="pdf-content">
+								<embed src="<{$UPLOAD_PATH}><{$pdf.files}>" width="100%" height="475" type='application/pdf'>
+							</div>
+						</div>
+						<div class="tips">Note:Working hour is Monday to Friday 9:00 am to 5:00 pm Eastern Standard Time (<{$beijing}>)</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

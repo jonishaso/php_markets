@@ -1,0 +1,18 @@
+<{foreach from=$wlinks item=item}>
+	<div class="item">
+		<div class="box">
+			<div class="title comTxt">
+				<hgroup>
+					<h2><a href="<{$http_root_www}>../en/newsDetail/2/<{$item.id}>"><{$item.title}></a></h2>
+					<h3>By <{$item.author}> On  <{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}>  <{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></h3>
+				</hgroup>
+			</div>
+			<div class="article comTxt2">
+				<article class="comArticle">
+					<p><{$item.intro}></p>
+				</article>
+				<div class="more2"><a href="<{$http_root_www}>../en/newsDetail/2/<{$item.id}>"><span class="hoverBg"><svg class="svg-btnBg svg-ele"></svg>Read More</span></a></div>
+			</div>
+		</div>
+	</div>
+<{/foreach}>

@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 1366px ) {
+	.wrapper {
+		width: 960px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.top-bar {
+		box-shadow: 0 0 4px rgba(nth($color, 2), 0.05);
+		&.active {
+			.hamburger,
+			.hd {
+				@include translate(0, 0);
+				@include opacity(1);
+			}
+		}
+		.hd {
+			@include translate(0, 0);
+			@include opacity(1);
+		}
+		.bd {
+			.com-div {
+				float: left;
+			}
+			.bar-search,
+			.bar-nav {
+				display: none;
+			}
+		}
+	}
+	.hamburger {
+		position: static;
+		@include translate(0, 0);
+		@include opacity(1);
+	}
+	.header {
+		display: none;
+	}
+	.banner {
+		.txt-all {
+			.btns {
+				width: 250px;
+			}
+			.txt2 {
+				bottom: 100px;
+				padding: 1.6em 0;
+			}
+		}
+		.scrollBtn {
+			bottom: 0px;
+		}
+	}
+
+	.introduce-02 {
+		.hd {
+			left: 500px;
+		}
+		.bd {
+			.diagram-list {
+				width: 500px;
+			}
+		}
+	}
+	.index-video {
+		.hd {
+			right: 550px;
+		}
+		.bd {
+			.picbg {
+				width: 500px;
+			}
+		}
+	}
+	.index-account {
+		.hd {
+			padding-left: 80px;
+		}
+		.account-changeinfo {
+			right: -50px;
+		}
+		.account-link {
+			left: 0;
+			right: auto;
+			bottom: 0;
+		}
+	}
+	.float-nav {
+		@include translate(0, -50%);
+	}
+
+	.nav3 {
+		.nav3-item {
+			.bd {
+				.account-link {
+					.btn-2 {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.side {
+		width:  260px;
+	}
+	.main {
+		width: 600px;
+	}
+	.main2,
+	.main5 {
+		width: 600px;
+	}
+	.main3 {
+		float: right;
+		width: 600px;
+		margin-left: 0;
+	}
+	.main4 {
+		width: 300px;
+	}
+	.insMain {
+		padding-top: 30px;
+	}
+
+	.newsList,
+	.videos {
+		.side3 {
+			display: none;
+		}
+	}
+
+	.accountType {
+		.account-changeinfo {
+			width: 90%;
+			li {
+				.name,
+				.accountType {
+					padding: 0 1em;
+				}
+			}
+		}
+		.svgtitle {
+			position: static;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			p {
+				&:nth-child(2) {
+					margin-right: 0;
+				}
+			}
+		}
+		.pictxt-list-02 {
+			margin-left: 0;
+			.item {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.eduInfo {
+		.main2 {
+			padding-top: 0;
+			padding-right: 0;
+		}
+	}
+
+	.mt4Use {
+		.mt4Step {
+			.nums {
+				@include fspx($FS80);
+			}
+			.pic {
+				width: 24%;
+			}
+			.txt {
+				width: 60%;
+			}
+		}
+	}
+	.pictxt-list-01 {
+		.picbg {
+			.border {
+				top: 15px;
+				right: 15px;
+				bottom: 15px;
+				left: 15px;
+			}
+		}
+		.txt {
+			hgroup {
+				padding: 0 10px 0 30px;
+			}
+		}
+	}
+	.pictxt-list-05 {
+		.box {
+			.txt {
+				.comArticle {
+					p {
+						&:nth-child(2) {
+							padding-left: 0;
+						}
+						span {
+							margin-right: 2em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pictxt-list-06 {
+		.box {
+			.pic {
+				width: 45%;
+			}
+			.txt {
+				width: 55%;
+				.comArticle {
+					p {
+						margin-bottom: 4px;
+					}
+				}
+			}
+		}
+	}
+}

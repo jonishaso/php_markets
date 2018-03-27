@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-13 insMain">
+		<div class="tradingTime">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cusresource">客户资源</a><em>&gt;</em><a href="<{$http_root_www}>tradingTime">假期交易时间</a></p></div>
+				<{include file='cusHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainHd">
+						<div class="comTitle">假期交易时间</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="pdf-hd clearfix">
+							<span class="l"><a href="<{$UPLOAD_PATH}><{$pdf.files}>" target="_blank"><i class="fa fa-file-pdf-o"></i> 点击下载本月交易时间 PDF 文档</a></span>
+							<span class="r">市场交易时间根据各个国家假期或活动而改变。</span>
+						</div>
+						<div class="pdf-bd">
+							<!--<div class="pdf-content" data-pdf-src="<{$STATIC_PATH}>ruizeanMarkets/images/sample-3pp.pdf"></div>-->
+							<div class="pdf-content">
+								<embed src="<{$UPLOAD_PATH}><{$pdf.files}>" width="100%" height="475" type='application/pdf'>
+							</div>
+						</div>
+						<div class="tips">注：我们的工作时间是周一至周五澳洲东部标准时间上午9点至下午5点 （<{$beijing}>）</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+	<aside class="side2 scrollFixed">
+		<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+		<nav class="nav4">
+			<ul>
+				<li class="h"><a href="<{$http_root_www}>about"><span><svg class="svg-btnBg svg-ele"></svg>Ruizean Markets</span></a></li>
+				<{if $active == "about2"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>?ctl=about2"><span>关于我们</span></a></li>
+				<{if $active == "whychooseus"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>whychooseus"><span>为什么选择我们</span></a></li>
+				<{if $active == "serverInfo"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>serverInfo"><span>服务器信息</span></a></li>
+				<{if $active == "contactus"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>contactus"><span>联系我们</span></a></li>
+			</ul>
+			<ul>
+				<li class="h"><a href="<{$http_root_www}>about"><span><svg class="svg-btnBg svg-ele"></svg>监管信息</span></a></li>
+				<{if $active == "authority"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>authority"><span>监管与牌照</span></a></li>
+				<{if $active == "claimfile"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>claimfile"><span>披露声明文件</span></a></li>
+			</ul>
+		</nav>
+		<{include file='accountUrl.htm'}>
+	</aside>
+	<div class="mobile-nav"> 
+		<select onchange="window.location=this.value">
+			<optgroup label="Ruizean Markets">
+				<option <{if $active == "about2"}>selected="selected"<{/if}> value="<{$http_root_www}>about2">关于我们</option>
+				<option <{if $active == "whychooseus"}>selected="selected"<{/if}> value="<{$http_root_www}>whychooseus">为什么选择我们</option>
+				<option <{if $active == "serverInfo"}>selected="selected"<{/if}> value="<{$http_root_www}>serverInfo">服务器信息</option>
+				<option <{if $active == "contactus"}>selected="selected"<{/if}> value="<{$http_root_www}>contactus">联系我们</option>
+			</optgroup>
+			<optgroup label="监管信息">
+				<option <{if $active == "authority"}>selected="selected"<{/if}> value="<{$http_root_www}>authority">监管与牌照</option>
+				<option <{if $active == "claimfile"}>selected="selected"<{/if}> value="<{$http_root_www}>claimfile">披露声明文件</option>
+			</optgroup>
+		</select>
+	</div>

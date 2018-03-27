@@ -1,0 +1,32 @@
+	<aside class="side2 scrollFixed">
+		<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+		<nav class="nav4">
+			<ul>
+				<li class="h"><a href="<{$http_root_www}>../en/about"><span><svg class="svg-btnBg svg-ele"></svg>Ruizean Markets</span></a></li>
+				<{if $active == "about2"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/about2"><span>About Us</span></a></li>
+				<{if $active == "whychooseus"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/whychooseus"><span>Why Choose Us</span></a></li>
+				<{if $active == "serverInfo"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/serverInfo"><span>Trading Servers</span></a></li>
+				<{if $active == "contactus"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/contactus"><span>Contact Us</span></a></li>
+			</ul>
+			<ul>
+				<li class="h"><a href="<{$http_root_www}>../en/about"><span><svg class="svg-btnBg svg-ele"></svg>Regulation</span></a></li>
+				<{if $active == "authority"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/authority"><span>Regulation & Licensing</span></a></li>
+				<{if $active == "claimfile"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/claimfile"><span>Disclosure Documents</span></a></li>
+			</ul>
+		</nav>
+		<{include file='accountUrl.htm'}>
+	</aside>
+	<div class="mobile-nav"> 
+		<select onchange="window.location=this.value">
+			<optgroup label="Ruizean Markets">
+				<option <{if $active == "about2"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/about2">About Us</option>
+				<option <{if $active == "whychooseus"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/whychooseus">Why Choose Us</option>
+				<option <{if $active == "serverInfo"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/serverInfo">Trading Servers</option>
+				<option <{if $active == "contactus"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/contactus">Contact Us</option>
+			</optgroup>
+			<optgroup label="Regulation">
+				<option <{if $active == "authority"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/authority">Regulation & Licensing</option>
+				<option <{if $active == "claimfile"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/claimfile">Disclosure documents</option>
+			</optgroup>
+		</select>
+	</div>

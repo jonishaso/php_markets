@@ -1,0 +1,34 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>product"><span><svg class="svg-btnBg svg-ele"></svg>账户特色</span></a></li>
+			<{if $active == "acctypes"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>acctypes"><span>交易账户类型</span></a></li>
+			<{if $active == "handicap"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>handicap"><span>点差和佣金</span></a></li>
+			<{if $active == "interestrate"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>interestrate"><span>隔夜调息利率</span></a></li>
+			<{if $active == "vpsHosting"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>vpsHosting"><span>VPS 托管</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>product"><span><svg class="svg-btnBg svg-ele"></svg>交易产品</span></a></li>
+			<{if $active == "fexchange"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>fexchange"><span>外汇</span></a></li>
+			<{if $active == "stockindex"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>stockindex"><span>股指</span></a></li>
+			<{if $active == "commodity"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>commodity"><span>大宗商品</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="账户特色">
+			<option <{if $active == "acctypes"}>selected="selected"<{/if}> value="<{$http_root_www}>acctypes">交易账户类型</option>
+			<option <{if $active == "handicap"}>selected="selected"<{/if}> value="<{$http_root_www}>handicap">点差和佣金</option>
+			<option <{if $active == "interestrate"}>selected="selected"<{/if}> value="<{$http_root_www}>interestrate">隔夜调息利率</option>
+			<option <{if $active == "vpsHosting"}>selected="selected"<{/if}> value="<{$http_root_www}>vpsHosting">VPS 托管</option>
+		</optgroup>
+		<optgroup label="交易产品">
+			<option <{if $active == "fexchange"}>selected="selected"<{/if}> value="<{$http_root_www}>fexchange">外汇</option>
+			<option <{if $active == "stockindex"}>selected="selected"<{/if}> value="<{$http_root_www}>stockindex">股指</option>
+			<option <{if $active == "commodity"}>selected="selected"<{/if}> value="<{$http_root_www}>commodity">大宗商品</option>
+		</optgroup>
+	</select>
+</div>

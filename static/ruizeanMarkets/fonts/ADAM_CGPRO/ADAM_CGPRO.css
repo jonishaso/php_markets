@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ADAM_CGPRO';
+    src: url('fonts/ADAM_CGPRO.eot');
+    src: url('fonts/ADAM_CGPRO.eot') format('embedded-opentype'),
+         url('fonts/ADAM_CGPRO.woff2') format('woff2'),
+         url('fonts/ADAM_CGPRO.woff') format('woff'),
+         url('fonts/ADAM_CGPRO.ttf') format('truetype'),
+         url('fonts/ADAM_CGPRO.svg#ADAM_CGPRO') format('svg');
+}

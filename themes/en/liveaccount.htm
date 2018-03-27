@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-12 insMain">
+		<div class="accountType">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/product">Open a Live Trading Account</a><em>&gt;</em><a href="<{$http_root_www}>../en/liveaccount">Open a Live Trading Account</a></p></div>
+				<{include file='productHeader.htm'}>
+
+	
+				<div class="main4">
+					<div class="mainBd">
+				<!-- ib form start -->
+					<aside class="side1">
+						<section class="form-apply-side form-box" style="display:block;">
+							<div class="form-box-bd">
+								<div class="box1 side-box1">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>Open a Live Trading Account</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<{include file="vpsForm.htm"}>
+									</div>
+								</div>
+								<div class="box2 side-box2" style="display:none;">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>Thank you for submitting your Live Trading Account Application.</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<hgroup>										
+<h4>One of our staff will be in contact with you to complete the application process.</h4>
+										</hgroup>
+									</div>
+								</div>
+							</div>
+						</section>
+					</aside>
+					<!-- ib form end -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</section>
+					
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formid2").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var country = form.country.value;
+				var area = form.area.value;
+				var message = form.message.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone+ '&country='+ country + '&area='+ area + '&message=' + message;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/vpsContact",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/edu"><span><svg class="svg-btnBg svg-ele"></svg>Education Tools</span></a></li>
+			<{if $active == "terminology"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/terminology"><span>Glossary</span></a></li>
+			<{if $active == "exchangeRate"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/exchangeRate"><span>Live Rates</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="Education Tools">
+			<option <{if $active == "terminology"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/terminology">Glossary</option>
+			<option <{if $active == "exchangeRate"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/exchangeRate">Live Rates</option>
+		</optgroup>
+	</select>
+</div>

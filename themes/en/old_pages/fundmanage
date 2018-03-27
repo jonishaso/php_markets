@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/cobrand">Partnership</a><em>&gt;</em><a href="<{$http_root_www}>../en/whitecoop">Money Manager</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">Money Manager</div>
+						<article class="comArticle">
+							<p>Ruizean Markets gives Fund Managers access to more than 90 foreign exchange markets, index and commodity CFDs, which they can offer to their existing customer base or use to attract new customers to join their Fund. </p>
+							<p>We provide in-depth market liquidity arising from ultra-low spreads, instant and accurate trade executions and the use of the award-winning MetaTrader 4 trading platform. On top of these advantages, all customer funds are highly secured and placed on deposit in a trust account within one of Australia's top banks; customer funds are kept completely separate from Ruizean funds. Ruizean Markets provides an indispensable tool that allows traders to manage multiple accounts on a single platform.</p>
+							<p>Multi-account management is an important part of the MT4 platform. This feature allows fund managers to place multiple transactions for multiple clients at the touch of a button, with transactions assigned automatically to individual customer accounts.</p>
+							<p>Opportunity to execute multiple transactions across multiple accounts.</p>
+							<p>You can access different trading strategies through your main account.</p>
+							<p>All transactions and funds are allocated to the correct customer accounts.</p>
+							<p>MT4 is a user-friendly trading platform.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

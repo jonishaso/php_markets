@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.eduList,
+.eduInfo {
+	position: relative;
+	.main2 {
+		padding-top: 30px;
+	}
+}
+
+.eduList {
+	.notice {
+		float: right;
+		margin-bottom: 15px;
+	}
+	.scroll-load {
+		text-align: center;
+		padding: 10px;
+		a {
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+}
+.eduInfo {
+	.main2 {
+		padding-right: 110px;
+	}
+	.article-title {
+		text-align: center;
+		line-height: 1.6em;
+		color: nth($color2, 1);
+		font-weight: bold;
+		@include fspx($FS16);
+	}
+	.article-info {
+		text-align: center;
+		line-height: 1.4em;
+		color: nth($color7, 2);
+		@include fspx($FS10);
+		margin-bottom: 30px;
+	}
+}

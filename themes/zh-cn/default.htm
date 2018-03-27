@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+<script type="text/javascript"> 
+	function loadXMLDoc()//ajax发送请求并显示 
+	{ 
+		var xmlhttp; 
+		if (window.XMLHttpRequest) 
+	 	{// code for IE7+, Firefox, Chrome, Opera, Safari 
+	 		xmlhttp=new XMLHttpRequest(); 
+	 	} 
+		else 
+	 	{// code for IE6, IE5 
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+	 	} 
+		xmlhttp.onreadystatechange=function() 
+		{ 
+		 	if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+		  	{ 
+		  		document.getElementById("homeMt4").innerHTML=xmlhttp.responseText; 
+		  	} 
+		} 
+		xmlhttp.open("POST","<{$http_root_www}>updateHomeMt4",true); 
+		xmlhttp.send(); 
+		setTimeout("loadXMLDoc()",5000);//递归调用 
+	} 
+	loadXMLDoc();//先执行一次 
+</script> 
+<script type="text/javascript"> 
+	function loadXMLDoc2()//ajax发送请求并显示 
+	{ 
+		var xmlhttp; 
+		if (window.XMLHttpRequest) 
+	 	{// code for IE7+, Firefox, Chrome, Opera, Safari 
+	 		xmlhttp=new XMLHttpRequest(); 
+	 	} 
+		else 
+	 	{// code for IE6, IE5 
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+	 	} 
+		xmlhttp.onreadystatechange=function() 
+		{ 
+		 	if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+		  	{ 
+		  		document.getElementById("homeMetal").innerHTML=xmlhttp.responseText; 
+		  	} 
+		} 
+		xmlhttp.open("POST","<{$http_root_www}>updateHomeMetal",true); 
+		xmlhttp.send(); 
+		setTimeout("loadXMLDoc2()",3000);//递归调用 
+	} 
+	loadXMLDoc2();//先执行一次 
+</script> 
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- Banner -->
+	<section class="banner swiper-container">
+		<ul class="slides swiper-wrapper">
+			<{foreach from=$banners item=item}>
+			<li class="swiper-slide" style="background-image: url(<{$UPLOAD_PATH}><{$item.pic}>);"></li>
+			<{/foreach}>
+		</ul>
+		<div class="txt-all">
+			<div class="earth-bg"><div class="wrapper"><span><img src="<{$STATIC_PATH}>ruizeanMarkets/images/svg-earth.svg" /></span></div></div>
+			<div class="txt1">
+				<div class="wrapper clearfix">
+					<span class="big-log"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo5.png" /></span>
+					<!--svg class="svgBannerTxt svg-ele" data-txt="Ruizean,Trader"></svg-->
+					<div class="swiper-pagination swiper-pagination1"></div>
+					<div class="btns">
+						<p class="p1">致力于提供优质的线上外汇交易服务方案</p>
+						<ul class="clearfix">
+							<li><a href="<{$http_root_www}>../zh-cn/liveaccount" class="clearfix"><svg class="svg-btn1 svg-ele"></svg></a></li>
+							<li><a href="<{$http_root_www}>../zh-cn/demoaccount" class="clearfix"><svg class="svg-btn2 svg-ele"></svg></a></li>
+							<!--<li><a href="<{$http_root_www}>ib" class="clearfix"><svg class="svg-btn3 svg-ele"></svg></a></li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="txt2">
+				<div class="wrapper">
+					<p>在专业的领域为您提供<span>优质的服务</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="scrollBtn bannerScrollBtn"><svg class="svgScrollBtn svg-ele"></svg></div>
+	</section>
+	<section class="introduce-01">
+		<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+		<div class="wrapper">
+			<div class="hd">
+				<h2><svg class="svg-hdTitle svg-ele" data-txt="欢迎访问Ruizean Markets"></svg></h2>
+			</div>
+			<div class="bd">
+				<div class="pictxt-list-01 clearfix">
+					<div class="item">
+						<div class="box">
+							<div class="pic picbg">
+								<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-01.jpg);"></div>
+								<div class="mask"></div>
+								<div class="border gradientBorder"><span class="l"></span><span class="r"></span><span class="t"></span><span class="b"></span></div>
+							</div>
+							<div class="txt">
+								<a href="javascript:void(0);">
+									<hgroup>
+										<h2>资金安全</h2>
+										<p>您的资金独立存放在澳洲最大的商业银行 —全球 AA 级的澳洲国立银行。</p>
+									</hgroup>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="box">
+							<div class="pic picbg">
+								<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-02.jpg);"></div>
+								<div class="mask"></div>
+								<div class="border gradientBorder"><span class="l"></span><span class="r"></span><span class="t"></span><span class="b"></span></div>
+							</div>
+							<div class="txt">
+								<a href="javascript:void(0);">
+									<hgroup>
+										<h2>优质报价</h2>
+										<p>Ruizean Markets 拥有多家顶级银行的报价，因此我们能向投资者提供优质的报价。</p>
+									</hgroup>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="box">
+							<div class="pic picbg">
+								<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-03.jpg);"></div>
+								<div class="mask"></div>
+								<div class="border gradientBorder"><span class="l"></span><span class="r"></span><span class="t"></span><span class="b"></span></div>
+							</div>
+							<div class="txt">
+								<a href="javascript:void(0);">
+									<hgroup>
+										<h2>多元化产品</h2>
+										<p>Ruizean Markets提供多元化的交易产品，包括外汇，股指，贵金属和原油等。</p>
+									</hgroup>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="box">
+							<div class="pic picbg">
+								<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-04.jpg);"></div>
+								<div class="mask"></div>
+								<div class="border gradientBorder"><span class="l"></span><span class="r"></span><span class="t"></span><span class="b"></span></div>
+							</div>
+							<div class="txt">
+								<a href="javascript:void(0);">
+									<hgroup>
+										<h2>极速执行</h2>
+										<p>Ruizean Markets为客户提供MT4交易平台具有最快的执行速度</p>
+									</hgroup>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="introduce-02">
+		<div class="pendant-02"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart3.png" /></div>
+		<div class="wrapper">
+			<div class="hd">
+				<h2><svg class="svg-hdTitle2 svg-ele" data-txt=""></svg></h2>
+				<p class="title-p"></p>
+			</div>
+			<div class="bd">
+				<div class="diagram-list clearfix">
+					<div class="dl-hd1">
+						<ul class="clearfix">
+							<li><div class="dh-item "><i>外汇</i><div class="gradientBorder2"><span class="t"></span><span class="r"></span><span class="b"></span><span class="l"></span></div></div></li>
+							<!--<li><div class="dh-item"><i>贵金属</i><div class="gradientBorder2"><span class="t"></span><span class="r"></span><span class="b"></span><span class="l"></span></div></div></li>
+							<li><div class="dh-item"><i>指数</i><div class="gradientBorder2"><span class="t"></span><span class="r"></span><span class="b"></span><span class="l"></span></div></div></li>
+							<li><div class="dh-item"><i>商品</i><div class="gradientBorder2"><span class="t"></span><span class="r"></span><span class="b"></span><span class="l"></span></div></div></li>-->
+						</ul>
+					</div>
+					<div class="dl-bd clearfix">
+						<div class="diagram db-item">
+							<table>
+								<thead>
+									<tr>
+										<td>&nbsp;</td>
+										<td>BID</td>
+										<td>ASK</td>
+										<!--<td>SPREAD</td>-->
+									</tr>
+								</thead>
+								<tbody id="homeMt4">
+									<{foreach from=$symbols item=item key=key}>
+										<{if $key < 5}>
+											<tr>
+												<td><{$item.symbol|upper}></td>
+												<td><{if $item.bidarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.bid}></td>
+												<td><{if $item.askarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.ask}></td>
+											</tr>
+										<{/if}>
+									<{/foreach}>
+								</tbody>
+							</table>
+						</div>
+						<div class="diagram db-item">
+							<table>
+								<thead>
+									<tr>
+										<td>&nbsp;</td>
+										<td>BID</td>
+										<td>ASK</td>
+										<!--<td>SPREAD</td>-->
+									</tr>
+								</thead>
+								<tbody id="homeMetal">
+									<{foreach from=$symbols item=item key=key}>
+										<{if $key == 5 or $key == 6}>
+											<tr>
+												<td><{$item.symbol|upper}></td>
+												<td><{if $item.bidarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.bid}></td>
+												<td><{if $item.askarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.ask}></td>
+											</tr>
+										<{/if}>
+									<{/foreach}>
+									<tr><td>敬请期待</td><td>--</td><td>--</td></tr>
+									<tr><td>敬请期待</td><td>--</td><td>--</td></tr>
+									<tr><td>敬请期待</td><td>--</td><td>--</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="diagram db-item">
+							<table>
+								<thead>
+									<tr>
+										<td>&nbsp;</td>
+										<td>BID</td>
+										<td>ASK</td>
+										<!--<td>SPREAD</td>-->
+									</tr>
+								</thead>
+								<tbody>
+									<{for $foo=1 to 5}>
+									    <tr><td>敬请期待</td><td>--</td><td>--</td></tr>
+									<{/for}>
+								</tbody>
+							</table>
+						</div>
+						<div class="diagram db-item">
+							<table>
+								<thead>
+									<tr>
+										<td>&nbsp;</td>
+										<td>BID</td>
+										<td>ASK</td>
+										<!--<td>SPREAD</td>-->
+									</tr>
+								</thead>
+								<tbody>
+									<{for $foo=1 to 5}>
+									    <tr><td>敬请期待</td><td>--</td><td>--</td></tr>
+									<{/for}>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="info-list clearfix">
+					<ul class="clearfix">
+						<li>
+							<h2><{$hcv.spread}></h2>
+							<p>点差起</p>
+						</li>
+						<li>
+							<h2><{$hcv.leverage}></h2>
+							<p>杠杆高达</p>
+						</li>
+						<li>
+							<h2><{$hcv.kindsOfProducts}></h2>
+							<p>多种交易产品</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="introduce-03">
+		<div class="wrapper">
+			
+			<section class="index-account clearfix">
+				<div class="pendant-03"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart2.png" /></div>
+				<div class="hd">
+					<div class="center">
+						<h2><svg class="svg-hdTitle2 svg-ele" data-txt="了解账户特点"></svg></h2>
+						<h2><svg class="svg-hdTitle2 svg-ele" data-txt="是您掌握成功的第一步"></svg></h2>
+						<div class="account-changebtn">
+							<div class="chb-item chb-true btn-3 white"><a class="theone" href="<{$http_root_www}>accountType"><div class="bg"></div><span>标准账户</span></a></div>
+							<div class="chb-item chb-false btn-3 white"><a class="theone" href="<{$http_root_www}>accountType"><div class="bg"></div><span>Pro账户</span></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="bd clearfix">
+					<div class="picbg">
+						<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-07.jpg);"></div>
+					</div>
+					<div class="account-changeinfo">
+						<{foreach from=$accounttype item=item}>
+							<ul>
+
+								<li class="clearfix">
+									<div class="name">点差</div>
+									<div class="info"><{$item.spread}></div>
+								</li>
+								<li class="clearfix">
+									<div class="name">杠杆</div>
+									<div class="info"><{$item.leverage}></div>
+								</li>
+								<li class="clearfix">
+									<div class="name">交易平台</div>
+									<div class="info"><{$item.banks}></div>
+								</li>
+
+							</ul>
+						<{/foreach}>
+					</div>
+					<div class="account-link clearfix">
+						<div class="btn-2 white"><a href="<{$http_root_www}>../zh-cn/liveaccount"><div class="bg"></div><span>真实账户 <i class="fa fa-angle-right"></i></span></a></div>
+						<div class="btn-2 white"><a href="<{$http_root_www}>../zh-cn/demoaccount" ><div class="bg"></div><span>模拟账户 <i class="fa fa-angle-right"></i></span></a></div>
+					</div>
+				</div>
+			</section>
+			<!--<section class="index-partner">
+				<div class="hd">
+					<h2>
+						<svg class="svg-hdTitle2 svg-ele" data-txt="流动性提供商 "></svg>
+						<svg class="svg-hdTitle3 svg-ele" data-txt="我们具有最有保障的流动资产提供者 "></svg>
+					</h2>
+				</div>
+				<div class="bd">
+					<div class="swiper-control1">
+						<div class="prev"><svg class="svg-arrow-prev svg-ele"></svg></div>
+						<div class="next"><svg class="svg-arrow-next svg-ele"></svg></div>
+					</div>
+					<div class="partner-list swiper-container">
+						<div class="partner-wrapper swiper-wrapper clearfix">
+							<{foreach from=$logo item=item}>
+								<div class="partner-item swiper-slide"><a href="javascript:void(0);"><img src="<{$UPLOAD_PATH}><{$item.pic|image2:197:28}>" /></a></div>
+							<{/foreach}>
+							<{foreach from=$logo item=item}>
+								<div class="partner-item swiper-slide"><a href="javascript:void(0);"><img src="<{$UPLOAD_PATH}><{$item.pic|image2:197:28}>" /></a></div>
+							<{/foreach}>
+						</div>
+					</div>
+				</div>
+			</section>-->
+		</div>
+	</section>
+	<section class="introduce-04">
+		<section class="index-platform">
+			<div class="wrapper">
+				<div class="bd clearfix">
+					<div class="pic"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-08.png" /></div>
+					<div class="txt">
+						<h2>
+							<svg class="svg-hdTitle2 svg-ele" data-txt="MetaTrader 4"></svg>
+							<br />
+							<svg class="svg-hdTitle2 svg-ele" data-txt="在线交易平台"></svg>
+						</h2>
+						<p class="title-p">介绍MetaTrader4交易平台的特点<br />Ruizean Markets提供多元化的交易产品，<br />包括外汇，股指，贵金属和原油等。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="index-platform-list">
+			<div class="wrapper">
+				<div class="bd">
+					<div class="platform-list">
+						<div class="platform-wrapper clearfix">
+							<{foreach from=$logoredirect item=item}>
+								<div class="platform-item"><a href="?ctl=deposit"><img src="<{$UPLOAD_PATH}><{$item.pic|image2:126:80}>" /></a></div>
+							<{/foreach}>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script src='https://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-default.js"></script>
+</body>
+</html>

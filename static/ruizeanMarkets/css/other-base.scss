@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/**
+*
+* 基本的样式初始化重置
+*
+**/
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+figure {
+	margin:0;
+	padding:0;
+}
+textarea {
+	resize:none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%; font-weight:normal;
+}
+a,
+label{
+	outline:none;
+}
+address,
+cite,
+dfn,
+em,
+var {
+	font-style:normal
+}
+ul,
+ol {
+	list-style:none;
+}
+fieldset,
+img {
+	border: 0;
+	vertical-align:bottom;
+}
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure{
+	display:block;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+* {
+	@include boxSizing();
+}
+*:after,
+*:before {
+	display:block;
+	@include boxSizing();
+}
+*:focus {
+	outline:none;
+}
+.clear {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.clearfix {
+	*zoom:1
+}
+
+.cssTable {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.cssTd {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { outline: none; }
+
+
+
+
+
+$space : 45px;
+$wrapWidth : 1120px;
+
+$color : #fff #000 #999 #c00 #666 !default;
+$color2 : #6FBDDF #E2C26E #F4E3A0 #7ECFE3 #4FB6E1 #dab76c #70B9DF #E0BF69 !default;
+$color3 : #79B1DB #FDEFB7 #B7A686 #D7C188 #c69c6d #f3e39e #71CDE1 #81AAD7 !default;
+$color4 : #F7F7F7 #d0d0d0 #80C0E3 #36a2d6 #f7f7f7 #7FD1E3 #EBD58F #ecb71c !default;
+$color5 : #ebebeb #D9A738 #276F9D #7BAFD9 #6FCBE0 #70B8DF #6ECAE0 #70B8DF !default;
+$color6 : #81A9D7 #70CDE1 #80aad7 #E2C370 #F4E3A0 #6fbbdf #7cc0e2 #d9d9d9 !default;
+$color7 : #64b1d6 #c5c5c5 #E2C985 #F4F4F4 #2f2f2f #EFEFEF #7ebfe2 #e7cd7e !default;
+$color8 : #e5c877 #CFCECE #F8F7F7 #6890B4 #A6BED3 #EFEEEE !default;
+
+$_FF_ADAM_CGPRO : 'ADAM_CGPRO','Microsoft Yahei','STHeiti Light';
+$_FF_AxisExtrabold : 'AxisExtrabold','Microsoft Yahei','STHeiti Light';
+
+html {
+	width:100%;
+	height:100%;
+	font-size:100px;
+	@include textSizeAdjust();
+}
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $_FF_MicrosoftYahei;
+	word-wrap:break-word;
+	@include fspx($FS14);
+}
+body {
+	color: nth($color, 2);
+	margin:0 auto;
+	background: nth($color, 1);
+	overflow-x: hidden;
+}
+a {
+	color: nth($color, 2);
+	text-decoration: none;
+	&:hover {
+		color: nth($color, 2);
+		text-decoration: none;
+	}
+}
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+img {
+	@include display(inline-flex);
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+svg {
+	@include display(inline-flex);
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+.wrapper {
+	width: $wrapWidth;
+	margin: 0 auto;
+}

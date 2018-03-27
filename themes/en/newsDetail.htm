@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- about -->
+	<section class="page-bg-5 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><{if $classId == 1}><a href="<{$http_root_www}>../en/about">Corporate Profile</a><em>&gt;</em><a href="<{$http_root_www}>../en/newsList">Company News<{elseif $classId == 2}><a href="<{$http_root_www}>../en/product">Our Products</a><em>&gt;</em><a href="<{$http_root_www}>../en/marketnews">Market News<{elseif $classId == 3}><a href="<{$http_root_www}>../en/about">Education</a><em>&gt;</em><a href="<{$http_root_www}>../en/eduList">Trading School Events<{/if}></a></p></div>
+				<{if $classId == 1}><{include file='aboutHeader.htm'}><{elseif $classId == 2}><{include file='productHeader.htm'}><{elseif $classId == 3}><{include file='eduHeader.htm'}><{/if}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle"><{$detail.title}></div>
+						<div class="comTitle3">By <{$detail.author}> On  <{$detail.publishedDate|date_format:"%Y"}>-<{$detail.publishedDate|date_format:"%m"}>-<{$detail.publishedDate|date_format:"%d"}>  <{$detail.lastModifiedDate|date_format:"%H"}>:<{$detail.lastModifiedDate|date_format:"%M"}>:<{$detail.lastModifiedDate|date_format:"%S"}></div>
+						<article class="comArticle">
+							<{$detail.content}>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-about.js"></script>
+</body>
+</html>

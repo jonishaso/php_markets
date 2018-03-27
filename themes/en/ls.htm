@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/cobrand">Partnership</a><em>&gt;</em><a href="<{$http_root_www}>../en/ib">Introducing Broker</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main4">
+					<div class="mainBd">
+						<div class="comTitle"> Liquidity Solutions</div>
+						<article class="comArticle">
+							<p>In this highly competitive market we aim to provide the best solutions for our clients. Our focus is to provide the best pricing and liquidity across various asset classes to enable a stable and consistent trading environment regardless of continually changing market conditions. As a global player and one of the leading brokers, we have invested heavily in our pricing technology and have built a deep liquidity network to ensure the best execution as well as reducing clients’ costs.
+                            </p>
+                            <p>Our liquidity solution has been designed specifically for institutional and high-volume traders looking for easy and quick access to institutional FX and CFD pricing. Maximise your potential by utilising our established relationships globally to access deep liquidity pools with low-latency connectivity and consistent, tight pricing.</p>
+							<p>Speak to one of our onboarding team today to assist in providing the ultimate solution for your trading needs. Please email <a href="mailto:jpapa@ruizeanmarkets.com">jpapa@ruizeanmarkets.com</a>. Alternatively, please complete the application contact form.</p>
+                            
+                            <ul>
+                                <li>We are authorised and regulated by ASIC (Australia)</li>
+                                <li>We offer tight raw spreads</li>
+                                <li>Leverage up to 1:400</li>
+                                <li>Liquidity from Tier 1 institutions</li>
+                                <li>Forex</li>
+                                <li>CFD’s on indices, commodities and precious metals</li>
+                            </ul>
+                        </article>
+					</div>			
+				</div>
+				<aside class="side4">
+					<section class="form-apply-side form-box" style="display:block;">
+						<div class="form-box-bd">
+							<div class="box1 side-box1">
+								<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Apply for Liquidity Solutions</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<{include file="lsForm.htm"}>
+								</div>
+							</div>
+							<div class="box2 side-box2" style="display:none;">
+								<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<hgroup>
+										<h4>It will be closed automic, also you can click close button to close it.</h4>
+									</hgroup>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="quick-link">
+						<div class="hd clearfix">
+							
+							<div class="cont">Come and Join Us</div>
+						</div>
+						<div class="bd">
+							<div class="btns">
+								<div class="btn-2 blue"><a href="<{$http_root_www}>../en/demoaccount"><div class="bg"></div><span>Open Demo Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								<div class="btn-2 blue"><a href="<{$http_root_www}>../en/liveaccount"><div class="bg"></div><span>Open Live Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								
+							</div>
+						</div>
+					</section>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formidls").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var message = form.message.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+encodeURIComponent(firstName) + '&lastName='+ encodeURIComponent(lastName) + '&email='+ encodeURIComponent(email)+ '&telephone='+ encodeURIComponent(telephone)+ '&message=' + encodeURIComponent(message);
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					// url: "<{$http_root_www}>../en/ibContact",
+					url: "<{$http_root_www}>../en/vpsContactForLs",					
+					data: dataString,
+					cache: false,
+					success: function(result,text){
+						// if(result == 1){
+						// 	hideForm1();
+						// 	console.log(text);
+						// 	return false;
+						// }else{
+						// 	$form.find('.send-result').html('Submit Failure');
+						// 	console.log(text);							
+						// 	clearTimeout(jsValidateTime1);
+						// 	jsValidateTime1 = setTimeout(function(){
+						// 		$form.find('.send-result').html('');
+						// 	}, 3000);
+						// }
+						console.log(result);
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

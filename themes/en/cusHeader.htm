@@ -1,0 +1,26 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/cusresource"><span><svg class="svg-btnBg svg-ele"></svg>Account Management</span></a></li>
+			<{if $active == "deposit"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/deposit"><span>Deposit Funds</span></a></li>
+			<{if $active == "withdraw"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/withdraw"><span>Withdraw Funds</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/cusresource"><span><svg class="svg-btnBg svg-ele"></svg>Client Knowledge Base</span></a></li>
+			<{if $active == "financialCalendar"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/financialCal"><span>Economic Calendar</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="Account Management">
+			<option <{if $active == "deposit"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/deposit">Deposit Funds</option>
+			<option <{if $active == "withdraw"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/withdraw">Withdraw Funds</option>
+		</optgroup>
+		<optgroup label="Client Knowledge Base">
+			<option <{if $active == "financialCalendar"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/financialCalendar">Economic Calendar</option>
+		</optgroup>
+	</select>
+</div>

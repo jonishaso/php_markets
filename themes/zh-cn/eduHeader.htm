@@ -1,0 +1,27 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>edu"><span><svg class="svg-btnBg svg-ele"></svg>教育学院</span></a></li>
+			<{if $active == "videos"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>videos"><span>外汇动画视频</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>edu"><span><svg class="svg-btnBg svg-ele"></svg>交易工具</span></a></li>
+			<{if $active == "terminology"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>terminology"><span>专业术语</span></a></li>
+			<{if $active == "exchangeRate"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>exchangeRate"><span>实时汇率</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="教育学院">
+			<option <{if $active == "videos"}>selected="selected"<{/if}> value="<{$http_root_www}>videos">外汇动画视频</option>
+		</optgroup>
+		<optgroup label="交易工具">
+			<option <{if $active == "terminology"}>selected="selected"<{/if}> value="<{$http_root_www}>terminology">专业术语</option>
+			<option <{if $active == "exchangeRate"}>selected="selected"<{/if}> value="<{$http_root_www}>exchangeRate">实时汇率</option>
+		</optgroup>
+	</select>
+</div>

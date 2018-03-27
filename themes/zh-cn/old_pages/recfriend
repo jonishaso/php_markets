@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cobrand">合作伙伴</a><em>&gt;</em><a href="<{$http_root_www}>recfriend">亲友推荐</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">推荐朋友给Ruizean Markets</div>
+						<article class="comArticle">
+							<p>推荐朋友，从朋友的交易中 获益 。根据您朋友的交易量，我们将为您提供 高达300美金的佣金。*推荐的朋友越多，获得的佣金越多。只要告知您的客户经理或者发邮件至 IB@ruizeanmarkets.com便可推荐好友加入。.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">优势</div>
+						<article class="comArticle">
+							<p>与亲朋、好友以及同事一同享受交易魅力</p>
+							<p>从朋友的每笔交易中获取奖励*</p>
+							<p>*适用条款与细则</p>
+							<p>每推荐一个朋友获得xxxx！</p>
+							<p>如果您向Ruizean Markets推荐一名朋友，或者居中牵线，他们若在Ruizean Markets开户且至少入金xxxx美元，您的将会获得xxxx！并不限制推荐新客户的次数，您想推荐或者联系多少朋友都可以， 都会获得xxxx。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">如何推荐朋友</div>
+						<article class="comArticle">
+							<p>可以直接向您的客户经理推荐还不是Ruizean Markets客户的朋友，我们将联系并协助您推荐的客户开户。一旦您推荐的朋友开设真实账户并入金xxxx美元，您将自动获得xxxx。</p>
+							<p>联系您的客户经理</p>
+							<p>您可以直接电话联系客户经理，亦可以发送邮件或是联系每周5天、全天24小时在线的客服团队，这里是联系方式：</p>
+							<p>电话：+612 9017 5230</p>
+							<p>在线聊天： <a onclick="livechat();" style="cursor: pointer; cursor: hand;">点击这里</a></p>
+							<p>邮箱： <a href="mailto://IB@ruizeanmarkets.com">IB@ruizeanmarkets.com</a></p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<article class="comArticle">
+							<p>条款与条件：推荐的朋友必须为新客户，且没有Ruizean Markets账户。一旦您推荐的朋友开设真实账户并入金xxxx美元，你将自动获得xxxx。您作为Ruizean Markets客户，授权向所推荐的朋友公开您的账户号。Ruizean Markets有权在不发出声明通知的情况下终止或更改推荐朋友的促销活动。请确保您已经阅读所有条款与条件。详情点击这里。</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

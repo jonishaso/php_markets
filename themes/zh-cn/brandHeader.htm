@@ -1,0 +1,25 @@
+<div class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>cobrand"><span><svg class="svg-btnBg svg-ele"></svg>合作伙伴</span></a></li>
+			<{if $active == "ib"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>ib"><span>IB代理经纪商</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>cobrand"><span><svg class="svg-btnBg svg-ele"></svg>高端定制</span></a></li>
+			<{if $active == "whitecoop"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>whitecoop"><span>白标合作</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</div>
+
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="合作伙伴">
+			<option <{if $active == "ib"}>selected="selected"<{/if}> value="<{$http_root_www}>ib">IB代理经纪商</option>
+		</optgroup>
+		<optgroup label="高端定制">
+			<option <{if $active == "whitecoop"}>selected="selected"<{/if}> value="<{$http_root_www}>whitecoop">白标合作</option>
+		</optgroup>
+	</select>
+</div>

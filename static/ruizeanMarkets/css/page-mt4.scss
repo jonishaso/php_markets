@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.mt4 {
+	position: relative;
+	.comTitle2 {
+		width: 180px;
+	}
+	.btns {
+		.btn-4 {
+			float: left;
+			width: 33.3333333%;
+			a {
+				width: 80%;
+			}
+		}
+	}
+	.picArticle {
+		.pic {
+			float: right;
+			width: 50%;
+			.img {
+				margin-bottom: 30px;
+			}
+			.btn-5 {
+				a {
+					margin: 0 auto;
+				}
+			}
+		}
+		.comArticle {
+			float: left;
+			width: 50%;
+			padding-right: 60px;
+		}
+	}
+}

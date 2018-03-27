@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.videos {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.video-wrap {
+		.b {
+			position: relative;
+			padding-top: 58%;
+			#video-id {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: nth($color, 1);
+			}
+		}
+		.h {
+			line-height: 1.4em;
+			padding: 0.5em 0;
+			color: nth($color6, 6);
+			@include fspx($FS16);
+		}
+	}
+	.video-list {
+		padding: 20px 0;
+		@include gradients(top, (rgba(nth($color4, 4), 1), rgba(nth($color4, 3), 1)));
+		.tip {
+			line-height: 1.4em;
+			color: nth($color, 1);
+			text-align: center;
+			@include fspx($FS12);
+		}
+		.h {
+			margin-bottom: 20px;
+			padding: 0 25px;
+			color: nth($color, 1);
+			@include fspx($FS14);
+		}
+		.b {
+			padding: 0 25px;
+			margin-bottom: 25px;
+			overflow: hidden;
+			li {
+				line-height: 1.4em;
+				margin-bottom: 1em;
+				color: nth($color, 1);
+				cursor: pointer;
+				@include fspx($FS12);
+				&.active,
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

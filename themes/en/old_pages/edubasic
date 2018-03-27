@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-5 insMain">
+		<div class="videos">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/edu">Education</a><em>&gt;</em><a href="<{$http_root_www}>../en/edubasic">Basics of Forex Trading</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<section class="main5 maodian2 clearfix">
+					<div class="quick-menu-vertical quick-menu-style1 quick-menu scrollFixed">
+						<ul class="clearfix">
+							<li data-id="qm-1">How does Forex Work?</li>
+							<li data-id="qm-2">Basic Terminology</li>
+							<li data-id="qm-3">Fundamental Analysis</li>
+							<li data-id="qm-4">Technical Analysis</li>
+							<li data-id="qm-5">Trend Lines</li>
+							<li data-id="qm-6">What is a Technical Indicator?</li>
+							<li data-id="qm-7">Gold (XAU/USD) - Reasons Why Gold is Traded</li>
+							<li data-id="qm-8">Order Types</li>
+							<li data-id="qm-9">"  </li>
+							<li data-id="qm-10">" </li>
+						</ul>
+					</div>
+					<div class="mainHd">
+						<div class="comTitle">Basics of Forex Trading</div>
+					</div>
+					<div class="mainBd-tab">
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-1">How does Forex Work? <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>Forex trading is the simultaneous buying of one currency and selling of another currency. These two currencies make up what is known as a "currency pair". Currencies are always traded in pairs and each currency is represented by three letters. The first two letters represent the country and the third letter identifies the currency. </p>
+									<p>Forex pairs are read in the opposite direction of mathematical proportions or ratios.<br />
+									For example:<br /> 
+									EUR/USD = 1.23700</p>
+									<p>In the example above, the currency to the left of the slash ("/") is called the base currency (in this example, the Euro) and the currency on the right is called the quote currency (in this example, the U.S Dollar). This notation means that 1 unit of the base currency (that is, 1 Euro) is equal to 1.23700 U.S Dollars. In other words, you have to pay 1.23700 U.S Dollars to buy 1 Euro.</p>
+									<p>If selling currency, the foreign currency exchange rate specifies how many units of the quote currency you will receive for selling one unit of the base currency. In the above example, you will receive 1.23700 U.S Dollars when you sell 1 Euro.</p>
+									<p><b>When to Buy?</b></p>
+									<p>A trader will open a buy position, or close your short position if they believe that the value of that specific base currency will increase.</p>
+									<p><b>When to Sell?</b></p>
+									<p>A trader will open a sell position, or close your long position if they believe that the value of that specific base currency will decrease.</p>
+									<p><b>When can Currencies be Traded?</b></p>
+									<p>The spot FX market is unique among the world financial markets in that it's open 24 hours a day, 5 days a week. See the below tables for GMT and EST trading times.</p>
+									<p><b>Trading sessions according to GMT (Greenwich Mean Time):</b></p>
+									<div class="comTable">
+										<table border="1">
+											<thead>
+												<tr>
+													<td>Region</td>
+													<td>City</td>
+													<td>Open(GMT)</td>
+													<td>Close(GMT)</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Europe</td>
+													<td>London/Frankfurt</td>
+													<td>8:00 am/7:00 am</td>
+													<td>5:00 pm/4:00 pm</td>
+												</tr>
+												<tr>
+													<td>America</td>
+													<td>New York/Chicago</td>
+													<td>1:00 pm/2:00 pm</td>
+													<td>10:00 pm/11:00 pm</td>
+												</tr>
+												<tr>
+													<td>Asia</td>
+													<td>Tokyo/Hong Kong</td>
+													<td>midnight/1:00 am</td>
+													<td>9:00 am/10:00 am</td>
+												</tr>
+												<tr>
+													<td>Pacific</td>
+													<td>Sydney/Wellington</td>
+													<td>10:00 pm/10:00 pm</td>
+													<td>7:00 am/6:00 am</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p><b>Trading sessions according to EST (Eastern Standard Time):</b></p>
+									<div class="comTable">
+										<table border="1">
+											<thead>
+												<tr>
+													<td>Region</td>
+													<td>City</td>
+													<td>Open(EST)</td>
+													<td>Close(EST)</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Europe</td>
+													<td>London/Frankfurt</td>
+													<td>3:00 am/2:00 am</td>
+													<td>12:00 noon/11:00 am</td>
+												</tr>
+												<tr>
+													<td>America</td>
+													<td>New York/Chicago</td>
+													<td>8:00 am/9:00 am</td>
+													<td>5:00 pm/6:00 pm</td>
+												</tr>
+												<tr>
+													<td>Asia</td>
+													<td>Tokyo/Hong Kong</td>
+													<td>7:00 pm/8:00 pm</td>
+													<td>4:00 am/5:00 am</td>
+												</tr>
+												<tr>
+													<td>Pacific</td>
+													<td>Sydney/Wellington</td>
+													<td>5:00 pm/5:00 pm</td>
+													<td>2:00 am/1:00 am</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p>*Trading hours may vary with daylight savings time.</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-2">Basic Terminology <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>Before trading currencies, an investor has to understand the basic terminology of the forex market, including how to interpret forex quotes and calculations. </p>
+									<b>ECN STP Broker</b>
+									<p>Ruizean Markets is an ECN STP broker using electronic communications networks (ECNs) to provide clients with direct access to other participants in the currency market by consolidating price quotations from several banks. Ruizean Markets clients have instant access using STP (Straight Through Processing) to the best prices with extremely tight spreads.</p>
+									<br />
+									<b>Pips and Pipettes</b>
+									<p>Ruizean Markets quotes currency pairs by "5, 3 and 2" decimal places – these are known as fractional pips or pipettes.</p>
+									<ul class="comUl ul-disc">
+										<li>On a 5 decimal place currency pair a pip is 0.00010</li>
+										<li>On a 3 decimal place currency pair a pip is 0.010</li>
+										<li>On a 2 decimal place currency pair a pip is 0.10</li>
+									</ul>
+									<br />
+									<p>For example: If GBP/USD moves from 1.51542 to 1.51552, the 0.00010 USD change is one pip.</p>
+									<div class="comTitle3">Spread: </div>
+									<article class="comArticle">
+										<p>The spread is the difference between the BID and the ASK price in the market quotes. The ASK price is applicable to a BUY order and the BID price is applicable to a SELL order.</p>
+										<p>Ruizean Markets operates using variable spreads, which are spreads that don't have the same constant value. A variable spread will condense and widen as the market conditions and liquidity change.</p>
+									</article>
+									<div class="comTitle3">Leverage: </div>
+									<article class="comArticle">
+										<p>Leverage is the ability to control a large amount of money in the forex markets. For example, Ruizean Markets offers a maximum leverage of 400:1, which means for every $1 that you have in your trading account; you can trade $400 on the forex market. The same principal applies to all base currencies and leverage amounts.</p>
+										<p>Leverage gives the trader the ability to make meaningful profits on the normally miniscule daily currency movements, and at the same time, the high level risk is also involved. Leverage can exponentially increase your profits, as well as your losses, so it is crucial that traders take care when using leverage. The larger your position size, the larger your pip value will be and therefore, the greater the impact on your profit/loss (P/L).</p>
+									</article>
+									<div class="comTitle3">Margin: </div>
+									<article class="comArticle">
+										<p>Margin is the term given to the amount of money required in your account in order to open a trade. It is calculated based on the current market quote of the base currency in the trader's account vs the base currency in the trader's account, the volume requested, and the leverage level of the trader's account. Free or available margin is indicated in the MT4 trading terminal. </p>
+										<p>Margin may be calculated as follows: (Current Market Quote * Volume)/Leverage = $Margin Required</p>
+										<p>For example:</p><br />
+										<ul class="comUl ul-disc">
+											<li>A trader wants to open 0.1 (10,000 base currency) lots of EUR/USD at the current market quote of 1.4177 and with a leverage level of 1:200.</li>
+											<li>The base currency of the account is USD.</li>
+											<li>(1.4177 * 10,000)/200 = $70.89 required to open a 0.1 lot position.</li>
+										</ul>
+									</article>
+									<div class="comTitle3">Margin Call: </div>
+									<article class="comArticle">
+										<p>A margin call is a warning message that occurs when a trader's account is running out of sufficient funds to sustain their current open positions on the market. If the market moves against a trader's position/s, additional funds will be requested through a "margin call". If there are insufficient available funds, the trader's open positions will be closed out. This can occur because a trader's Equity (Balance - Open Profit/Loss) falls below a specific margin level, which is the amount required to support open positions; the trader's positions will automatically be closed.</p>
+										<p>This is calculated as follows for the MetaTrader 4 platform: Equity/Margin = < 20%</p>
+									</article>
+									<div class="comTitle3">Hedging: </div>
+									<article class="comArticle">
+										<p>Hedging refers to the opening of a new position in the opposite direction of an existing position on the same instrument. For example, to hedge a 0.1 lot Buy position on AUD/USD, you would open a 0.1 lot Sell position on AUD/USD. No additional margin is required to hedge a position. It is important to note that one cannot open a new position on an account with insufficient usable margin.</p>
+									</article>
+									<div class="comTitle3">Rollovers/Swaps: </div>
+									<article class="comArticle">
+										<p>Forex trading may also generate interest income as well as capital gains. Since forex is traded in pairs, every trade involves not only two different currencies, but also their two different interest rates. If the interest rate of the currency a trader has bought is higher than the interest rate of the currency a trader has sold, then the trader will earn interest or "rollover" (positive roll).</p>
+										<p>However, if the interest rate on the currency the trader bought is lower than the interest rate on the currency sold, then the trader will pay rollover (negative roll). It is important to note that rollovers/swaps can add a significant extra cost or profit to a trade; the rollover amount increases/decreases as the position size increases/decreases. Rollovers take place at 5pm EST (New York Time).</p>
+									</article>
+									<div class="comTitle3">Commissions: </div>
+									<article class="comArticle">
+										<p>These are service fees that Ruizean Markets charges on trader accounts and equates to:</p>
+										<div class="comTable">
+											<table border="1">
+												<thead>
+													<tr>
+														<td>Lot Size</td>
+														<td>Commission Amount</td>
+														<td>Notes</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>0.01/0.1/1</td>
+														<td>AU$0.07/AU$0.70/AU$7</td>
+														<td>Round turn means that commission is only paid when positions are closed</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p>** The commission amount increases/decreases as the position size increases/decreases.</p>
+									</article>
+									<div class="comTitle3">Expert Advisor (EA)</div>
+									<article class="comArticle">
+										<p>EA's are algorithmic programs that have been developed to open trades on behalf of investors on the MetaTrader 4 platform. Expert Advisors are based on signals generated by various technical indicators and may be acquired online.</p>
+									</article>
+									<div class="comTitle3">Virtual Private Server (VPS)</div>
+									<article class="comArticle">
+										<p>A VPS is used to keep the MetaTrader 4 platform running even if the trader exits the program. This minimizes the chance of system downtime, due to technology and connectivity failures.</p>
+									</article>
+									<div class="comTitle3">MAM/PAMM Accounts</div>
+									<article class="comArticle">
+										<p>Multi Account Manager Account types on the MetaTrader 4 platform are designed for Money Managers who trade on behalf of other investors and manage multiple accounts from a single interface. Money Managers can also manage multiple accounts by utilising Expert Advisors (EAs).</p>
+									</article>
+									<div class="comTitle3">Safe Haven Currencies</div>
+									<article class="comArticle">
+										<p>This is a term used to describe trading an alternative currency or instrument that is less volatile as a result of market turmoil and uncertainty. Safe haven currencies or instruments are considered low risk, because their issuing governments are stable and their economies tend to be strong, however this does not necessarily mean that they are ‘safe’.</p>
+									</article>
+									<div class="comTitle3">One-Click-Trading</div>
+									<article class="comArticle">
+										<p>Allows you to open/close your position a new position with just one click.</p>
+									</article>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-3">Fundamental Analysis<i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>Fundamental analysis is the study of the overall economic, financial, political and other factors that represent and quantify the economy in question and can influence a financial instrument. These macroeconomic and economic health elements of a country help traders to determine future movements in a financial market.</p>
+									<p>Each day, many economic and political announcements are released that have a direct impact on the markets, including the forex market. Therefore, it is important that traders understand how to interpret this information and convert it into an educated and successful trade.</p>
+								</article>
+								<div class="comTitle3">Pointers</div>
+								<div class="comTitle4">Economic Policies in Individual Countries:</div>
+								<article class="comArticle">
+									<p>These refer to how a country governs trade, budget and currency distributions. This is why budget readings in parliaments across the world, are important to individuals looking to invest in the country's currency. If the budget is well balanced, promoting trade and improved economic status, then the currency's value will increase. If for any reason the distribution of wealth and economic policies reflected in the budget is less than satisfactory, then the country's currency suffers.</p>
+								</article>
+								<div class="comTitle4">Deficits and Surpluses: </div>
+								<article class="comArticle">
+									<p>Countries with the strongest currencies in the forex market are those with fewer deficits, meaning that they are in a good position to trade and even lend to other countries.</p>
+								</article>
+								<div class="comTitle4">Trade Trends and Levels:</div>
+								<article class="comArticle">
+									<p>If a country is very active in trade, then there will be a great demand for its currency, which affects all the currency pairs associated with it. A high amount of trade also indicates the competitiveness of the market, not just for currency, but for commodities and stocks as well. Economic events affecting trade trends involve supply and demand in the global market.</p>
+								</article>
+								<div class="comTitle4">Inflation: </div>
+								<article class="comArticle">
+									<p>This reduces the value of a currency and the rate of inflation should be reasonable, since it occurs in every country.</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-4">Technical Analysis <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>Technical analysis is the study of prices over time, with charts being the primary tool. This is done by comparing current price action with historical price action to identify patterns that can suggest probable future price movement.</p>
+									<p>Technical analysis helps traders to determine trends and acts as a signal or indicator to either buy or sell. Technical analysts believe that the historical performance of a financial instrument, indicates the future performance of that instrument.</p>
+									<div class="comTitle3">Trader Types</div>
+									<article class="comArticle">
+										<p>In order to understand which charts you should be using, it is important to determine the type of trading you will perform, by understanding the difference between the two types of traders.</p>
+									</article>
+									<div class="comTitle4">Short Term: </div>
+									<article class="comArticle">
+										<p>Short term traders are intraday traders who get in and get out of the market quickly, by constantly opening and closing positions.</p>
+									</article>
+									<div class="comTitle4">Medium to Long Term: </div>
+									<article class="comArticle">
+										<p>Medium to long term traders are traders who keep their open positions on the market for a long period of time (weeks/months).</p>
+									</article>
+									<div class="comTitle3">Chart Types</div>
+									<article class="comArticle">
+										<p>There are 3 types of charts:</p>
+									</article>
+									<div class="comTitle4">Line Chart: </div>
+									<article class="comArticle">
+										<p>A Line Chart simply shows a line from one closing price to the next closing price. It is not specific to the period of the chart and shows the general direction of the instrument over time.</p>
+										<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb1.png"></p>
+									</article>
+									<div class="comTitle4">Bar Chart: </div>
+									<article class="comArticle">
+										<p>A Bar Chart goes into more detail by showing the opening and closing prices, in addition to the high and low of the specified period using a straight bar/line format.</p>
+										<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb2.png"></p>
+									</article>
+									<div class="comTitle4">Candlestick Chart:</div>
+									<article class="comArticle">
+										<p>This also shows the opening and closing prices in addition to the high and low of the specified period and resembles a candlestick. This type of chart is easier to interpret and identify pivot points or reversals in a trend.</p>
+										<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb3.png"></p>
+									</article>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-5">Trend Lines <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>The term ‘trend’ describes the current direction of the financial instrument or an investor's outlook towards the direction of a financial instrument. A trend line can be drawn on a chart between two or more price pivot/turning points. Trend lines are commonly used to judge entry and exit points when trading.</p>
+									<p>There are 5 types of trends:</p>
+								</article>
+								<div class="comTitle4">Bullish: </div>
+								<article class="comArticle">
+									<p>A bullish trend is the term given to an optimistic outlook, where there is a belief that a particular instrument is about to rise (buy opportunity).</p>
+								</article>
+								<div class="comTitle4">Bearish:</div>
+								<article class="comArticle">
+									<p>A bearish trend is the term given to a pessimistic outlook, where there is a belief that a particular instrument is about to drop (sell opportunity).</p>
+								</article>
+								<div class="comTitle4">Hawkish:</div>
+								<article class="comArticle">
+									<p>A hawkish trend is the term given to a favoured increase in interest rates (buy opportunity).</p>
+								</article>
+								<div class="comTitle4">Dovish:</div>
+								<article class="comArticle">
+									<p>A dovish trend is the term given to a favoured decrease in interest rates (sell opportunity). </p>
+								</article>
+								<div class="comTitle4">Ranging/Flat:</div>
+								<article class="comArticle">
+									<p>When the market is ranging or flat, this suggests that the price of the instrument is neither rising nor falling. This type of trend usually indicates a change in the overall direction of a trend.</p>
+								</article>
+								<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb4.png"></p>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-6">What is a Technical Indicator? <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>Technical Indicators are a result of mathematical calculations/algorithms designed by professional traders and are based on indications of price or volume.</p>
+									<p>The values obtained from the technical indicators are used to create various patterns that may be added to a chart. These allow traders to forecast probable price changes and, therefore, probable times at which to open a buy or sell position, in addition to when they should close current open positions. There are many technical indicators; however, here are a few of the most commonly used. </p>
+								</article>
+								<div class="comTitle3">Support and Resistance</div>
+								<article class="comArticle">
+									<p>When the market moves in a specific direction and then pivots and changes direction, the highest point that was reached before the market changed direction is called the Resistance Level. In the same way, the lowest level the market reaches before the market pivots is called the Support Level.</p>
+									<p>It is important to note that if the market passes through a resistance level, then that resistance level can also become a new support level. The same applies in the opposite direction. Previous resistance and support levels are also used as an indicator for future pivots and therefore possible entry points into the market.</p>
+									<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb5.png"></p>
+								</article>
+								<div class="comTitle3">Moving Average</div>
+								<article class="comArticle">
+									<p>Moving Averages show the average price within a defined time period, by considering the most recent closing prices over the given time period. The result is then divided by the number of prices used in the calculation. For example: In a 10-day moving average, the last 10 closing prices are added together and then divided by 10.</p>
+									<p>There are four types of Moving Averages: Simple MA, Exponential MA, Smoothed MA, and Weighted MA. They differ from each other only in terms of the weight coefficients that are assigned to the latest data.</p>
+									<p>Moving averages are used to define areas of support and resistance, as well as entry points into the market, to emphasize the direction of a trend, and to smooth out price and volume fluctuations.</p>
+									<p>The direction of the indicator shows whether a bullish or bearish trend is present in the market at the moment.</p>
+									<p>With two or more moving averages applied to one chart, the further apart they are from one another, the stronger the indication of the current trend.</p>
+									<p>When the moving averages intersect, this confirms the change in a trend. It is only a confirmation, because the change of this indicator is late in comparison with a price change.</p>
+									<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb6.png"></p>
+								</article>
+								<div class="comTitle3">Oscillators</div>
+								<article class="comArticle">
+									<p>Oscillators are designed to indicate a possible change in the trend of a specific trading instrument, by showing whether the instrument is either overbought or oversold. This allows traders to determine when a change in the current overall trend will occur and in turn, an entry point into the market.</p>
+									<p>The RSI indicator is used to determine the state of the market – whether it is overbought, oversold, or stable. If the RSI tops out in the upper zone [overbought (sell signal), > 70] and then returns to the middle zone, the price would move in the same direction. If the RSI bottoms out in the lower zone [oversold (buy signal), < 30] and then returns to the middle zone, the price would move in the same direction. In other words, the price and the RSI movements correlate.</p>
+									<p>The Stochastic oscillator is used on the trending markets. If both lines top out in the upper zone [above 80% mark (sell signal)] and then the indicator returns to the middle zone, the rate would move in the same direction. If both lines bottom out in the lower zone [below 20% mark (buy signal)] and then the indicator returns to the middle zone, the rate would move in the same direction</p>
+									<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb7.png"></p>
+								</article>
+								<div class="comTitle3">Retracements</div>
+								<article class="comArticle">
+									<p>Trading instruments usually retrace the previous day’s trades. The most popular retracement is the Fibonacci Retracement indicator, which is a chart tool used to determine the support and resistance levels of an instrument.</p>
+									<p>The Fibonacci Retracement levels are created by drawing a trend line between two extreme points and then splitting the vertical distance according to the specified percentages.</p>
+									<p>The Fibonacci Retracement can include up to 13 lines. In order to find these retracement levels, you need to identify the recent Swing Highs and Swing Lows (extreme changes in the trend direction).</p>
+									<p><img src="<{$STATIC_PATH}>ruizeanMarkets/images/eb8.png"></p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-7">Gold (XAU/USD) - Reasons Why Gold is Traded <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p>As an investment, gold is the most popular of the precious metals. Investors generally buy gold as a hedge or safe haven during economic, political, or social uncertainty (including investment market declines, burgeoning national debt, currency failure, inflation, war and social unrest). </p>
+									<p>The gold market is subject to speculation as are other markets.  The history of the gold standard, the role of gold reserves in central banking, gold's low correlation with other commodity prices, and its pricing in relation to flat currencies during the financial crisis of 2007–2010, suggest that gold behaves more like a currency than a commodity.</p>
+									<p>There are several factors which drive gold up/down:</p>
+									<ul class="comUl ul-disc">
+										<li>Global inflation.</li>
+										<li>War in the Middle East and North Africa.</li>
+										<li>Threats to oil supplies.</li>
+										<li>Volatility in the forex markets.</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd comTitle5 qm-id clearfix" id="qm-8">Order Types<i class="fa fa-caret-right"></i></div>
+							<div class="com-bd">
+								<article class="comArticle">
+									<p></p>
+									<p></p>
+								</article>
+								<div class="comTitle3">Market Order/Execution: </div>
+								<article class="comArticle">
+									<p>A market order is an order to open a buy or sell position at the best current available price.</p>
+								</article>
+								<div class="comTitle3">Pending Order: </div>
+								<article class="comArticle">
+									<p>A pending order is an order to buy or sell an instrument at a specified future price, only if the market reaches that specific price.</p>
+								</article>
+								<div class="comTitle3">Limit Order: </div>
+								<article class="comArticle">
+									<p>A limit order is triggered when the market moves past your specified entry level, providing the best available price once triggered. A limit order sits below the current market price for a buy limit, and above the current market price for a sell limit.</p>
+								</article>
+								<div class="comTitle3">Stop-Loss: </div>
+								<article class="comArticle">
+									<p>A stop loss is a conditional order set at a fixed price level that is aimed at closing a position after a certain price has been reached. A stop is triggered when the market moves in an unfavourable direction for the trader and it is designed to prevent further losses when a position is losing money.</p>
+								</article>
+								<div class="comTitle3">Trailing Stop: </div>
+								<article class="comArticle">
+									<p>A trailing stop is a type of stop-loss order that moves with the trade as the market price fluctuates. It does not remain at a fixed price and is therefore set in a distance of pips. The trailing stop only activates when the trailing stop level has been reached. It is designed to realize the profit made by the position.</p>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script src='http://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-videos.js"></script>
+</body>
+</html>

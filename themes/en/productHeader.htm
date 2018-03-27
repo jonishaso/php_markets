@@ -1,0 +1,35 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/product"><span><svg class="svg-btnBg svg-ele"></svg>Account Features</span></a></li>
+			<{if $active == "acctypes"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/acctypes"><span>Trading Account Types</span></a></li>
+			<{if $active == "handicap"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/handicap"><span>Spreads & Commissions</span></a></li>
+			<{if $active == "interestrate"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/interestrate"><span>Swaps</span></a></li>
+			<{if $active == "vpsHosting"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/vpsHosting"><span>VPS Hosting</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/product"><span><svg class="svg-btnBg svg-ele"></svg>Trading Products</span></a></li>
+			<{if $active == "fexchange"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/fexchange"><span>Forex</span></a></li>
+			<{if $active == "stockindex"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/stockindex"><span>Indices</span></a></li>
+			<{if $active == "commodity"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/commodity"><span>Commodities</span></a></li>
+			
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="Account Features">
+			<option <{if $active == "acctypes"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/acctypes">Trading Account Types</option>
+			<option <{if $active == "handicap"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/handicap">Spreads & Commissions</option>
+			<option <{if $active == "interestrate"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/interestrate">Swaps</option>
+			<option <{if $active == "vpsHosting"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/vpsHosting">VPS Hosting</option>
+		</optgroup>
+		<optgroup label="Trading Products">
+			<option <{if $active == "fexchange"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/fexchange">Forex</option>
+			<option <{if $active == "stockindex"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/stockindex">Indices</option>
+			<option <{if $active == "commodity"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/commodity">Commodities</option>
+		</optgroup>
+	</select>
+</div>

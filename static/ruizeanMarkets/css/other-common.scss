@@ -1,0 +1,2676 @@
+@charset "utf-8";
+
+/**
+*
+* 公共样式
+*
+**/
+
+body {
+	padding-top: 54px;
+	background: nth($color2, 4);
+}
+
+
+.lang {
+	.lang-box {
+		position: relative;
+		width: 120px;
+		a {
+			display: block;
+			color: nth($color2, 6);
+			padding: 5px;
+			@include fspx($FS14);
+			div {
+				height: 17px;
+				line-height: 17px;
+			}
+			.county {
+				float: left;
+				width: 25px;
+				height: inherit;
+				line-height: inherit;
+				text-align: center;
+			}
+			.name {
+				float: left;
+				height: inherit;
+				line-height: inherit;
+				margin-left: 10px;
+				i {
+					margin-left: 10px;
+				}
+			}
+		}
+		.lang-bd {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: nth($color, 1);
+		}
+		&:hover {
+			.lang-bd {
+				display: block;
+			}
+		}
+	}
+}
+
+.hamburger {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	@include opacity(0);
+	@include translate(100%, -50%);
+	@include transition(all 0.3s linear);
+	&.active {
+		i {
+			&:nth-child(1) {
+				@include rotate(45deg);
+			}
+			&:nth-child(2) {
+				@include opacity(0);
+				@include translate(10%, 0);
+			}
+			&:nth-child(3) {
+				@include rotate(-45deg);
+			}
+		}
+	}
+	span {
+		position: relative;
+		display: block;
+		width:  30px;
+		height: 30px;
+		background: rgba(nth($color, 1), 0);
+		cursor: pointer;
+	}
+	i {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 2px;
+		margin-top: -1px;
+		width: 100%;
+		background-color: nth($color2, 2);
+		@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		@include transition(all 0.3s linear);
+		&:nth-child(1) {
+			@include translate(0, -8px);
+		}
+		&:nth-child(3) {
+			@include translate(0, 8px);
+		}
+	}
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 8;
+	background: nth($color, 1);
+	.hd {
+		float: left;
+		height: inherit;
+		padding: 10px;
+		height: 54px;
+		@include opacity(0);
+		@include translate(-100%, 0);
+		@include transition(all 0.3s linear);
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+	.bd {
+		position: relative;
+		float: right;
+		height: 54px;
+		@include display();
+		@include alignItems();
+		.com-div {
+			float: left;
+			padding: 0 10px;
+		}
+	}
+	.bar-search {
+		a {
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 50%;
+			text-align: center;
+			color: nth($color, 3);
+			@include fspx($FS14);
+			&:hover {
+				background: nth($color, 1);
+				color: nth($color2, 6);
+			}
+		}
+	}
+	.bar-nav {
+		li {
+			float: left;
+			a {
+				display: block;
+				color: nth($color, 3);
+				height: 28px;
+				line-height: 28px;
+				padding: 0 1em;
+				@include fspx($FS14);
+				&:hover {
+					color: nth($color2, 6);
+				}
+			}
+		}
+	}
+	&.active {
+		box-shadow: 0 0 5px rgba(nth($color, 2), 0.3);
+		.hd {
+			@include opacity(1);
+			@include translate(0, 0);
+		}
+		.hamburger {
+			@include opacity(1);
+			@include translate(0, -50%);
+		}
+	}
+}
+
+
+.header {
+	position: fixed;
+	top: 54px;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	z-index: 7;
+	@include transition(background 0.3s linear);
+	&.insHeader {
+		background-color: rgba(nth($color6, 1), 0.91);
+		@include gradients(left, (rgba(nth($color6, 1), 0.91) 0, rgba(nth($color6, 2), 0.91) 90%));
+	}
+	.wrapper {
+		height: 56px;
+		line-height: 56px;
+		overflow: hidden;
+		.logo {
+			float: left;
+		}
+		.nav {
+			float: right;
+		}
+	}
+	&.fixed {
+		background: rgba(nth($color2, 1), 0.95);
+	}
+}
+
+
+.logo {
+	a {
+		display: block;
+	}
+}
+.nav {
+	li {
+		float: left;
+		a {
+			display: block;
+			color: nth($color, 1);
+			padding: 0 15px;
+			@include fspx($FS16);
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.nav2 {
+	&.top-nav-list {
+		position: fixed;
+		top: 54px;
+		left: 0;
+		right: 0;
+		z-index: 8;
+		background: rgba(nth($color5, 3), 0.82);
+		padding: 30px 0;
+		visibility: hidden;
+		.nav2-item {
+			.bd {
+				ul {
+					margin-bottom: 30px;
+					li {
+						&.t {
+							a {
+								font-weight: bold;
+								color: nth($color, 1);
+								@include fspx($FS14);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.nav2-item {
+		float: left;
+		width: 16.666666%;
+		padding-left: 25px;
+		.hd {
+			margin-bottom: 25px;
+			a {
+				display: block;
+			}
+		}
+		.bd {
+			@include fspx($FS12);
+			ul {
+				margin-bottom: 15px;
+				li {
+					line-height: 1.4em;
+					a {
+						&:hover {
+							font-weight: bold;
+							text-decoration: underline;
+						}
+					}
+					&.t {
+						margin-bottom: 20px;
+						a {
+							color: nth($color4, 4);
+						}
+					}
+					&.c {
+						margin-bottom: 20px;
+						a {
+							color: nth($color4, 5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav3 {
+	&.header-nav-list {
+		position: fixed;
+		top: 54 + 76px;
+		left: 0;
+		right: 0;
+		z-index: 8;
+		padding: 40px 0;
+		background: rgba(nth($color5, 3), 0.82);
+		visibility: hidden;
+	}
+	.nav3-item {
+		position: relative;
+		float: left;
+		padding-left: 25px;
+		&:nth-child(1){
+			width: 40%;
+			.bd {
+				ul {
+					float: left;
+					width: 33.3333333%;
+				}
+			}
+		}
+		&:nth-child(2),
+		&:nth-child(3){
+			width: 30%;
+			.bd {
+				ul {
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+		.apply-link {
+			.btn-2 {
+				float: left;
+				margin-right: 14px;
+				a {
+					width: auto;
+					height: 3.14em;
+					line-height: 3.14em;
+					padding: 0 3em;
+					font-weight: bold;
+					@include fspx($FS14);
+				}
+				
+			}
+		}
+		.account-link {
+			.btn-2 {
+				float: left;
+				margin-right: 14px;
+				margin-bottom: 5px;
+				a {
+					width: auto;
+					height: 2.5em;
+					line-height: 2.5em;
+					padding: 0 2em;
+					@include fspx($FS12);
+				}
+				
+			}
+		}
+		.hd,
+		.hd2 {
+			margin-bottom: 15px;
+			a {
+				display: block;
+			}
+		}
+		.bd {
+			position: relative;
+			@include fspx($FS12);
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -25px;
+				width: 1px;
+				background-color: nth($color2, 2);
+				@include gradients(top, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+			}
+			ul {
+				li {
+					line-height: 1.4em;
+					a {
+						position: relative;
+						padding-left: 10px;
+						&:before {
+							display: none;
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 0;
+							bottom: 0;
+							width: 4px;
+							background-color: nth($color2, 2);
+							@include gradients(top, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+						}
+						&:hover {
+							font-weight: bold;
+							text-decoration: underline;
+							&:before {
+								display: block;
+							}
+						}
+					}
+					&.t {
+						margin-bottom: 15px;
+						a {
+							color: nth($color4, 4);
+							&:hover {
+								color: nth($color2, 3);
+							}
+						}
+					}
+					&.c {
+						margin-bottom: 10px;
+						a {
+							display: block;
+							color: nth($color4, 5);
+							&:hover {
+								color: nth($color2, 3);
+							}
+						}
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav4 {
+	ul {
+		margin-bottom: 35px;
+	}
+	li {
+		margin-bottom: 12px;
+		a {
+			display: block;
+			text-align: right;
+		}
+		&.h {
+			a {
+				line-height: 30px;
+				color: nth($color, 1);
+				font-weight: bold;
+				@include fspx($FS16);
+				span {
+					position: relative;
+					display: inline-block;
+					min-width: 160px;
+					padding: 0 20px;
+					.svg-btnBg {
+						position: absolute;
+						right: -20px;
+						top: 0;
+						z-index: -1;
+						max-width: none;
+						max-height: 100%;
+					}
+				}
+			}
+		}
+		&.b {
+			a {
+				line-height: 30px;
+				color: nth($color, 1);
+				@include fspx($FS14);
+				span {
+					position: relative;
+					padding: 0 20px 0 0;
+					&:before {
+						content: '';
+						position: absolute;
+						right: 100%;
+						top: 50%;
+						width: 0;
+						height: 2px;
+						background: nth($color, 1);
+						@include translate(-5px, -50%);
+						@include transition(all 0.3s linear);
+					}
+				}
+			}
+			&.active,
+			&:hover {
+				font-weight: bold;
+				span {
+					&:before {
+						width: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav5 {
+	&.top-nav-list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 30%;
+		bottom: 0;
+		z-index: 10;
+		padding-bottom: 110px;
+		background: nth($color8, 3);
+		box-shadow: 0 0 4px nth($color, 3);
+		visibility: hidden;
+		@include translate(0, -100%);
+	}
+	.cont-bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px;
+	}
+	.cont-top {
+		position: relative;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-top: 54px;
+		.mobile-side-top {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 54px;
+			padding: 10px;
+			border-bottom: 1px solid nth($color8, 6);
+			z-index: 2;
+			background: nth($color8, 3);
+			.hamburger {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				left: auto;
+				@include translate(0, -50%);
+			}
+			.mobile-logo {
+				height: 100%;
+			}
+		}
+		ul {
+			a {
+				position: relative;
+				display: block;
+				line-height: 1.6em;
+				color: nth($color, 2);
+				padding-top: 10px;
+				padding-bottom: 10px;
+				&:hover {
+					background: nth($color, 1);
+				}
+			}
+		}
+	}
+	.active {
+		.no1 {
+			.arrow {
+				@include transform(translate(0, -50%) rotate(-180deg));
+			}
+		}
+	}
+	.no1 {
+		@include fspx($FS18);
+		a {
+			padding-left: 10px;
+			padding-right: 40px;
+			font-weight: bold;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+		.arrow {
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			width: 40px;
+			text-align: center;
+			@include translate(0, -50%);
+			@include transition(all 0.3s);
+		}
+	}
+	.no2 {
+		@include fspx($FS16);
+		a {
+			padding-left: 40px;
+			padding-right: 40px;
+			font-weight: bold;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	.no3 {
+		@include fspx($FS14);
+		a {
+			padding-left: 60px;
+			padding-right: 40px;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	.bt1 {
+		display: none;
+	}
+	.lang {
+		float: right;
+		position: relative;
+		z-index: 4;
+		padding: 0 0 10px 0;
+		margin-bottom: 10px;
+		.lang-box {
+			.lang-hd {
+				background: nth($color, 1);
+			}
+			.lang-bd {
+				top: auto;
+				bottom: 100%;
+			}
+		}
+	}
+	.share {
+		float: left;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.onlineform {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: nth($color2, 2);
+	color: nth($color, 1);
+	@include fspx($FS18);
+}
+
+.footer-nav-mobile {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	background: nth($color8, 4);
+	ul {
+		li {
+			position: relative;
+			float: left;
+			width: 33.333333%;
+			text-align: center;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 20%;
+				bottom: 20%;
+				right:0 ;
+				width: 1px;
+				background: nth($color8, 5);
+			}
+			&:last-child {
+				&:before {
+					display: none;
+				}
+			}
+			a {
+				display: block;
+				height: 70px;
+				text-align: center;
+				color: nth($color, 1);
+				@include display();
+				@include justifyContent();
+				@include alignItems();
+				@include fspx($FS20);
+				&:active {
+					background: nth($color2, 2);
+				}
+			}
+		}
+	}
+}
+
+
+.float-nav {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 6;
+	@include transition(all 0.2s linear);
+	//@include translate(100%, -50%);
+	&.hide {
+		@include translate(100%, -50%);
+	}
+	&.show {
+		@include translate(0, -50%);
+	}
+	ul {
+		li {
+			margin-bottom: 1px;
+		}
+	}
+	a {
+		position: relative;
+		display: block;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		text-align: center;
+		background-image: url(../images/share2.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: left 0;
+		background-color: nth($color2, 7);
+		color: nth($color, 1);
+		@include fspx($FS20);
+		&:hover {
+			.popdiv1,
+			.popdiv2 {
+				display: block;
+			}
+		}
+		&.s-qq {
+			background-position: left -44px * 0;
+			&:hover {
+				background-position: left -44px * 1;
+			}
+		}
+		&.s-weixin {
+			background-position: left -44px * 2;
+			&:hover {
+				background-position: left -44px * 3;
+			}
+		}
+		&.s-tel {
+			background-position: left -44px * 4;
+			&:hover {
+				background-position: left -44px * 5;
+			}
+		}
+		&.s-email {
+			background-position: left -44px * 6;
+			&:hover {
+				background-position: left -44px * 7;
+			}
+		}
+		&.s-video {
+			background-position: left -44px * 8;
+			&:hover {
+				background-position: left -44px * 9;
+			}
+		}
+		&.backTop {
+			background-image: none;
+			margin-top: 30px;
+		}
+		.popdiv1 {
+			display: none;
+			position: absolute;
+			right: 100%;
+			top: 0;
+			width: 120px;
+			padding: 15px;
+			margin-right: 15px;
+			background: nth($color2, 7);
+			color: nth($color, 1);
+			@include fspx($FS12);
+			p {
+				line-height: 1.4em;
+				&:nth-child(2) {
+				font-family: $_FF_Arial;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 100%;
+				top: 15px;
+				border-width: 8px;
+				border-style: solid;
+				border-color: transparent;
+				border-left-color: nth($color2, 7);
+			}
+		}
+		.popdiv2 {
+			display: none;
+			position: absolute;
+			right: 100%;
+			top: 0;
+			width: 200px;
+			padding: 15px;
+			margin-right: 15px;
+			background: nth($color2, 7);
+			color: nth($color, 1);
+			text-align: left;
+			@include fspx($FS12);
+			p {
+				line-height: 1.8em;
+				&:nth-child(2) {
+				font-family: $_FF_Arial;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 100%;
+				top: 15px;
+				border-width: 8px;
+				border-style: solid;
+				border-color: transparent;
+				border-left-color: nth($color2, 7);
+			}
+		}
+	}
+}
+
+
+.footer {
+	position: relative;
+	background-image: url(../images/bg5.png);
+	background-color: nth($color4, 3);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(nth($color4, 6), 0.89);
+		@include gradients(left, (rgba(nth($color4, 6), 0.89), rgba(nth($color4, 3), 0.89)));
+	}
+}
+.footer-nav {
+	position: relative;
+	z-index: 3;
+	padding: 20px 0;
+}
+.footer-copy {
+	position: relative;
+	z-index: 3;
+	padding: 50px 0;
+	.left {
+		float: left;
+		width: 66%;
+	}
+	.right {
+		float: right;
+		width: 34%;
+	}
+	.right-left {
+		float: left;
+	}
+	.right-right {
+		float: right;
+	}
+	.top {
+		margin-bottom: 15px;
+		@include display();
+		@include alignItems();
+	}
+	.footer-logo {
+		float: left;
+	}
+	.footer-address {
+		float: left;
+		line-height: 2em;
+		color: nth($color4, 4);
+		@include fspx($FS12);
+		dl {
+			float: left;
+			padding-left: 40px;
+			span {
+				float: left;
+			}
+			p {
+				float: left;
+				color: nth($color, 1);
+				@include fspx($FS14);
+			}
+		}
+	}
+	.copy {
+		line-height: 1.8em;
+		color: nth($color4, 4);
+		@include fspx($FS12);
+		a {
+			color: nth($color4, 4);
+			margin-right: 10px;
+		}
+	}
+	.share {
+		margin-bottom: 20px;
+	}
+	.account-link {
+		.btn-2 {
+			margin-bottom: 20px;
+		}
+	}
+	.lang {
+		.lang-box {
+			a {
+				color: nth($color, 1);
+			}
+		}
+		&:hover {
+			.lang-hd,
+			.lang-bd {
+				background: nth($color, 1);
+			}
+			.lang-box {
+				a {
+					color: nth($color2, 1);
+				}
+			}
+		}
+	}
+}
+
+
+
+.side {
+	position: relative;
+	float: left;
+	width: 370px;
+	padding: 10px;
+	background-image: url(../images/bg5.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background-color: rgba(nth($color5, 5), 0.89);
+		@include gradients(left, (rgba(nth($color5, 5), 0.89), rgba(nth($color5, 6), 0.89)));
+	}
+	.pendant-01 {
+		position: absolute;
+		right: 80%;
+		bottom: 0;
+		z-index: 3;
+		height: 225px;
+		@include translate(0, 30%);
+		img {
+			max-width: none;
+			max-height: 100%;
+		}
+	}
+	.side-logo {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 140px;
+		.hd {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translate(-70px, -46%);
+		}
+		.p1 {
+			line-height: 1.2em;
+			font-weight: bold;
+			color: nth($color, 1);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			@include fspx($FS20);
+		}
+		.p2 {
+			line-height: 1.2em;
+			text-align: center;
+			color: nth($color, 1);
+			letter-spacing: 2px;
+			padding-top: 5px;
+			text-transform: uppercase;
+			@include fspx($FS16);
+		}
+		ul {
+			@include translate(-30px, 0);
+			li {
+				&:nth-child(2) {
+					padding-left: 40px;
+				}
+			}
+		}
+	}
+	.btns {
+		position: relative;
+		z-index: 2;
+		padding: 20px;
+		ul {
+			li {
+				margin-bottom: 15px;
+				&:nth-child(1) {
+					text-align: right;
+				}
+				&:nth-child(2) {
+					text-align: center;
+				}
+				&:nth-child(3) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+.side2 {
+	position: relative;
+	float: left;
+	width: 270px;
+	padding: 10px;
+	background-image: url(../images/bg5.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background-color: rgba(nth($color5, 5), 0.89);
+		@include gradients(left, (rgba(nth($color5, 5), 0.89), rgba(nth($color5, 6), 0.89)));
+	}
+	.pendant-01 {
+		position: absolute;
+		right: 50%;
+		bottom: 0;
+		z-index: 3;
+		height: 225px;
+		@include translate(0, 30%);
+		img {
+			max-width: none;
+			max-height: 100%;
+		}
+	}
+	.nav4,
+	.account-link {
+		position: relative;
+		z-index: 3;
+	}
+	.account-link {
+		padding-bottom: 150px;
+		text-align: center;
+		.btn-2 {
+			display: inline-block;
+			padding: 0 5px;
+			margin-bottom: 5px;
+			a {
+				width: auto;
+				@include fspx($FS12);
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.side3 {
+	float: right;
+	width: 200px;
+}
+.side4 {
+	float: right;
+	width: 280px;
+}
+.main {
+	position: relative;
+	float: right;
+	width: 700px;
+}
+.main2 {
+	position: relative;
+	float: right;
+	width: 750px;
+	.main3 {
+		margin-left: 0;
+	}
+}
+.main3 {
+	position: relative;
+	float: left;
+	width: 550px;
+	margin-left: 50px;
+}
+.main4 {
+	position: relative;
+	float: left;
+	width: 450px;
+	margin-left: 50px;
+}
+.main5 {
+	position: relative;
+	float: right;
+	width: 800px;
+	.main3 {
+		margin-left: 0;
+	}
+}
+.insMain {
+	position: relative;
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	padding: 76px 0 100px;
+}
+
+.mainHd {
+	margin-bottom: 20px;
+}
+.mainBd {
+	margin-bottom: 40px;
+}
+.mainBd-tab {
+	.com-bd {
+		display: none;
+	}
+}
+.mainBd-tab2 {
+	.com-bd {
+		display: none;
+	}
+}
+.maodian {
+	.mainBd {
+		margin-bottom: 1px;
+		.comTitle5 {
+			margin-bottom: 0;
+			background: none;
+			color: nth($color8, 1);
+			border-bottom: 1px solid nth($color8, 1);
+			.fa {
+				float: right;
+				font-size: 120%;
+			}
+			&.active {
+				color: nth($color6, 7);
+				border-color: nth($color6, 7);
+				.fa {
+					@include rotate(90deg);
+				}
+			}
+		}
+		.comArticle {
+			padding: 15px 10px;
+		}
+	}
+}
+.maodian2 {
+	.mainBd {
+		margin-bottom: 1px;
+		.comTitle5 {
+			margin-bottom: 0;
+			background: none;
+			color: nth($color6, 7);
+			border-bottom: 1px solid nth($color6, 7);
+			.fa {
+				float: right;
+				font-size: 120%;
+			}
+			&.active {
+				color: nth($color8, 1);
+				border-color: nth($color8, 1);
+				.fa {
+					@include rotate(90deg);
+				}
+			}
+		}
+		.com-bd {
+			padding: 15px 10px;
+		}
+		.comArticle {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.mt4Use {
+	.maodian {
+		.mainBd {
+			.stpimg {
+				float: left;
+				width: 200px;
+				padding: 10px;
+			}
+			.comArticle {
+				padding-left: 230px;
+			}
+		}
+	}
+}
+
+.location {
+	height: 40px;
+	line-height: 40px;
+	color: nth($color6, 3);
+	@include fspx($FS12);
+	a {
+		color: nth($color6, 3);
+		&:hover {
+			text-decoration: underline;
+			font-weight: bold;
+			color: nth($color2, 2);
+		}
+	}
+	em {
+		margin: 0 7px;
+	}
+}
+
+
+.quick-menu-style1 {
+	position: absolute;
+	top: 0;
+	right: -20px;
+	@include translate(100%, 0);
+	ul {
+		li {
+			width: 140px;
+			line-height: 30px;
+			margin-bottom: 1px;
+			background: nth($color5, 8);
+			color: nth($color, 1);
+			padding: 0 10px;
+			cursor: pointer;
+			@include fspx($FS14);
+			&:hover,
+			&.active {
+				background: nth($color4, 4);
+			}
+		}
+	}
+	&.small {
+		ul {
+			li {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.quick-menu-style2 {
+	&.direction-vertical {
+		position: absolute;
+		top: 0;
+		right: -20px;
+		@include translate(100%, 0);
+		ul {
+			li {
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				margin-bottom: 1px;
+				color: nth($color8, 1);
+				text-align: center;
+				cursor: pointer;
+				@include fspx($FS14);
+				&:hover,
+				&.active {
+					color: nth($color, 1);
+					background: nth($color8, 1);
+				}
+			}
+		}
+		.curValue {
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			padding-left: 20px;
+			color: nth($color2, 1);
+			@include fspx($FS50);
+			@include translate(20px, -50%);
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 1px;
+				background: nth($color8, 2);
+			}
+		}
+	}
+	&.direction-horizontal {
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 4;
+		padding: 0 5px;
+		.curValue {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 80px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: nth($color2, 1);
+			@include fspx($FS60);
+			@include translate(0, -50%);
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 1px;
+				background: nth($color8, 2);
+			}
+		}
+		ul {
+			padding-right: 80px;
+			overflow: hidden;
+			li {
+				position: relative;
+				float: left;
+				width: 3.8%;
+				height: 50px;
+				line-height: 50px;
+				margin: 5px 0;
+				color: nth($color8, 1);
+				text-align: center;
+				overflow: hidden;
+				cursor: pointer;
+				@include fspx($FS18);
+				@include transition(line-height 0.15s linear);
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					border-style: solid;
+					border-color: transparent;
+					border-width: 5px;
+					border-bottom-color: nth($color8, 1);
+					@include transition(all 0.15s linear);
+					@include translate(-50%, -50%);
+					@include opacity(0);
+				}
+				&:hover {
+					font-weight: bold;
+					line-height: 40px;
+					@include transition(line-height 0.15s linear);
+					&:before {
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+.quick-menu-mobile {
+	display: none;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	z-index: 4;
+	@include translate(0, -50%);
+	ul {
+		li {
+			width: 14px;
+			height: 14px;
+			line-height: 14px;
+			margin-bottom: 1px;
+			color: nth($color8, 1);
+			text-align: center;
+			cursor: pointer;
+			@include fspx($FS11);
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				background: nth($color8, 1);
+			}
+		}
+	}
+}
+
+.quick-menu-style3 {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 4;
+	padding: 0 5px;
+	&.scrolling {
+		top: 5px;
+		background: nth($color, 1);
+		box-shadow: 0 0 8px rgba(nth($color, 2), 0.1);
+	}
+	.curValue {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 80px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: nth($color2, 1);
+		@include fspx($FS60);
+		@include translate(0, -50%);
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 1px;
+			background: nth($color8, 2);
+		}
+	}
+	ul {
+		padding-right: 80px;
+		overflow: hidden;
+		li {
+			position: relative;
+			float: left;
+			width: 3.8%;
+			height: 50px;
+			line-height: 50px;
+			margin: 5px 0;
+			color: nth($color8, 1);
+			text-align: center;
+			overflow: hidden;
+			cursor: pointer;
+			@include fspx($FS18);
+			@include transition(all 0.3s linear);
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				border-style: solid;
+				border-color: transparent;
+				border-width: 5px;
+				border-bottom-color: nth($color8, 1);
+				@include transition(all 0.15s linear);
+				@include translate(-50%, -50%);
+				@include opacity(0);
+			}
+			&:hover,
+			&.active {
+				font-weight: bold;
+				line-height: 40px;
+				@include transition(all 0.15s linear);
+			}
+			&.active {
+				&:before {
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}
+
+
+.notice {
+	height: 30px;
+	line-height: 30px;
+	color: nth($color7, 1);
+	@include fspx($FS11);
+	li {
+		height: 30px;
+		line-height: 30px;
+		color: nth($color7, 1);
+		overflow: hidden;
+		@include fspx($FS11);
+	}
+	a {
+		color: nth($color7, 1);
+	}
+	.h,
+	.b,
+	.m1 {
+		float: left;
+	}
+	.m2 {
+		float: right;
+	}
+	.m {
+		a {
+			text-decoration: underline;
+		}
+	}
+	.b {
+		width: 400px;
+	}
+	.title {
+		float: left;
+		width: 140px;
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.date {
+		float: left;
+		width: 140px;
+		margin: 0 15px;
+		i {
+			font-style: normal;
+			margin: 0 5px;
+		}
+	}
+}
+
+
+.help-tips {
+	line-height: 1.6em;
+	color: nth($color6, 6);
+	text-align: center;
+	padding: 10px 0;
+	@include fspx($FS12);
+	a {
+		color: nth($color6, 6);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+.line-box-01 {
+	width: 24px;
+	height: 6px;
+	background-color: nth($color2, 2);
+	@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+}
+
+.comTitle {
+	line-height: 1.2em;
+	font-weight: bold;
+	color: nth($color6, 6);
+	margin-bottom: 30px;
+	@include fspx($FS20);
+}
+.comTitle2 {
+	position: relative;
+	text-align: center;
+	color: nth($color6, 7);
+	margin-bottom: 10px;
+	@include fspx($FS14);
+}
+.comTitle3 {
+	position: relative;
+	//color: nth($color6, 6);
+	color: nth($color2, 2);
+	font-weight: bold;
+	margin-bottom: 10px;
+	@include fspx($FS16);
+	p {
+		@include fspx($FS14);
+	}
+}
+.comTitle4 {
+	position: relative;
+	color: nth($color6, 6);
+	margin-bottom: 10px;
+	@include fspx($FS16);
+}
+.comTitle5 {
+	position: relative;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	line-height: 1.2em;
+	padding: 10px;
+	background: nth($color6, 6);
+	font-weight: bold;
+	@include fspx($FS18);
+}
+.comTable {
+	table {
+		margin-bottom: 10px;
+		line-height: 2em;
+		color: nth($color6, 7);
+		border: 0;
+		@include fspx($FS12);
+	}
+	td {
+		border: 0;
+		border-bottom: 1px solid nth($color7, 6);
+		padding: 5px 10px;
+		color: nth($color6, 7);
+		text-align: center;
+		background: nth($color, 1);
+	}
+	thead {
+		td {
+			font-weight: bold;
+			color: nth($color, 1);
+			font-size: 130%;
+			background: nth($color6, 6);
+		}
+	}
+	tbody {
+		tr {
+			&:hover {
+				td {
+					background: nth($color7, 6);
+				}
+			}
+		}
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comArticle {
+	line-height: 2em;
+	color: nth($color6, 7);
+	@include fspx($FS12);
+	p {
+		margin-bottom: 10px;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comArticle2 {
+	line-height: 1.5em;
+	color: nth($color6, 6);
+	@include fspx($FS14);
+	p {
+		margin-bottom: 10px;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comUl {
+	&.ul-disc {
+		list-style-type : disc;
+	}
+	&.ul-circle {
+		list-style-type : circle;
+	}
+	&.ul-square {
+		list-style-type : square;
+	}
+	li {
+		line-height: 2em;
+		color: nth($color6, 7);
+		margin-bottom: 4px;
+		@include fspx($FS12);
+	}
+}
+.comTxt {
+	height: 60px;
+	padding: 15px 15px 10px;
+	h2 {
+		height: 20px;
+		line-height: 20px;
+		color: nth($color, 3);
+		overflow: hidden;
+		@include fspx($FS14);
+		a {
+			color: nth($color, 3);
+			&:hover {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	h3 {
+		height: 15px;
+		line-height: 15px;
+		color: nth($color7, 2);
+		overflow: hidden;
+		@include fspx($FS8);
+	}
+}
+.comTxt2 {
+	padding: 10px 15px;
+	.comArticle {
+		color: nth($color, 1);
+		margin-bottom: 1em;
+		overflow: hidden;
+	}
+	.more {
+		text-align: right;
+		a {
+			color: nth($color, 1);
+			text-decoration: underline;
+			@include fspx($FS11);
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+	.more2 {
+		position: relative;
+		z-index: 3;
+		a {
+			float: right;
+			span {
+				position: relative;
+				display: block;
+				height: 3em;
+				line-height: 3em;
+				color: nth($color, 1);
+				padding: 0 20px 0 40px;
+				@include fspx($FS12);
+				.svg-btnBg {
+					position: absolute;
+					top: 0;
+					right: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
+
+.pictxt-slider-01 {
+	.item {
+		cursor: pointer;
+		&.active,
+		&:hover {
+			.box {
+				.pic {
+					.bg {
+						&:before {
+							background: rgba(nth($color, 2), 0.2);
+						}
+					}
+				}
+			}
+		}
+		.box {
+			position: relative;
+			overflow: hidden;
+			.pic {
+				.bg {
+					position: relative;
+					padding-top: 58%;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: rgba(nth($color, 2), 0.45);
+					}
+				}
+			}
+			.txt {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				padding: 10px;
+				@include translate(0, -50%);
+				img {
+					max-width: 30px;
+				}
+				p {
+					line-height: 1.6em;
+					color: nth($color2, 2);
+					@include fspx($FS12);
+				}
+			}
+			/*
+			.txt {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(nth($color, 2), 0.9);
+				color: nth($color, 1);
+				padding: 10px;
+				line-height: 1.3em;
+				@include fspx($FS12);
+				@include transition(all 0.3s linear);
+				@include translate(0, 100%);
+			}
+			&:hover {
+				.txt {
+					@include translate(0, 0);
+				}
+			}
+			*/
+		}
+	}
+}
+
+.pictxt-list-01 {
+	.item {
+		float: left;
+		width: 25%;
+		padding: 0 12px;
+	}
+	.box {
+		position: relative;
+		overflow: hidden;
+		@include skew(-10deg, 0);
+		@include transformOrigin(bottom, center);
+		&:hover {
+			.picbg {
+				.mask {
+					bottom: 0;
+					height: 100%;
+				}
+				.border {
+					@include scale(1, 1);
+					@include opacity(1);
+				}
+			}
+			.txt {
+				bottom: 0;
+				height: 100%;
+			}
+		}
+	}
+	.picbg {
+		.bg {
+			padding-top: 177%;
+		}
+		.mask {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 55px;
+			height: 160px;
+			background: rgba(nth($color2, 7), 0.9);
+			@include transition(all 0.4s);
+		}
+		.border {
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			bottom: 25px;
+			left: 25px;
+			@include scale(2, 2);
+			@include opacity(0);
+			@include transition(all 0.4s);
+		}
+	}
+	.txt {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 55px;
+		height: 160px;
+		@include transition(all 0.4s);
+		a {
+			display: block;
+			height: inherit;
+			color: nth($color, 1);
+			text-align: center;
+			@include display();
+			@include alignItems();
+		}
+		hgroup {
+			display: block;
+			padding: 0 45px 0 65px;
+			@include skew(10deg, 0);
+			@include transformOrigin(bottom, center);
+		}
+		h2 {
+			line-height: 1.5em;
+			margin-bottom: 1em;
+			@include fspx($FS15);
+		}
+		p {
+			line-height: 1.6em;
+			@include fspx($FS10);
+		}
+	}
+}
+
+.pictxt-list-02 {
+	.item {
+		float: left;
+		width: 50%;
+		margin-bottom: 30px;
+		&:nth-child(2n+1){
+			padding-right: 35px;
+		}
+		&:nth-child(2n+2){
+			padding-left: 35px;
+		}
+	}
+	.box {
+		position: relative;
+		&:hover {
+			.pic {
+				.bg {
+					@include transform(translate(-15%, 0) skew(25deg, 0) scale(1.1, 1.1));
+				}
+			}
+		}
+		.pic {
+			width: 108px;
+			box-shadow: -2px 2px 6px #aaa;
+			overflow: hidden;
+			@include transform(skew(-25deg, 0));
+			.bg {
+				width: 140%;
+				padding-top: 80%;
+				@include transition(all 0.3s linear);
+				@include transform(translate(-15%, 0) skew(25deg, 0));
+			}
+		}
+		.btn-2 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(100px, -50%);
+			a {
+				text-align: right;
+				@include fspx($FS14);
+			}
+		}
+	}
+}
+
+
+.pictxt-list-03 {
+	margin: 0 -12px;
+	.item {
+		float: left;
+		width: 50%;
+		padding: 0 12px;
+		margin-bottom: 24px;
+	}
+	.box {
+		position: relative;
+		overflow: hidden;
+		.btn-2 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(70%, -50%);
+			a {
+				text-align: right;
+				@include fspx($FS14);
+			}
+		}
+		&:hover {
+			.txt {
+				.cont {
+					@include translate(0, -100%);
+				}
+			}
+		}
+	}
+	.picbg {
+		.bg {
+			padding-top: 51.4%;
+		}
+	}
+	.txt {
+		position: relative;
+		height: 60px;
+		.cont {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			@include translate(0, -60px);
+			@include transition(all 0.3s linear);
+		}
+		.h {
+			background: nth($color, 1);
+		}
+		.b {
+			background-color: nth($color5, 8);
+			@include gradients(left, (nth($color5, 7), nth($color5, 8)));
+			.comArticle {
+				height: 1.6em * 3;
+				line-height: 1.6em;
+			}
+		}
+	}
+}
+
+
+.pictxt-list-04 {
+	.item {
+		float: left;
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	.box {
+		position: relative;
+		.pic {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			text-align: right;
+			.img {
+				max-width: 100px;
+				max-height: 55px;
+				margin-bottom: 10px;
+			}
+			.line-box-01 {
+				float: right;
+			}
+		}
+		.txt {
+			margin-left: 100px;
+			padding: 0 25px;
+			.title {
+				margin-bottom: 10px;
+			}
+			.comArticle2 {
+				margin-bottom: 10px;
+			}
+			.btns {
+				.btn-2 {
+					float: right;
+					a {
+						width: auto;
+						height: 30px;
+						line-height: 30px;
+						@include fspx($FS14);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-05 {
+	.item {
+		float: left;
+		width: 50%;
+		&:nth-child(2n+1) {
+			padding-right: 30px;
+		}
+		&:nth-child(2n+2) {
+			padding-left: 30px;
+		}
+	}
+	.box {
+		position: relative;
+		.icon {
+			float: left;
+			width: 50px;
+		}
+		.txt {
+			padding-left: 70px;
+			.title {
+				margin-bottom: 5px;
+			}
+			.comArticle {
+				p {
+					span {
+						margin-right: 6em;
+					}
+					&:nth-child(2){
+						padding-left: 3em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-06 {
+	.item {
+		margin-bottom: 30px;
+	}
+	.box {
+		position: relative;
+		.b-title {
+			margin-bottom: 10px;
+			color: nth($color6, 6);
+			@include fspx($FS18);
+		}
+		.pic {
+			float: left;
+			width: 50%;
+			.bg {
+				padding-top: 55%;
+			}
+		}
+		.txt {
+			float: right;
+			width: 50%;
+			padding: 0 0 0 35px;
+			.comArticle {
+				line-height: 1.6em;
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-07 {
+	.item {
+		/*
+		float: left;
+		width: 50%;
+		padding: 0 30px 0 0;
+		&.w100 {
+			width: 100%;
+		}
+		*/
+		margin-bottom: 40px;
+	}
+	.box {
+		position: relative;
+		.txt {
+			.title {
+				margin-bottom: 5px;
+				//text-align: center;
+			}
+			.comArticle {
+				p {
+					span {
+						margin-right: 6em;
+					}
+					&:nth-child(2){
+						padding-left: 3em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.video {
+	position: relative;
+	& + .video-mask {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		background: rgba(nth($color, 2), 0.3);
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			max-width: 50%;
+			max-height: 50%;
+			@include translate(-50%, -50%);
+		}
+	}
+}
+
+
+.news-list {
+	.item {
+		margin-bottom: 30px;
+	}
+	.box {
+		background: nth($color, 1);
+		padding: 15px 100px 15px 20px;
+		box-shadow: 0 2px 10px rgba(nth($color, 3), 0.3);
+		@include transition(all 0.3s linear);
+		.comTxt {
+			height: auto;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+		.comTxt2 {
+			position: relative;
+			padding: 0;
+			.comArticle {
+				line-height: 1.4em;
+				color: nth($color3, 1);
+				margin-bottom: 0;
+			}
+			.more2 {
+				position: absolute;
+				right: -110px;
+				top: 0;
+			}
+		}
+		&:hover {
+			background-color: nth($color5, 8);
+			@include gradients(left, (nth($color5, 7), nth($color5, 8)));
+			@include translate(-10px, 0);
+			.comTxt {
+				h2,
+				h3 {
+					color: nth($color, 1);
+					a {
+						color: nth($color, 1);
+					}
+				}
+				h2 {
+					font-weight: bold;
+				}
+			}
+			.comTxt2 {
+				.comArticle {
+					color: nth($color, 1);
+				}
+				.more2 {
+					svg {
+						path:nth-child(3) {
+							display: block !important;
+						}
+						path:nth-child(4) {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.news-list2 {
+	border: 3px solid nth($color7, 3);
+	padding: 0 12px;
+	ul {
+		li {
+			color: nth($color2, 6);
+			padding: 10px 0;
+			border-bottom: 1px dashed nth($color7, 3);
+			&:last-child {
+				border-bottom: none;
+			}
+			a {
+				color: nth($color2, 6);
+				&:hover {
+					text-decoration: underline;
+					font-weight: bold;
+				}
+			}
+			h2 {
+				line-height: 1.4em;
+				overflow: hidden;
+				@include fspx($FS12);
+			}
+			p {
+				line-height: 1.4em;
+				overflow: hidden;
+				@include fspx($FS10);
+			}
+		}
+	}
+}
+
+
+.news-list3 {
+	.item {
+		margin-bottom: 25px;
+		.box {
+			.h {
+				position: relative;
+				line-height: 32px;
+				padding: 0 10px;
+				background: nth($color7, 4);
+				.angle-down {
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					width: 0;
+					height: 0;
+					border-top: 8px solid nth($color2, 3);
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					@include translate(0, -50%);
+				}
+			}
+			.b {
+				padding: 10px 0;
+				display: none;
+			}
+		}
+	}
+}
+
+.diagram-list {
+	box-shadow: 0 10px 20px rgba(nth($color, 2), 0.5);
+	.dl-hd1 {
+		height: 68px;
+		padding: 0 25px;
+		color: nth($color, 1);
+		background: nth($color3, 1);
+		@include fspx($FS17);
+		ul {
+			height: inherit;
+		}
+		li {
+			float: left;
+			width: 22%;
+			height: inherit;
+			cursor: pointer;
+			@include display();
+			@include alignItems();
+			@include justifyContent();
+			&:last-child {
+				width: 34%;
+			}
+			&.three {
+				width: 33.333333%;
+			}
+			.dh-item {
+				position: relative;
+				width: 100%;
+				height: 34px;
+				line-height: 34px;
+				text-align: center;
+				i {
+					font-style: normal;
+				}
+			}
+			.gradientBorder2 {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				@include scale(1.2, 1.2);
+				@include transition(all 0.3s);
+				@include opacity(0);
+			}
+			&:hover,
+			&.active {
+				.dh-item {
+					color: nth($color3, 2);
+				}
+				.gradientBorder2 {
+					@include scale(1, 1);
+					@include opacity(1);
+				}
+			}
+		}
+	}
+	.dl-hd2 {
+		padding: 25px;
+		background-color: nth($color, 1);
+		li {
+			float: left;
+			width: 20%;
+			height: 46px;
+			line-height: 46px;
+			color: nth($color3, 4);
+			box-shadow: 0 0 0 1px nth($color3, 4);
+			text-align: center;
+			cursor: pointer;
+			@include fspx($FS10);
+			&.active,
+			&:hover {
+				color: nth($color, 1);
+				background: nth($color3, 4);
+			}
+			i {
+				font-style: normal;
+			}
+		}
+	}
+	.dl-bd {
+		background-color: nth($color, 1);
+		.diagram {
+			table {
+				border: none;
+				background-repeat: no-repeat;
+				background-position: left top;
+				background-image: url(../images/pendant-07.png);
+				td {
+					padding: 15px;
+					line-height: 1.4em;
+					text-align: center;
+					font-weight: bold;
+					border: 0;
+					border-bottom: 1px solid nth($color7, 6);
+					@include fspx($FS18);
+				}
+				thead {
+					td {
+						color: nth($color7, 7);
+					}
+					&.bg {
+						td {
+							height: 68px;
+							color: nth($color, 1);
+							background: nth($color3, 1);
+							@include fspx($FS17);
+						}
+					}
+				}
+				tbody {
+					tr {
+						td {
+							color: nth($color7, 8);
+							background: nth($color, 1);
+							&:first-child {
+								color: nth($color7, 7);
+							}
+							.up,
+							.down {
+								display: inline-block;
+								margin-right: 4px;
+								img {
+									vertical-align: middle;
+									margin-top: -2px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.info-list {
+	li {
+		float: left;
+		width: 16.6666666%;
+		text-align: center;
+		h2 {
+			line-height: 1.4em;
+			color: nth($color3, 6);
+			@include fspx($FS48);
+		}
+		p {
+			line-height: 1.4em;
+			color: nth($color, 1);
+			@include fspx($FS18);
+		}
+	}
+}
+
+
+
+.body-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(nth($color, 2), 0.47);
+}
+
+
+.line-01 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 18px;
+		height: 3px;
+		background: nth($color, 1);
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-02 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 90px;
+		height: 1px;
+		background: nth($color2, 3);
+		@include gradients(left, (rgba(nth($color2, 2), 1), rgba(nth($color2, 3), 1), rgba(nth($color2, 2), 1)));
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-03 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 24px;
+		height: 2px;
+		background: nth($color6, 7);
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-04 {
+	height: 2px;
+	background-image: url(../images/line3.png);
+	background-repeat: repeat;
+	background-position: center;
+	background-size: auto 100%;
+}
+
+
+.pdf-hd {
+	line-height: 40px;
+	border-radius: 4px;
+	padding: 0 10px;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	background-color: rgba(nth($color2, 2), 1);
+	@include gradients(left, (rgba(nth($color2, 2), 1) 0, rgba(nth($color2, 3), 1) 50%, rgba(nth($color2, 2), 1) 100%));
+	.l {
+		float: left;
+		@include fspx($FS16);
+		i {
+			font-size: 200%;
+			margin-right: 10px;
+		}
+		a {
+			display: block;
+			color: nth($color, 1);
+			@include display();
+			@include alignItems();
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.r {
+		float: right;
+		@include fspx($FS12);
+	}
+}
+.pdf-bd {
+	border-radius: 4px;
+	padding: 15px;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	background-color: rgba(nth($color2, 2), 1);
+	@include gradients(left, (rgba(nth($color2, 2), 1) 0, rgba(nth($color2, 3), 1) 50%, rgba(nth($color2, 2), 1) 100%));
+	.pdf-content {
+		border-radius: 4px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: nth($color, 1);
+		background-image: url(../images/pdf-bg-01.jpg);
+		p {
+			color: nth($color, 2);
+			padding: 20px;
+			a {
+				color: nth($color, 4);
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.scroll-load {
+	text-align: center;
+}
+
+
+.page-bg-1 {
+	background-image: url(../images/bg6.jpg);
+}
+.page-bg-2 {
+	background-image: url(../images/bg7.jpg);
+}
+.page-bg-3 {
+	background-image: url(../images/bg8.jpg);
+}
+.page-bg-4 {
+	background-image: url(../images/bg9.jpg);
+}
+.page-bg-5 {
+	background-image: url(../images/bg10.jpg);
+}
+.page-bg-6 {
+	background-image: url(../images/bg11.jpg);
+}
+.page-bg-7 {
+	background-image: url(../images/bg12.jpg);
+}
+.page-bg-8 {
+	background-image: url(../images/bg13.jpg);
+}
+.page-bg-9 {
+	background-image: url(../images/bg14.jpg);
+}
+.page-bg-10 {
+	background-image: url(../images/bg15.jpg);
+}
+.page-bg-11 {
+	background-image: url(../images/bg16.jpg);
+}
+.page-bg-12 {
+	background-image: url(../images/bg17.jpg);
+}
+.page-bg-13 {
+	background-image: url(../images/bg18.jpg);
+}
+.page-bg-14 {
+	background-image: url(../images/bg19.jpg);
+}
+
+

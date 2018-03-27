@@ -1,0 +1,31 @@
+<div class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/tradeplatform"><span><svg class="svg-btnBg svg-ele"></svg>MataTrader 4</span></a></li>
+			<{if $active == "mt4intro"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/mt4intro"><span>MetaTrader 4</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/tradeplatform"><span><svg class="svg-btnBg svg-ele"></svg>MT4 Devices</span></a></li>
+			<{if $active == "windows"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/mt4/windows"><span>Windows</span></a></li>
+			<{if $active == "ios"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/mt4/ios"><span>Iphone / IPad </span></a></li>
+			<{if $active == "android"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/mt4/android"><span>Android</span></a></li>
+			<{if $active == "linux"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/mt4/linux"><span>Linux</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</div>
+
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="MetaTrader 4">
+			<option <{if $active == "mt4intro"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/mt4intro">MataTrader 4</option>
+		</optgroup>
+		<optgroup label="Download Platform">
+			<option <{if $active == "windows"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/mt4/windows">Windows</option>
+			<option <{if $active == "ios"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/mt4/ios">Iphone / IPad</option>
+			<option <{if $active == "android"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/mt4/android">Android</option>
+			<option <{if $active == "linux"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/mt4/linux">Linux</option>
+		</optgroup>
+	</select>
+</div>

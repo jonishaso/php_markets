@@ -1,0 +1,536 @@
+	<{include file="social.htm"}>
+	<script type="text/javascript">
+		function livechat(){
+			//LC_API.open_chat_window();
+			var is_minimized = LC_API.chat_window_minimized();
+			if(is_minimized){
+				LC_API.open_chat_window();
+			}else{
+				LC_API.minimize_chat_window();
+			}
+		}
+		/*function searchFunc(){
+			if(document.getElementById('sid').style.display == 'none'){
+				document.getElementById('sid').style.display = '';
+			}else{
+				document.getElementById('sid').style.display = 'none';
+			}
+		}*/
+	</script>
+	<section class="top-bar">
+		<div class="wrapper clearfix">
+			<div class="hd"><a href="<{$http_root_www}>../en"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" /></a></div>
+			<div class="bd clearfix">
+				<div class="btn-1 com-div"><a href="<{$http_root_www}>../en/demoaccount">Demo Account</a></div>
+				<div class="btn-1 com-div">
+					<{if $camp}>
+						<a href="http://personal.ruizeanmarkets.com/Registration/Main/FirstStep?camp=<{$camp}>">Live Account</a></div>
+					<{else}>
+						<a href="http://personal.ruizeanmarkets.com/Registration/Main/FirstStep">Live Account</a></div>				
+					<{/if}>
+
+				<!--<div class="btn-1 com-div" id="sid" style="display:none"><input type="text" placeholder="搜索" name="search" id="search" /></div>
+				<div class="bar-search com-div"><a onclick="searchFunc();" style="cursor: pointer; cursor: hand;"><i class="fa fa-search"></i></a></div>-->
+				<div class="bar-nav com-div clearfix">
+					<ul class="clearfix">
+						<!--<li><a onclick="livechat();" style="cursor: pointer; cursor: hand;">Online Support</a></li>-->
+						<li><a href="https://personal.ruizeanmarkets.com/Account/LogOn?ReturnUrl=%2f">Clients Login</a></li>
+						
+					</ul>
+				</div>
+				<!-- 语言切换 -->
+				<div class="lang com-div">
+					<div class="lang-box clearfix">
+						<div class="lang-hd"><a><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em><i class="fa fa-angle-down"></i></span></div></a></div>
+						<div class="lang-bd">
+							<ul class="clearfix">
+								<li><a href="<{$smarty.server.REQUEST_URI}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em></span></div></a></li>
+								<li><a href="<{if $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/1/'}><{$http_root_www}>../zh-cn/newsList<{elseif $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/2/'}><{$http_root_www}>../zh-cn/marketnews<{elseif $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/3/'}><{$http_root_www}>../zh-cn/eduList<{elseif $smarty.server.REQUEST_URI|strpos:'en'}><{$smarty.server.REQUEST_URI|replace:'en':'zh-cn'}><{else}><{$smarty.server.REQUEST_URI}>zh-cn/<{/if}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em></i></span></div></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 头部汉堡菜单按钮 -->
+				<div class="hamburger com-div">
+					<span class="clearfix">
+						<i></i>
+						<i></i>
+						<i></i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 头部汉堡菜单 -->
+	
+	<!-- 新增的手机版导航  -->
+	<div class="top-nav-list nav5 mobile clearfix">
+		<div class="cont-top">
+			<ul class="clearfix">
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>">Home</a></div>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/about">Corporate Profile <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Ruizean Markets</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/about2">About Us</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/whychooseus">Why Choose Us</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/serverInfo">Trading Servers</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/contactus">Contact Us</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Regulation</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/authority">Regulation & License</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/claimfile">Disclosure Documents</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/product">Our Products <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Account Features</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/acctypes">Trading Account Types</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/handicap">Spreads & Commissions</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/interestrate">Swaps</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/vpsHosting">VPS Hosting</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Trading Products</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/fexchange">Forex</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/stockindex">Indices</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/commodity">Commodities</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Other Products</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/risk" target="_blank">FX Risk Management</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/tradeplatform">Trading Platform <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>MetaTrader 4</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/mt4intro">Metatrader 4</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Download Platform</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/mt4/windows">Windows</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/mt4/ios">iPhone/iPad</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/mt4/android">Android</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/mt4/linux">Linux</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/cobrand">Partnership <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Referral Programs</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/ib">Introducing Broker</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Broker Solutions</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/whitecoop">White Label Partner</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/cusresource">Client Resources <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Account Management</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/deposit">Deposit Funds</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/withdraw">Withdraw Funds</a></li>
+								<!--<li class="li3 no3"><a href="<{$http_root_www}>../en/logReg">Client Login</a></li>-->
+							<!-- </ul> -->
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>Client Knowledge Base</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/financialCal">Economic Calendar</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>../en/edu">Education<span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Education Tools</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/terminology">Glossary</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>../en/exchangeRate">Live Rates</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="cont-bottom">
+			<div class="lang">
+				<div class="lang-box clearfix">
+					<div class="lang-hd"><a><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em><i class="fa fa-angle-down"></i></span></div></a></div>
+					<div class="lang-bd">
+						<ul class="clearfix">
+							<li><a href="<{if $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/1/'}><{$http_root_www}>../zh-cn/newsList<{elseif $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/2/'}><{$http_root_www}>../zh-cn/marketnews<{elseif $smarty.server.REQUEST_URI|strpos:'/en/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/3/'}><{$http_root_www}>../zh-cn/eduList<{elseif $smarty.server.REQUEST_URI|strpos:'en'}><{$smarty.server.REQUEST_URI|replace:'en':'zh-cn'}><{else}><{$smarty.server.REQUEST_URI}>zh-cn/<{/if}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em></span></div></a></li>
+							<li><a href="<{$smarty.server.REQUEST_URI}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em></i></span></div></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="share clearfix">
+				<a href="" class="link s-facebook"></a>
+				<a href="" class="link s-twitter"></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-nav-mobile">
+		<ul class="clearfix">
+			<li><a href="<{$http_root_www}>../en/liveaccount">Open Live Account</a></li>
+			<li><a href="<{$http_root_www}>../en/demoaccount">Open Demo Account</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="top-nav-list pc nav2 clearfix">
+		<div class="wrapper clearfix">
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/about"><svg class="svg-hdTitle4 svg-ele" data-txt="Corporate Profile"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/about">Ruizean Markets</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/about2">About Us</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/whychooseus">Why Choose Us</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/serverInfo">Trading Servers</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/contactus">Contact Us</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/about">Regulation</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/authority">Regulation & License</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/claimfile">Disclosure Documents</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/product"><svg class="svg-hdTitle4 svg-ele" data-txt="Our Products"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/product">Account Features</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/acctypes">Trading Account Types</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/handicap">Spreads & Commissions</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/interestrate">Swaps</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/vpsHosting">VPS Hosting</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/product">Trading Products</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/fexchange">Forex</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/stockindex">Indices</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/commodity">Commodities</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/product">Other Products</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/risk" target="_blank">FX Risk Management</a></li>
+							</ul>
+								
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="Trading Platform"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/tradeplatform">MetaTrader 4</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/mt4intro">Metatrader 4</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/tradeplatform">Download Platform</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/mt4/windows">Windows</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/mt4/ios">iPhone/iPad</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/mt4/android">Android</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/mt4/linux">Linux</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="Partnership"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/cobrand">Referral Programs</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/ib">Introducing Broker</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/cobrand">Broker Solutions</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/whitecoop">White Label Partner</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/ls">Liquidity Solutions</a></li>								
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="Client Resources"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/cusresource">Account Management</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/deposit">Deposit Funds</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/withdraw">Withdraw Funds</a></li>
+								<!--<li class="c"><a href="<{$http_root_www}>../en/logReg">Client Login</a></li>-->
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/cusresource">Client Knowledge Base</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/financialCal">Economic Calendar</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>../en/edu"><svg class="svg-hdTitle4 svg-ele" data-txt="Education"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>../en/edu">Education Tools</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/terminology">Glossary</a></li>
+								<li class="c"><a href="<{$http_root_www}>../en/exchangeRate">Live Rates</a></li>
+							</ul>
+						</div>
+					</section>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<header class="header<{if $insHeader}> insHeader<{/if}>">
+		<div class="wrapper clearfix">
+			<h1 class="logo"><a href="<{$http_root_www}>../en/" title=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" /></a></h1>
+			<nav class="nav">
+				<ul class="clearfix">
+					<li><a href="<{$http_root_www}>../en/">Home</a></li>
+					<li><a href="<{$http_root_www}>../en/about" data-nav3="item-about">Corporate Profile</a></li>
+					<li><a href="<{$http_root_www}>../en/product" data-nav3="item-product">Our Products</a></li>
+					<li><a href="<{$http_root_www}>../en/tradeplatform" data-nav3="item-platform">Trading Platform</a></li>
+					<li><a href="<{$http_root_www}>../en/cobrand" data-nav3="item-co-brand">Partnership</a></li>
+					<li><a href="<{$http_root_www}>../en/cusresource" data-nav3="item-cus-resource">Client Resources</a></li>
+					<li><a href="<{$http_root_www}>../en/edu" data-nav3="item-edu">Education</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="header-nav-list nav3">
+		<div class="wrapper">
+			<div class="item clearfix" id="item-about">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/about"><svg class="svg-hdTitle4 svg-ele" data-txt="Ruizean Markets"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/about2">About Us</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/serverInfo">Trading Servers</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/whychooseus">Why Choose Us</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/contactus">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/about"><svg class="svg-hdTitle4 svg-ele" data-txt="Regulation"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/authority">Regulation & License</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/claimfile">Disclosure Documents</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+			<div class="item clearfix" id="item-product">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/product"><svg class="svg-hdTitle4 svg-ele" data-txt="Account Features"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/acctypes">Trading Account Types</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/handicap">Spreads & Commissions</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/interestrate">Swaps</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/vpsHosting">VPS Hosting</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/product"><svg class="svg-hdTitle4 svg-ele" data-txt="Trading Products"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/fexchange">Forex</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/commodity">Commodities</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/stockindex">Indices</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/product"><svg class="svg-hdTitle4 svg-ele" data-txt="Other Products"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/risk" target="_blank">FX Risk Management</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix" id="item-platform">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="MetaTrader 4"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/mt4intro">MetaTrader 4</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="Download Platform"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/mt4/windows">Windows</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/mt4/ios">iPhone/iPad</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/mt4/android">Android</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/mt4/linux">Linux</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+			<div class="item clearfix" id="item-co-brand">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="Referral Programs"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/ib">Introducing Broker</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="Broker Solutions"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/whitecoop">White Label Partner</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/ls">Liquidity Solutions</a></li>																
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd2">
+						<h2><a href=""><svg class="svg-hdTitle5 svg-ele" data-txt="Open account, Start experiencing"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<div class="apply-link clearfix">
+							<div class="btn-2 white"><a href="<{$http_root_www}>../en/ib"><div class="bg"></div><span>Register New IB <i class="fa fa-angle-double-right"></i></span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix" id="item-cus-resource">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="Account Management"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/deposit">Deposit Funds</a></li>
+							<!--<li class="c"><a href="<{$http_root_www}>../en/logReg">Client Login</a></li>-->
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/withdraw">Withdraw Funds</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="Client Knowledge Base"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/financialCal">Economic Calendar</a></li>
+						</ul>
+						<ul class="clearfix">
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix" id="item-edu">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>../en/edu"><svg class="svg-hdTitle4 svg-ele" data-txt="Education Tools"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>../en/terminology">Glossary</a></li>
+							<li class="c"><a href="<{$http_root_www}>../en/exchangeRate">Live Rates</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				<{include file='logr.htm'}>
+			</div>
+		</div>
+	</section>

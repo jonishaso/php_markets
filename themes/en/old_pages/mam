@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-9 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/product">Our Products</a><em>&gt;</em><a href="<{$http_root_www}>../en/mam">Multi Account Manager (MAM)</a></p></div>
+				<{include file='productHeader.htm'}>
+				<div class="main4">
+					<div class="comTitle">Multi Account Manager (MAM)</div>
+					<div class="mainBd">
+						<article class="comArticle">
+							<p>With the need for simultaneous access to multiple MT4 trading accounts for industry professionals, MT4 multiple accounts terminal is the best solution. Whether you are an investment account manager or manage multiple individual accounts, multi-account management allows traders to manage multiple MT4 accounts simultaneously from one terminal under a master account. </p>
+							<p>&nbsp;</p>
+							<p>You can log into a single MT4 platform and have all of your accounts online at the same time, manage client funds from multiple accounts and automatically assign transactions to individual customer accounts. </p>
+							<p>&nbsp;</p>
+							<p>Depending on the individual distribution, all orders can be carried out from the real-time transaction management software in MT4. When combined with our deep market liquidity and straight-through mode, multi-account management has become a very powerful trading tool for trading multiple accounts simultaneously.</p>
+							<p>&nbsp;</p>
+							<p>We welcome questions related to our platform and if you need more advice on multiple account management (MAM), please submit the following inquiry form; we will reply to you as soon as possible.</p>
+							<p>&nbsp;</p>
+						</article>
+					</div>
+					<div class="mainHd">
+					</div>
+				</div>
+				<aside class="side4">
+					<section class="form-apply-side form-box" style="display:block;">
+						<div class="form-box-bd">
+							<div class="box1 side-box1">
+								<div class="logo"><a href=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Apply for MAM</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<form class="form1" id="formid2">
+										<div class="row clearfix">
+											<div class="col-02 col">
+												<input type="text" placeholder="First Name*" required class="form-input1" name="firstName" id="firstName"/>
+											</div>
+											<div class="col-02 col">
+												<input type="text" placeholder="Last Name*" required class="form-input1" name="lastName" id="lastName"/>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="email" placeholder="Email*" required class="form-input1" name="email" id="email"/>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="tel" placeholder="Telephone*" required class="form-input1" name="telephone" id="telephone"/>
+											</div>
+										</div>
+										<div class="row"><div class="col-01 col"><div class="space-line"></div></div></div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<div class="form-select1">
+													<select class="form-select1-select2" name="country" id="country">
+														<{foreach from=$countriesArr item=item key='key'}>
+															<option value="<{$key}>"><{$item}></option>
+														<{/foreach}>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="area" placeholder="Location" class="form-input1" name="area" id="area"/>
+											</div>
+											<!--<div class="col-02 col">
+												<div class="form-select1">
+													<select class="form-select1-select2">
+														<option value="1">省</option>
+														<option value="1">省1</option>
+														<option value="1">省2</option>
+														<option value="1">省3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-02 col">
+												<div class="form-select1">
+													<select class="form-select1-select2">
+														<option value="1">市</option>
+														<option value="1">市1</option>
+														<option value="1">市2</option>
+														<option value="1">市3</option>
+													</select>
+												</div>
+											</div>-->
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<textarea placeholder="Message" required class="form-textarea1" name="message" id="message"></textarea>
+											</div>
+										</div>
+										<div class="row row-submit clearfix">
+											<div class="col-01 col">
+												<button type="submit" class="form-submit1">Submit</button>
+												<p class="send-result" style="color:#c00;font-size:14px;text-align:center;padding:5px;"></p>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="box2 side-box2" style="display:none;">
+								<div class="logo"><a href=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<hgroup>
+										<h4>It will be closed automic, also you can click close button to close it.</h4>
+									</hgroup>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formid2").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var country = form.country.value;
+				var area = form.area.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone+ '&country='+ country + '&area='+ area;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/mamform",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

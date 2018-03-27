@@ -1,0 +1,72 @@
+@charset "utf-8";
+.vpsHosting {
+	position: relative;
+	.side4 {
+		position: relative;
+		padding-bottom: 240px;
+		.pendant-01 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 210px;
+			img {
+				max-width: none;
+			}
+		}
+	}
+	.form-apply-side {
+		margin-bottom: 20px;
+		.box1 {
+			.hd {
+				margin: 0 25px 20px;
+			}
+			.logo {
+				max-width: 34px;
+				margin: 0 auto 15px;
+			}
+		}
+	}
+	.quick-link {
+		.hd {
+			margin-bottom: 10px;
+			.icon {
+				float: left;
+				width: 40%;
+				height: 40px;
+				line-height: 20px;
+				text-align: center;
+				color: nth($color6, 7);
+				@include fspx($FS40);
+			}
+			.cont {
+				float: left;
+				width: 50%;
+				line-height: 20px;
+				text-align: center;
+				color: nth($color6, 7);
+				@include fspx($FS12);
+			}
+		}
+		.pictxt-list-02 {
+			.item {
+				float: none;
+				width: 100%;
+				margin-bottom: 5px;
+				&:nth-child(2n+1) {
+					padding-right: 0;
+				}
+				&:nth-child(2n+2) {
+					padding-left: 0;
+				}
+			}
+		}
+		.btns {
+			.btn-2 {
+				margin-bottom: 10px;
+				a {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-5 insMain">
+		<div class="eduList">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>edu">外汇教育</a><em>&gt;</em><a href="<{$http_root_www}>eduList">教育机构活动</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<div class="main2">
+					<div class="comTitle">教育机构活动</div>
+					<div class="notice clearfix">
+						<div class="h">重要通知：</div>
+						<div class="b clearfix">
+							<ul class="slides">
+								<{foreach from=$notice item=item}>
+									<li class="clearfix">
+										<div class="m1 clearfix">
+											<span class="title"><{if $item.sourceHtml}><a href="<{$item.sourceHtml}>" target="_blank"><{else}><a href="javascript:void(0);"><{/if}><{$item.title}></a></span>
+											<span class="date"><i><{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}></i><i><{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></i></span>
+										</div>
+										<div class="m2">
+											<{if $item.sourceHtml}><a href="<{$item.sourceHtml}>" target="_blank"><{else}><a href="javascript:void(0);"><{/if}>查看更多</a>
+										</div>
+									</li>
+								<{/foreach}>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="pictxt-list-03 clearfix">
+						<{foreach from=$edulist item=item}>
+							<div class="item">
+								<div class="box">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$UPLOAD_PATH}><{$item.imageUrl}>);"></div></div>
+									<div class="txt">
+										<div class="cont">
+											<div class="h comTxt">
+												<hgroup>
+													<h2><a href="<{$http_root_www}>newsDetail/3/<{$item.id}>"><{$item.title}></a></h2>
+													<h3><span>By <{$item.author}> On</span><span><{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}></span><span><{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></span></h3>
+												</hgroup>
+											</div>
+											<div class="b comTxt2">
+												<article class="comArticle">
+													<{$item.intro}>
+												</article>
+												<div class="more"><a href="<{$http_root_www}>newsDetail/3/<{$item.id}>">查看更多</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<{/foreach}>
+					</div>
+					<div class="scroll-load" id="loading"><a href="javascript:void(0);"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/btn-01.png" /></a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script>
+	
+	var pageCount = '<{$page}>';
+	var pageNo = 1; //设置当前页数，全局变量
+	var state = true;
+	
+	$(function () {
+		var stop=true; 
+		$(window).scroll(function(){
+		    if(($('.footer').offset().top - $(window).scrollTop()) / $(window).height() <= 0.9 && stop == true){ 
+		    	pageNo++;
+		    	if(pageNo < pageCount){
+		    		stop = true;
+		    	}else if(pageNo == pageCount){
+		    		stop = true;
+		    		$('.scroll-load').hide();
+		    	}else if(pageCount == 1){
+		    		stop = true;
+		    		$('.scroll-load').hide();
+		    	}
+
+		        if(stop==true){ 
+		            stop=false;
+		            //var dd = '<{$ajaxUrl}>page='+pageNo;
+		            //alert("<{$ajaxUrl}>"); 
+		            $.post("<{$ajaxUrl}>"+pageNo, {start:1, n:50},function(txt){ 
+						if(txt != ''){
+							var txt = $('<div class="pictxt-list-03 clearfix">'+ txt +'</div>');
+							$("#loading").before(txt);
+							stop=true; 
+						}
+		            },"text"); 
+		        } 
+		    } 
+		});
+	});
+	</script>
+</body>
+</html>

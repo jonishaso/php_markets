@@ -1,0 +1,9 @@
+<{foreach from=$symbols item=item key=key}>
+										<{if $key < 5}>
+											<tr>
+												<td><{$item.symbol|upper}></td>
+												<td><{if $item.bidarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.bid}></td>
+												<td><{if $item.askarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.ask}></td>
+											</tr>
+										<{/if}>
+									<{/foreach}>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-9 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>product">产品介绍</a><em>&gt;</em><a href="<{$http_root_www}>mam">MAM多账户管理</a></p></div>
+				<{include file='productHeader.htm'}>
+				<div class="main4">
+					<div class="comTitle">多账户管理（MAM）</div>
+					<div class="mainBd">
+						<article class="comArticle">
+							<p>针对需要同时访问多个MT4交易账户的行业专业人士，MT4多账户终端是最佳的解决方案。无论是作为其他投资者的账户管理员，还是操作个人的多个账户，多账户管理允许交易员从一个终端上的主账户内为多个MT4账户执行统一订单，并自动分配到您账户下的客户账户内。根据不同的个性化分配方式，所有的订单都能从一个MT4的软件中进行实时的交易管理。</p>
+							<p>&nbsp;</p>
+							<p>MetaTrader 4 多账户终端内置于MT4的服务器，着重强调交易的执行速度和可靠性。当与我们深度的市场流动性和直通式交易模式结合时，多账户管理成为一个非常强大的交易工具，从客户端同时操作多个账户的交易。</p>
+							<p>&nbsp;</p>
+							<p>欢迎您咨询有关我们平台的所有问题，如果您需要咨询更多关于多帐户管理（MAM），请您提交以下的咨询表格，我们会尽快给您答复。</p>
+							<p>&nbsp;</p>
+						</article>
+					</div>
+					<div class="mainHd">
+					</div>
+				</div>
+				<aside class="side4">
+					<section class="form-apply-side form-box" style="display:block;">
+						<div class="form-box-bd">
+							<div class="box1 side-box1">
+								<div class="logo"><a href=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>申请MAM多账户</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<form class="form1" id="formid2">
+										<div class="row clearfix">
+											<div class="col-02 col">
+												<input type="text" placeholder="名*" required class="form-input1" name="firstName" id="firstName"/>
+											</div>
+											<div class="col-02 col">
+												<input type="text" placeholder="姓*" required class="form-input1" name="lastName" id="lastName"/>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="email" placeholder="电子邮箱*" required class="form-input1" name="email" id="email"/>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="tel" placeholder="联系电话*" required class="form-input1" name="telephone" id="telephone"/>
+											</div>
+										</div>
+										<div class="row"><div class="col-01 col"><div class="space-line"></div></div></div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<div class="form-select1">
+													<select class="form-select1-select2" name="country" id="country">
+														<{foreach from=$countriesArr item=item key='key'}>
+															<option value="<{$key}>"><{$item}></option>
+														<{/foreach}>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<input type="area" placeholder="地区" class="form-input1" name="area" id="area"/>
+											</div>
+											<!--<div class="col-02 col">
+												<div class="form-select1">
+													<select class="form-select1-select2">
+														<option value="1">省</option>
+														<option value="1">省1</option>
+														<option value="1">省2</option>
+														<option value="1">省3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-02 col">
+												<div class="form-select1">
+													<select class="form-select1-select2">
+														<option value="1">市</option>
+														<option value="1">市1</option>
+														<option value="1">市2</option>
+														<option value="1">市3</option>
+													</select>
+												</div>
+											</div>-->
+										</div>
+										<div class="row clearfix">
+											<div class="col-01 col">
+												<textarea placeholder="留言" required class="form-textarea1" name="message" id="message"></textarea>
+											</div>
+										</div>
+										<div class="row row-submit clearfix">
+											<div class="col-01 col">
+												<button type="submit" class="form-submit1">提交</button>
+												<p class="send-result" style="color:#c00;font-size:14px;text-align:center;padding:5px;"></p>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="box2 side-box2" style="display:none;">
+								<div class="logo"><a href=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Ruizean Markets工作人员会尽快与您取得联系，请耐心等待。</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<hgroup>
+										<h4>5秒后自动关闭弹窗，或用户手动点击关闭按钮关闭。</h4>
+									</hgroup>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formid2").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var country = form.country.value;
+				var area = form.area.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone+ '&country='+ country + '&area='+ area;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>mamform",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('提交失败');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<form class="form1" action="?ctl=ibContact" method="post">
+	<div class="row clearfix">
+		<div class="col-02 col">
+			<input type="name" placeholder="名*" required class="form-input1" name="firstName" id="firstName"/>
+		</div>
+		<div class="col-02 col">
+			<input type="name" placeholder="姓*" required class="form-input1" name="lastName" id="lastName"/>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="email" placeholder="电子邮箱*" required class="form-input1" name="email" id="email"/>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="tel" placeholder="联系电话*" required class="form-input1" name="telephone" id="telephone"/>
+		</div>
+	</div>
+	<div class="row"><div class="col-01 col"><div class="space-line"></div></div></div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<div class="form-select1">
+				<select class="form-select1-select2" name="country" id="country">
+					<{foreach from=$countriesArr item=item key='key'}>
+						<option value="<{$key}>"><{$item}></option>
+					<{/foreach}>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="area" placeholder="地区" class="form-input1" name="area" id="area"/>
+		</div>
+		<!--<div class="col-02 col">
+			<div class="form-select1">
+				<select class="form-select1-select2">
+					<option value="1">省</option>
+					<option value="1">省1</option>
+					<option value="1">省2</option>
+					<option value="1">省3</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-02 col">
+			<div class="form-select1">
+				<select class="form-select1-select2">
+					<option value="1">市</option>
+					<option value="1">市1</option>
+					<option value="1">市2</option>
+					<option value="1">市3</option>
+				</select>
+			</div>
+		</div>-->
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<textarea placeholder="留言" class="form-textarea1" name="message" id="message"></textarea>
+		</div>
+	</div>
+	<div class="row row-submit clearfix">
+		<div class="col-01 col">
+			<button type="button" class="form-submit1" onclick="ajaxSub();">提交</button>
+		</div>
+	</div>
+</form>

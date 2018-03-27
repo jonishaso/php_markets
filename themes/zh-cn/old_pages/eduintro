@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-5 insMain">
+		<div class="videos">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>edu">外汇教育</a><em>&gt;</em><a href="<{$http_root_www}>eduintro">交易学院介绍</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<section class="main5 clearfix">
+					<div class="mainHd">
+						<div class="comTitle"><{$intro.title}></div>
+						<article class="comArticle">
+							<{$intro.content}>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script src='http://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-videos.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 922px ) {
+	.wrapper {
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.banner {
+		.scrollBtn {
+			display: none;
+		}
+		.txt-all {
+			.btns {
+				right: 30px;
+			}
+		}
+	}
+	.pictxt-list-01 {
+		.item {
+			width: 50%;
+			padding: 5px;
+		}
+		.picbg {
+			.bg {
+				padding-top: 100%;
+			}
+		}
+	}
+	.introduce-01 {
+		padding: 80px 0;
+		.pictxt-list-01 {
+			.item {
+				@include translate(0, 0);
+				@include opacity(1);
+			}
+		}
+	}
+	.introduce-02 {
+		padding: 0;
+		background: nth($color, 1);
+		overflow: hidden;
+		.pendant-02 {
+			display: none;
+		}
+		.hd {
+			position: static;
+			padding-left: 0;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			.title-p {
+				color: nth($color2, 1);
+			}
+		}
+		.bd {
+			.diagram-list {
+				position: static;
+				width: 100%;
+				margin-bottom: 40px;
+				@include translate(0, 0);
+			}
+			.info-list {
+				margin: 0 -30px;
+				padding: 30px;
+				background-image: url(../images/bg2.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+		}
+	}
+	.info-list {
+		li {
+			width: 33.3333333%;
+			margin-bottom: 15px;
+		}
+	}
+
+	.index-video {
+		padding: 80px 0;
+		margin-bottom: 0;
+		.hd {
+			position: static;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			.title-p {
+				display: none;
+			}
+			.btn-2 {
+				display: inline-block;
+			}
+		}
+		.bd {
+			.picbg {
+				float: none;
+				width: 100%;
+				.bg {
+					padding-top: 61.4%;
+				}
+				.video {
+					top: 0;
+					&+ .video-mask {
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.index-account {
+		margin-bottom: 0;
+		padding-bottom: 100px;
+		.pendant-03 {
+			display: none;
+		}
+		.hd {
+			position: static;
+			width: 100%;
+			padding-left: 0;
+			@include translate(0, 0);
+			.center {
+				display: block;
+				text-align: center;
+			}
+			h2 {
+				&:nth-child(2) {
+					margin-left: 0;
+				}
+			}
+		}
+		.bd {
+			width: 70%;
+		}
+		.account-changebtn {
+			display: inline-block;
+			.chb-item {
+				display: inline-block;
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+			}
+		}
+		.account-link {
+			position: absolute;
+			top: 100%;
+			bottom: auto;
+			right: 0;
+			left: auto;
+			padding-top: 15px;
+			.btn-2 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.footer-nav {
+		display: none;
+	}
+
+	.index-partner {
+		.bd {
+			padding: 0 40px;
+		}
+	}
+
+	.swiper-control1 {
+		.prev {
+			left: 0;
+		}
+		.next {
+			right: 0;
+		}
+	}
+	.index-platform-list {
+		.platform-item {
+			width: 33.333333%;
+		}
+	}
+
+	.notice {
+		display: none;
+	}
+	.exchangeRate {
+		.main2 {
+			.pendant-01 {
+				display: none;
+			}
+		}
+		.diagram-list,
+		.exchangeRate-data-list {
+			.pendant-02,
+			.pendant-03,
+			.pendant-05 {
+				display: none;
+			}
+		}
+	}
+
+	.quick-menu-mobile {
+		display: block;
+	}
+	.quick-menu-style2 {
+		display: none;
+	}
+	.index-platform {
+		.txt {
+			h2 {
+				svg {
+					&:nth-child(3) {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.mobile-nav {
+	display: none;
+}
+@media screen and (max-width: 768px ) {
+	body {
+		padding-bottom: 70px;
+	}
+	.footer-nav-mobile {
+		display: block;
+	}
+	.top-bar {
+		box-shadow: 0 0 4px nth($color, 3);
+		.hd {
+			float: none;
+			text-align: center;
+		}
+		.bd {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			.com-div {
+				display: none;
+				&.hamburger {
+					position: absolute;
+					top: 50%;
+					left: 15px;
+					display: block;
+					@include translate(0, -50%);
+					@include transition(all 0.3s);
+				}
+			}
+		}
+	}
+	.top-nav-list {
+		&.nav2 {
+			display: none !important;
+		}
+		&.nav5 {
+			@include translate(0, 0);
+		}
+	}
+	.banner {
+		.txt-all {
+			.txt1 {
+				.big-log {
+					width: 80%;
+				}
+				.btns {
+					display: none;
+				}
+			}
+		}
+	}
+	.introduce-01 {
+		padding: 40px 0;
+		.pendant-01 {
+			width: 35%;
+		}
+	}
+	.footer-copy {
+		padding: 30px 0;
+		.left {
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.right {
+			float: none;
+			width: 100%;
+		}
+		.right-left {
+			float: none;
+			width: 100%;
+			.share {
+				float: left;
+			}
+			.lang {
+				float: right;
+			}
+		}
+		.footer-logo {
+			display: none;
+		}
+		.footer-address {
+			float: none;
+			display: block;
+			width: 100%;
+			dl {
+				padding-left: 0;
+				padding-right: 20px;
+				width: 50%;
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	#livechat-compact-container {
+		display: none !important;
+	}
+
+
+	.pictxt-list-02 {
+		.box {
+			.pic {
+				width: 90px;
+			}
+			.btn-2 {
+				@include translate(50%, -50%);
+			}
+		}
+	}
+	.mainHd {
+		h2 {
+			svg {
+				max-height: 24px;
+			}
+		}
+	}
+
+	.side2 {
+		display: none;
+	}
+	.main2,
+	.main5,
+	.main3,
+	.main4,
+	.side4 {
+		float: none;
+		width: 100%;
+	}
+	.mobile-nav {
+		display: block;
+		margin-bottom: 30px;
+		select {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			color: nth($color2, 1);
+			border: 1px solid nth($color2, 1);
+			background: nth($color, 1);
+		}
+	}
+
+	.accountType {
+		.account-changeinfo {
+			width: 100%;
+		}
+	}
+	.comTable {
+		td {
+			padding: 4px;
+		}
+	}
+	.insMain {
+		padding: 30px 0;
+	}
+	.index-account {
+		.bd {
+			width: 100%;
+			padding: 20px 0;
+			.account-changeinfo {
+				position: relative;
+				top: auto;
+				right: auto;
+				width: 100%;
+				padding: 20px 0;
+				@include translate(0, 0);
+			}
+			.picbg {
+				float: left;
+				position: absolute;
+				top: 0;
+				left: -20px;
+				right: 10%;
+				bottom: 0;
+				width: auto;
+				.bg {
+					padding-top: 0;
+					height: 100%;
+				}
+			}
+		}
+		.account-changeinfo {
+			width: 80%;
+			right: 10%;
+			li {
+				padding: 8px 0;
+			}
+		}
+		.account-link {
+			right: 0;
+			left: 0;
+			text-align: center;
+			.btn-2 {
+				float: none;
+				display: inline-block;
+				margin-left: 0;
+			}
+		}
+		.btn-3 {
+			a {
+				width: auto;
+				&.theone {
+					height: auto;
+					line-height: 25px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	.introduce-02 {
+		.hd {
+			margin-bottom: 10px;
+			h2 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.index-partner {
+		.hd {
+			margin-bottom: 10px;
+		}
+	}
+}

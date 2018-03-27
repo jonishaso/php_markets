@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 600px ) {
+	.wrapper {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.pictxt-list-02 {
+		.item {
+			float: none;
+			width: 100%;
+			border-bottom: 1px solid nth($color2, 2);
+		}
+		.box {
+			.btn-2 {
+				left: auto;
+				right: 0;
+				@include translate(0, -50%);
+			}
+		}
+	}
+	.pictxt-list-03 {
+		margin: 0;
+		.item {
+			float: none;
+			width: 100%;
+			padding: 0;
+		}
+		.box {
+			&:hover {
+				.txt {
+					.cont {
+						@include translate(0, 0);
+					}
+				}
+			}
+		}
+		.txt {
+			height: auto;
+			.cont {
+				position: static;
+				@include translate(0, 0);
+			}
+		}
+	}
+	.pictxt-list-04 {
+		.box {
+			.txt {
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+	.logreg {
+		.mainHd {
+			width: 100%;
+			.line-02 {
+				display: none;
+			}
+		}
+	}
+	.financialCalendar {
+		.main2 {
+			.pendant-01 {
+				display: none;
+			}
+		}
+	}
+	.mt4 {
+		.picArticle {
+			.pic {
+				width: 100%;
+			}
+		}
+		.btns {
+			.btn-4 {
+				width: 100%;
+			}
+		}
+	}
+
+	.mt4Use {
+		.maodian {
+			.mainBd {
+				.stpimg {
+					float: left;
+					width: 40%;
+					padding: 10px;
+				}
+				.comArticle {
+					padding-left: 42%;
+				}
+			}
+		}
+	}
+
+	.comTxt2 {
+		.more2 {
+			&:after {
+				content: '';
+				clear: both;
+				height: 0;
+			}
+			a {
+				float: left;
+			}
+		}
+	}
+	.news-list {
+		.box {
+			padding: 10px;
+			.comTxt2 {
+				.more2 {
+					position: relative;
+					right: auto;
+				}
+			}
+		}
+	}
+
+	.vpsHosting {
+		.form-apply-side {
+			float: none;
+			width: 100%;
+		}
+		.quick-link {
+			float: none;
+			width: 100%;
+		}
+	}
+	.quick-menu-style2 {
+		&.direction-horizontal {
+			ul {
+				padding-right: 0;
+				li {
+					height: 24px;
+					line-height: 24px;
+					&:before {
+						display: none;
+					}
+					&:hover {
+						line-height: 24px;
+					}
+				}
+			}
+			.curValue {
+				display: none;
+			}
+		}
+	}
+	.quick-menu-style3 {
+		ul {
+			li {
+				height: 24px;
+				line-height: 24px;
+				&:hover {
+					line-height: 24px;
+				}
+			}
+		}
+	}
+	.pdf-bd {
+		padding: 4px;
+	}
+	.swiper-control3 {
+		.prev {
+			left: -20px;
+		}
+		.next {
+			right: -20px;
+		}
+	}
+}
+@media screen and (max-width: 414px ) {
+	.wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	body {
+		padding-bottom: 40px;
+	}
+	.footer-nav-mobile {
+		ul {
+			li {
+				a {
+					height: 40px;
+					@include fspx($FS16);
+				}
+			}
+		}
+	}
+	.banner {
+		.txt-all {
+			.txt2 {
+				letter-spacing: 0;
+			}
+		}
+	}
+	.introduce-04 {
+		.index-platform {
+			.pic {
+				width: 40%;
+			}
+			.txt {
+				width: 56%;
+				padding-left: 4%;
+			}
+		}
+	}
+
+	.pictxt-list-01 {
+		.item {
+			width: 100%;
+		}
+		.picbg {
+			.bg {
+				padding-top: 50%;
+			}
+		}
+	}
+	.diagram-list {
+		.dl-hd1 {
+			li {
+				.dh-item {
+					min-width: 100%;
+				}
+			}
+		}
+		.dl-bd {
+			.diagram {
+				table {
+					tbody {
+						tr {
+							td {
+								padding: 10px 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.btn-2 {
+		a {
+			height: 2.4em;
+			line-height: 2.4em;
+		}
+	}
+	.btn-3 {
+		a {
+			width: 140px;
+			height: 50px;
+			line-height: 20px;
+			padding: 5px 1em;
+			&.theone {
+				height: 40px;
+				line-height: 40px;
+				padding: 0 1em;
+			}
+		}
+	}
+	.float-nav {
+		bottom: 40px;
+		a {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+
+	.quick-menu-style2 {
+		&.direction-horizontal {
+			ul {
+				li {
+					width: 7.692307692307692%;
+				}
+			}
+		}
+	}
+	.accountType {
+		.account-changeinfo {
+			li {
+				.info {
+					padding: 0;
+				}
+			}
+		}
+	}
+	.comTable {
+		thead {
+			td {
+				font-size: 110%;
+			}
+		}
+	}
+}

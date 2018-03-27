@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-9 insMain">
+		<div class="accountType">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/product">Our Products</a><em>&gt;</em><a href="<{$http_root_www}>../en/stp">Straight Through Processing(STP)</a></p></div>
+				<{include file='productHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainBd">
+						<div class="comTitle">Straight Through Processing(STP)</div>
+						<article class="comArticle">
+							<p>Ruizean Markets uses Straight Through Processing (STP) for transactions on the market. Also known as “No Dealing Desk”, STP excludes human intervention, providing a very stable trading environment with lightning fast transaction speeds. </p>
+							<p>Adhering to best market practices, Ruizean Markets customers receive transparent pricing with minimum trading spreads. STP allows the entire process to be conducted electronically with no background processing, giving customers access to profitable trades in real-time.</p>
+							<p>Along with our deep liquidity, STP gives our customers high-quality live streaming quotes for global currency pairs at very competitive prices, as well as providing a highly stable environment and ultra-fast transactions.</p>
+							<p>At the same time, the platform combines the international advanced ECN (Electronic Communications Network) technology, giving traders instant access to the foreign exchange and precious metals trading markets, rather than going through a third party.  </p>
+							<p>This means that traders can avoid going through a market maker and can instead, place their own market orders, which are executed automatically. Traders enjoy not only the transparency of direct market quotes, but they also enjoy a smaller Bid-Ask spread and reduced slippage.</p>
+							<p>One of the other advantages of using the STP trading model is that Ruizean Markets does not benefit from trading losses. Our profits come from direct commissions or the Bid-Ask spreads, so if you don’t make money, we don’t make money.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">STP advantage</div>
+						<div class="pictxt-list-07 clearfix">
+							<div class="item">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="Deep liquidity"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>The Forex market encompass a massive volume of transactions, billions of calculations and high volatility. This environment requires access to deep liquidity, providing optimum trading conditions to traders. Customers can take advantage of a wide range of Ruizean Markets quote sources, and have access to liquidity in global financial market institutions across more than 50 currency pairs.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="Speed of trade execution"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>All orders have direct access to our market maker, so that transactions can be completed in less than a second. Ruizean Markets’s use of advanced technology, along with our connections to Equinix NY4 in New York, provide low-latency, high network execution speeds, achieving superior transaction speeds for our customers.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item w100">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="Low spreads"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>The lower the Bid-Ask spread, the greater your profits. With over 10 international investment banks and brokers providing real-time quotes, traders receive the lowest spreads in the market, ensuring that transaction costs are minimised and that profits are optimised.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

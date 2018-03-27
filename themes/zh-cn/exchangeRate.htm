@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+<script type="text/javascript"> 
+	function loadXMLDoc()//ajax发送请求并显示 
+	{ 
+		var xmlhttp; 
+		if (window.XMLHttpRequest) 
+	 	{// code for IE7+, Firefox, Chrome, Opera, Safari 
+	 		xmlhttp=new XMLHttpRequest(); 
+	 	} 
+		else 
+	 	{// code for IE6, IE5 
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+	 	} 
+		xmlhttp.onreadystatechange=function() 
+		{ 
+		 	if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+		  	{ 
+		  		document.getElementById("myMt4").innerHTML=xmlhttp.responseText; 
+		  	} 
+		} 
+		xmlhttp.open("POST","<{$http_root_www}>?ctl=updateMt4",true); 
+		xmlhttp.send(); 
+		setTimeout("loadXMLDoc()",5000);//递归调用 
+	} 
+	loadXMLDoc();//先执行一次 
+</script> 
+
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-10 insMain">
+		<div class="exchangeRate">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>edu">外汇教育</a><em>&gt;</em><a href="<{$http_root_www}>exchangeRate">实时汇率</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<div class="main2">
+					<div class="comTitle">实时汇率</div>
+					<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+					<div class="mainBd">
+						<div class="diagram-list clearfix">
+							<div class="dl-bd clearfix">
+								<div class="diagram db-item">
+									<table>
+										<thead class="bg">
+											<tr>
+												<td>交易产品</td>
+												<td>BID</td>
+												<td>ASK</td>
+											</tr>
+										</thead>
+										<tbody id="myMt4">
+											<{foreach from=$symbols item=item key=key}>
+												<tr>
+													<td><{$item.symbol|upper}></td>
+													<td><{if $item.bidarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.bid}></td>
+													<td><{if $item.askarrow == 1}><i class="down"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" /></i><{else}><i class="up"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" /></i><{/if}><{$item.ask}></td>
+												</tr>
+											<{/foreach}>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="pendant-02"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-17.jpg" /></div>
+							<div class="pendant-03"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-03.png" /></div>
+							<div class="pendant-04"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-04.png" /></div>
+							<div class="pendant-05"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-05.png" /></div>
+						</div>
+						<!--div class="exchangeRate-data-list">
+							<div class="pendant-03"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-03.png" /></div>
+							<div class="pendant-04"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-05.png" /></div>
+							<div class="pendant-05"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-06.png" /></div>
+						</div-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

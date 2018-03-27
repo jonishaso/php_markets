@@ -1,0 +1,6602 @@
+@charset "utf-8";
+
+@mixin blur($px:4){
+    -webkit-filter: blur($px + px);
+    -moz-filter: blur($px + px);
+    -ms-filter: blur($px + px);
+    filter: blur($px + px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=$px, MakeShadow=false);
+}
+@mixin transform($transform...) {
+	-webkit-transform:$transform;
+	-moz-transform:$transform;
+	-ms-transform:$transform;
+	-o-transform:$transform;
+	transform:$transform;
+}
+@mixin transition($transition...) {
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+@mixin delay($delay) {
+	-webkit-transition-delay:$delay;
+	-moz-transition-delay:$delay;
+	-ms-transition-delay:$delay;
+	-o-transition-delay:$delay;
+	transition-delay:$delay;
+}
+@mixin skew($x:0, $y:0) {
+	-webkit-transform:skew($x, $y);
+	-moz-transform:skew($x, $y);
+	-ms-transform:skew($x, $y);
+	-o-transform:skew($x, $y);
+	transform:skew($x, $y);
+}
+@mixin translate($x:50%, $y:50%) {
+	-webkit-transform:translate($x, $y);
+	-moz-transform:translate($x, $y);
+	-ms-transform:translate($x, $y);
+	-o-transform:translate($x, $y);
+	transform:translate($x, $y);
+}
+@mixin translate3d($x:50%, $y:50%, $z:50%) {
+	-webkit-transform:translate3d($x, $y, $z);
+	-moz-transform:translate3d($x, $y, $z);
+	-ms-transform:translate3d($x, $y, $z);
+	-o-transform:translate3d($x, $y, $z);
+	transform:translate3d($x, $y, $z);
+}
+@mixin scale($x:1, $y:1) {
+	-webkit-transform:scale($x, $y);
+	-moz-transform:scale($x, $y);
+	-ms-transform:scale($x, $y);
+	-o-transform:scale($x, $y);
+	transform:scale($x, $y);
+}
+@mixin rotate($value:0deg) {
+	-webkit-transform:rotate($value);
+	-moz-transform:rotate($value);
+	-ms-transform:rotate($value);
+	-o-transform:rotate($value);
+	transform:rotate($value);
+}
+@mixin perspective($value:800px){
+    -webkit-perspective: $value;
+    -moz-perspective: $value;
+    -ms-perspective: $value;
+    -o-perspective: $value;
+    perspective: $value;
+}
+@mixin transformOrigin($x:center, $y:center){
+    -webkit-transform-origin:$x $y;
+    -moz-transform-origin:$x $y;
+    -ms-transform-origin:$x $y;
+    -o-transform-origin:$x $y;
+    transform-origin:$x $y;
+}
+@mixin opacity($value) {
+	opacity:$value;
+	filter:alpha(opacity=$value*100);
+}
+@mixin radialGradient($type:circle, $color...){
+    background: -webkit-radial-gradient($type, $color);
+    background: -moz-radial-gradient($type, $color);
+    background: -o-radial-gradient($type, $color);
+    background: radial-gradient($type, $color);
+}
+@mixin animation($args){
+    -webkit-animation: $args;
+    -moz--webkit-animation: $args;
+    -ms-animation: $args;
+    -o-animation: $args;
+    animation: $args;
+}
+@mixin display($value:flex){
+	display: -webkit-+$value;
+	display: -moz-+$value;
+	display: -ms-+$value;
+	display: -o-+$value;
+	display: $value;
+}
+@mixin flex($value:1){
+	-webkit-flex: $value;
+	-moz-flex: $value;
+	-ms-flex: $value;
+	-o-flex: $value;
+	flex: $value;
+}
+@mixin alignItems($value:center){
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	-ms-align-items: $value;
+	-o-align-items: $value;
+	align-items: $value;
+}
+@mixin alignContent($value:center){
+	-webkit-align-content: $value;
+	-moz-align-content: $value;
+	-ms-align-content: $value;
+	-o-align-content: $value;
+	align-content: $value;
+}
+@mixin alignSelf($value:center){
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	-ms-align-self: $value;
+	-o-align-self: $value;
+	align-self: $value;
+}
+@mixin justifyContent($value:center){
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	-ms-justify-content: $value;
+	-o-justify-content: $value;
+	justify-content: $value;
+}
+@mixin appearance($value:none){
+	-webkit-appearance: $value;
+	-moz-appearance: $value;
+	-ms-appearance: $value;
+	-o-appearance: $value;
+	appearance: $value;
+}
+@mixin placeholderColor($value:nth($color, 6)){
+    &::-webkit-input-placeholder, &::-webkit-input-placeholder { color: $value; }
+    &:-ms-input-placeholder, &:-ms-input-placeholder { color: $value; }
+    &::-moz-placeholder, &::-moz-placeholder { color: $value; }
+    &:-moz-placeholder, &:-moz-placeholder { color: $value; }
+}
+@mixin placeholderCenter($value:center){
+    &::-webkit-input-placeholder, &::-webkit-input-placeholder { text-align:$value; }
+    &:-ms-input-placeholder, &:-ms-input-placeholder { text-align:$value; }
+    &::-moz-placeholder, &::-moz-placeholder { text-align:$value; }
+    &:-moz-placeholder, &:-moz-placeholder { text-align:$value; }
+}
+@mixin textSizeAdjust($value:100%){
+	-webkit-text-size-adjust : $value;
+	-moz-text-size-adjust : $value;
+	-ms-text-size-adjust : $value;
+	-o-text-size-adjust : $value;
+	text-size-adjust : $value;
+}
+@mixin boxSizing($value:border-box){
+	-webkit-box-sizing: $value;
+	-moz-box-sizing : $value;
+	-ms-box-sizing : $value;
+	-o-box-sizing : $value;
+	box-sizing : $value;
+}
+@mixin gradient($value1, $value2){
+    filter: alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=$value1,endcolorstr=$value2,gradientType=0);
+    -ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=$value1,endcolorstr=$value2,gradientType=0);  
+    background: $value1; /* 一些不支持背景渐变的浏览器 */  
+    background: -moz-linear-gradient(top, $value1, $value2);  
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from($value1), to($value2));
+}
+@mixin gradients($direction, $values...){
+	background: -webkit-linear-gradient($direction, $values);
+	background: -o-linear-gradient($direction, $values);
+	background: -moz-linear-gradient($direction, $values);
+	background: linear-gradient($direction, $values);
+}
+@mixin borderGradients($direction, $values...){
+	border-image: -webkit-linear-gradient($direction, $values);
+	border-image: -o-linear-gradient($direction, $values);
+	border-image: -moz-linear-gradient($direction, $values);
+	border-image: linear-gradient($direction, $values);
+}
+@mixin backgroundImage($url:_blank, $repeat:no-repeat, $position:center, $size:cover){
+    background-image: url($url);
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+}
+@mixin fsrem($FSARRAY, $multiple:1){
+	@each $name , $value in $FSARRAY {
+		@if $name == null {
+			font-size: $value * $multiple * 0.01rem;
+		}
+		@else {
+			@media screen and (max-width: $name) {
+				font-size: $value * $multiple * 0.01rem;
+			}
+		}
+	}
+}
+@mixin fspx($FSARRAY, $multiple:1){
+	@each $name , $value in $FSARRAY {
+		@if $name == null {
+			font-size: $value * $multiple * 1px;
+		}
+		@else {
+			@media screen and (max-width: $name) {
+				font-size: $value * $multiple * 1px;
+			}
+		}
+	}
+}
+@mixin keyframes($aniName){
+	@-webkit-keyframes #{$aniName}{
+		@content;
+	}
+	@-moz-keyframes #{$aniName}{
+		@content;
+	}
+	@-ms-keyframes #{$aniName}{
+		@content;
+	}
+	@-o-keyframes #{$aniName}{
+		@content;
+	}
+	@keyframes #{$aniName}{
+		@content;
+	}
+}
+
+
+$FS8 : (
+	null : 8
+);
+$FS10 : (
+	null : 10
+);
+$FS11 : (
+	null : 11
+);
+$FS12 : (
+	null : 12
+);
+$FS13 : (
+	null : 13
+);
+$FS14 : (
+	null : 14
+);
+$FS15 : (
+	null : 15,
+		1024px : 14
+);
+$FS16 : (
+	null : 16,
+		1024px : 14,
+);
+$FS17 : (
+	null : 17,
+		1366px : 16,
+		1024px : 14,
+);
+$FS18 : (
+	null : 18,
+		1366px : 16,
+		1024px : 15,
+);
+$FS20 : (
+	null : 20,
+		1366px : 18,
+		1024px : 16,
+);
+$FS24 : (
+	null : 24,
+		1366px : 20,
+		1024px : 18,
+);
+$FS32 : (
+	null : 32
+);
+$FS33 : (
+	null : 33
+);
+$FS40 : (
+	null : 40
+);
+$FS48 : (
+	null : 48,
+		1366px : 40,
+		922px : 32,
+
+);
+$FS50 : (
+	null : 50
+);
+$FS60 : (
+	null : 60
+);
+$FS80 : (
+	null : 80
+);
+$FS144 : (
+	null : 144
+);
+
+$_FF_Arial : 'arial','Microsoft Yahei','STHeiti Light';
+$_FF_MicrosoftYahei : 'Microsoft Yahei','arial','STHeiti Light';;@charset "utf-8";
+
+/**
+*
+* 基本的样式初始化重置
+*
+**/
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+figure {
+	margin:0;
+	padding:0;
+}
+textarea {
+	resize:none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%; font-weight:normal;
+}
+a,
+label{
+	outline:none;
+}
+address,
+cite,
+dfn,
+em,
+var {
+	font-style:normal
+}
+ul,
+ol {
+	list-style:none;
+}
+fieldset,
+img {
+	border: 0;
+	vertical-align:bottom;
+}
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure{
+	display:block;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+* {
+	@include boxSizing();
+}
+*:after,
+*:before {
+	display:block;
+	@include boxSizing();
+}
+*:focus {
+	outline:none;
+}
+.clear {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.clearfix {
+	*zoom:1
+}
+
+.cssTable {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.cssTd {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { outline: none; }
+
+
+
+
+
+$space : 45px;
+$wrapWidth : 1120px;
+
+$color : #fff #000 #999 #c00 #666 !default;
+$color2 : #6FBDDF #E2C26E #F4E3A0 #7ECFE3 #4FB6E1 #dab76c #70B9DF #E0BF69 !default;
+$color3 : #79B1DB #FDEFB7 #B7A686 #D7C188 #c69c6d #f3e39e #71CDE1 #81AAD7 !default;
+$color4 : #F7F7F7 #d0d0d0 #80C0E3 #36a2d6 #f7f7f7 #7FD1E3 #EBD58F #ecb71c !default;
+$color5 : #ebebeb #D9A738 #276F9D #7BAFD9 #6FCBE0 #70B8DF #6ECAE0 #70B8DF !default;
+$color6 : #81A9D7 #70CDE1 #80aad7 #E2C370 #F4E3A0 #6fbbdf #7cc0e2 #d9d9d9 !default;
+$color7 : #64b1d6 #c5c5c5 #E2C985 #F4F4F4 #2f2f2f #EFEFEF #7ebfe2 #e7cd7e !default;
+$color8 : #e5c877 #CFCECE #F8F7F7 #6890B4 #A6BED3 #EFEEEE !default;
+
+$_FF_ADAM_CGPRO : 'ADAM_CGPRO','Microsoft Yahei','STHeiti Light';
+$_FF_AxisExtrabold : 'AxisExtrabold','Microsoft Yahei','STHeiti Light';
+
+html {
+	width:100%;
+	height:100%;
+	font-size:100px;
+	@include textSizeAdjust();
+}
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $_FF_MicrosoftYahei;
+	word-wrap:break-word;
+	@include fspx($FS14);
+}
+body {
+	color: nth($color, 2);
+	margin:0 auto;
+	background: nth($color, 1);
+	overflow-x: hidden;
+}
+a {
+	color: nth($color, 2);
+	text-decoration: none;
+	&:hover {
+		color: nth($color, 2);
+		text-decoration: none;
+	}
+}
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+img {
+	@include display(inline-flex);
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+svg {
+	@include display(inline-flex);
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+.wrapper {
+	width: $wrapWidth;
+	margin: 0 auto;
+};@charset "utf-8";
+/**
+*
+* 插件样式
+*
+**/
+.ps-container {
+	position: relative;
+}
+.ps-container .ps-scrollbar-y-rail,
+.ps-container .ps-scrollbar-x-rail {
+    z-index: 3;
+}
+.ps-container .ps-scrollbar-x-rail.in-scrolling,
+.ps-container .ps-scrollbar-y-rail,
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+	background: rgba(nth($color, 1), 0.2);
+}
+.ps-container .ps-scrollbar-y-rail .ps-scrollbar-y {
+	background: nth($color, 1);
+}
+
+
+.flex-control-nav {
+	li {
+		cursor: pointer;
+		
+		a {
+			position: relative;
+			display: block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			text-indent: -9999em;
+			border-radius: 50%;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				border: 2px solid nth($color, 1);
+				border-radius: 50%;
+			}
+			
+			&.flex-active:before {
+				border: 3px solid nth($color, 2);
+				@include scale(1.3, 1.3);
+			}
+		}
+	}
+}
+
+
+.swiper-pagination1 {
+	.swiper-pagination-bullet {
+		width: 24px;
+		height: 3px;
+		border: 1px solid nth($color, 1);
+		background: none;
+		margin: 0 6px;
+		border-radius: 0;
+		@include opacity(1);
+	}
+	.swiper-pagination-bullet-active {
+		background: nth($color, 1);
+	}
+}
+.swiper-pagination2 {
+	.swiper-pagination-bullet {
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		border: none;
+		background: none;
+		margin: 0 6px;
+		color: nth($color6, 8);
+		border-radius: 0;
+		text-align: center;
+		@include opacity(1);
+		&.active {
+			color: nth($color6, 6);
+		}
+		&.swiper-pagination-bullet-active {
+			color: nth($color, 1);
+			background-color: nth($color6, 6);
+			@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+		}
+	}
+	.swiper-pagination-bullet-active {
+		background: nth($color, 1);
+	}
+}
+
+
+
+.swiper-control1 {
+	.prev,
+	.next {
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		width: 15px;
+		height: 26px;
+		cursor: pointer;
+		@include translate(0, -50%);
+	}
+	.prev {
+		left: -30px;
+	}
+	.next {
+		right: -30px;
+	}
+}
+.swiper-control2 {
+	position: relative;
+	.prev,
+	.next {
+		float: left;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		text-align: center;
+		cursor: pointer;
+		margin-left: 6px;
+		color: nth($color, 1);
+		background-color: nth($color5, 8);
+		@include fspx($FS14);
+		@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+		&:hover {
+			background-color: nth($color2, 2);
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		}
+	}
+}
+
+.swiper-control3 {
+	.prev,
+	.next {
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		width: 20px;
+		height: 17px;
+		cursor: pointer;
+		@include translate(0, -50%);
+		background-image: url(../images/arrow1.png);
+		background-position: left 0;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+	.prev {
+		left: -30px;
+		background-position: left 0;
+		&:hover {
+			background-position: left -17px * 1;
+		}
+	}
+	.next {
+		right: -30px;
+		background-position: left -17px * 2;
+		&:hover {
+			background-position: left -17px * 3;
+		}
+	}
+}
+
+.selectpicker {
+	display: none;
+};@charset "utf-8";
+/**
+* 可复用公共模块样式
+**/
+
+$closeWidth : 40px;
+$closeHeight : 40px;
+.close {
+	cursor:pointer;
+	span {
+		display: block;
+		position: relative;
+		width: $closeWidth;
+		height: $closeWidth;
+		@include rotate(45deg);
+	}
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: $closeWidth;
+		height: $closeHeight;
+		background: nth($color, 1);
+		@include translate(-50%, -50%);
+		&:last-child {
+			@include transform(translate(-50%, -50%) rotate(90deg));
+		}
+	}
+}
+
+
+.picbg {
+	position: relative;
+	.bg {
+		padding-top: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+
+.btn-1 {
+	a {
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		box-shadow: 0 0 0 2px nth($color2, 2) inset;
+		padding: 0 1em;
+		color: nth($color, 3);
+		background-color: nth($color, 1);
+		@include fspx($FS14);
+		&:hover,
+		&.active {
+			color: nth($color, 1);
+			box-shadow: none;
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		}
+	}
+	&.noShadow {
+		a {
+			.bg {
+				box-shadow: none;
+			}
+			&:hover,
+			&.active {
+				.bg {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+.btn-2 {
+	a {
+		position: relative;
+		display: block;
+		min-width: 160px;
+		height: 3em;
+		line-height: 3em;
+		padding: 0 1em;
+		color: nth($color, 1);
+		text-align: center;
+		@include fspx($FS16);
+		i {
+			@include transition(transform 0.3s linear);
+		}
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: nth($color2, 2); 
+			box-shadow: 0 10px 10px rgba(nth($color, 2), 0.3);
+			@include skew(-25deg);
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		span {
+			position: relative;
+			z-index: 2;
+		}
+		&:hover,
+		&.active {
+			i {
+				@include translate(100%, 0);
+			}
+			.bg {
+				box-shadow: 0 5px 5px rgba(nth($color, 2), 0.3);
+			}
+		}
+	}
+	&.white {
+		a {
+			color: nth($color2, 2);
+			.bg {
+				background-color: nth($color4, 1);
+				@include gradients(left, (nth($color4, 1), nth($color4, 1), nth($color4, 1)));
+			}
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+			}
+		}
+	}
+	&.blue {
+		a {
+			color: nth($color, 1);
+			.bg {
+				background-color: nth($color5, 8);
+				@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+				&:before {
+					width: 0;
+					background-color: nth($color2, 2);
+					@include transition(all 0.3s linear);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+			}
+			i {
+				margin-left: 10px;
+				@include transition(transform 0.3s linear);
+				@include translate(0, 0);
+			}
+			&:hover,
+			&.active {
+				font-weight: bold;
+				.bg {
+					&:before {
+						width: 100%;
+					}
+				}
+				i {
+					margin-left: 10px;
+					@include translate(50%, 0);
+				}
+			}
+		}
+	}
+	&.noShadow {
+		a {
+			.bg {
+				box-shadow: none;
+			}
+			&:hover,
+			&.active {
+				.bg {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+.btn-3 {
+	a {
+		position: relative;
+		display: block;
+		width: 250px;
+		height: 70px;
+		line-height: 20px;
+		padding: 15px 1em;
+		color: nth($color, 1);
+		text-align: center;
+		&.theone {
+			height: 70px;
+			line-height: 70px;
+			padding: 0 1em;
+		}
+		@include fspx($FS16);
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			box-shadow: 0 10px 10px rgba(nth($color, 2), 0.3);
+			background-color: nth($color2, 2);
+			@include skew(-25deg);
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		}
+		span {
+			position: relative;
+			z-index: 2;
+		}
+		i {
+			position: relative;
+			z-index: 2;
+			font-style: normal;
+			@include fspx($FS10);
+		}
+		&:hover,
+		&.active {
+			.bg {
+				box-shadow: 0 5px 5px rgba(nth($color, 2), 0.3);
+			}
+		}
+	}
+	&.white {
+		a {
+			color: nth($color2, 2);
+			.bg {
+				background-color: nth($color4, 1);
+				@include gradients(left, (nth($color4, 1), nth($color4, 1), nth($color4, 1)));
+			}
+			i {
+				color: nth($color4, 2);
+			}
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+				i {
+					color: nth($color, 1);
+				}
+			}
+		}
+	}
+	&.noShadow {
+		a {
+			.bg {
+				box-shadow: none;
+			}
+			&:hover,
+			&.active {
+				.bg {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+.btn-4 {
+	a {
+		position: relative;
+		display: block;
+		width: 160px;
+		height: 46px;
+		line-height: 46px;
+		padding: 0 10px;
+		color: nth($color, 1);
+		text-align: right;
+		@include fspx($FS14);
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: nth($color2, 2); 
+			box-shadow: 0 10px 10px rgba(nth($color, 2), 0.3);
+			@include skew(-25deg);
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		}
+		.icon {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			color: nth($color, 1);
+			line-height: 1em;
+			@include fspx($FS50);
+			@include translate(50%, 0);
+			.fa {
+				@include translate(0, 50%);
+				@include transition(transform 0.3s linear);
+			}
+		}
+		.name {
+			position: relative;
+			z-index: 2;
+			i {
+				margin-left: 10px;
+				@include transition(transform 0.3s linear);
+				@include translate(0, 0);
+			}
+		}
+		&:hover,
+		&.active {
+			.bg {
+				box-shadow: 0 5px 5px rgba(nth($color, 2), 0.3);
+			}
+		}
+	}
+	&.white {
+		a {
+			color: nth($color2, 2);
+			.bg {
+				background-color: nth($color4, 1);
+				@include gradients(left, (nth($color4, 1), nth($color4, 1), nth($color4, 1)));
+			}
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+			}
+		}
+	}
+	&.blue {
+		a {
+			color: nth($color, 1);
+			text-align: right;
+			.bg {
+				background-color: nth($color5, 8);
+				@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+			}
+			&:hover,
+			&.active {
+				font-weight: bold;
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+				.icon {
+					.fa {
+						@include translate(0, 20%);
+					}
+				}
+				.name {
+					i {
+						margin-left: 10px;
+						@include translate(50%, 0);
+					}
+				}
+			}
+		}
+	}
+	&.noShadow {
+		a {
+			.bg {
+				box-shadow: none;
+			}
+			&:hover,
+			&.active {
+				.bg {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+
+.btn-5 {
+	a {
+		position: relative;
+		display: block;
+		max-width: 240px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		color: nth($color, 1);
+		text-align: center;
+		@include fspx($FS12);
+		.bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: nth($color2, 2); 
+			box-shadow: 0 10px 10px rgba(nth($color, 2), 0.3);
+			//@include skew(-25deg);
+			@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		}
+		.name {
+			position: relative;
+			display: inline-block;
+			z-index: 2;
+			i {
+				font-size: 200%;
+				vertical-align: middle;
+				margin-right: 15px;
+			}
+		}
+		&:hover,
+		&.active {
+			.bg {
+				box-shadow: 0 5px 5px rgba(nth($color, 2), 0.3);
+			}
+		}
+	}
+	&.white {
+		a {
+			color: nth($color2, 2);
+			.bg {
+				background-color: nth($color4, 1);
+				@include gradients(left, (nth($color4, 1), nth($color4, 1), nth($color4, 1)));
+			}
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+				}
+			}
+		}
+	}
+	&.blue {
+		a {
+			color: nth($color, 1);
+			.bg {
+				background-color: nth($color5, 8);
+				@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+			}
+			&:hover,
+			&.active {
+				font-weight: bold;
+				.bg {
+					background-color: nth($color2, 2);
+					@include gradients(left, (nth($color2, 2), nth($color2, 3)));
+				}
+			}
+		}
+	}
+	&.noShadow {
+		a {
+			.bg {
+				box-shadow: none;
+			}
+			&:hover,
+			&.active {
+				.bg {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+.share {
+	a {
+		float: left;
+		width: 33px;
+		height: 33px;
+		background-image: url(../images/share.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: left 0;
+		margin-right: 12px;
+		@include transition(transform 0.2s);
+		&.s-weixin {
+			background-position: left 0;
+		}
+		&.s-qq {
+			background-position: left -33px;
+		}
+		&.s-facebook {
+			background-position: left -66px;
+		}
+		&.s-twitter {
+			background-position: left -99px;
+		}
+		&:hover {
+			@include translate(0, -10%);
+		}
+	}
+}
+
+
+.title-p {
+	color: nth($color, 1);
+	line-height: 1.4em;
+	@include fspx($FS14);
+}
+
+
+.gradientBorder {
+	position: relative;
+	span {
+		position: absolute;
+	}
+	.t {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: nth($color2, 3);
+		@include gradients(left, (nth($color2, 3), nth($color2, 8)));
+	}
+	.r {
+		top: 0;
+		right: 0;
+		width: 5px;
+		height: 100%;
+		background-color: nth($color2, 3);
+		@include gradients(top, (nth($color2, 8), nth($color2, 3)));
+	}
+	.b {
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 5px;
+		background-color: nth($color2, 3);
+		@include gradients(left, (nth($color2, 8), nth($color2, 3)));
+	}
+	.l {
+		top: 0;
+		left: 0;
+		width: 5px;
+		height: 100%;
+		background-color: nth($color2, 3);
+		@include gradients(top, (nth($color2, 3), nth($color2, 8)));
+	}
+}
+.gradientBorder2 {
+	position: relative;
+	span {
+		position: absolute;
+	}
+	.t {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: nth($color2, 3);
+		@include gradients(left, (nth($color2, 3), nth($color3, 3), nth($color2, 3)));
+	}
+	.r {
+		top: 0;
+		right: 0;
+		width: 3px;
+		height: 100%;
+		background-color: nth($color2, 3);
+	}
+	.b {
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 3px;
+		background-color: nth($color2, 3);
+		@include gradients(left, (nth($color2, 3), nth($color3, 3), nth($color2, 3)));
+	}
+	.l {
+		top: 0;
+		left: 0;
+		width: 3px;
+		height: 100%;
+		background-color: nth($color2, 3);
+	}
+};@charset "utf-8";
+
+/**
+*
+* 公共样式
+*
+**/
+
+body {
+	padding-top: 54px;
+	background: nth($color2, 4);
+}
+
+
+.lang {
+	.lang-box {
+		position: relative;
+		width: 120px;
+		a {
+			display: block;
+			color: nth($color2, 6);
+			padding: 5px;
+			@include fspx($FS14);
+			div {
+				height: 17px;
+				line-height: 17px;
+			}
+			.county {
+				float: left;
+				width: 25px;
+				height: inherit;
+				line-height: inherit;
+				text-align: center;
+			}
+			.name {
+				float: left;
+				height: inherit;
+				line-height: inherit;
+				margin-left: 10px;
+				i {
+					margin-left: 10px;
+				}
+			}
+		}
+		.lang-bd {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: nth($color, 1);
+		}
+		&:hover {
+			.lang-bd {
+				display: block;
+			}
+		}
+	}
+}
+
+.hamburger {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	@include opacity(0);
+	@include translate(100%, -50%);
+	@include transition(all 0.3s linear);
+	&.active {
+		i {
+			&:nth-child(1) {
+				@include rotate(45deg);
+			}
+			&:nth-child(2) {
+				@include opacity(0);
+				@include translate(10%, 0);
+			}
+			&:nth-child(3) {
+				@include rotate(-45deg);
+			}
+		}
+	}
+	span {
+		position: relative;
+		display: block;
+		width:  30px;
+		height: 30px;
+		background: rgba(nth($color, 1), 0);
+		cursor: pointer;
+	}
+	i {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		height: 2px;
+		margin-top: -1px;
+		width: 100%;
+		background-color: nth($color2, 2);
+		@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+		@include transition(all 0.3s linear);
+		&:nth-child(1) {
+			@include translate(0, -8px);
+		}
+		&:nth-child(3) {
+			@include translate(0, 8px);
+		}
+	}
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 8;
+	background: nth($color, 1);
+	.hd {
+		float: left;
+		height: inherit;
+		padding: 10px;
+		height: 54px;
+		@include opacity(0);
+		@include translate(-100%, 0);
+		@include transition(all 0.3s linear);
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+	.bd {
+		position: relative;
+		float: right;
+		height: 54px;
+		@include display();
+		@include alignItems();
+		.com-div {
+			float: left;
+			padding: 0 10px;
+		}
+	}
+	.bar-search {
+		a {
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 50%;
+			text-align: center;
+			color: nth($color, 3);
+			@include fspx($FS14);
+			&:hover {
+				background: nth($color, 1);
+				color: nth($color2, 6);
+			}
+		}
+	}
+	.bar-nav {
+		li {
+			float: left;
+			a {
+				display: block;
+				color: nth($color, 3);
+				height: 28px;
+				line-height: 28px;
+				padding: 0 1em;
+				@include fspx($FS14);
+				&:hover {
+					color: nth($color2, 6);
+				}
+			}
+		}
+	}
+	&.active {
+		box-shadow: 0 0 5px rgba(nth($color, 2), 0.3);
+		.hd {
+			@include opacity(1);
+			@include translate(0, 0);
+		}
+		.hamburger {
+			@include opacity(1);
+			@include translate(0, -50%);
+		}
+	}
+}
+
+
+.header {
+	position: fixed;
+	top: 54px;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	z-index: 7;
+	@include transition(background 0.3s linear);
+	&.insHeader {
+		background-color: rgba(nth($color6, 1), 0.91);
+		@include gradients(left, (rgba(nth($color6, 1), 0.91) 0, rgba(nth($color6, 2), 0.91) 90%));
+	}
+	.wrapper {
+		height: 56px;
+		line-height: 56px;
+		overflow: hidden;
+		.logo {
+			float: left;
+		}
+		.nav {
+			float: right;
+		}
+	}
+	&.fixed {
+		background: rgba(nth($color2, 1), 0.95);
+	}
+}
+
+
+.logo {
+	a {
+		display: block;
+	}
+}
+.nav {
+	li {
+		float: left;
+		a {
+			display: block;
+			color: nth($color, 1);
+			padding: 0 15px;
+			@include fspx($FS16);
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.nav2 {
+	&.top-nav-list {
+		position: fixed;
+		top: 54px;
+		left: 0;
+		right: 0;
+		z-index: 8;
+		background: rgba(nth($color5, 3), 0.82);
+		padding: 30px 0;
+		visibility: hidden;
+		.nav2-item {
+			.bd {
+				ul {
+					margin-bottom: 30px;
+					li {
+						&.t {
+							a {
+								font-weight: bold;
+								color: nth($color, 1);
+								@include fspx($FS14);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.nav2-item {
+		float: left;
+		width: 16.666666%;
+		padding-left: 25px;
+		.hd {
+			margin-bottom: 25px;
+			a {
+				display: block;
+			}
+		}
+		.bd {
+			@include fspx($FS12);
+			ul {
+				margin-bottom: 15px;
+				li {
+					line-height: 1.4em;
+					a {
+						&:hover {
+							font-weight: bold;
+							text-decoration: underline;
+						}
+					}
+					&.t {
+						margin-bottom: 20px;
+						a {
+							color: nth($color4, 4);
+						}
+					}
+					&.c {
+						margin-bottom: 20px;
+						a {
+							color: nth($color4, 5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav3 {
+	&.header-nav-list {
+		position: fixed;
+		top: 54 + 76px;
+		left: 0;
+		right: 0;
+		z-index: 8;
+		padding: 40px 0;
+		background: rgba(nth($color5, 3), 0.82);
+		visibility: hidden;
+	}
+	.nav3-item {
+		position: relative;
+		float: left;
+		padding-left: 25px;
+		&:nth-child(1){
+			width: 40%;
+			.bd {
+				ul {
+					float: left;
+					width: 33.3333333%;
+				}
+			}
+		}
+		&:nth-child(2),
+		&:nth-child(3){
+			width: 30%;
+			.bd {
+				ul {
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+		.apply-link {
+			.btn-2 {
+				float: left;
+				margin-right: 14px;
+				a {
+					width: auto;
+					height: 3.14em;
+					line-height: 3.14em;
+					padding: 0 3em;
+					font-weight: bold;
+					@include fspx($FS14);
+				}
+				
+			}
+		}
+		.account-link {
+			.btn-2 {
+				float: left;
+				margin-right: 14px;
+				margin-bottom: 5px;
+				a {
+					width: auto;
+					height: 2.5em;
+					line-height: 2.5em;
+					padding: 0 2em;
+					@include fspx($FS12);
+				}
+				
+			}
+		}
+		.hd,
+		.hd2 {
+			margin-bottom: 15px;
+			a {
+				display: block;
+			}
+		}
+		.bd {
+			position: relative;
+			@include fspx($FS12);
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -25px;
+				width: 1px;
+				background-color: nth($color2, 2);
+				@include gradients(top, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+			}
+			ul {
+				li {
+					line-height: 1.4em;
+					a {
+						position: relative;
+						padding-left: 10px;
+						&:before {
+							display: none;
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 0;
+							bottom: 0;
+							width: 4px;
+							background-color: nth($color2, 2);
+							@include gradients(top, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+						}
+						&:hover {
+							font-weight: bold;
+							text-decoration: underline;
+							&:before {
+								display: block;
+							}
+						}
+					}
+					&.t {
+						margin-bottom: 15px;
+						a {
+							color: nth($color4, 4);
+							&:hover {
+								color: nth($color2, 3);
+							}
+						}
+					}
+					&.c {
+						margin-bottom: 10px;
+						a {
+							display: block;
+							color: nth($color4, 5);
+							&:hover {
+								color: nth($color2, 3);
+							}
+						}
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav4 {
+	ul {
+		margin-bottom: 35px;
+	}
+	li {
+		margin-bottom: 12px;
+		a {
+			display: block;
+			text-align: right;
+		}
+		&.h {
+			a {
+				line-height: 30px;
+				color: nth($color, 1);
+				font-weight: bold;
+				@include fspx($FS16);
+				span {
+					position: relative;
+					display: inline-block;
+					min-width: 160px;
+					padding: 0 20px;
+					.svg-btnBg {
+						position: absolute;
+						right: -20px;
+						top: 0;
+						z-index: -1;
+						max-width: none;
+						max-height: 100%;
+					}
+				}
+			}
+		}
+		&.b {
+			a {
+				line-height: 30px;
+				color: nth($color, 1);
+				@include fspx($FS14);
+				span {
+					position: relative;
+					padding: 0 20px 0 0;
+					&:before {
+						content: '';
+						position: absolute;
+						right: 100%;
+						top: 50%;
+						width: 0;
+						height: 2px;
+						background: nth($color, 1);
+						@include translate(-5px, -50%);
+						@include transition(all 0.3s linear);
+					}
+				}
+			}
+			&.active,
+			&:hover {
+				font-weight: bold;
+				span {
+					&:before {
+						width: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav5 {
+	&.top-nav-list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 30%;
+		bottom: 0;
+		z-index: 10;
+		padding-bottom: 110px;
+		background: nth($color8, 3);
+		box-shadow: 0 0 4px nth($color, 3);
+		visibility: hidden;
+		@include translate(0, -100%);
+	}
+	.cont-bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px;
+	}
+	.cont-top {
+		position: relative;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-top: 54px;
+		.mobile-side-top {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 54px;
+			padding: 10px;
+			border-bottom: 1px solid nth($color8, 6);
+			z-index: 2;
+			background: nth($color8, 3);
+			.hamburger {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				left: auto;
+				@include translate(0, -50%);
+			}
+			.mobile-logo {
+				height: 100%;
+			}
+		}
+		ul {
+			a {
+				position: relative;
+				display: block;
+				line-height: 1.6em;
+				color: nth($color, 2);
+				padding-top: 10px;
+				padding-bottom: 10px;
+				&:hover {
+					background: nth($color, 1);
+				}
+			}
+		}
+	}
+	.active {
+		.no1 {
+			.arrow {
+				@include transform(translate(0, -50%) rotate(-180deg));
+			}
+		}
+	}
+	.no1 {
+		@include fspx($FS18);
+		a {
+			padding-left: 10px;
+			padding-right: 40px;
+			font-weight: bold;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+		.arrow {
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			width: 40px;
+			text-align: center;
+			@include translate(0, -50%);
+			@include transition(all 0.3s);
+		}
+	}
+	.no2 {
+		@include fspx($FS16);
+		a {
+			padding-left: 40px;
+			padding-right: 40px;
+			font-weight: bold;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	.no3 {
+		@include fspx($FS14);
+		a {
+			padding-left: 60px;
+			padding-right: 40px;
+			&:active，
+			&.active {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	.bt1 {
+		display: none;
+	}
+	.lang {
+		float: right;
+		position: relative;
+		z-index: 4;
+		padding: 0 0 10px 0;
+		margin-bottom: 10px;
+		.lang-box {
+			.lang-hd {
+				background: nth($color, 1);
+			}
+			.lang-bd {
+				top: auto;
+				bottom: 100%;
+			}
+		}
+	}
+	.share {
+		float: left;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.onlineform {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: nth($color2, 2);
+	color: nth($color, 1);
+	@include fspx($FS18);
+}
+
+.footer-nav-mobile {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	background: nth($color8, 4);
+	ul {
+		li {
+			position: relative;
+			float: left;
+			width: 33.333333%;
+			text-align: center;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 20%;
+				bottom: 20%;
+				right:0 ;
+				width: 1px;
+				background: nth($color8, 5);
+			}
+			&:last-child {
+				&:before {
+					display: none;
+				}
+			}
+			a {
+				display: block;
+				height: 70px;
+				text-align: center;
+				color: nth($color, 1);
+				@include display();
+				@include justifyContent();
+				@include alignItems();
+				@include fspx($FS20);
+				&:active {
+					background: nth($color2, 2);
+				}
+			}
+		}
+	}
+}
+
+
+.float-nav {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 6;
+	@include transition(all 0.2s linear);
+	//@include translate(100%, -50%);
+	&.hide {
+		@include translate(100%, -50%);
+	}
+	&.show {
+		@include translate(0, -50%);
+	}
+	ul {
+		li {
+			margin-bottom: 1px;
+		}
+	}
+	a {
+		position: relative;
+		display: block;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		text-align: center;
+		background-image: url(../images/share2.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: left 0;
+		background-color: nth($color2, 7);
+		color: nth($color, 1);
+		@include fspx($FS20);
+		&:hover {
+			.popdiv1,
+			.popdiv2 {
+				display: block;
+			}
+		}
+		&.s-qq {
+			background-position: left -44px * 0;
+			&:hover {
+				background-position: left -44px * 1;
+			}
+		}
+		&.s-weixin {
+			background-position: left -44px * 2;
+			&:hover {
+				background-position: left -44px * 3;
+			}
+		}
+		&.s-tel {
+			background-position: left -44px * 4;
+			&:hover {
+				background-position: left -44px * 5;
+			}
+		}
+		&.s-email {
+			background-position: left -44px * 6;
+			&:hover {
+				background-position: left -44px * 7;
+			}
+		}
+		&.s-video {
+			background-position: left -44px * 8;
+			&:hover {
+				background-position: left -44px * 9;
+			}
+		}
+		&.backTop {
+			background-image: none;
+			margin-top: 30px;
+		}
+		.popdiv1 {
+			display: none;
+			position: absolute;
+			right: 100%;
+			top: 0;
+			width: 120px;
+			padding: 15px;
+			margin-right: 15px;
+			background: nth($color2, 7);
+			color: nth($color, 1);
+			@include fspx($FS12);
+			p {
+				line-height: 1.4em;
+				&:nth-child(2) {
+				font-family: $_FF_Arial;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 100%;
+				top: 15px;
+				border-width: 8px;
+				border-style: solid;
+				border-color: transparent;
+				border-left-color: nth($color2, 7);
+			}
+		}
+		.popdiv2 {
+			display: none;
+			position: absolute;
+			right: 100%;
+			top: 0;
+			width: 200px;
+			padding: 15px;
+			margin-right: 15px;
+			background: nth($color2, 7);
+			color: nth($color, 1);
+			text-align: left;
+			@include fspx($FS12);
+			p {
+				line-height: 1.8em;
+				&:nth-child(2) {
+				font-family: $_FF_Arial;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 100%;
+				top: 15px;
+				border-width: 8px;
+				border-style: solid;
+				border-color: transparent;
+				border-left-color: nth($color2, 7);
+			}
+		}
+	}
+}
+
+
+.footer {
+	position: relative;
+	background-image: url(../images/bg5.png);
+	background-color: nth($color4, 3);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(nth($color4, 6), 0.89);
+		@include gradients(left, (rgba(nth($color4, 6), 0.89), rgba(nth($color4, 3), 0.89)));
+	}
+}
+.footer-nav {
+	position: relative;
+	z-index: 3;
+	padding: 20px 0;
+}
+.footer-copy {
+	position: relative;
+	z-index: 3;
+	padding: 50px 0;
+	.left {
+		float: left;
+		width: 66%;
+	}
+	.right {
+		float: right;
+		width: 34%;
+	}
+	.right-left {
+		float: left;
+	}
+	.right-right {
+		float: right;
+	}
+	.top {
+		margin-bottom: 15px;
+		@include display();
+		@include alignItems();
+	}
+	.footer-logo {
+		float: left;
+	}
+	.footer-address {
+		float: left;
+		line-height: 2em;
+		color: nth($color4, 4);
+		@include fspx($FS12);
+		dl {
+			float: left;
+			padding-left: 40px;
+			span {
+				float: left;
+			}
+			p {
+				float: left;
+				color: nth($color, 1);
+				@include fspx($FS14);
+			}
+		}
+	}
+	.copy {
+		line-height: 1.8em;
+		color: nth($color4, 4);
+		@include fspx($FS12);
+		a {
+			color: nth($color4, 4);
+			margin-right: 10px;
+		}
+	}
+	.share {
+		margin-bottom: 20px;
+	}
+	.account-link {
+		.btn-2 {
+			margin-bottom: 20px;
+		}
+	}
+	.lang {
+		.lang-box {
+			a {
+				color: nth($color, 1);
+			}
+		}
+		&:hover {
+			.lang-hd,
+			.lang-bd {
+				background: nth($color, 1);
+			}
+			.lang-box {
+				a {
+					color: nth($color2, 1);
+				}
+			}
+		}
+	}
+}
+
+
+
+.side {
+	position: relative;
+	float: left;
+	width: 370px;
+	padding: 10px;
+	background-image: url(../images/bg5.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background-color: rgba(nth($color5, 5), 0.89);
+		@include gradients(left, (rgba(nth($color5, 5), 0.89), rgba(nth($color5, 6), 0.89)));
+	}
+	.pendant-01 {
+		position: absolute;
+		right: 80%;
+		bottom: 0;
+		z-index: 3;
+		height: 225px;
+		@include translate(0, 30%);
+		img {
+			max-width: none;
+			max-height: 100%;
+		}
+	}
+	.side-logo {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 140px;
+		.hd {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translate(-70px, -46%);
+		}
+		.p1 {
+			line-height: 1.2em;
+			font-weight: bold;
+			color: nth($color, 1);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			@include fspx($FS20);
+		}
+		.p2 {
+			line-height: 1.2em;
+			text-align: center;
+			color: nth($color, 1);
+			letter-spacing: 2px;
+			padding-top: 5px;
+			text-transform: uppercase;
+			@include fspx($FS16);
+		}
+		ul {
+			@include translate(-30px, 0);
+			li {
+				&:nth-child(2) {
+					padding-left: 40px;
+				}
+			}
+		}
+	}
+	.btns {
+		position: relative;
+		z-index: 2;
+		padding: 20px;
+		ul {
+			li {
+				margin-bottom: 15px;
+				&:nth-child(1) {
+					text-align: right;
+				}
+				&:nth-child(2) {
+					text-align: center;
+				}
+				&:nth-child(3) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+.side2 {
+	position: relative;
+	float: left;
+	width: 270px;
+	padding: 10px;
+	background-image: url(../images/bg5.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background-color: rgba(nth($color5, 5), 0.89);
+		@include gradients(left, (rgba(nth($color5, 5), 0.89), rgba(nth($color5, 6), 0.89)));
+	}
+	.pendant-01 {
+		position: absolute;
+		right: 50%;
+		bottom: 0;
+		z-index: 3;
+		height: 225px;
+		@include translate(0, 30%);
+		img {
+			max-width: none;
+			max-height: 100%;
+		}
+	}
+	.nav4,
+	.account-link {
+		position: relative;
+		z-index: 3;
+	}
+	.account-link {
+		padding-bottom: 150px;
+		text-align: center;
+		.btn-2 {
+			display: inline-block;
+			padding: 0 5px;
+			margin-bottom: 5px;
+			a {
+				width: auto;
+				@include fspx($FS12);
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.side3 {
+	float: right;
+	width: 200px;
+}
+.side4 {
+	float: right;
+	width: 280px;
+}
+.main {
+	position: relative;
+	float: right;
+	width: 700px;
+}
+.main2 {
+	position: relative;
+	float: right;
+	width: 750px;
+	.main3 {
+		margin-left: 0;
+	}
+}
+.main3 {
+	position: relative;
+	float: left;
+	width: 550px;
+	margin-left: 50px;
+}
+.main4 {
+	position: relative;
+	float: left;
+	width: 450px;
+	margin-left: 50px;
+}
+.main5 {
+	position: relative;
+	float: right;
+	width: 800px;
+	.main3 {
+		margin-left: 0;
+	}
+}
+.insMain {
+	position: relative;
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	padding: 76px 0 100px;
+}
+
+.mainHd {
+	margin-bottom: 20px;
+}
+.mainBd {
+	margin-bottom: 40px;
+}
+.mainBd-tab {
+	.com-bd {
+		display: none;
+	}
+}
+.mainBd-tab2 {
+	.com-bd {
+		display: none;
+	}
+}
+.maodian {
+	.mainBd {
+		margin-bottom: 1px;
+		.comTitle5 {
+			margin-bottom: 0;
+			background: none;
+			color: nth($color8, 1);
+			border-bottom: 1px solid nth($color8, 1);
+			.fa {
+				float: right;
+				font-size: 120%;
+			}
+			&.active {
+				color: nth($color6, 7);
+				border-color: nth($color6, 7);
+				.fa {
+					@include rotate(90deg);
+				}
+			}
+		}
+		.comArticle {
+			padding: 15px 10px;
+		}
+	}
+}
+.maodian2 {
+	.mainBd {
+		margin-bottom: 1px;
+		.comTitle5 {
+			margin-bottom: 0;
+			background: none;
+			color: nth($color6, 7);
+			border-bottom: 1px solid nth($color6, 7);
+			.fa {
+				float: right;
+				font-size: 120%;
+			}
+			&.active {
+				color: nth($color8, 1);
+				border-color: nth($color8, 1);
+				.fa {
+					@include rotate(90deg);
+				}
+			}
+		}
+		.com-bd {
+			padding: 15px 10px;
+		}
+		.comArticle {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.mt4Use {
+	.maodian {
+		.mainBd {
+			.stpimg {
+				float: left;
+				width: 200px;
+				padding: 10px;
+			}
+			.comArticle {
+				padding-left: 230px;
+			}
+		}
+	}
+}
+
+.location {
+	height: 40px;
+	line-height: 40px;
+	color: nth($color6, 3);
+	@include fspx($FS12);
+	a {
+		color: nth($color6, 3);
+		&:hover {
+			text-decoration: underline;
+			font-weight: bold;
+			color: nth($color2, 2);
+		}
+	}
+	em {
+		margin: 0 7px;
+	}
+}
+
+
+.quick-menu-style1 {
+	position: absolute;
+	top: 0;
+	right: -20px;
+	@include translate(100%, 0);
+	ul {
+		li {
+			width: 140px;
+			line-height: 30px;
+			margin-bottom: 1px;
+			background: nth($color5, 8);
+			color: nth($color, 1);
+			padding: 0 10px;
+			cursor: pointer;
+			@include fspx($FS14);
+			&:hover,
+			&.active {
+				background: nth($color4, 4);
+			}
+		}
+	}
+	&.small {
+		ul {
+			li {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.quick-menu-style2 {
+	&.direction-vertical {
+		position: absolute;
+		top: 0;
+		right: -20px;
+		@include translate(100%, 0);
+		ul {
+			li {
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				margin-bottom: 1px;
+				color: nth($color8, 1);
+				text-align: center;
+				cursor: pointer;
+				@include fspx($FS14);
+				&:hover,
+				&.active {
+					color: nth($color, 1);
+					background: nth($color8, 1);
+				}
+			}
+		}
+		.curValue {
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			padding-left: 20px;
+			color: nth($color2, 1);
+			@include fspx($FS50);
+			@include translate(20px, -50%);
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 1px;
+				background: nth($color8, 2);
+			}
+		}
+	}
+	&.direction-horizontal {
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 4;
+		padding: 0 5px;
+		.curValue {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 80px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: nth($color2, 1);
+			@include fspx($FS60);
+			@include translate(0, -50%);
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 1px;
+				background: nth($color8, 2);
+			}
+		}
+		ul {
+			padding-right: 80px;
+			overflow: hidden;
+			li {
+				position: relative;
+				float: left;
+				width: 3.8%;
+				height: 50px;
+				line-height: 50px;
+				margin: 5px 0;
+				color: nth($color8, 1);
+				text-align: center;
+				overflow: hidden;
+				cursor: pointer;
+				@include fspx($FS18);
+				@include transition(line-height 0.15s linear);
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					border-style: solid;
+					border-color: transparent;
+					border-width: 5px;
+					border-bottom-color: nth($color8, 1);
+					@include transition(all 0.15s linear);
+					@include translate(-50%, -50%);
+					@include opacity(0);
+				}
+				&:hover {
+					font-weight: bold;
+					line-height: 40px;
+					@include transition(line-height 0.15s linear);
+					&:before {
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+.quick-menu-mobile {
+	display: none;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	z-index: 4;
+	@include translate(0, -50%);
+	ul {
+		li {
+			width: 14px;
+			height: 14px;
+			line-height: 14px;
+			margin-bottom: 1px;
+			color: nth($color8, 1);
+			text-align: center;
+			cursor: pointer;
+			@include fspx($FS11);
+			&:hover,
+			&.active {
+				color: nth($color, 1);
+				background: nth($color8, 1);
+			}
+		}
+	}
+}
+
+.quick-menu-style3 {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 4;
+	padding: 0 5px;
+	&.scrolling {
+		top: 5px;
+		background: nth($color, 1);
+		box-shadow: 0 0 8px rgba(nth($color, 2), 0.1);
+	}
+	.curValue {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 80px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: nth($color2, 1);
+		@include fspx($FS60);
+		@include translate(0, -50%);
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 1px;
+			background: nth($color8, 2);
+		}
+	}
+	ul {
+		padding-right: 80px;
+		overflow: hidden;
+		li {
+			position: relative;
+			float: left;
+			width: 3.8%;
+			height: 50px;
+			line-height: 50px;
+			margin: 5px 0;
+			color: nth($color8, 1);
+			text-align: center;
+			overflow: hidden;
+			cursor: pointer;
+			@include fspx($FS18);
+			@include transition(all 0.3s linear);
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				border-style: solid;
+				border-color: transparent;
+				border-width: 5px;
+				border-bottom-color: nth($color8, 1);
+				@include transition(all 0.15s linear);
+				@include translate(-50%, -50%);
+				@include opacity(0);
+			}
+			&:hover,
+			&.active {
+				font-weight: bold;
+				line-height: 40px;
+				@include transition(all 0.15s linear);
+			}
+			&.active {
+				&:before {
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}
+
+
+.notice {
+	height: 30px;
+	line-height: 30px;
+	color: nth($color7, 1);
+	@include fspx($FS11);
+	li {
+		height: 30px;
+		line-height: 30px;
+		color: nth($color7, 1);
+		overflow: hidden;
+		@include fspx($FS11);
+	}
+	a {
+		color: nth($color7, 1);
+	}
+	.h,
+	.b,
+	.m1 {
+		float: left;
+	}
+	.m2 {
+		float: right;
+	}
+	.m {
+		a {
+			text-decoration: underline;
+		}
+	}
+	.b {
+		width: 400px;
+	}
+	.title {
+		float: left;
+		width: 140px;
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.date {
+		float: left;
+		width: 140px;
+		margin: 0 15px;
+		i {
+			font-style: normal;
+			margin: 0 5px;
+		}
+	}
+}
+
+
+.help-tips {
+	line-height: 1.6em;
+	color: nth($color6, 6);
+	text-align: center;
+	padding: 10px 0;
+	@include fspx($FS12);
+	a {
+		color: nth($color6, 6);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+.line-box-01 {
+	width: 24px;
+	height: 6px;
+	background-color: nth($color2, 2);
+	@include gradients(left, (nth($color2, 2), nth($color2, 3), nth($color2, 2)));
+}
+
+.comTitle {
+	line-height: 1.2em;
+	font-weight: bold;
+	color: nth($color6, 6);
+	margin-bottom: 30px;
+	@include fspx($FS20);
+}
+.comTitle2 {
+	position: relative;
+	text-align: center;
+	color: nth($color6, 7);
+	margin-bottom: 10px;
+	@include fspx($FS14);
+}
+.comTitle3 {
+	position: relative;
+	//color: nth($color6, 6);
+	color: nth($color2, 2);
+	font-weight: bold;
+	margin-bottom: 10px;
+	@include fspx($FS16);
+	p {
+		@include fspx($FS14);
+	}
+}
+.comTitle4 {
+	position: relative;
+	color: nth($color6, 6);
+	margin-bottom: 10px;
+	@include fspx($FS16);
+}
+.comTitle5 {
+	position: relative;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	line-height: 1.2em;
+	padding: 10px;
+	background: nth($color6, 6);
+	font-weight: bold;
+	@include fspx($FS18);
+}
+.comTable {
+	table {
+		margin-bottom: 10px;
+		line-height: 2em;
+		color: nth($color6, 7);
+		border: 0;
+		@include fspx($FS12);
+	}
+	td {
+		border: 0;
+		border-bottom: 1px solid nth($color7, 6);
+		padding: 5px 10px;
+		color: nth($color6, 7);
+		text-align: center;
+		background: nth($color, 1);
+	}
+	thead {
+		td {
+			font-weight: bold;
+			color: nth($color, 1);
+			font-size: 130%;
+			background: nth($color6, 6);
+		}
+	}
+	tbody {
+		tr {
+			&:hover {
+				td {
+					background: nth($color7, 6);
+				}
+			}
+		}
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comArticle {
+	line-height: 2em;
+	color: nth($color6, 7);
+	@include fspx($FS12);
+	p {
+		margin-bottom: 10px;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comArticle2 {
+	line-height: 1.5em;
+	color: nth($color6, 6);
+	@include fspx($FS14);
+	p {
+		margin-bottom: 10px;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		margin: 0 2px;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.comUl {
+	&.ul-disc {
+		list-style-type : disc;
+	}
+	&.ul-circle {
+		list-style-type : circle;
+	}
+	&.ul-square {
+		list-style-type : square;
+	}
+	li {
+		line-height: 2em;
+		color: nth($color6, 7);
+		margin-bottom: 4px;
+		@include fspx($FS12);
+	}
+}
+.comTxt {
+	height: 60px;
+	padding: 15px 15px 10px;
+	h2 {
+		height: 20px;
+		line-height: 20px;
+		color: nth($color, 3);
+		overflow: hidden;
+		@include fspx($FS14);
+		a {
+			color: nth($color, 3);
+			&:hover {
+				color: nth($color2, 1);
+			}
+		}
+	}
+	h3 {
+		height: 15px;
+		line-height: 15px;
+		color: nth($color7, 2);
+		overflow: hidden;
+		@include fspx($FS8);
+	}
+}
+.comTxt2 {
+	padding: 10px 15px;
+	.comArticle {
+		color: nth($color, 1);
+		margin-bottom: 1em;
+		overflow: hidden;
+	}
+	.more {
+		text-align: right;
+		a {
+			color: nth($color, 1);
+			text-decoration: underline;
+			@include fspx($FS11);
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+	.more2 {
+		position: relative;
+		z-index: 3;
+		a {
+			float: right;
+			span {
+				position: relative;
+				display: block;
+				height: 3em;
+				line-height: 3em;
+				color: nth($color, 1);
+				padding: 0 20px 0 40px;
+				@include fspx($FS12);
+				.svg-btnBg {
+					position: absolute;
+					top: 0;
+					right: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
+
+.pictxt-slider-01 {
+	.item {
+		cursor: pointer;
+		&.active,
+		&:hover {
+			.box {
+				.pic {
+					.bg {
+						&:before {
+							background: rgba(nth($color, 2), 0.2);
+						}
+					}
+				}
+			}
+		}
+		.box {
+			position: relative;
+			overflow: hidden;
+			.pic {
+				.bg {
+					position: relative;
+					padding-top: 58%;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: rgba(nth($color, 2), 0.45);
+					}
+				}
+			}
+			.txt {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				padding: 10px;
+				@include translate(0, -50%);
+				img {
+					max-width: 30px;
+				}
+				p {
+					line-height: 1.6em;
+					color: nth($color2, 2);
+					@include fspx($FS12);
+				}
+			}
+			/*
+			.txt {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(nth($color, 2), 0.9);
+				color: nth($color, 1);
+				padding: 10px;
+				line-height: 1.3em;
+				@include fspx($FS12);
+				@include transition(all 0.3s linear);
+				@include translate(0, 100%);
+			}
+			&:hover {
+				.txt {
+					@include translate(0, 0);
+				}
+			}
+			*/
+		}
+	}
+}
+
+.pictxt-list-01 {
+	.item {
+		float: left;
+		width: 25%;
+		padding: 0 12px;
+	}
+	.box {
+		position: relative;
+		overflow: hidden;
+		@include skew(-10deg, 0);
+		@include transformOrigin(bottom, center);
+		&:hover {
+			.picbg {
+				.mask {
+					bottom: 0;
+					height: 100%;
+				}
+				.border {
+					@include scale(1, 1);
+					@include opacity(1);
+				}
+			}
+			.txt {
+				bottom: 0;
+				height: 100%;
+			}
+		}
+	}
+	.picbg {
+		.bg {
+			padding-top: 177%;
+		}
+		.mask {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 55px;
+			height: 160px;
+			background: rgba(nth($color2, 7), 0.9);
+			@include transition(all 0.4s);
+		}
+		.border {
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			bottom: 25px;
+			left: 25px;
+			@include scale(2, 2);
+			@include opacity(0);
+			@include transition(all 0.4s);
+		}
+	}
+	.txt {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 55px;
+		height: 160px;
+		@include transition(all 0.4s);
+		a {
+			display: block;
+			height: inherit;
+			color: nth($color, 1);
+			text-align: center;
+			@include display();
+			@include alignItems();
+		}
+		hgroup {
+			display: block;
+			padding: 0 45px 0 65px;
+			@include skew(10deg, 0);
+			@include transformOrigin(bottom, center);
+		}
+		h2 {
+			line-height: 1.5em;
+			margin-bottom: 1em;
+			@include fspx($FS15);
+		}
+		p {
+			line-height: 1.6em;
+			@include fspx($FS10);
+		}
+	}
+}
+
+.pictxt-list-02 {
+	.item {
+		float: left;
+		width: 50%;
+		margin-bottom: 30px;
+		&:nth-child(2n+1){
+			padding-right: 35px;
+		}
+		&:nth-child(2n+2){
+			padding-left: 35px;
+		}
+	}
+	.box {
+		position: relative;
+		&:hover {
+			.pic {
+				.bg {
+					@include transform(translate(-15%, 0) skew(25deg, 0) scale(1.1, 1.1));
+				}
+			}
+		}
+		.pic {
+			width: 108px;
+			box-shadow: -2px 2px 6px #aaa;
+			overflow: hidden;
+			@include transform(skew(-25deg, 0));
+			.bg {
+				width: 140%;
+				padding-top: 80%;
+				@include transition(all 0.3s linear);
+				@include transform(translate(-15%, 0) skew(25deg, 0));
+			}
+		}
+		.btn-2 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(100px, -50%);
+			a {
+				text-align: right;
+				@include fspx($FS14);
+			}
+		}
+	}
+}
+
+
+.pictxt-list-03 {
+	margin: 0 -12px;
+	.item {
+		float: left;
+		width: 50%;
+		padding: 0 12px;
+		margin-bottom: 24px;
+	}
+	.box {
+		position: relative;
+		overflow: hidden;
+		.btn-2 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(70%, -50%);
+			a {
+				text-align: right;
+				@include fspx($FS14);
+			}
+		}
+		&:hover {
+			.txt {
+				.cont {
+					@include translate(0, -100%);
+				}
+			}
+		}
+	}
+	.picbg {
+		.bg {
+			padding-top: 51.4%;
+		}
+	}
+	.txt {
+		position: relative;
+		height: 60px;
+		.cont {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			@include translate(0, -60px);
+			@include transition(all 0.3s linear);
+		}
+		.h {
+			background: nth($color, 1);
+		}
+		.b {
+			background-color: nth($color5, 8);
+			@include gradients(left, (nth($color5, 7), nth($color5, 8)));
+			.comArticle {
+				height: 1.6em * 3;
+				line-height: 1.6em;
+			}
+		}
+	}
+}
+
+
+.pictxt-list-04 {
+	.item {
+		float: left;
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	.box {
+		position: relative;
+		.pic {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			text-align: right;
+			.img {
+				max-width: 100px;
+				max-height: 55px;
+				margin-bottom: 10px;
+			}
+			.line-box-01 {
+				float: right;
+			}
+		}
+		.txt {
+			margin-left: 100px;
+			padding: 0 25px;
+			.title {
+				margin-bottom: 10px;
+			}
+			.comArticle2 {
+				margin-bottom: 10px;
+			}
+			.btns {
+				.btn-2 {
+					float: right;
+					a {
+						width: auto;
+						height: 30px;
+						line-height: 30px;
+						@include fspx($FS14);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-05 {
+	.item {
+		float: left;
+		width: 50%;
+		&:nth-child(2n+1) {
+			padding-right: 30px;
+		}
+		&:nth-child(2n+2) {
+			padding-left: 30px;
+		}
+	}
+	.box {
+		position: relative;
+		.icon {
+			float: left;
+			width: 50px;
+		}
+		.txt {
+			padding-left: 70px;
+			.title {
+				margin-bottom: 5px;
+			}
+			.comArticle {
+				p {
+					span {
+						margin-right: 6em;
+					}
+					&:nth-child(2){
+						padding-left: 3em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-06 {
+	.item {
+		margin-bottom: 30px;
+	}
+	.box {
+		position: relative;
+		.b-title {
+			margin-bottom: 10px;
+			color: nth($color6, 6);
+			@include fspx($FS18);
+		}
+		.pic {
+			float: left;
+			width: 50%;
+			.bg {
+				padding-top: 55%;
+			}
+		}
+		.txt {
+			float: right;
+			width: 50%;
+			padding: 0 0 0 35px;
+			.comArticle {
+				line-height: 1.6em;
+			}
+		}
+	}
+}
+
+
+
+.pictxt-list-07 {
+	.item {
+		/*
+		float: left;
+		width: 50%;
+		padding: 0 30px 0 0;
+		&.w100 {
+			width: 100%;
+		}
+		*/
+		margin-bottom: 40px;
+	}
+	.box {
+		position: relative;
+		.txt {
+			.title {
+				margin-bottom: 5px;
+				//text-align: center;
+			}
+			.comArticle {
+				p {
+					span {
+						margin-right: 6em;
+					}
+					&:nth-child(2){
+						padding-left: 3em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.video {
+	position: relative;
+	& + .video-mask {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		background: rgba(nth($color, 2), 0.3);
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			max-width: 50%;
+			max-height: 50%;
+			@include translate(-50%, -50%);
+		}
+	}
+}
+
+
+.news-list {
+	.item {
+		margin-bottom: 30px;
+	}
+	.box {
+		background: nth($color, 1);
+		padding: 15px 100px 15px 20px;
+		box-shadow: 0 2px 10px rgba(nth($color, 3), 0.3);
+		@include transition(all 0.3s linear);
+		.comTxt {
+			height: auto;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+		.comTxt2 {
+			position: relative;
+			padding: 0;
+			.comArticle {
+				line-height: 1.4em;
+				color: nth($color3, 1);
+				margin-bottom: 0;
+			}
+			.more2 {
+				position: absolute;
+				right: -110px;
+				top: 0;
+			}
+		}
+		&:hover {
+			background-color: nth($color5, 8);
+			@include gradients(left, (nth($color5, 7), nth($color5, 8)));
+			@include translate(-10px, 0);
+			.comTxt {
+				h2,
+				h3 {
+					color: nth($color, 1);
+					a {
+						color: nth($color, 1);
+					}
+				}
+				h2 {
+					font-weight: bold;
+				}
+			}
+			.comTxt2 {
+				.comArticle {
+					color: nth($color, 1);
+				}
+				.more2 {
+					svg {
+						path:nth-child(3) {
+							display: block !important;
+						}
+						path:nth-child(4) {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.news-list2 {
+	border: 3px solid nth($color7, 3);
+	padding: 0 12px;
+	ul {
+		li {
+			color: nth($color2, 6);
+			padding: 10px 0;
+			border-bottom: 1px dashed nth($color7, 3);
+			&:last-child {
+				border-bottom: none;
+			}
+			a {
+				color: nth($color2, 6);
+				&:hover {
+					text-decoration: underline;
+					font-weight: bold;
+				}
+			}
+			h2 {
+				line-height: 1.4em;
+				overflow: hidden;
+				@include fspx($FS12);
+			}
+			p {
+				line-height: 1.4em;
+				overflow: hidden;
+				@include fspx($FS10);
+			}
+		}
+	}
+}
+
+
+.news-list3 {
+	.item {
+		margin-bottom: 25px;
+		.box {
+			.h {
+				position: relative;
+				line-height: 32px;
+				padding: 0 10px;
+				background: nth($color7, 4);
+				.angle-down {
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					width: 0;
+					height: 0;
+					border-top: 8px solid nth($color2, 3);
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					@include translate(0, -50%);
+				}
+			}
+			.b {
+				padding: 10px 0;
+				display: none;
+			}
+		}
+	}
+}
+
+.diagram-list {
+	box-shadow: 0 10px 20px rgba(nth($color, 2), 0.5);
+	.dl-hd1 {
+		height: 68px;
+		padding: 0 25px;
+		color: nth($color, 1);
+		background: nth($color3, 1);
+		@include fspx($FS17);
+		ul {
+			height: inherit;
+		}
+		li {
+			float: left;
+			width: 22%;
+			height: inherit;
+			cursor: pointer;
+			@include display();
+			@include alignItems();
+			@include justifyContent();
+			&:last-child {
+				width: 34%;
+			}
+			&.three {
+				width: 33.333333%;
+			}
+			.dh-item {
+				position: relative;
+				width: 100%;
+				height: 34px;
+				line-height: 34px;
+				text-align: center;
+				i {
+					font-style: normal;
+				}
+			}
+			.gradientBorder2 {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				@include scale(1.2, 1.2);
+				@include transition(all 0.3s);
+				@include opacity(0);
+			}
+			&:hover,
+			&.active {
+				.dh-item {
+					color: nth($color3, 2);
+				}
+				.gradientBorder2 {
+					@include scale(1, 1);
+					@include opacity(1);
+				}
+			}
+		}
+	}
+	.dl-hd2 {
+		padding: 25px;
+		background-color: nth($color, 1);
+		li {
+			float: left;
+			width: 20%;
+			height: 46px;
+			line-height: 46px;
+			color: nth($color3, 4);
+			box-shadow: 0 0 0 1px nth($color3, 4);
+			text-align: center;
+			cursor: pointer;
+			@include fspx($FS10);
+			&.active,
+			&:hover {
+				color: nth($color, 1);
+				background: nth($color3, 4);
+			}
+			i {
+				font-style: normal;
+			}
+		}
+	}
+	.dl-bd {
+		background-color: nth($color, 1);
+		.diagram {
+			table {
+				border: none;
+				background-repeat: no-repeat;
+				background-position: left top;
+				background-image: url(../images/pendant-07.png);
+				td {
+					padding: 15px;
+					line-height: 1.4em;
+					text-align: center;
+					font-weight: bold;
+					border: 0;
+					border-bottom: 1px solid nth($color7, 6);
+					@include fspx($FS18);
+				}
+				thead {
+					td {
+						color: nth($color7, 7);
+					}
+					&.bg {
+						td {
+							height: 68px;
+							color: nth($color, 1);
+							background: nth($color3, 1);
+							@include fspx($FS17);
+						}
+					}
+				}
+				tbody {
+					tr {
+						td {
+							color: nth($color7, 8);
+							background: nth($color, 1);
+							&:first-child {
+								color: nth($color7, 7);
+							}
+							.up,
+							.down {
+								display: inline-block;
+								margin-right: 4px;
+								img {
+									vertical-align: middle;
+									margin-top: -2px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.info-list {
+	li {
+		float: left;
+		width: 16.6666666%;
+		text-align: center;
+		h2 {
+			line-height: 1.4em;
+			color: nth($color3, 6);
+			@include fspx($FS48);
+		}
+		p {
+			line-height: 1.4em;
+			color: nth($color, 1);
+			@include fspx($FS18);
+		}
+	}
+}
+
+
+
+.body-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(nth($color, 2), 0.47);
+}
+
+
+.line-01 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 18px;
+		height: 3px;
+		background: nth($color, 1);
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-02 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 90px;
+		height: 1px;
+		background: nth($color2, 3);
+		@include gradients(left, (rgba(nth($color2, 2), 1), rgba(nth($color2, 3), 1), rgba(nth($color2, 2), 1)));
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-03 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	i {
+		position: absolute;
+		top: 0;
+		width: 24px;
+		height: 2px;
+		background: nth($color6, 7);
+		@include translate(0, -50%);
+		&.i1 {
+			left: 0;
+		}
+		&.i2 {
+			right: 0;
+		}
+	}
+}
+.line-04 {
+	height: 2px;
+	background-image: url(../images/line3.png);
+	background-repeat: repeat;
+	background-position: center;
+	background-size: auto 100%;
+}
+
+
+.pdf-hd {
+	line-height: 40px;
+	border-radius: 4px;
+	padding: 0 10px;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	background-color: rgba(nth($color2, 2), 1);
+	@include gradients(left, (rgba(nth($color2, 2), 1) 0, rgba(nth($color2, 3), 1) 50%, rgba(nth($color2, 2), 1) 100%));
+	.l {
+		float: left;
+		@include fspx($FS16);
+		i {
+			font-size: 200%;
+			margin-right: 10px;
+		}
+		a {
+			display: block;
+			color: nth($color, 1);
+			@include display();
+			@include alignItems();
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.r {
+		float: right;
+		@include fspx($FS12);
+	}
+}
+.pdf-bd {
+	border-radius: 4px;
+	padding: 15px;
+	color: nth($color, 1);
+	margin-bottom: 10px;
+	background-color: rgba(nth($color2, 2), 1);
+	@include gradients(left, (rgba(nth($color2, 2), 1) 0, rgba(nth($color2, 3), 1) 50%, rgba(nth($color2, 2), 1) 100%));
+	.pdf-content {
+		border-radius: 4px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: nth($color, 1);
+		background-image: url(../images/pdf-bg-01.jpg);
+		p {
+			color: nth($color, 2);
+			padding: 20px;
+			a {
+				color: nth($color, 4);
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.scroll-load {
+	text-align: center;
+}
+
+
+.page-bg-1 {
+	background-image: url(../images/bg6.jpg);
+}
+.page-bg-2 {
+	background-image: url(../images/bg7.jpg);
+}
+.page-bg-3 {
+	background-image: url(../images/bg8.jpg);
+}
+.page-bg-4 {
+	background-image: url(../images/bg9.jpg);
+}
+.page-bg-5 {
+	background-image: url(../images/bg10.jpg);
+}
+.page-bg-6 {
+	background-image: url(../images/bg11.jpg);
+}
+.page-bg-7 {
+	background-image: url(../images/bg12.jpg);
+}
+.page-bg-8 {
+	background-image: url(../images/bg13.jpg);
+}
+.page-bg-9 {
+	background-image: url(../images/bg14.jpg);
+}
+.page-bg-10 {
+	background-image: url(../images/bg15.jpg);
+}
+.page-bg-11 {
+	background-image: url(../images/bg16.jpg);
+}
+.page-bg-12 {
+	background-image: url(../images/bg17.jpg);
+}
+.page-bg-13 {
+	background-image: url(../images/bg18.jpg);
+}
+.page-bg-14 {
+	background-image: url(../images/bg19.jpg);
+}
+
+
+;@charset "utf-8";
+
+.form-input1 {
+	display: block;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 12px;
+	color: nth($color, 1);
+	border: none;
+	background: rgba(nth($color5, 2), 0.5);
+	border-radius: 3px;
+	@include placeholderColor(nth($color5, 1));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-textarea1 {
+	display: block;
+	width: 100%;
+	height: 24px * 7;
+	line-height: 24px;
+	padding: 0 12px;
+	color: nth($color2, 6);
+	border: none;
+	background: rgba(nth($color, 1), 0.9);
+	border-radius: 3px;
+	@include placeholderColor(nth($color2, 6));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-submit1 {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 26px;
+	padding: 0 12px;
+	color: nth($color, 1);
+	border: 2px solid nth($color, 1);
+	background: none;
+	text-align: center;
+	border-radius: 0;
+	font-weight: bold;
+	cursor: pointer;
+	text-shadow: 0 0 5px nth($color4, 8);
+	@include placeholderColor(nth($color5, 1));
+	@include fspx($FS16);
+	@include appearance();
+	&:hover {
+		background: nth($color, 1);
+		color: nth($color2, 2);
+	}
+}
+
+
+.form-select1-select2 {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+}
+.select2-container--form-select1 {
+	.select2-selection--single {
+		width: 100%;
+		height: 24px;
+		line-height: 24px;
+		padding: 0 12px;
+		color: nth($color, 1);
+		border: none;
+		background: rgba(nth($color5, 2), 0.5);
+		border-radius: 3px;
+		@include fspx($FS12);
+		.select2-selection__rendered {
+			padding: 0;
+		}
+	}
+	.select2-results__options {
+		max-height: 150px;
+		overflow-y: auto;
+		li {
+			@include fspx($FS12);
+			&:hover {
+				color: nth($color, 1);
+				background: nth($color2, 7);
+			}
+		}
+	}
+}
+
+
+
+.form-input2 {
+	display: block;
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 12px;
+	color: nth($color, 3);
+	border: none;
+	background: nth($color, 1);
+	border-radius: 3px;
+	box-shadow: 0 0 10px nth($color2, 2);
+	@include placeholderColor(nth($color2, 2));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-submit2 {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 26px;
+	padding: 0 12px;
+	font-weight: bold;
+	color: nth($color, 1);
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: -2px 3px 10px rgba(nth($color, 2), 0.2);
+	background: nth($color2, 2);
+	@include gradients(left, (rgba(nth($color2, 2), 1), rgba(nth($color2, 3), 1), rgba(nth($color2, 2), 1)));
+	@include placeholderColor(nth($color2, 3));
+	@include fspx($FS14);
+	@include appearance();
+	&:hover {
+		box-shadow: -1px 1px 3px rgba(nth($color, 2), 0.1);
+	}
+}
+
+
+
+.form-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(nth($color, 2), 0.8);
+}
+
+.form-box {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	padding: 25px;
+	background-color: nth($color4, 7);
+	background-image: url(../images/form-box-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 5px rgba(nth($color, 2), 0.3);
+	@include translate(-50%, -50%);
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: nth($color6, 4);
+		z-index: 1;
+		@include gradients(left, (rgba(nth($color6, 4), 0.89), rgba(nth($color6, 5), 0.89), rgba(nth($color6, 4), 0.89)));
+	}
+	.form-box-bd {
+		position: relative;
+		z-index: 2;
+	}
+	
+	h2,
+	h3,
+	h4 {
+		line-height: 1.4em;
+		color: nth($color, 1);
+		font-weight: bold;
+		text-shadow: 0 0 5px nth($color4, 8);
+	}
+	h2 {
+		@include fspx($FS16);
+	}
+	h3 {
+		@include fspx($FS18);
+	}
+	h4 {
+		@include fspx($FS10);
+	}
+	.hd {
+		position: relative;
+		text-align: center;
+		margin-bottom: 25px;
+		padding: 0 25px;
+	}
+	.logo {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.space-line {
+		height: 2px;
+		background-image: url(../images/line.png);
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		background-position: center;
+	}
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		color: nth($color, 1);
+		cursor: pointer;
+		text-align: center;
+		z-index: 3;
+		@include fspx($FS11);
+		&:hover {
+			background: nth($color, 1);
+			color: nth($color2, 2);
+		}
+	}
+}
+.form1 {
+	.col {
+		margin-bottom: 12px;
+		padding: 0 7px;
+		&.col-02 {
+			float: left;
+			width: 50%;
+		}
+		&.col-03 {
+			float: left;
+			width: 33.3333333%;
+		}
+	}
+	.row-submit {
+		padding-top: 30px;
+	}
+}
+.form2 {
+	.col {
+		margin-bottom: 12px;
+		&.col-01 {
+			float: none;
+		}
+	}
+}
+
+
+.form-apply-side {
+	position: relative;
+	left: auto;
+	top: auto;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	z-index: 3;
+	@include translate(0, 0);
+	.box1 {
+	}
+	.box2 {
+		text-align: center;
+		.hd {
+			margin-bottom: 60px;
+		}
+	}
+}
+.form-apply {
+	width: 340px;
+	min-height: 380px;
+	.box1 {
+		padding: 0 30px;
+	}
+	.box2 {
+		text-align: center;
+		.hd {
+			margin-bottom: 60px;
+		}
+	}
+}
+.form-logreg {
+	display: block;
+	position: static;
+	text-align: center;
+	@include translate(0, 0);
+	.form-box-bd {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.row-submit {
+		padding: 20px 0;
+	}
+	.form-submit2 {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+	.tips {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		color: nth($color, 1);
+		z-index: 3;
+		@include fspx($FS12);
+		a {
+			color: nth($color, 1);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+};@charset "utf-8";
+
+.banner {
+	margin-top: -40px;
+	height: 100vh;
+	.slides {
+		height: inherit;
+		li {
+			position: relative;
+			height: inherit;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	.scrollBtn {
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		z-index: 3;
+		cursor: pointer;
+		@include translate(-50%, -50%);
+	}
+	.txt-all {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		.wrapper {
+			position: relative;
+		}
+		.earth-bg {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			span {
+				display: block;
+				width: 50%;
+				@include opacity(0.3);
+				@include translate(-50%, 20%);
+			}
+		}
+		.txt1 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-align: left;
+			@include display();
+			@include alignItems();
+			.big-log {
+				display: block;
+				width: 50%;
+			}
+		}
+		.txt2 {
+			position: absolute;
+			right: 0;
+			bottom: 130px;
+			left: 0;
+			background: rgba(nth($color2, 5), 0.38);
+			line-height: 1.8em;
+			color: nth($color, 1);
+			letter-spacing: 0.1em;
+			padding: 2em 0;
+			@include fspx($FS18);
+			span {
+				text-transform: uppercase;
+				@include fspx($FS24);
+			}
+		}
+		.swiper-pagination1 {
+			padding-top: 20px;
+		}
+		.btns {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			@include translate(0, -50%);
+			.p1 {
+				text-align: right;
+				color: nth($color, 1);
+				margin-bottom: 6px;
+				@include fspx($FS13);
+			}
+			ul {
+				li {
+					margin: 6px 0;
+				}
+			}
+		}
+	}
+}
+
+
+.introduce-01 {
+	position: relative;
+	z-index: 2;
+	background-image: url(../images/bg1.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 115px 0 415px;
+	.hd {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.pendant-01 {
+		position: absolute;
+		top: 0;
+		left: 25%;
+		width: 36%;
+		@include translate(-60%, -60%);
+	}
+	.pictxt-list-01 {
+		.item {
+			@include opacity(0);
+			@include transition(transform 0.5s linear, opacity 0.5s linear);
+			@include translate(-60%, 0);
+			@for $i from 1 through 4 {
+			  &:nth-child(#{$i}) {
+				  @include delay((4+1-$i)*0.2s);
+				}
+			}
+		}
+	}
+	&.viewIn {
+		.pictxt-list-01 {
+			.item {
+				@include opacity(1);
+				@include translate(0, 0);
+			}
+		}
+	}
+}
+
+
+.introduce-02 {
+	position: relative;
+	z-index: 3;
+	background-image: url(../images/bg2.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-bottom: 225px;
+	.pendant-02 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 27%;
+		@include translate(0, -50%);
+	}
+	.hd {
+		position: relative;
+		left: 750px;
+		padding-left: 50px;
+		@include translate(0, -60px);
+		h2 {
+			margin-bottom: 20px;
+		}
+	}
+	.bd {
+		position: relative;
+		.diagram-list {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 750px;
+			@include translate(0, -100%);
+		}
+		.info-list {
+			padding: 70px 0;
+		}
+	}
+}
+.introduce-03 {
+	position: relative;
+	z-index: 4;
+	background-image: url(../images/bg3.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.index-video {
+	position: relative;
+	margin-bottom: 140px;
+	.hd {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 715px;
+		text-align: center;
+		@include translate(0, -30%);
+		p {
+			margin-bottom: 50px;
+		}
+		.btn-2 {
+			margin-top: 25px;
+			a {
+				margin: 0 auto;
+			}
+		}
+	}
+	.bd {
+		.picbg {
+			float: right;
+			width: 715px;
+			.bg {
+				padding-top: 61.4% * 0.5;
+			}
+			.video {
+				position: absolute;
+				top: -100%;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				box-shadow: 0 10px 20px rgba(nth($color, 2), 0.5);
+				& + .video-mask {
+					top: -100%;
+				}
+			}
+		}
+	}
+}
+.index-account {
+	position: relative;
+	margin-bottom: 40px;
+	.pendant-03 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40%;
+		@include translate(50%, -40%);
+	}
+	.hd {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 50%;
+		padding-left: 130px;
+		text-align: center;
+		@include translate(0, -50%);
+		.center {
+			display: inline-block;
+			text-align: left;
+		}
+		h2:nth-child(2) {
+			margin-left: 50px;
+		}
+	}
+	.bd {
+		position: relative;
+		float: left;
+		width: 50%;
+		.picbg {
+			float: right;
+			width: 150%;
+			.bg {
+				padding-top: 65.5%;
+			}
+		}
+	}
+	.account-changebtn {
+		margin-top: 30px;
+		.chb-item {
+			margin-bottom: 20px;
+			&:nth-child(1) {
+				margin-left: 70px;
+			}
+		}
+	}
+	.account-changeinfo {
+		position: absolute;
+		top: 50%;
+		right: -130px;
+		width: 100%;
+		padding: 30px 0;
+		background-color: rgba(nth($color3, 7), 0.92);
+		@include translate(0, -50%);
+		@include gradients(left, (rgba(nth($color3, 7), 0.92) 0, rgba(nth($color3, 8), 0.92) 90%, rgba(nth($color3, 8), 0.92) 100%));
+		li {
+			line-height: 1.4em;
+			padding: 15px 0;
+			color: nth($color, 1);
+			.name,
+			.info {
+				float: left;
+				width: 50%;
+				padding: 0 1em;
+			}
+			.name {
+				font-weight: bold;
+				@include fspx($FS18);
+			}
+			.info {
+				@include fspx($FS14);
+			}
+		}
+	}
+	.account-link {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		.btn-2 {
+			float: left;
+			margin-left: 30px;
+		}
+	}
+}
+.index-partner {
+	padding: 30px 0;
+	.hd {
+		text-align: center;
+		svg {
+			margin: 0 10px;
+		}
+	}
+	.bd {
+		position: relative;
+	}
+	.partner-list {
+		.partner-item {
+			float: left;
+			width: auto;
+			padding: 5px 0;
+			a {
+				display: block;
+				height: 50px;
+				line-height: 40px;
+				padding: 5px 30px;
+				text-align: center;
+				@include transition(all 0.3s linear);
+				&:hover {
+					background: nth($color, 1);
+					box-shadow: 0 0 4px rgba(nth($color, 2), 0.2);
+					@include translate(0, -2px);
+				}
+			}
+		}
+	}
+}
+
+.introduce-04 {
+	position: relative;
+	z-index: 5;
+	.index-platform {
+		.pic {
+			@include opacity(0);
+			@include translate(-100%, 0);
+			@include transition(transform 0.3s linear, opacity 0.3s linear);
+		}
+		.txt {
+			@include opacity(0);
+			@include translate(100%, 0);
+			@include transition(transform 0.3s linear, opacity 0.3s linear);
+		}
+	}
+	&.viewIn {
+		.index-platform {
+			.pic {
+				@include opacity(1);
+				@include translate(0%, 0);
+			}
+			.txt {
+				@include opacity(1);
+				@include translate(0%, 0);
+			}
+		}
+	}
+}
+.index-platform {
+	background-image: url(../images/bg4.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	.bd {
+		padding: 70px 0;
+		@include display();
+		@include alignItems();
+	}
+	.pic,
+	.txt {
+		width: 50%;
+	}
+	.pic {
+		text-align: right;
+	}
+	.txt {
+		padding-left: 80px;
+		h2 {
+			margin-bottom: 25px;
+			svg {
+				&:nth-child(3) {
+					margin-left: 50px;
+				}
+			}
+		}
+	}
+}
+.index-platform-list {
+	background: nth($color, 1);
+	padding: 20px 0;
+	.platform-item {
+		float: left;
+		width: 16.6666666%;
+		a {
+			display: block;
+			height: 80px;
+			line-height: 80px;
+			padding: 0 10px;
+			text-align: center;
+			background: nth($color, 1);
+			@include transition(all 0.3s linear);
+			&:hover {
+				@include transform(translate(0, -3px) scale(1.1, 1.1));
+			}
+		}
+	}
+};@charset "utf-8";
+.about {
+	.line-04 {
+		margin: 40px 0;
+	}
+};@charset "utf-8";
+
+.logreg {
+	position: relative;
+	.mainHd {
+		position: relative;
+		width: 460px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+};@charset "utf-8";
+
+.mt4 {
+	position: relative;
+	.comTitle2 {
+		width: 180px;
+	}
+	.btns {
+		.btn-4 {
+			float: left;
+			width: 33.3333333%;
+			a {
+				width: 80%;
+			}
+		}
+	}
+	.picArticle {
+		.pic {
+			float: right;
+			width: 50%;
+			.img {
+				margin-bottom: 30px;
+			}
+			.btn-5 {
+				a {
+					margin: 0 auto;
+				}
+			}
+		}
+		.comArticle {
+			float: left;
+			width: 50%;
+			padding-right: 60px;
+		}
+	}
+};@charset "utf-8";
+
+.mt4Use {
+	position: relative;
+	.mobile-main2 {
+		display: none;
+	}
+	.stepBtns {
+		margin-bottom: 140px;
+		.btn-2 {
+			position: relative;
+			float: left;
+			width: 20%;
+			margin-right: 20%;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 150%;
+				top: 50%;
+				width: 60%;
+				height: 3px;
+				background-image: url(../images/line2.png);
+				background-repeat: repeat-x;
+				background-size: auto 100%;
+				background-position: center;
+				@include translate(-50%, -50%);
+			}
+			a {
+				width: 100%;
+			}
+			&:last-child {
+				margin-right: 0;
+				&:before {
+					content: none;
+				}
+			}
+		}
+	}
+	.mt4Step {
+		overflow: visible;
+		.swiper-pagination2 {
+			position: absolute;
+			bottom: 100%;
+			right: 0;
+			left: auto;
+			width: auto;
+			margin-bottom: 10px;
+		}
+		.swiper-control2 {
+			position: absolute;
+			z-index: 3;
+			right: 15px;
+			bottom: 15px;
+		}
+		.line {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(0, -50%);
+		}
+		.nums {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			color: nth($color6, 6);
+			line-height: 1em;
+			font-family: $_FF_AxisExtrabold;
+			@include fspx($FS144);
+			@include translate(-50%, -50%);
+		}
+		.pic {
+			position: absolute;
+			left: 25%;
+			top: 50%;
+			width: 208px;
+			@include translate(-50%, -50%);
+			&:before {
+				content: '';
+				position: absolute;
+				left: 14px;
+				top: 14px;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background: nth($color5, 8);
+				@include gradients(left, (nth($color5, 8), nth($color5, 7)));
+			}
+			.bg {
+				position: relative;
+				z-index: 2;
+				padding-top: 177.8%;
+				box-shadow: 0 0 1px nth($color, 3);
+			}
+		}
+		.txt {
+			float: right;
+			width: 55%;
+			padding: 25px 20px;
+			.comTitle2 {
+				text-align: left;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.comArticle {
+				height: 1.8 * 9em;
+				line-height: 1.8em;
+				margin-bottom: 10px;
+			}
+		}
+	}
+};@charset "utf-8";
+
+.eduList,
+.eduInfo {
+	position: relative;
+	.main2 {
+		padding-top: 30px;
+	}
+}
+
+.eduList {
+	.notice {
+		float: right;
+		margin-bottom: 15px;
+	}
+	.scroll-load {
+		text-align: center;
+		padding: 10px;
+		a {
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+}
+.eduInfo {
+	.main2 {
+		padding-right: 110px;
+	}
+	.article-title {
+		text-align: center;
+		line-height: 1.6em;
+		color: nth($color2, 1);
+		font-weight: bold;
+		@include fspx($FS16);
+	}
+	.article-info {
+		text-align: center;
+		line-height: 1.4em;
+		color: nth($color7, 2);
+		@include fspx($FS10);
+		margin-bottom: 30px;
+	}
+};@charset "utf-8";
+.newsList {
+	position: relative;
+};@charset "utf-8";
+
+.funds {
+	position: relative;
+};@charset "utf-8";
+
+.financialCalendar {
+	position: relative;
+	.main2 {
+		position: relative;
+		.pendant-01 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 460px;
+			@include translate(0, -50%);
+		}
+	}
+}
+
+.financialCalendar-box {
+	position: relative;
+	padding: 10px;
+	border-radius: 10px;
+	background-image: url(../images/bgsm1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 10px;
+		background-color: rgba(nth($color2, 2), 0.89);
+		@include gradients(left, (rgba(nth($color2, 2), 0.89), rgba(nth($color2, 3), 0.89), rgba(nth($color2, 2), 0.89)));
+	}
+	.financialCalendar-data {
+		position: relative;
+		z-index: 3;
+		height: 560px;
+		background: nth($color, 1);
+		border-radius: 10px;
+		overflow: hidden;
+		overflow-x: auto;
+	}
+	.fxplugin {
+		min-width: 500px;
+		height: 100%;
+		& > div {
+			height: inherit;
+			iframe {
+				height: inherit;
+			}
+		}
+	}
+	.pendant-02 {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 4;
+		@include translate(100%, -50%);
+	}
+	.pendant-03 {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+		@include translate(-20%, -50%);
+	}
+};@charset "utf-8";
+.vpsHosting {
+	position: relative;
+	.side4 {
+		position: relative;
+		padding-bottom: 240px;
+		.pendant-01 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 210px;
+			img {
+				max-width: none;
+			}
+		}
+	}
+	.form-apply-side {
+		margin-bottom: 20px;
+		.box1 {
+			.hd {
+				margin: 0 25px 20px;
+			}
+			.logo {
+				max-width: 34px;
+				margin: 0 auto 15px;
+			}
+		}
+	}
+	.quick-link {
+		.hd {
+			margin-bottom: 10px;
+			.icon {
+				float: left;
+				width: 40%;
+				height: 40px;
+				line-height: 20px;
+				text-align: center;
+				color: nth($color6, 7);
+				@include fspx($FS40);
+			}
+			.cont {
+				float: left;
+				width: 50%;
+				line-height: 20px;
+				text-align: center;
+				color: nth($color6, 7);
+				@include fspx($FS12);
+			}
+		}
+		.pictxt-list-02 {
+			.item {
+				float: none;
+				width: 100%;
+				margin-bottom: 5px;
+				&:nth-child(2n+1) {
+					padding-right: 0;
+				}
+				&:nth-child(2n+2) {
+					padding-left: 0;
+				}
+			}
+		}
+		.btns {
+			.btn-2 {
+				margin-bottom: 10px;
+				a {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+};@charset "utf-8";
+.exchangeRate {
+	position: relative;
+	.main2 {
+		position: relative;
+		padding-top: 15px;
+		.pendant-01 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 460px;
+			@include translate(0, -50%);
+		}
+	}
+	.diagram-list {
+		position: relative;
+		z-index: 3;
+		width: 520px;
+		margin-bottom: 30px;
+		.pendant-02 {
+			position: absolute;
+			left: 0;
+			top: 160px;
+			z-index: -1;
+			width: 415px;
+			@include translate(100%, 0);
+		}
+		.pendant-03 {
+			position: absolute;
+			right: 50%;
+			bottom: 95%;
+			z-index: -2;
+			width: 69px;
+		}
+		.pendant-04 {
+			position: absolute;
+			left: 120%;
+			top: 30%;
+			z-index: -2;
+			width: 79px;
+		}
+		.pendant-05 {
+			position: absolute;
+			left: -50px;
+			bottom: -20px;
+			z-index: -2;
+			width: 73px;
+		}
+	}
+	.exchangeRate-data-list {
+		position: relative;
+		z-index: 3;
+		max-width: 720px;
+		background-color: nth($color, 1);
+		background-image: url(../images/data-bg-01.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left top;
+		box-shadow: -10px 10px 12px rgba(nth($color, 2), 0.3);
+		.pendant-03 {
+			position: absolute;
+			left: 100%;
+			top: 20%;
+			z-index: -2;
+			width: 69px;
+		}
+		.pendant-04 {
+			position: absolute;
+			left: 105%;
+			bottom: 20%;
+			z-index: -2;
+			width: 45px;
+		}
+		.pendant-05 {
+			position: absolute;
+			left: -60px;
+			bottom: 20%;
+			z-index: -2;
+			width: 87px;
+		}
+		.arrow-icon {
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			vertical-align: middle;
+			margin-right: 4px;
+			margin-top: -1px;
+			background-image: url(../images/data-icon.png);
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			background-position: left 0;
+			&.arrow-down {
+				background-position: left 0;
+			}
+			&.arrow-up {
+				background-position: left 14px * -1;
+			}
+		}
+		.table {
+			ul {
+				display: table;
+				width: 100%;
+				li {
+					display: table-row;
+					.lump {
+						display: table-cell;
+						text-align: center;
+						vertical-align: middle;
+						&:nth-child(1),
+						&:nth-child(4) {
+							width: 20%;
+						}
+						&:nth-child(2),
+						&:nth-child(3) {
+							width: 30%;
+						}
+					}
+				}
+			}
+		}
+		.h {
+			position: relative;
+			z-index: 2;
+			padding-top: 20px;
+			background-color: rgba(nth($color4, 6), 0.89);
+			@include gradients(left, (rgba(nth($color4, 6), 0.89), rgba(nth($color4, 3), 0.89)));
+			.lump {
+				line-height: 2em;
+				font-family: $_FF_Arial;
+				text-transform: uppercase;
+				color: nth($color, 1);
+				@include fspx($FS18);
+			}
+		}
+		.b {
+			position: relative;
+			z-index: 2;
+			padding: 30px 0;
+			li {
+				&:hover {
+					background-color: rgba(nth($color4, 6), 0.89);
+					.lump {
+						color: nth($color, 1);
+					}
+				}
+			}
+			.lump {
+				line-height: 1.4em;
+				padding: 0.5em;
+				color: nth($color7, 5);
+				@include fspx($FS13);
+			}
+		}
+	}
+};@charset "utf-8";
+
+.accountType {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.svgtitle {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		@include translate(0, -50%);
+		p {
+			&:nth-child(2) {
+				margin-right: 20px;
+			}
+		}
+	}
+	.pictxt-list-02 {
+		margin-left: 236px;
+		.item {
+			margin-bottom: 0;
+		}
+	}
+	.account-changebtn {
+		position: relative;
+		z-index: 3;
+		padding: 10px 0;
+		margin-bottom: 15px;
+		.chb-item {
+			float: left;
+			margin-right: 20px;
+			a {
+				position: relative;
+				display: block;
+				font-weight: bold;
+				padding: 0.2em 1em;
+				@include fspx($FS20);
+				.svg-btnBd {
+					position: absolute;
+					top: 0;
+					left: 0;
+					path {
+						@include transition(all 0.3s linear);
+					}
+				}
+				&.active,
+				&:hover {
+					.svg-btnBd {
+						path {
+							stroke-dashoffset: 0 !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.account-changeinfo {
+		position: relative;
+		z-index: 3;
+		padding: 10px;
+		width: 70%;
+		box-shadow: -5px 5px 20px rgba(nth($color, 2), 0.2);
+		background-color: rgba(nth($color3, 7), 0.92);
+		@include gradients(left, (rgba(nth($color3, 7), 0.92) 0, rgba(nth($color3, 8), 0.92) 90%, rgba(nth($color3, 8), 0.92) 100%));
+		li {
+			line-height: 1.4em;
+			padding: 7px 0;
+			color: nth($color, 1);
+			@include fspx($FS14);
+			.name,
+			.info {
+				float: left;
+				padding: 0 1em 0 5em;
+			}
+			.name {
+				width: 40%;
+				font-weight: bold;
+			}
+			.info {
+				width: 60%;
+			}
+		}
+	}
+	.account-pic {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 70%;
+		.bg {
+			padding-top: 65.5%;
+		}
+	}
+};@charset "utf-8";
+
+.tradingTime {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.tips {
+		text-align: right;
+		color: nth($color2, 6);
+		@include fspx($FS12);
+	}
+};@charset "utf-8";
+
+.videos {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.video-wrap {
+		.b {
+			position: relative;
+			padding-top: 58%;
+			#video-id {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: nth($color, 1);
+			}
+		}
+		.h {
+			line-height: 1.4em;
+			padding: 0.5em 0;
+			color: nth($color6, 6);
+			@include fspx($FS16);
+		}
+	}
+	.video-list {
+		padding: 20px 0;
+		@include gradients(top, (rgba(nth($color4, 4), 1), rgba(nth($color4, 3), 1)));
+		.tip {
+			line-height: 1.4em;
+			color: nth($color, 1);
+			text-align: center;
+			@include fspx($FS12);
+		}
+		.h {
+			margin-bottom: 20px;
+			padding: 0 25px;
+			color: nth($color, 1);
+			@include fspx($FS14);
+		}
+		.b {
+			padding: 0 25px;
+			margin-bottom: 25px;
+			overflow: hidden;
+			li {
+				line-height: 1.4em;
+				margin-bottom: 1em;
+				color: nth($color, 1);
+				cursor: pointer;
+				@include fspx($FS12);
+				&.active,
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+};@charset "utf-8";
+
+
+@media screen and (max-width: 1366px ) {
+	.wrapper {
+		width: 960px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.top-bar {
+		box-shadow: 0 0 4px rgba(nth($color, 2), 0.05);
+		&.active {
+			.hamburger,
+			.hd {
+				@include translate(0, 0);
+				@include opacity(1);
+			}
+		}
+		.hd {
+			@include translate(0, 0);
+			@include opacity(1);
+		}
+		.bd {
+			.com-div {
+				float: left;
+			}
+			.bar-search,
+			.bar-nav {
+				display: none;
+			}
+		}
+	}
+	.hamburger {
+		position: static;
+		@include translate(0, 0);
+		@include opacity(1);
+	}
+	.header {
+		display: none;
+	}
+	.banner {
+		.txt-all {
+			.btns {
+				width: 250px;
+			}
+			.txt2 {
+				bottom: 100px;
+				padding: 1.6em 0;
+			}
+		}
+		.scrollBtn {
+			bottom: 0px;
+		}
+	}
+
+	.introduce-02 {
+		.hd {
+			left: 500px;
+		}
+		.bd {
+			.diagram-list {
+				width: 500px;
+			}
+		}
+	}
+	.index-video {
+		.hd {
+			right: 550px;
+		}
+		.bd {
+			.picbg {
+				width: 500px;
+			}
+		}
+	}
+	.index-account {
+		.hd {
+			padding-left: 80px;
+		}
+		.account-changeinfo {
+			right: -50px;
+		}
+		.account-link {
+			left: 0;
+			right: auto;
+			bottom: 0;
+		}
+	}
+	.float-nav {
+		@include translate(0, -50%);
+	}
+
+	.nav3 {
+		.nav3-item {
+			.bd {
+				.account-link {
+					.btn-2 {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.side {
+		width:  260px;
+	}
+	.main {
+		width: 600px;
+	}
+	.main2,
+	.main5 {
+		width: 600px;
+	}
+	.main3 {
+		float: right;
+		width: 600px;
+		margin-left: 0;
+	}
+	.main4 {
+		width: 300px;
+	}
+	.insMain {
+		padding-top: 30px;
+	}
+
+	.newsList,
+	.videos {
+		.side3 {
+			display: none;
+		}
+	}
+
+	.accountType {
+		.account-changeinfo {
+			width: 90%;
+			li {
+				.name,
+				.accountType {
+					padding: 0 1em;
+				}
+			}
+		}
+		.svgtitle {
+			position: static;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			p {
+				&:nth-child(2) {
+					margin-right: 0;
+				}
+			}
+		}
+		.pictxt-list-02 {
+			margin-left: 0;
+			.item {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.eduInfo {
+		.main2 {
+			padding-top: 0;
+			padding-right: 0;
+		}
+	}
+
+	.mt4Use {
+		.mt4Step {
+			.nums {
+				@include fspx($FS80);
+			}
+			.pic {
+				width: 24%;
+			}
+			.txt {
+				width: 60%;
+			}
+		}
+	}
+	.pictxt-list-01 {
+		.picbg {
+			.border {
+				top: 15px;
+				right: 15px;
+				bottom: 15px;
+				left: 15px;
+			}
+		}
+		.txt {
+			hgroup {
+				padding: 0 10px 0 30px;
+			}
+		}
+	}
+	.pictxt-list-05 {
+		.box {
+			.txt {
+				.comArticle {
+					p {
+						&:nth-child(2) {
+							padding-left: 0;
+						}
+						span {
+							margin-right: 2em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pictxt-list-06 {
+		.box {
+			.pic {
+				width: 45%;
+			}
+			.txt {
+				width: 55%;
+				.comArticle {
+					p {
+						margin-bottom: 4px;
+					}
+				}
+			}
+		}
+	}
+};@charset "utf-8";
+
+
+@media screen and (max-width: 1024px ) {
+	.wrapper {
+		width: 90%;
+	}
+
+	.nav2,
+	.top-bar {
+		.wrapper {
+			width: 100%;
+		}
+	}
+
+	.nav2 {
+		.nav2-item {
+			padding: 0 5px;
+		}
+	}
+	.float-nav {
+		top: auto;
+		bottom: 70px;
+		@include translate(0, 0);
+		li {
+			display: none;
+			&:last-child {
+				display: block;
+			}
+		}
+		a {
+			&.backTop {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.pictxt-list-01 {
+		.box {
+			@include skew(0, 0);
+			&:hover {
+				.picbg {
+					.mask {
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						height: auto;
+					}
+				}
+			}
+		}
+		.picbg {
+			.border {
+				top: 10px;
+				right: 10px;
+				bottom: 10px;
+				left: 10px;
+			}
+			.mask {
+				top: 15px;
+				left: 15px;
+				bottom: 15px;
+				right: 15px;
+				height: auto;
+			}
+		}
+		.txt {
+			left: 15px;
+			bottom: 0;
+			right: 15px;
+			height: 100%;
+			hgroup {
+				padding: 15px;
+				@include skew(0, 0);
+			}
+		}
+	}
+
+	.introduce-01 {
+		padding-bottom: 300px;
+	}
+
+	.index-account {
+		.account-link {
+			position: static;
+		}
+	}
+	.footer-copy {
+		.right-left {
+			float: right;
+		}
+		.right-right {
+			display: none;
+		}
+	}
+
+
+	.side {
+		display: none;
+	}
+	.main {
+		width: 100%;
+	}
+	.side2 {
+		width: 30%;
+		.account-link {
+			.btn-2 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.main2,
+	.main5,
+	.main3 {
+		width: 65%;
+	}
+	.main5 {
+		.main3 {
+			width: 100%;
+		}
+	}
+	.main4 {
+		float: right;
+		width: 65%;
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+	.side4 {
+		width: 65%;
+	}
+	.btn-2 {
+		a {
+			height: 2.4em;
+			line-height: 2.4em;
+		}
+	}
+	.pictxt-list-02 {
+		.item {
+			&:nth-child(2n+1),
+			&:nth-child(2n+2) {
+				padding: 0 20px;
+			}
+		}
+	}
+	.pictxt-list-05 {
+		.item {
+			float: none;
+			width: 100%;
+			margin-bottom: 15px;
+			&:nth-child(2n+1) {
+				padding-right: 0;
+			}
+			&:nth-child(2n+2) {
+				padding-left: 0;
+			}
+		}
+	}
+	.pictxt-list-06 {
+		.box {
+			.pic {
+				float: none;
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			.txt {
+				float: none;
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+	.exchangeRate {
+		.diagram-list {
+			width: 100%;
+		}
+	}
+	.pictxt-list-04 {
+		.item {
+			float: none;
+			width: 100%;
+			border-bottom: 1px solid nth($color2, 2);
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+		}
+		.box {
+			.pic {
+				top: 50%;
+				@include translate(0, -50%);
+				text-align: left;
+				.line-box-01 {
+					float: left;
+				}
+			}
+			.txt {
+				.btns {
+					.btn-2 {
+						float: left;
+					}
+				}
+			}
+		}
+	}
+	.mt4 {
+		.picArticle {
+			.pic {
+				float: none;
+				margin: 0 auto 30px;
+				text-align: center;
+			}
+			.comArticle {
+				float: none;
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		.btns {
+			.btn-4 {
+				float: none;
+				width: 50%;
+				margin-bottom: 10px;
+				a {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.mt4Use {
+		.pc-main2 {
+			display: none;
+		}
+		.mobile-main2 {
+			display: block;
+		}
+	}
+	.vpsHosting {
+		.side4 {
+			padding-bottom: 0;
+			.pendant-01 {
+				display: none;
+			}
+		}
+		.form-apply-side {
+			float: left;
+			width: 48%;
+		}
+		.quick-link {
+			float: right;
+			width: 48%;
+			/*
+			.hd {
+				.icon {
+					width: 40px;
+				}
+				.cont {
+					text-align: left;
+				}
+			}
+			*/
+			.pictxt-list-02 {
+				.item {
+					padding: 0;
+					margin-bottom: 10px;
+					&:nth-child(2n+2),
+					&:nth-child(2n+1) {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+};@charset "utf-8";
+
+
+@media screen and (max-width: 922px ) {
+	.wrapper {
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.banner {
+		.scrollBtn {
+			display: none;
+		}
+		.txt-all {
+			.btns {
+				right: 30px;
+			}
+		}
+	}
+	.pictxt-list-01 {
+		.item {
+			width: 50%;
+			padding: 5px;
+		}
+		.picbg {
+			.bg {
+				padding-top: 100%;
+			}
+		}
+	}
+	.introduce-01 {
+		padding: 80px 0;
+		.pictxt-list-01 {
+			.item {
+				@include translate(0, 0);
+				@include opacity(1);
+			}
+		}
+	}
+	.introduce-02 {
+		padding: 0;
+		background: nth($color, 1);
+		overflow: hidden;
+		.pendant-02 {
+			display: none;
+		}
+		.hd {
+			position: static;
+			padding-left: 0;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			.title-p {
+				color: nth($color2, 1);
+			}
+		}
+		.bd {
+			.diagram-list {
+				position: static;
+				width: 100%;
+				margin-bottom: 40px;
+				@include translate(0, 0);
+			}
+			.info-list {
+				margin: 0 -30px;
+				padding: 30px;
+				background-image: url(../images/bg2.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+		}
+	}
+	.info-list {
+		li {
+			width: 33.3333333%;
+			margin-bottom: 15px;
+		}
+	}
+
+	.index-video {
+		padding: 80px 0;
+		margin-bottom: 0;
+		.hd {
+			position: static;
+			margin-bottom: 30px;
+			@include translate(0, 0);
+			.title-p {
+				display: none;
+			}
+			.btn-2 {
+				display: inline-block;
+			}
+		}
+		.bd {
+			.picbg {
+				float: none;
+				width: 100%;
+				.bg {
+					padding-top: 61.4%;
+				}
+				.video {
+					top: 0;
+					&+ .video-mask {
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.index-account {
+		margin-bottom: 0;
+		padding-bottom: 100px;
+		.pendant-03 {
+			display: none;
+		}
+		.hd {
+			position: static;
+			width: 100%;
+			padding-left: 0;
+			@include translate(0, 0);
+			.center {
+				display: block;
+				text-align: center;
+			}
+			h2 {
+				&:nth-child(2) {
+					margin-left: 0;
+				}
+			}
+		}
+		.bd {
+			width: 70%;
+		}
+		.account-changebtn {
+			display: inline-block;
+			.chb-item {
+				display: inline-block;
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+			}
+		}
+		.account-link {
+			position: absolute;
+			top: 100%;
+			bottom: auto;
+			right: 0;
+			left: auto;
+			padding-top: 15px;
+			.btn-2 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.footer-nav {
+		display: none;
+	}
+
+	.index-partner {
+		.bd {
+			padding: 0 40px;
+		}
+	}
+
+	.swiper-control1 {
+		.prev {
+			left: 0;
+		}
+		.next {
+			right: 0;
+		}
+	}
+	.index-platform-list {
+		.platform-item {
+			width: 33.333333%;
+		}
+	}
+
+	.notice {
+		display: none;
+	}
+	.exchangeRate {
+		.main2 {
+			.pendant-01 {
+				display: none;
+			}
+		}
+		.diagram-list,
+		.exchangeRate-data-list {
+			.pendant-02,
+			.pendant-03,
+			.pendant-05 {
+				display: none;
+			}
+		}
+	}
+
+	.quick-menu-mobile {
+		display: block;
+	}
+	.quick-menu-style2 {
+		display: none;
+	}
+	.index-platform {
+		.txt {
+			h2 {
+				svg {
+					&:nth-child(3) {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.mobile-nav {
+	display: none;
+}
+@media screen and (max-width: 768px ) {
+	body {
+		padding-bottom: 70px;
+	}
+	.footer-nav-mobile {
+		display: block;
+	}
+	.top-bar {
+		box-shadow: 0 0 4px nth($color, 3);
+		.hd {
+			float: none;
+			text-align: center;
+		}
+		.bd {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			.com-div {
+				display: none;
+				&.hamburger {
+					position: absolute;
+					top: 50%;
+					left: 15px;
+					display: block;
+					@include translate(0, -50%);
+					@include transition(all 0.3s);
+				}
+			}
+		}
+	}
+	.top-nav-list {
+		&.nav2 {
+			display: none !important;
+		}
+		&.nav5 {
+			@include translate(0, 0);
+		}
+	}
+	.banner {
+		.txt-all {
+			.txt1 {
+				.big-log {
+					width: 80%;
+				}
+				.btns {
+					display: none;
+				}
+			}
+		}
+	}
+	.introduce-01 {
+		padding: 40px 0;
+		.pendant-01 {
+			width: 35%;
+		}
+	}
+	.footer-copy {
+		padding: 30px 0;
+		.left {
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.right {
+			float: none;
+			width: 100%;
+		}
+		.right-left {
+			float: none;
+			width: 100%;
+			.share {
+				float: left;
+			}
+			.lang {
+				float: right;
+			}
+		}
+		.footer-logo {
+			display: none;
+		}
+		.footer-address {
+			float: none;
+			display: block;
+			width: 100%;
+			dl {
+				padding-left: 0;
+				padding-right: 20px;
+				width: 50%;
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	#livechat-compact-container {
+		display: none !important;
+	}
+
+
+	.pictxt-list-02 {
+		.box {
+			.pic {
+				width: 90px;
+			}
+			.btn-2 {
+				@include translate(50%, -50%);
+			}
+		}
+	}
+	.mainHd {
+		h2 {
+			svg {
+				max-height: 24px;
+			}
+		}
+	}
+
+	.side2 {
+		display: none;
+	}
+	.main2,
+	.main5,
+	.main3,
+	.main4,
+	.side4 {
+		float: none;
+		width: 100%;
+	}
+	.mobile-nav {
+		display: block;
+		margin-bottom: 30px;
+		select {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			color: nth($color2, 1);
+			border: 1px solid nth($color2, 1);
+			background: nth($color, 1);
+		}
+	}
+
+	.accountType {
+		.account-changeinfo {
+			width: 100%;
+		}
+	}
+	.comTable {
+		td {
+			padding: 4px;
+		}
+	}
+	.insMain {
+		padding: 30px 0;
+	}
+	.index-account {
+		.bd {
+			width: 100%;
+			padding: 20px 0;
+			.account-changeinfo {
+				position: relative;
+				top: auto;
+				right: auto;
+				width: 100%;
+				padding: 20px 0;
+				@include translate(0, 0);
+			}
+			.picbg {
+				float: left;
+				position: absolute;
+				top: 0;
+				left: -20px;
+				right: 10%;
+				bottom: 0;
+				width: auto;
+				.bg {
+					padding-top: 0;
+					height: 100%;
+				}
+			}
+		}
+		.account-changeinfo {
+			width: 80%;
+			right: 10%;
+			li {
+				padding: 8px 0;
+			}
+		}
+		.account-link {
+			right: 0;
+			left: 0;
+			text-align: center;
+			.btn-2 {
+				float: none;
+				display: inline-block;
+				margin-left: 0;
+			}
+		}
+		.btn-3 {
+			a {
+				width: auto;
+				&.theone {
+					height: auto;
+					line-height: 25px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	.introduce-02 {
+		.hd {
+			margin-bottom: 10px;
+			h2 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.index-partner {
+		.hd {
+			margin-bottom: 10px;
+		}
+	}
+};@charset "utf-8";
+
+
+@media screen and (max-width: 600px ) {
+	.wrapper {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.pictxt-list-02 {
+		.item {
+			float: none;
+			width: 100%;
+			border-bottom: 1px solid nth($color2, 2);
+		}
+		.box {
+			.btn-2 {
+				left: auto;
+				right: 0;
+				@include translate(0, -50%);
+			}
+		}
+	}
+	.pictxt-list-03 {
+		margin: 0;
+		.item {
+			float: none;
+			width: 100%;
+			padding: 0;
+		}
+		.box {
+			&:hover {
+				.txt {
+					.cont {
+						@include translate(0, 0);
+					}
+				}
+			}
+		}
+		.txt {
+			height: auto;
+			.cont {
+				position: static;
+				@include translate(0, 0);
+			}
+		}
+	}
+	.pictxt-list-04 {
+		.box {
+			.txt {
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+	.logreg {
+		.mainHd {
+			width: 100%;
+			.line-02 {
+				display: none;
+			}
+		}
+	}
+	.financialCalendar {
+		.main2 {
+			.pendant-01 {
+				display: none;
+			}
+		}
+	}
+	.mt4 {
+		.picArticle {
+			.pic {
+				width: 100%;
+			}
+		}
+		.btns {
+			.btn-4 {
+				width: 100%;
+			}
+		}
+	}
+
+	.mt4Use {
+		.maodian {
+			.mainBd {
+				.stpimg {
+					float: left;
+					width: 40%;
+					padding: 10px;
+				}
+				.comArticle {
+					padding-left: 42%;
+				}
+			}
+		}
+	}
+
+	.comTxt2 {
+		.more2 {
+			&:after {
+				content: '';
+				clear: both;
+				height: 0;
+			}
+			a {
+				float: left;
+			}
+		}
+	}
+	.news-list {
+		.box {
+			padding: 10px;
+			.comTxt2 {
+				.more2 {
+					position: relative;
+					right: auto;
+				}
+			}
+		}
+	}
+
+	.vpsHosting {
+		.form-apply-side {
+			float: none;
+			width: 100%;
+		}
+		.quick-link {
+			float: none;
+			width: 100%;
+		}
+	}
+	.quick-menu-style2 {
+		&.direction-horizontal {
+			ul {
+				padding-right: 0;
+				li {
+					height: 24px;
+					line-height: 24px;
+					&:before {
+						display: none;
+					}
+					&:hover {
+						line-height: 24px;
+					}
+				}
+			}
+			.curValue {
+				display: none;
+			}
+		}
+	}
+	.quick-menu-style3 {
+		ul {
+			li {
+				height: 24px;
+				line-height: 24px;
+				&:hover {
+					line-height: 24px;
+				}
+			}
+		}
+	}
+	.pdf-bd {
+		padding: 4px;
+	}
+	.swiper-control3 {
+		.prev {
+			left: -20px;
+		}
+		.next {
+			right: -20px;
+		}
+	}
+}
+@media screen and (max-width: 414px ) {
+	.wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	body {
+		padding-bottom: 40px;
+	}
+	.footer-nav-mobile {
+		ul {
+			li {
+				a {
+					height: 40px;
+					@include fspx($FS16);
+				}
+			}
+		}
+	}
+	.banner {
+		.txt-all {
+			.txt2 {
+				letter-spacing: 0;
+			}
+		}
+	}
+	.introduce-04 {
+		.index-platform {
+			.pic {
+				width: 40%;
+			}
+			.txt {
+				width: 56%;
+				padding-left: 4%;
+			}
+		}
+	}
+
+	.pictxt-list-01 {
+		.item {
+			width: 100%;
+		}
+		.picbg {
+			.bg {
+				padding-top: 50%;
+			}
+		}
+	}
+	.diagram-list {
+		.dl-hd1 {
+			li {
+				.dh-item {
+					min-width: 100%;
+				}
+			}
+		}
+		.dl-bd {
+			.diagram {
+				table {
+					tbody {
+						tr {
+							td {
+								padding: 10px 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.btn-2 {
+		a {
+			height: 2.4em;
+			line-height: 2.4em;
+		}
+	}
+	.btn-3 {
+		a {
+			width: 140px;
+			height: 50px;
+			line-height: 20px;
+			padding: 5px 1em;
+			&.theone {
+				height: 40px;
+				line-height: 40px;
+				padding: 0 1em;
+			}
+		}
+	}
+	.float-nav {
+		bottom: 40px;
+		a {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+
+	.quick-menu-style2 {
+		&.direction-horizontal {
+			ul {
+				li {
+					width: 7.692307692307692%;
+				}
+			}
+		}
+	}
+	.accountType {
+		.account-changeinfo {
+			li {
+				.info {
+					padding: 0;
+				}
+			}
+		}
+	}
+	.comTable {
+		thead {
+			td {
+				font-size: 110%;
+			}
+		}
+	}
+}

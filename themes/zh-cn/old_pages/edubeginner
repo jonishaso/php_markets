@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-5 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>edu">外汇教育</a><em>&gt;</em><a href="<{$http_root_www}>edubeginner">新手入门指南</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<section class="main5 clearfix">
+					<div class="mainBd">
+						<div class="comTitle">新手入门指南</div>
+						<article class="comArticle">
+							<p>Forex/ FX是「外汇」的常用简称，它一般用来形容特别是投资者及投机者在外汇市场买入及卖出外汇。「低买高卖」这个为人熟悉的讲法的确适用于外汇交易。外汇交易者买入价格偏低的货币及卖出价格偏高的货币，就像股票交易者买入价格偏低的股票及卖出价格偏高的股票。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">如何查看报价？</div>
+						<article class="comArticle">
+							<p>由于您经常将一种货币与另一种货币进行比较，外汇是以一对的形式报价的。这在一开始时可能看似混乱，但其实它却是十分简单直接的。例如，欧元/美元是1.4022，显示出1欧元(EUR)约值多少美元(USD)。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">什么是一手？</div>
+						<article class="comArticle">
+							<p>一手是最小的交易单位。福汇账户的标准一手是1,000个单位的货币。不过，只要交易是1,000个单位的递增数目，例如2,000、3,000、15,000、112,000等，账户持有人便可以建立不同规模的交易。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">什么是点子？</div>
+						<article class="comArticle">
+							<p>点子是您计算盈利或亏损的单位。大部份货币对（日圆货币对除外）的报价均达到第四个小数位。小数点后第四个位（一毫）一般就是交易者计算「点子」时会留意的地方。报价中该个位置每一点的变动就是1点的变动。举例说，假若欧元/美元由1.4022上升至1.4027，欧元/美元已上升了5点子。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">什么是杠杆/保证金？</div>
+						<article class="comArticle">
+							<p>正如前文所述，所有交易均以借入的资金执行。这使您可以善用杠杆。200:1的杠杆让您只需存放5美元作为保证金就可在市场中以1,000美元进行交易。这表示您可以藉着在市场中控制较您的账户为多的资金以利用几乎是最小的货币变动。另一方面，杠杆可以大幅增加您的损失。利用任何水平的杠杆进行外汇交易未必适合所有投资者。</p>
+							<p>您为了持有一个持仓而必须拨出的特定金额称为保证金要求。保证金可以视作维持开仓部位所须的实际押金。这并非一项收费或交易成本，只是将您的账户净值的一部份拨出及分配为保证金存款。</p>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script src='http://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-videos.js"></script>
+</body>
+</html>

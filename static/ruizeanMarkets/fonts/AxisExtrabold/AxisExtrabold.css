@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AxisExtrabold';
+    src: url('fonts/AxisExtrabold.eot');
+    src: url('fonts/AxisExtrabold.eot') format('embedded-opentype'),
+         url('fonts/AxisExtrabold.woff2') format('woff2'),
+         url('fonts/AxisExtrabold.woff') format('woff'),
+         url('fonts/AxisExtrabold.ttf') format('truetype'),
+         url('fonts/AxisExtrabold.svg#AxisExtrabold') format('svg');
+}

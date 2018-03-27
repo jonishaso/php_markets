@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- about -->
+	<section class="insMain page-bg-6">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>about">公司简介</a><em>&gt;</em><a href="<{$http_root_www}>claimfile">披露声明文件</a></p></div>
+				<{include file='aboutHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">披露声明文件</div>
+						<article class="comArticle">
+							<p>请下载并阅读以下有关外汇保证证金交易和差价合约产品的披露声明文件，明白产品的性质并知道您进行外汇交易的权利和义务。</p>
+							<p>通过申请Ruizean Markets交易账户，客户同意已阅读并理解以下文件，并同意文件中包含的条款和条件。</p>
+							<{foreach from=$list item=item}>
+								<div class="pdf-hd clearfix">
+									<span class="l"><a href="<{$UPLOAD_PATH}><{$item.files}>" target="_blank"><i class="fa fa-file-pdf-o"></i> <{$item.title}></a></span>
+									<span class="r"><{$item.subTitle}></span>
+								</div>
+							<{/foreach}>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-about.js"></script>
+</body>
+</html>

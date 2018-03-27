@@ -1,0 +1,23 @@
+<{foreach from=$edulist item=item}>
+	<div class="item">
+		<div class="box">
+			<div class="pic picbg"><div class="bg" style="background-image:url(<{$UPLOAD_PATH}><{$item.imageUrl}>);"></div></div>
+			<div class="txt">
+				<div class="cont">
+					<div class="h comTxt">
+						<hgroup>
+							<h2><a href="<{$http_root_www}>../en/newsDetail/3/<{$item.id}>"><{$item.title}></a></h2>
+							<h3><span>By <{$item.author}> On</span><span><{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}></span><span><{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></span></h3>
+						</hgroup>
+					</div>
+					<div class="b comTxt2">
+						<article class="comArticle">
+							<{$item.intro}>
+						</article>
+						<div class="more"><a href="<{$http_root_www}>../en/newsDetail/3/<{$item.id}>">Read More</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<{/foreach}>

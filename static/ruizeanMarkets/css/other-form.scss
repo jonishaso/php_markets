@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+.form-input1 {
+	display: block;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 12px;
+	color: nth($color, 1);
+	border: none;
+	background: rgba(nth($color5, 2), 0.5);
+	border-radius: 3px;
+	@include placeholderColor(nth($color5, 1));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-textarea1 {
+	display: block;
+	width: 100%;
+	height: 24px * 7;
+	line-height: 24px;
+	padding: 0 12px;
+	color: nth($color2, 6);
+	border: none;
+	background: rgba(nth($color, 1), 0.9);
+	border-radius: 3px;
+	@include placeholderColor(nth($color2, 6));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-submit1 {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 26px;
+	padding: 0 12px;
+	color: nth($color, 1);
+	border: 2px solid nth($color, 1);
+	background: none;
+	text-align: center;
+	border-radius: 0;
+	font-weight: bold;
+	cursor: pointer;
+	text-shadow: 0 0 5px nth($color4, 8);
+	@include placeholderColor(nth($color5, 1));
+	@include fspx($FS16);
+	@include appearance();
+	&:hover {
+		background: nth($color, 1);
+		color: nth($color2, 2);
+	}
+}
+
+
+.form-select1-select2 {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+}
+.select2-container--form-select1 {
+	.select2-selection--single {
+		width: 100%;
+		height: 24px;
+		line-height: 24px;
+		padding: 0 12px;
+		color: nth($color, 1);
+		border: none;
+		background: rgba(nth($color5, 2), 0.5);
+		border-radius: 3px;
+		@include fspx($FS12);
+		.select2-selection__rendered {
+			padding: 0;
+		}
+	}
+	.select2-results__options {
+		max-height: 150px;
+		overflow-y: auto;
+		li {
+			@include fspx($FS12);
+			&:hover {
+				color: nth($color, 1);
+				background: nth($color2, 7);
+			}
+		}
+	}
+}
+
+
+
+.form-input2 {
+	display: block;
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 12px;
+	color: nth($color, 3);
+	border: none;
+	background: nth($color, 1);
+	border-radius: 3px;
+	box-shadow: 0 0 10px nth($color2, 2);
+	@include placeholderColor(nth($color2, 2));
+	@include fspx($FS12);
+	@include appearance();
+	&.error {
+		& + label {
+			display: block;
+			color: #c00;
+			@include fspx($FS12);
+		}
+	}
+}
+.form-submit2 {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 26px;
+	padding: 0 12px;
+	font-weight: bold;
+	color: nth($color, 1);
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: -2px 3px 10px rgba(nth($color, 2), 0.2);
+	background: nth($color2, 2);
+	@include gradients(left, (rgba(nth($color2, 2), 1), rgba(nth($color2, 3), 1), rgba(nth($color2, 2), 1)));
+	@include placeholderColor(nth($color2, 3));
+	@include fspx($FS14);
+	@include appearance();
+	&:hover {
+		box-shadow: -1px 1px 3px rgba(nth($color, 2), 0.1);
+	}
+}
+
+
+
+.form-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(nth($color, 2), 0.8);
+}
+
+.form-box {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	padding: 25px;
+	background-color: nth($color4, 7);
+	background-image: url(../images/form-box-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 5px rgba(nth($color, 2), 0.3);
+	@include translate(-50%, -50%);
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: nth($color6, 4);
+		z-index: 1;
+		@include gradients(left, (rgba(nth($color6, 4), 0.89), rgba(nth($color6, 5), 0.89), rgba(nth($color6, 4), 0.89)));
+	}
+	.form-box-bd {
+		position: relative;
+		z-index: 2;
+	}
+	
+	h2,
+	h3,
+	h4 {
+		line-height: 1.4em;
+		color: nth($color, 1);
+		font-weight: bold;
+		text-shadow: 0 0 5px nth($color4, 8);
+	}
+	h2 {
+		@include fspx($FS16);
+	}
+	h3 {
+		@include fspx($FS18);
+	}
+	h4 {
+		@include fspx($FS10);
+	}
+	.hd {
+		position: relative;
+		text-align: center;
+		margin-bottom: 25px;
+		padding: 0 25px;
+	}
+	.logo {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.space-line {
+		height: 2px;
+		background-image: url(../images/line.png);
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		background-position: center;
+	}
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		color: nth($color, 1);
+		cursor: pointer;
+		text-align: center;
+		z-index: 3;
+		@include fspx($FS11);
+		&:hover {
+			background: nth($color, 1);
+			color: nth($color2, 2);
+		}
+	}
+}
+.form1 {
+	.col {
+		margin-bottom: 12px;
+		padding: 0 7px;
+		&.col-02 {
+			float: left;
+			width: 50%;
+		}
+		&.col-03 {
+			float: left;
+			width: 33.3333333%;
+		}
+	}
+	.row-submit {
+		padding-top: 30px;
+	}
+}
+.form2 {
+	.col {
+		margin-bottom: 12px;
+		&.col-01 {
+			float: none;
+		}
+	}
+}
+
+
+.form-apply-side {
+	position: relative;
+	left: auto;
+	top: auto;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	z-index: 3;
+	@include translate(0, 0);
+	.box1 {
+	}
+	.box2 {
+		text-align: center;
+		.hd {
+			margin-bottom: 60px;
+		}
+	}
+}
+.form-apply {
+	width: 340px;
+	min-height: 380px;
+	.box1 {
+		padding: 0 30px;
+	}
+	.box2 {
+		text-align: center;
+		.hd {
+			margin-bottom: 60px;
+		}
+	}
+}
+.form-logreg {
+	display: block;
+	position: static;
+	text-align: center;
+	@include translate(0, 0);
+	.form-box-bd {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.row-submit {
+		padding: 20px 0;
+	}
+	.form-submit2 {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+	.tips {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		color: nth($color, 1);
+		z-index: 3;
+		@include fspx($FS12);
+		a {
+			color: nth($color, 1);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -1,0 +1,186 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^ruizeantrader\.com [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.ruizeantrader.com/$1 [R,L]
+
+#RewriteBase /
+RewriteRule ^admin/? admin/index.php [NC]
+RewriteRule ^contact.php$ index.php?ctl=contact [NC]
+RewriteRule ^verifycode.gif$ index.php?con=admin&ctl=verifycode&%{QUERY_STRING} [NC]
+	
+	RewriteRule ^personen/([a-z]+)/?$ index.php?lang=en&ctl=person&person=$1 [NC]
+	RewriteRule ^personcn/([a-z]+)/?$ index.php?lang=zh-cn&ctl=person&person=$1 [NC]
+	
+	RewriteRule ^zh-cn/?$ index.php?lang=zh-cn&%{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/contact.php$ index.php?lang=zh-cn&ctl=contact [NC]
+	RewriteRule ^zh-cn/ibContact? index.php?lang=zh-cn&ctl=ibContact [NC]
+	RewriteRule ^zh-cn/mamForm? index.php?lang=zh-cn&ctl=mamForm [NC]
+	RewriteRule ^zh-cn/ib/? index.php?lang=zh-cn&ctl=ib [NC]
+	RewriteRule ^zh-cn/newsDetail/([0-9]+)/([0-9]+)/?$ index.php?lang=zh-cn&ctl=newsDetail&classId=$1&id=$2&{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/newsList/([0-9]+)/([0-9]+)/?$ index.php?lang=zh-cn&ctl=newsList&ajax=$1&page=$2&{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/marketnews/([0-9]+)/([0-9]+)/?$ index.php?lang=zh-cn&ctl=marketnews&ajax=$1&page=$2&{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/eduList/([0-9]+)/([0-9]+)/?$ index.php?lang=zh-cn&ctl=eduList&ajax=$1&page=$2&{QUERY_STRING} [NC]
+
+	RewriteRule ^zh-cn/about2/? index.php?lang=zh-cn&ctl=about2 [NC]
+	RewriteRule ^zh-cn/about/? index.php?lang=zh-cn&ctl=about [NC]
+	RewriteRule ^zh-cn/whychooseus? index.php?lang=zh-cn&ctl=whychooseus [NC]
+	RewriteRule ^zh-cn/fundsecurity? index.php?lang=zh-cn&ctl=fundsecurity [NC]
+	RewriteRule ^zh-cn/serverInfo? index.php?lang=zh-cn&ctl=serverInfo [NC]
+	RewriteRule ^zh-cn/newsList/? index.php?lang=zh-cn&ctl=newsList [NC]
+	RewriteRule ^zh-cn/authority? index.php?lang=zh-cn&ctl=authority [NC]
+	RewriteRule ^zh-cn/claimfile? index.php?lang=zh-cn&ctl=claimfile [NC]
+
+	RewriteRule ^zh-cn/product? index.php?lang=zh-cn&ctl=product [NC]
+	RewriteRule ^zh-cn/accounttype? index.php?lang=zh-cn&ctl=accounttype [NC]
+	RewriteRule ^zh-cn/acctypes? index.php?lang=zh-cn&ctl=acctypes [NC]
+	RewriteRule ^zh-cn/stockindex? index.php?lang=zh-cn&ctl=stockindex [NC]
+	RewriteRule ^zh-cn/stp? index.php?lang=zh-cn&ctl=stp [NC]
+	RewriteRule ^zh-cn/handicap? index.php?lang=zh-cn&ctl=handicap [NC]
+	RewriteRule ^zh-cn/marketnews/? index.php?lang=zh-cn&ctl=marketnews [NC]
+	RewriteRule ^zh-cn/mam? index.php?lang=zh-cn&ctl=mam [NC]
+	RewriteRule ^zh-cn/interestrate? index.php?lang=zh-cn&ctl=interestrate [NC]
+	RewriteRule ^zh-cn/vpsHosting? index.php?lang=zh-cn&ctl=vpsHosting [NC]
+	RewriteRule ^zh-cn/fexchange? index.php?lang=zh-cn&ctl=fexchange [NC]
+	RewriteRule ^zh-cn/commodity? index.php?lang=zh-cn&ctl=commodity [NC]
+	
+	RewriteRule ^zh-cn/demoaccount? index.php?lang=zh-cn&ctl=demoaccount [NC]
+	RewriteRule ^zh-cn/liveaccount? index.php?lang=zh-cn&ctl=liveaccount [NC]
+
+	RewriteRule ^zh-cn/tradeplatform? index.php?lang=zh-cn&ctl=tradeplatform [NC]
+	RewriteRule ^zh-cn/mt4intro? index.php?lang=zh-cn&ctl=mt4intro [NC]
+	RewriteRule ^zh-cn/mt4Use? index.php?lang=zh-cn&ctl=mt4Use [NC]
+	RewriteRule ^zh-cn/mt4/([a-z]+)/?$ index.php?lang=zh-cn&ctl=mt4&par=$1&{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/recfriend? index.php?lang=zh-cn&ctl=recfriend [NC]
+	RewriteRule ^zh-cn/whitecoop? index.php?lang=zh-cn&ctl=whitecoop [NC]
+	RewriteRule ^zh-cn/fundmanage? index.php?lang=zh-cn&ctl=fundmanage [NC]
+
+	RewriteRule ^zh-cn/cobrand? index.php?lang=zh-cn&ctl=cobrand [NC]
+	RewriteRule ^zh-cn/deposit? index.php?lang=zh-cn&ctl=deposit [NC]
+	RewriteRule ^zh-cn/logReg? index.php?lang=zh-cn&ctl=logReg [NC]
+	RewriteRule ^zh-cn/withdraw? index.php?lang=zh-cn&ctl=withdraw [NC]
+
+	RewriteRule ^zh-cn/cusresource? index.php?lang=zh-cn&ctl=cusresource [NC]
+	RewriteRule ^zh-cn/faq? index.php?lang=zh-cn&ctl=faq [NC]
+	RewriteRule ^zh-cn/financialCal? index.php?lang=zh-cn&ctl=financialCal [NC]
+	RewriteRule ^zh-cn/tradingTime? index.php?lang=zh-cn&ctl=tradingTime [NC]
+	RewriteRule ^zh-cn/help? index.php?lang=zh-cn&ctl=help [NC]
+
+	
+	RewriteRule ^zh-cn/edubasic/? index.php?lang=zh-cn&ctl=edubasic [NC]
+	RewriteRule ^zh-cn/eduintro/? index.php?lang=zh-cn&ctl=eduintro [NC]
+	RewriteRule ^zh-cn/videos/? index.php?lang=zh-cn&ctl=videos [NC]
+	RewriteRule ^zh-cn/edubeginner/? index.php?lang=zh-cn&ctl=edubeginner [NC]
+	RewriteRule ^zh-cn/eduList/? index.php?lang=zh-cn&ctl=eduList [NC]
+	RewriteRule ^zh-cn/edubook/? index.php?lang=zh-cn&ctl=edubook [NC]
+	RewriteRule ^zh-cn/terminology/? index.php?lang=zh-cn&ctl=terminology [NC]
+	RewriteRule ^zh-cn/exchangeRate/? index.php?lang=zh-cn&ctl=exchangeRate [NC]
+	RewriteRule ^zh-cn/edu/? index.php?lang=zh-cn&ctl=edu [NC]
+	RewriteRule ^zh-cn/updateHomeMetal/? index.php?lang=zh-cn&ctl=updateHomeMetal [NC]
+	RewriteRule ^zh-cn/updateHomeMt4/? index.php?lang=zh-cn&ctl=updateHomeMt4 [NC]
+	RewriteRule ^zh-cn/updateMt4/? index.php?lang=zh-cn&ctl=updateMt4 [NC]
+	
+	RewriteRule ^zh-cn/ls? index.php?lang=zh-cn&ctl=ls [NC]
+	
+	RewriteRule ^zh-cn/vpsContact? index.php?lang=zh-cn&ctl=vpsContact [NC]
+	RewriteRule ^zh-cn/contactus? index.php?lang=zh-cn&ctl=contactus [NC]
+
+	RewriteRule ^zh-cn/([^?.]+)/([0-9]+)$ index.php?lang=zh-cn&ctl=display&id=$2&%{QUERY_STRING} [NC]
+	RewriteRule ^zh-cn/([^?.]+)$ index.php?lang=zh-cn&ctl=info&alias=$1&%{QUERY_STRING} [NC]
+
+	RewriteRule ^en/?$ index.php?lang=en [NC]
+	RewriteRule ^en/contact.php$ index.php?lang=en&ctl=contact [NC]
+	RewriteRule ^en/ibContact? index.php?lang=en&ctl=ibContact [NC]
+	RewriteRule ^en/ib/? index.php?lang=en&ctl=ib [NC]
+	RewriteRule ^en/newsDetail/([0-9]+)/([0-9]+)/?$ index.php?lang=en&ctl=newsDetail&classId=$1&id=$2&{QUERY_STRING} [NC]
+	RewriteRule ^en/newsList/([0-9]+)/([0-9]+)/?$ index.php?lang=en&ctl=newsList&ajax=$1&page=$2&{QUERY_STRING} [NC]
+	RewriteRule ^en/marketnews/([0-9]+)/([0-9]+)/?$ index.php?lang=en&ctl=marketnews&ajax=$1&page=$2&{QUERY_STRING} [NC]
+	RewriteRule ^en/eduList/([0-9]+)/([0-9]+)/?$ index.php?lang=en&ctl=eduList&ajax=$1&page=$2&{QUERY_STRING} [NC]
+
+	RewriteRule ^en/about2/? index.php?lang=en&ctl=about2 [NC]
+	RewriteRule ^en/about/? index.php?lang=en&ctl=about [NC]
+	
+	RewriteRule ^en/whychooseus? index.php?lang=en&ctl=whychooseus [NC]
+	RewriteRule ^en/fundsecurity? index.php?lang=en&ctl=fundsecurity [NC]
+	RewriteRule ^en/serverInfo? index.php?lang=en&ctl=serverInfo [NC]
+	RewriteRule ^en/newsList? index.php?lang=en&ctl=newsList [NC]
+	RewriteRule ^en/authority? index.php?lang=en&ctl=authority [NC]
+	RewriteRule ^en/claimfile? index.php?lang=en&ctl=claimfile [NC]
+
+	RewriteRule ^en/product? index.php?lang=en&ctl=product [NC]
+	RewriteRule ^en/accounttype? index.php?lang=en&ctl=accounttype [NC]
+	RewriteRule ^en/acctypes? index.php?lang=en&ctl=acctypes [NC]
+	RewriteRule ^en/stockindex? index.php?lang=en&ctl=stockindex [NC]
+	RewriteRule ^en/handicap? index.php?lang=en&ctl=handicap [NC]
+	RewriteRule ^en/marketnews? index.php?lang=en&ctl=marketnews [NC]
+	RewriteRule ^en/interestrate? index.php?lang=en&ctl=interestrate [NC]
+	RewriteRule ^en/vpsHosting? index.php?lang=en&ctl=vpsHosting [NC]
+	RewriteRule ^en/fexchange? index.php?lang=en&ctl=fexchange [NC]
+	RewriteRule ^en/commodity? index.php?lang=en&ctl=commodity [NC]
+	
+	RewriteRule ^en/liveaccount? index.php?lang=en&ctl=liveaccount [NC]
+	RewriteRule ^en/demoaccount? index.php?lang=en&ctl=demoaccount [NC]
+	RewriteRule ^en/demoContact? index.php?lang=en&ctl=demoContact [NC]
+
+	RewriteRule ^en/tradeplatform? index.php?lang=en&ctl=tradeplatform [NC]
+	RewriteRule ^en/mt4intro? index.php?lang=en&ctl=mt4intro [NC]
+	RewriteRule ^en/mt4/([a-z]+)/?$ index.php?lang=en&ctl=mt4&par=$1&{QUERY_STRING} [NC]
+
+	RewriteRule ^en/whitecoop? index.php?lang=en&ctl=whitecoop [NC]
+	RewriteRule ^en/risk? index.php?lang=en&ctl=risk [NC]
+	RewriteRule ^en/ls? index.php?lang=en&ctl=ls [NC]
+	
+
+	RewriteRule ^en/vpsContactForLs? index.php?lang=en&ctl=vpsContactForLs [NC]
+	RewriteRule ^en/vpsContactForHosting? index.php?lang=en&ctl=vpsContactForHosting [NC]
+	RewriteRule ^en/mam? index.php?lang=en&ctl=mam[NC]
+	RewriteRule ^en/mamForm? index.php?lang=en&ctl=mamForm[NC]
+	RewriteRule ^en/cobrand? index.php?lang=en&ctl=cobrand [NC]
+	RewriteRule ^en/deposit? index.php?lang=en&ctl=deposit [NC]
+
+	RewriteRule ^en/withdraw? index.php?lang=en&ctl=withdraw [NC]
+
+	RewriteRule ^en/cusresource? index.php?lang=en&ctl=cusresource [NC]
+	RewriteRule ^en/faq? index.php?lang=en&ctl=faq [NC]
+	RewriteRule ^en/financialCal? index.php?lang=en&ctl=financialCal [NC]
+	RewriteRule ^en/help? index.php?lang=en&ctl=help [NC]
+	
+	RewriteRule ^en/edubasic/? index.php?lang=en&ctl=edubasic [NC]
+	RewriteRule ^en/eduintro/? index.php?lang=en&ctl=eduintro [NC]
+	RewriteRule ^en/videos/? index.php?lang=en&ctl=videos [NC]
+	RewriteRule ^en/edubeginner/? index.php?lang=en&ctl=edubeginner [NC]
+	RewriteRule ^en/eduList/? index.php?lang=en&ctl=eduList [NC]
+	RewriteRule ^en/terminology/? index.php?lang=en&ctl=terminology [NC]
+	RewriteRule ^en/exchangeRate/? index.php?lang=en&ctl=exchangeRate [NC]
+	RewriteRule ^en/edu/? index.php?lang=en&ctl=edu [NC]
+	RewriteRule ^en/updateHomeMetal/? index.php?lang=en&ctl=updateHomeMetal [NC]
+	RewriteRule ^en/updateHomeMt4/? index.php?lang=en&ctl=updateHomeMt4 [NC]
+	RewriteRule ^en/updateMt4/? index.php?lang=en&ctl=updateMt4 [NC]
+
+	RewriteRule ^en/vpsContact? index.php?lang=en&ctl=vpsContact [NC]
+	RewriteRule ^en/contactus? index.php?lang=en&ctl=contactus [NC]
+
+	RewriteRule ^en/([^?.]+)/([0-9]+)$ index.php?lang=en&ctl=display&id=$2&%{QUERY_STRING} [NC]
+	RewriteRule ^en/([^?.]+)$ index.php?lang=en&ctl=info&alias=$1&%{QUERY_STRING} [NC]
+
+	
+
+#paypal
+RewriteRule ^payment/paypal/([^\/?.]+)?/?$ index.php?ctl=payment/paypal&act=$1&%{QUERY_STRING} [NC]
+
+#oauth connect
+RewriteRule ^oauth_connect/([^?.]+)/?$ index.php?ctl=oauth_connect&act=$1&%{QUERY_STRING} [NC]
+
+#member
+RewriteRule ^member/?$ index.php?ctl=member&%{QUERY_STRING} [NC]
+RewriteRule ^member/([^?.]+)/?$ index.php?ctl=member&act=$1&%{QUERY_STRING} [NC]
+
+RewriteRule ^([^?.]+)/([0-9]+)$ index.php?ctl=display&id=$2&%{QUERY_STRING} [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?.]+)$ index.php?ctl=info&alias=$1&%{QUERY_STRING} [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+</IfModule>
+Header add x-frame-options "DENY"

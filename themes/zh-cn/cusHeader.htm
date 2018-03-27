@@ -1,0 +1,28 @@
+<aside class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>cusresource"><span><svg class="svg-btnBg svg-ele"></svg>账户管理</span></a></li>
+			<{if $active == "deposit"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>deposit"><span>存入资金</span></a></li>
+			<{if $active == "withdraw"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>withdraw"><span>提取资金</span></a></li>
+			<!--<{if $active == "logReg"}><li class="b active"><{else}><li class="b"><{/if}><a href="https://personal.ruizeanmarkets.com"><span>客户登录专区</span></a></li>-->
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>cusresource"><span><svg class="svg-btnBg svg-ele"></svg>信息咨询</span></a></li>
+			<{if $active == "financialCalendar"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>financialCal"><span>财经日历</span></a></li>
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</aside>
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="账户管理">
+			<option <{if $active == "deposit"}>selected="selected"<{/if}> value="<{$http_root_www}>deposit">存入资金</option>
+			<option <{if $active == "withdraw"}>selected="selected"<{/if}> value="<{$http_root_www}>withdraw">提取资金</option>
+			<!--<option <{if $active == "logReg"}>selected="selected"<{/if}> value="<{$http_root_www}>logReg">客户登录专区</option>-->
+		</optgroup>
+		<optgroup label="信息咨询">
+			<option <{if $active == "financialCal"}>selected="selected"<{/if}> value="<{$http_root_www}>financialCalendar">财经日历</option>
+		</optgroup>
+	</select>
+</div>

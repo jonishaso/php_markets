@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="<{$SKIN_PATH}>images/global.css">
+<link rel="stylesheet" type="text/css" href="<{$SKIN_PATH}>images/main.css">
+<script type="text/javascript" src="<{$SKIN_PATH}>js/jquery.js"></script>
+<script type="text/javascript" src="<{$SKIN_PATH}>js/global.js"></script>
+<script src="<{$STATIC_PATH}>crop/crop4.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>crop/crop2.css">
+<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>crop/Jcrop/jquery.Jcrop.css">
+<script type="text/javascript" src="<{$STATIC_PATH}>crop/Jcrop/jquery.Jcrop.js"></script>
+<{if $class.info.hasPublishdate}>
+<script src="<{$STATIC_PATH}>DatePicker/My97DatePicker/WdatePicker.js"></script>
+<{/if}>
+<{if $class.info.hasContent}>
+<script src="<{$STATIC_PATH}>/editor/ckeditor/ckeditor.js"></script>
+<script>
+$(function(){
+	CKEDITOR.replace('content', {
+		height : 350,
+		filebrowserImageUploadUrl : '?con=admin&ctl=editor&act=pic'
+	});
+});
+</script>
+<{/if}>
+<script type="text/javascript">
+function check (form)
+{
+	var name = document.getElementsByName('data[title]')[0];
+	if (name.value == '')
+	{
+		alert('<{$lang->title}><{$lang->can_not_empty}>');
+		name.focus();
+		return false;
+	}
+
+	<{if $class.info.hasContent}>
+	var content	= CKEDITOR.instances.content.getData();
+	$('#content').val(content);
+	<{/if}>
+
+	return true;
+}
+
+<{if $class.info.hasInfoPic}>
+function addLine( obj ) {
+	var _str = '<p><input type="hidden" name="pics_old_id[]" /><input type="text" name="pics_sortnum[]" value="" placeholder="Sort No." size="10" /> <input type="text" name="picsname[]" size="30" value="" placeholder="Image Title" /> <input type="file" name="pics[]" size="30" cropsize="<{$class.other.infopic2width}>,<{$class.other.infopic2height}>" /> &nbsp; <a href="#" onclick="return deleteLine( this );">X</a></p>';
+	$(obj).before(_str);
+	$(obj).prev('p').find('input[name="pics[]"]').crop();
+}
+
+function deleteLine( obj ) {
+	$(obj).parent().remove();
+	return false;
+}
+
+function checkDelete() {
+	if ( window.confirm( '<{$lang->are_you_sure_you_want_delete_this_attachment}>' ) ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+<{/if}>
+
+$(function(){
+	$('input[name="imageUrl"]').crop();
+	$('input[name="bigImageUrl"]').crop();
+	$('input[name="pics[]"]').crop();
+});
+</script>
+</head>
+
+<body>
+<div class="wrap inner clearfix">
+	<div class="container">
+		<{if $data.classId == 102 or $data.classId == 103 or $data.classId == 104 or $data.classId == 108}>
+		<{else}>
+			<div class="tips">
+				<a href="<{$returnUrl}>" class="lnkReturn"><{$lang->return_to_list}></a> 
+			</div>
+		<{/if}>
+		<form action="?con=admin&ctl=info/&act=edit&class_id=<{$data.classId}>&id=<{$data.id}>&noback=<{if $data.classId == 102 or $data.classId == 103 or $data.classId == 104 or $data.classId == 105 or $data.classId == 108}>1<{else}><{$noback}><{/if}>&noback2=<{if $data.classId == 102 or $data.classId == 103 or $data.classId == 104 or $data.classId == 105 or $data.classId == 108}>1<{else}><{$noback2}><{/if}>" method="post" enctype="multipart/form-data" onsubmit="return check(this);">
+			<table class="editTable">
+				<{if $data.classId == 102}>
+					<tr class="editHdTr">
+						<td colspan="2"><{$data.title}></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Pricing<{else}>定价<{/if}></td>
+						<td class="editRtTd"><input name="data[fromPrice]" value="<{$data.fromPrice}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Spreads<{else}>点差<{/if}></td>
+						<td class="editRtTd"><input name="data[spread]" value="<{$data.spread}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Trading Platform<{else}>交易平台<{/if}></td>
+						<td class="editRtTd"><input name="data[platform]" value="<{$data.platform}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Servers Location<{else}>服务器所在地<{/if}></td>
+						<td class="editRtTd"><input name="data[server]" value="<{$data.server}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Maximum Leverage<{else}>最大杠杆<{/if}></td>
+						<td class="editRtTd"><input name="data[leverage]" value="<{$data.leverage}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>How many banks<{else}>多少家银行<{/if}></td>
+						<td class="editRtTd"><input name="data[banks]" value="<{$data.banks}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Minimum deposit<{else}>最低存款<{/if}></td>
+						<td class="editRtTd"><input name="data[lowestFund]" value="<{$data.lowestFund}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>The type of currency pairs<{else}>货币对种类<{/if}></td>
+						<td class="editRtTd"><input name="data[currencyClassify]" value="<{$data.currencyClassify}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>The minimum trading volume<{else}>最小交易量<{/if}></td>
+						<td class="editRtTd"><input name="data[minTradeNum]" value="<{$data.minTradeNum}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Trading cost<{else}>交易成本<{/if}></td>
+						<td class="editRtTd"><input name="data[tradeFunds]" value="<{$data.tradeFunds}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Minimum customer amount<{else}>最小客户金额<{/if}></td>
+						<td class="editRtTd"><input name="data[lowestSaving]" value="<{$data.lowestSaving}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Programming language<{else}>程序设计语言<{/if}></td>
+						<td class="editRtTd"><input name="data[programLang]" value="<{$data.programLang}>" type="text" size="30" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{if $language == 'en'}>Suitable group<{else}>适合群体<{/if}></td>
+						<td class="editRtTd"><input name="data[ppl]" value="<{$data.ppl}>" type="text" size="30" class="text" /></td>
+					</tr>
+				<{elseif $data.classId == 103 or $data.classId == 104}>
+					<tr class="editHdTr">
+						<td colspan="2"><{$data.title}></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{$lang->title}></td>
+						<td class="editRtTd"><input name="data[title]" value="<{$data.title}>" type="text" size="30" class="text" /><input id="isApproved" name="data[isApproved]" value="1" type="hidden" /></td>
+					</tr>
+					<{if $class.info.hasInfoPic}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->album}></td>
+							<td class="editRtTd">
+								<{foreach from=$pic_list item=item key=key}>
+									<p><input type="hidden" name="pics_old_id[]" value="<{$item.id}>" /><input type="text" name="pics_sortnum[]" value="<{$item.sortnum}>" size="10" placeholder="Sort No." /> <a href="<{$UPLOAD_PATH}><{$item.pic}>" target="_blank"><{$item.picname}></a> &nbsp; <a href="<{$deletepicurl}>id=<{$item.id}>&infoid=<{$data.id}>" onclick="return checkDelete();">X</a></p>
+								<{/foreach}>
+								<p><input type="hidden" name="pics_old_id[]" /><input type="text" name="pics_sortnum[]" value="" placeholder="Sort No." size="10" /> <input type="text" name="picsname[]" size="30" value="" placeholder="Image Title" /> <input type="file" name="pics[]" size="30" cropsize="<{$class.other.infopic2width}>,<{$class.other.infopic2height}>" /></p>
+								<input type="button" value="Add" onclick="addLine( this );" />
+								<p><{$lang->image_allow_follow_types}></p>
+							</td>
+						</tr>
+					<{/if}>
+				<{else}>
+					<tr class="editHdTr">
+						<td colspan="2"><{$lang->basic_parameters}></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{$lang->category_name}></td>
+						<td class="editRtTd"><{$positionStr}></td>
+						<!--<td class="editRtTd">
+							<select name="cate">
+								<{foreach from=$categoryArr item=item key=key}>
+									<option value="<{$item.id}>"><{$item.name}></option>
+								<{/foreach}>
+							</select>
+						</td>-->
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><em class="tip" tips="<{$lang->bigger_front}>"><{$lang->ordinal}></em></td>
+						<td class="editRtTd"><input name="data[ordinal]" value="<{$data.ordinal}>" type="text" size="10" class="text" /></td>
+					</tr>
+					<tr class="editTr">
+						<td class="editLtTd"><{$lang->title}></td>
+						<td class="editRtTd"><input name="data[title]" value="<{$data.title}>" type="text" size="60" class="text" /></td>
+					</tr>
+					<{if $class.info.hasSubTitle}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->sub_title}></td>
+							<td class="editRtTd"><input name="data[subTitle]" value="<{$data.subTitle}>" type="text" size="60" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasTitleStyle}>
+					<tr class="editTr">
+						<td class="editLtTd"><{$lang->style}></td>
+						<td class="editRtTd">
+							<input name="color" value="<{$data.color}>" type="text" size="10" class="text" /> 
+							<input id="chkTitleBold" name="chkTitleBold" value="1" type="checkbox"<{if $data.chkTitleBold}> checked<{/if}> /><label for="chkTitleBold"><{$lang->bold}></label>
+							<input id="chkTitleItalic" name="chkTitleItalic" value="1" type="checkbox"<{if $data.chkTitleItalic}> checked<{/if}> /><label for="chkTitleItalic"><{$lang->italic}></label>
+						</td>
+					</tr>
+					<{/if}>
+					<tr class="editTr">
+						<td class="editLtTd"><{$lang->status}></td>
+						<td class="editRtTd">
+							<input id="isApproved" name="data[isApproved]" value="1" type="checkbox"<{if $data.isApproved}> checked<{/if}> /><label for="isApproved"><{$lang->audit}></label>
+							<{if $data.classId == 106101 or $data.classId == 106102}>
+								<{if $class.info.hasTop}><input id="isTop" name="data[isTop]" value="1" type="checkbox"<{if $data.isTop}> checked<{/if}> /><label for="isTop">company news<!--<{$lang->status_top}>--></label><{/if}>
+								<{if $class.info.hasRecommended}><input id="isRecommended" name="data[isRecommended]" value="1" type="checkbox"<{if $data.isRecommended}> checked<{/if}> /><label for="isRecommended">market news<!--<{$lang->status_recommend}>--></label><{/if}>
+								<{if $class.info.hasHot}><input id="isHot" onClick="toggle();" name="data[isHot]" value="1" type="checkbox"<{if $data.isHot}> checked<{/if}> /><label for="isHot"><{$lang->status_hot}></label><{/if}>
+							<{else}>
+								<{if $class.info.hasTop}><input id="isTop" name="data[isTop]" value="1" type="checkbox"<{if $data.isTop}> checked<{/if}> /><label for="isTop"><{$lang->status_top}></label><{/if}>
+								<{if $class.info.hasRecommended}><input id="isRecommended" name="data[isRecommended]" value="1" type="checkbox"<{if $data.isRecommended}> checked<{/if}> /><label for="isRecommended"><{$lang->status_recommend}></label><{/if}>
+								<{if $class.info.hasHot}><input id="isHot" onClick="toggle();" name="data[isHot]" value="1" type="checkbox"<{if $data.isHot}> checked<{/if}> /><label for="isHot"><{$lang->status_hot}></label><{/if}>
+							<{/if}>
+						</td>
+					</tr>
+					<{if $class.info.hasView}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->hits}></td>
+							<td class="editRtTd"><input name="data[hits]" value="<{$data.hits}>" type="text" size="10" maxlength="10" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasAlias}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->alias}></td>
+							<td class="editRtTd"><input name="data[alias]" value="<{$data.alias}>" type="text" size="60" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasUrl}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->link_address}></td>
+							<td class="editRtTd"><input name="data[url]" value="<{$data.url}>" type="text" size="60" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasPageTitle}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->page_title}></td>
+							<td class="editRtTd"><input name="data[pageTitle]" value="<{$data.pageTitle}>" type="text" size="100" maxlength="100" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasKeywords}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->page_keywords}></td>
+							<td class="editRtTd"><input name="data[keywords]" value="<{$data.keywords}>" type="text" size="100" maxlength="150" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasDescription}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->page_description}></td>
+							<td class="editRtTd"><input name="data[description]" value="<{$data.description}>" type="text" size="30" maxlength="250" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasTags}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->tags}></td>
+							<td class="editRtTd"><input name="data[tags]" value="<{$data.tags}>" type="text" size="60" class="text" /> <{$lang->tags_tips}></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasPublishdate}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->publish_date}></td>
+							<td class="editRtTd"><input name="data[publishedDate]" value="<{$data.publishedDate}>" type="text" size="15" class="text" onfocus="WdatePicker();" onclick="WdatePicker();" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasSource}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->source}></td>
+							<td class="editRtTd"><input name="data[source]" value="<{$data.source}>" type="text" size="15" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasAuthor}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->author}></td>
+							<td class="editRtTd"><input name="data[author]" value="<{$data.author}>" type="text" size="15" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasBigImageUrl}>
+						<tr class="editTr" id="hidethis">
+							<td class="editLtTd"><{$lang->enlarge}></td>
+							<td class="editRtTd">
+								<input name="bigImageUrl" type="file" size="30" cropsize="<{$class.other.pic2width}>,<{$class.other.pic2height}>" />
+								<{if $data.bigImageUrl}><a href="<{$UPLOAD_PATH}><{$data.bigImageUrl}>" target="_blank">[<{$lang->have}>]</a><{/if}>
+							</td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasImageUrl}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->thumbnail}></td>
+							<td class="editRtTd">
+								<input name="imageUrl" type="file" size="30" cropsize="<{$class.other.pic1width}>,<{$class.other.pic1height}>" />
+								<{if $data.imageUrl}><a href="<{$UPLOAD_PATH}><{$data.imageUrl}>" target="_blank">[<{$lang->have}>]</a><{/if}>
+							</td>
+						</tr>
+					<{/if}>
+					
+					<{if $class.info.hasInfoPic}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->album}></td>
+							<td class="editRtTd">
+								<{foreach from=$pic_list item=item key=key}>
+									<p><input type="hidden" name="pics_old_id[]" value="<{$item.id}>" /><input type="text" name="pics_sortnum[]" value="<{$item.sortnum}>" size="10" placeholder="Sort No." /> <a href="<{$UPLOAD_PATH}><{$item.pic}>" target="_blank"><{$item.picname}></a> &nbsp; <a href="<{$deletepicurl}>id=<{$item.id}>&infoid=<{$data.id}>" onclick="return checkDelete();">X</a></p>
+								<{/foreach}>
+								<p><input type="hidden" name="pics_old_id[]" /><input type="text" name="pics_sortnum[]" value="" placeholder="Sort No." size="10" /> <input type="text" name="picsname[]" size="30" value="" placeholder="Image Title" /> <input type="file" name="pics[]" size="30" cropsize="<{$class.other.infopic2width}>,<{$class.other.infopic2height}>" /></p>
+								<input type="button" value="Add" onclick="addLine( this );" />
+								<p><{$lang->image_allow_follow_types}></p>
+							</td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasFiles}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->attachment}></td>
+							<td class="editRtTd">
+								<input name="files" type="file" size="30" />
+								<{if $data.files}><a href="<{$UPLOAD_PATH}><{$data.files}>" target="_blank">[<{$lang->have}>]</a><{/if}>
+								<p>Allow the following types: <{if $class.other.exts}><{$class.other.exts}><{else}>jpg,jpeg,png,gif,rar,doc,docx,xls,xlsx,pdf,zip<{/if}></p>
+							</td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasIntro}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->intro}></td>
+							<td class="editor"><textarea name="data[intro]" style="width:98%; height:100px;"><{$data.intro}></textarea></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasSourceHtml}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->source_url}></td>
+							<td class="editRtTd"><input name="data[sourceHtml]" value="<{$data.sourceHtml}>" type="text" size="60" class="text" /></td>
+						</tr>
+					<{/if}>
+					<{if $class.info.hasContent}>
+						<tr class="editTr">
+							<td class="editLtTd"><{$lang->detail}></td>
+							<td class="editor"><textarea id="content" name="data[content]"><{$data.content}></textarea></td>
+						</tr>
+					<{/if}>
+				<{/if}>
+			</table>
+			<div class="editBtn clearfix">
+				<input type="submit" value="Save" class="lnkSave" /> 
+				<{if $data.classId == 102 or $data.classId == 103 or $data.classId == 104 or $data.classId == 105 or $data.classId == 108}>
+				<{else}>
+					<a href="?con=admin&ctl=info/&class_id=<{$data.classId}>&noback=<{$noback}>" class="lnkReturn"><{$lang->return_to_list}></a> 
+				<{/if}>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	function toggle() {
+ 		if( document.getElementById("hidethis").style.display=='none' ){
+   			document.getElementById("hidethis").style.display = '';
+ 		}else{
+   			document.getElementById("hidethis").style.display = 'none';
+ 		}
+ 	}
+</script>
+<{if $data.isHot == 1}>
+<script type="text/javascript">
+	document.getElementById("hidethis").style.display = '';
+</script>
+<{else}>
+<script type="text/javascript">
+	document.getElementById("hidethis").style.display = 'none';
+</script>
+<{/if}>
+</body>
+</html>

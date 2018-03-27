@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+.financialCalendar {
+	position: relative;
+	.main2 {
+		position: relative;
+		.pendant-01 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 460px;
+			@include translate(0, -50%);
+		}
+	}
+}
+
+.financialCalendar-box {
+	position: relative;
+	padding: 10px;
+	border-radius: 10px;
+	background-image: url(../images/bgsm1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 10px;
+		background-color: rgba(nth($color2, 2), 0.89);
+		@include gradients(left, (rgba(nth($color2, 2), 0.89), rgba(nth($color2, 3), 0.89), rgba(nth($color2, 2), 0.89)));
+	}
+	.financialCalendar-data {
+		position: relative;
+		z-index: 3;
+		height: 560px;
+		background: nth($color, 1);
+		border-radius: 10px;
+		overflow: hidden;
+		overflow-x: auto;
+	}
+	.fxplugin {
+		min-width: 500px;
+		height: 100%;
+		& > div {
+			height: inherit;
+			iframe {
+				height: inherit;
+			}
+		}
+	}
+	.pendant-02 {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 4;
+		@include translate(100%, -50%);
+	}
+	.pendant-03 {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+		@include translate(-20%, -50%);
+	}
+}

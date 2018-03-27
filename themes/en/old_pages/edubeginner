@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-5 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/edu">Education</a><em>&gt;</em><a href="<{$http_root_www}>../en/edubeginner">Forex Trading Guides</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<section class="main5 clearfix">
+					<div class="mainBd">
+						<div class="comTitle">Forex Trading Guides</div>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">What is Forex?</div>
+						<article class="comArticle">
+							<p>Forex/FX or the "Exchange" as it is commonly referred to, is s term generally used to describe the buying and selling of currency in the foreign exchange market. "Buy low, sell high", people are familiar with this phrase, which applies to foreign exchange transactions. Forex traders buy currencies at a low price and sell when the prices are higher, in the same way that stock traders buy undervalued stocks and sell them when the prices increase. </p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">How to view a quote?</div>
+						<article class="comArticle">
+							<p>When you compare one currency with another currency, in the foreign exchange this comparison is made in the form of a pair of quotes. This may seem confusing at the beginning, but in fact it is very simple and straightforward. For example, EUR/USD is 1.4022, showing the value of one euro (EUR) value in US dollars (USD).</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">What is a lot?</div>
+						<article class="comArticle">
+							<p>Mini lot is 0.01 (1,000) is the minimum trading unit and in a Ruizean Markets standard account the standard lot is 1 (100,000). However, as long as the number of transactions is above 1,000 units, for example 2,000, 3,000, 15,000, 112,000 etc., account holders will be able to open a position on the FX.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">What is the Pips?</div>
+						<article class="comArticle">
+							<p>The pips is how you calculate the profit or loss of a unit. Most currencies (except the Yen currency pair) are quoted to four decimal places. The fourth decimal place (cent) in general, allows the local traders to calculate the "pip". Changes in the offer for each point position are equivalent to 1. For example, if the EUR/USD rose from 1.4022 to 1.4027, the EUR/USD has risen by 5 basis points.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">What is the leverage / margin?</div>
+						<article class="comArticle">
+							<p>As mentioned above, all transactions are executions on borrowed money (leveraged). This allows you to take advantage of leverage. For example, a 200: 1 leverage allows you to keep only $5 as a deposit, whilst opening positions valued up to $1,000. This means that you can take advantage of currency movements without having to maintain an equivalent balance in your account. It is important to remember that leveraging your positions can dramatically increase your losses as well as your profits, which means that leveraged foreign exchange trading may not be suitable for all investors.</p>
+							<p>Margin refers to your open positions and must be paid in a lump sum. This means that you need to hold a certain amount of equity in your account to cover margin calls. If your usable margin opens below the margin call level, you will not be allowed to open any trades until your account is reconciled. </p>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script src='http://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-videos.js"></script>
+</body>
+</html>

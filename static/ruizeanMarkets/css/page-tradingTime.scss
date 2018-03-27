@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.tradingTime {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.tips {
+		text-align: right;
+		color: nth($color2, 6);
+		@include fspx($FS12);
+	}
+}

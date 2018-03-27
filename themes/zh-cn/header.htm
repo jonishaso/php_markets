@@ -1,0 +1,533 @@
+	<{include file="social.htm"}>
+	<script type="text/javascript">
+		function livechat(){
+			//LC_API.open_chat_window();
+			var is_minimized = LC_API.chat_window_minimized();
+			if(is_minimized){
+				LC_API.open_chat_window();
+			}else{
+				LC_API.minimize_chat_window();
+			}
+		}
+		/*function searchFunc(){
+			if(document.getElementById('sid').style.display == 'none'){
+				document.getElementById('sid').style.display = '';
+			}else{
+				document.getElementById('sid').style.display = 'none';
+			}
+		}*/
+	</script>
+	<section class="top-bar">
+		<div class="wrapper clearfix">
+			<div class="hd"><a href="<{$http_root_www}>"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" /></a></div>
+			<div class="bd clearfix">
+				<div class="btn-1 com-div"><a href="<{$http_root_www}>../zh-cn/liveaccount">注册真实账户</a></div>
+				<div class="btn-1 com-div"><a href="<{$http_root_www}>../zh-cn/demoaccount" >注册模拟账户</a></div>
+				<!--<div class="btn-1 com-div"><a href="https://personal.ruizeanmarkets.com">登录客户专区</a></div>-->
+				<!--<div class="btn-1 com-div" id="sid" style="display:none"><input type="text" placeholder="搜索" name="search" id="search" /></div>
+				<div class="bar-search com-div"><a onclick="searchFunc();" style="cursor: pointer; cursor: hand;"><i class="fa fa-search"></i></a></div>-->
+				<div class="bar-nav com-div clearfix">
+					<ul class="clearfix">
+						<!--<li><a onclick="livechat();" style="cursor: pointer; cursor: hand;">在线帮助</a></li>-->
+						<!-- <li><a href="<{$http_root_www}>contactus">联系我们</a></li> -->
+						<li><a href="https://personal.ruizeanmarkets.com/Account/LogOn?ReturnUrl=%2f">客户登录</a></li>
+					</ul>
+				</div>
+				<!-- 语言切换 -->
+				<div class="lang com-div">
+					<div class="lang-box clearfix">
+						<div class="lang-hd"><a><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em><i class="fa fa-angle-down"></i></span></div></a></div>
+						<div class="lang-bd">
+							<ul class="clearfix">
+								<li><a href="<{$smarty.server.REQUEST_URI}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em></span></div></a></li>
+								<li><a href="<{if $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/1/'}><{$http_root_www}>../en/newsList<{elseif $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/2/'}><{$http_root_www}>../en/marketnews<{elseif $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/3/'}><{$http_root_www}>../en/eduList<{elseif $smarty.server.REQUEST_URI|strpos:'zh-cn'}><{$smarty.server.REQUEST_URI|replace:'zh-cn':'en'}><{else}><{$smarty.server.REQUEST_URI}>en/<{/if}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em></i></span></div></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 头部汉堡菜单按钮 -->
+				<div class="hamburger com-div">
+					<span class="clearfix">
+						<i></i>
+						<i></i>
+						<i></i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 头部汉堡菜单 -->
+	
+	<!----------------------------------------------------------------------------------------------------------->
+	<!-----------------------------------------------  新增的手机版导航  ------------------------------------------------------------>
+	<!----------------------------------------------------------------------------------------------------------->
+	<!----------------------------------------------------------------------------------------------------------->
+	<div class="top-nav-list nav5 mobile clearfix">
+		<div class="cont-top">
+			<ul class="clearfix">
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>">首页</a></div>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>about">公司简介 <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>Ruizean Markets</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>about2">关于我们</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>whychooseus">为什么选择我们</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>serverInfo">服务器信息</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>contactus">联系我们</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>监管</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>authority">监管与牌照</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>claimfile">披露声明文件</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>product">产品介绍 <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>账户特色</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>acctypes">交易账户类型</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>handicap">点差和佣金</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>interestrate">隔夜掉息利率</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>vpsHosting">vps托管</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>交易产品</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>fexchange">外汇</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>stockindex">股指</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>commodity">大宗商品</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>tradeplatform">交易平台 <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>MetaTrader 4</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>mt4intro">Metatrader 4</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>MT4平台下载</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>mt4/windows">Windows</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>mt4/ios">iPhone/iPad</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>mt4/android">Android</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>mt4/linux">Linux</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>cobrand">合作伙伴 <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>推荐计划</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>ib">IB代理经纪商</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>高端定制</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>whitecoop">白标合作</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>cusresource">客户资源 <span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>账户管理</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>deposit">存入资金</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>withdraw">提取资金</a></li>
+								<!--<li class="li3 no3"><a href="<{$http_root_www}>logReg">客户登录专区</a></li>-->
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>信息资讯</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>financialCal">财经日历</a></li>
+
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="li1">
+					<div class="tp1 no1"><a href="<{$http_root_www}>edu">外汇教育<span class="arrow"><i class="fa fa-angle-down"></i></span></a></div>
+					<ul class="bt1">
+						<li class="li2">
+							<div class="tp2 no2"><a>教育学院</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>videos">外汇动画视频</a></li>
+							</ul>
+						</li>
+						<li class="li2">
+							<div class="tp2 no2"><a>交易工具</a></div>
+							<ul class="bt2">
+								<li class="li3 no3"><a href="<{$http_root_www}>terminology">专业术语</a></li>
+								<li class="li3 no3"><a href="<{$http_root_www}>exchangeRate">实时汇率</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="cont-bottom">
+			<div class="lang">
+				<div class="lang-box clearfix">
+					<div class="lang-hd"><a href=""><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em><i class="fa fa-angle-down"></i></span></div></a></div>
+					<div class="lang-bd">
+						<ul class="clearfix">
+							<li><a href="<{$smarty.server.REQUEST_URI}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country.jpg" /></span><span class="name"><em>简体中文</em></span></div></a></li>
+							<li><a href="<{if $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/1/'}><{$http_root_www}>../en/newsList<{elseif $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/2/'}><{$http_root_www}>../en/marketnews<{elseif $smarty.server.REQUEST_URI|strpos:'/zh-cn/' and $smarty.server.REQUEST_URI|strpos:'/newsDetail/3/'}><{$http_root_www}>../en/eduList<{elseif $smarty.server.REQUEST_URI|strpos:'zh-cn'}><{$smarty.server.REQUEST_URI|replace:'zh-cn':'en'}><{else}><{$smarty.server.REQUEST_URI}>en/<{/if}>"><div class="clearfix"><span class="county"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/country2.jpg" /></span><span class="name"><em>English</em></i></span></div></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="share clearfix">
+				<a href="" class="link s-facebook"></a>
+				<a href="" class="link s-twitter"></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-nav-mobile">
+		<ul class="clearfix">
+			<li><a href="<{$http_root_www}>../zh-cn/liveaccount">注册真实账户</a></li>
+			<li><a href="<{$http_root_www}>../zh-cn/demoaccount">体验模拟账户</a></li>
+			<!--<li><a href="<{$http_root_www}>?con=web&ctl=logReg">登录客户专区</a></li>-->
+		</ul>
+	</div>
+	
+	
+	<div class="top-nav-list pc nav2 clearfix">
+		<div class="wrapper clearfix">
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>about"><svg class="svg-hdTitle4 svg-ele" data-txt="公司简介"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>about">Ruizean Markets</a></li>
+								<li class="c"><a href="<{$http_root_www}>about2">关于我们</a></li>
+								<li class="c"><a href="<{$http_root_www}>whychooseus">为什么选择我们</a></li>
+								<li class="c"><a href="<{$http_root_www}>serverInfo">服务器信息</a></li>
+								<li class="c"><a href="<{$http_root_www}>contactus">联系我们</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>about">监管</a></li>
+								<li class="c"><a href="<{$http_root_www}>authority">监管与牌照</a></li>
+								<li class="c"><a href="<{$http_root_www}>claimfile">披露声明文件</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>product"><svg class="svg-hdTitle4 svg-ele" data-txt="产品介绍"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>product">账户特色</a></li>
+								<li class="c"><a href="<{$http_root_www}>acctypes">交易账户类型</a></li>
+								<li class="c"><a href="<{$http_root_www}>handicap">点差和佣金</a></li>
+								<li class="c"><a href="<{$http_root_www}>interestrate">隔夜掉息利率</a></li>
+								<li class="c"><a href="<{$http_root_www}>vpsHosting">vps托管</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>product">交易产品</a></li>
+								<li class="c"><a href="<{$http_root_www}>fexchange">外汇</a></li>
+								<li class="c"><a href="<{$http_root_www}>stockindex">股指</a></li>
+								<li class="c"><a href="<{$http_root_www}>commodity">大宗商品</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="交易平台"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>tradeplatform">MetaTrader 4</a></li>
+								<li class="c"><a href="<{$http_root_www}>mt4intro">Metatrader 4</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>tradeplatform">MT4平台下载</a></li>
+								<li class="c"><a href="<{$http_root_www}>mt4/windows">Windows</a></li>
+								<li class="c"><a href="<{$http_root_www}>mt4/ios">iPhone/iPad</a></li>
+								<li class="c"><a href="<{$http_root_www}>mt4/android">Android</a></li>
+								<li class="c"><a href="<{$http_root_www}>mt4/linux">Linux</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="合作伙伴"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>cobrand">推荐计划</a></li>
+								<li class="c"><a href="<{$http_root_www}>ib">IB代理经纪商</a></li>
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>cobrand">高端定制</a></li>
+								<li class="c"><a href="<{$http_root_www}>whitecoop">白标合作</a></li>
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="客户资源"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>cusresource">账户管理</a></li>
+								<li class="c"><a href="<{$http_root_www}>deposit">存入资金</a></li>
+								<li class="c"><a href="<{$http_root_www}>withdraw">提取资金</a></li>
+								<!--<li class="c"><a href="<{$http_root_www}>logReg">客户登录专区</a></li>-->
+							</ul>
+							<ul>
+								<li class="t"><a href="<{$http_root_www}>cusresource">信息资讯</a></li>
+								<li class="c"><a href="<{$http_root_www}>financialCal">财经日历</a></li>
+
+							</ul>
+						</div>
+					</section>
+					<section class="nav2-item">
+						<div class="hd">
+							<h2><a href="<{$http_root_www}>edu"><svg class="svg-hdTitle4 svg-ele" data-txt="外汇教育"></svg></a></h2>
+						</div>
+						<div class="bd">
+							<ul>
+								<li class="c"><a href="<{$http_root_www}>videos">外汇动画视频</a></li>
+							</ul>
+							<ul>
+								<li class="c"><a href="<{$http_root_www}>terminology">专业术语</a></li>
+								<li class="c"><a href="<{$http_root_www}>exchangeRate">实时汇率</a></li>
+							</ul>
+						</div>
+					</section>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<header class="header<{if $insHeader}> insHeader<{/if}>">
+		<div class="wrapper clearfix">
+			<h1 class="logo"><a href="<{$http_root_www}>" title=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" /></a></h1>
+			<nav class="nav">
+				<ul class="clearfix">
+					<li><a href="<{$http_root_www}>">首页</a></li>
+					<li><a href="<{$http_root_www}>about" data-nav3="item-about">公司简介</a></li>
+					<li><a href="<{$http_root_www}>product" data-nav3="item-product">产品介绍</a></li>
+					<li><a href="<{$http_root_www}>tradeplatform" data-nav3="item-platform">交易平台</a></li>
+					<li><a href="<{$http_root_www}>cobrand" data-nav3="item-co-brand">合作伙伴</a></li>
+					<li><a href="<{$http_root_www}>cusresource" data-nav3="item-cus-resource">客户资源</a></li>
+					<li><a href="<{$http_root_www}>edu" data-nav3="item-edu">外汇教育</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="header-nav-list nav3">
+		<div class="wrapper">
+			<div class="item clearfix" id="item-about">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>about"><svg class="svg-hdTitle4 svg-ele" data-txt="Ruizean Markets"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>about2">关于我们</a></li>
+							<li class="c"><a href="<{$http_root_www}>serverInfo">服务器信息</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>whychooseus">为什么选择我们</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>contactus">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>about"><svg class="svg-hdTitle4 svg-ele" data-txt="监管"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>authority">监管与牌照</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>claimfile">披露声明文件</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+			<div class="item clearfix" id="item-product">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>product"><svg class="svg-hdTitle4 svg-ele" data-txt="账户特色"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>acctypes">交易账户类型</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>handicap">点差和佣金</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>interestrate">隔夜掉息利率</a></li>
+							<li class="c"><a href="<{$http_root_www}>vpsHosting">vps托管</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>product"><svg class="svg-hdTitle4 svg-ele" data-txt="交易产品"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>fexchange">外汇</a></li>
+							<li class="c"><a href="<{$http_root_www}>commodity">大宗商品</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>stockindex">股指</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+			<div class="item clearfix" id="item-platform">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="MetaTrader 4"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>mt4intro">MetaTrader 4</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>tradeplatform"><svg class="svg-hdTitle4 svg-ele" data-txt="MT4平台下载"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>mt4/windows">Windows</a></li>
+							<li class="c"><a href="<{$http_root_www}>mt4/ios">iPhone/iPad</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>mt4/android">Android</a></li>
+							<li class="c"><a href="<{$http_root_www}>mt4/linux">Linux</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+			<div class="item clearfix" id="item-co-brand">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="推荐计划"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>ib">IB代理经纪商</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>cobrand"><svg class="svg-hdTitle4 svg-ele" data-txt="高端定制"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>whitecoop">白标合作</a></li>
+						</ul>
+						<ul class="clearfix">
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd2">
+						<h2><a href=""><svg class="svg-hdTitle5 svg-ele" data-txt="轻松开户，开启非凡体验"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<div class="apply-link clearfix">
+							<div class="btn-2 white"><a href="<{$http_root_www}>ib"><div class="bg"></div><span>申请IB经纪商 <i class="fa fa-angle-double-right"></i></span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix" id="item-cus-resource">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="账户管理"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>deposit">存入资金</a></li>
+							<!--<li class="c"><a href="<{$http_root_www}>logReg">客户登录专区</a></li>-->
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>withdraw">提取资金</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>cusresource"><svg class="svg-hdTitle4 svg-ele" data-txt="信息资讯"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+
+							<li class="c"><a href="<{$http_root_www}>financialCal">财经日历</a></li>
+						</ul>
+						<ul class="clearfix">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item clearfix" id="item-edu">
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>edu"><svg class="svg-hdTitle4 svg-ele" data-txt="教育学院"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>videos">外汇动画视频</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav3-item">
+					<div class="hd">
+						<h2><a href="<{$http_root_www}>edu"><svg class="svg-hdTitle4 svg-ele" data-txt="交易工具"></svg></a></h2>
+					</div>
+					<div class="bd clearfix">
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>terminology">专业术语</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li class="c"><a href="<{$http_root_www}>exchangeRate">实时汇率</a></li>
+						</ul>
+					</div>
+				</div>
+				<{include file='logr.htm'}>
+			</div>
+		</div>
+	</section>

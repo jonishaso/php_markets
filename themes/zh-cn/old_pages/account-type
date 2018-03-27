@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-12 insMain">
+		<div class="accountType">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>product">产品介绍</a><em>&gt;</em><a href="<{$http_root_www}>accounttype">交易账户类型</a></p></div>
+				<{include file='productHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainHd">
+						<div class="comTitle">交易账户类型</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="account-changebtn clearfix">
+							<div class="chb-item active"><a href=""><svg class="svg-hdTitle2 svg-ele" data-txt="标准账户"></svg><svg class="svg-btnBd svg-ele"></svg></a></div>
+							<div class="chb-item"><a href=""><svg class="svg-hdTitle2 svg-ele" data-txt="机构账户"></svg><svg class="svg-btnBd svg-ele"></svg></a></div>
+						</div>
+						<div class="account-pic picbg">
+							<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-07.jpg);"></div>
+						</div>
+						<div class="account-changeinfo">
+							<{foreach from=$accounttype item=item}>
+								<ul class="clearfix">
+									<li class="clearfix">
+										<div class="name">点差</div>
+										<div class="info"><{$item.spread}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">交易平台</div>
+										<div class="info"><{$item.platform}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">服务器所在地</div>
+										<div class="info"><{$item.server}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">最大杠杆</div>
+										<div class="info"><{$item.leverage}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">最低存款</div>
+										<div class="info"><{$item.lowestFund}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">货币对种类</div>
+										<div class="info"><{$item.currencyClassify}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">最小交易量</div>
+										<div class="info"><{$item.minTradeNum}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">交易成本</div>
+										<div class="info"><{$item.tradeFunds}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">程序设计语言</div>
+										<div class="info"><{$item.programLang}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">适合群体</div>
+										<div class="info"><{$item.ppl}></div>
+									</li>
+								</ul>
+							<{/foreach}>
+						</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="svgtitle">
+							<p><svg class="svg-hdTitle2 svg-ele" data-txt="了解账户特点"></svg></p>
+							<p><svg class="svg-hdTitle2 svg-ele" data-txt="是您掌握成功的第一步"></svg></p>
+						</div>
+						<div class="pictxt-list-02 clearfix">
+							<div class="item">
+								<div class="box">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p2-09.jpg)"></div></div>
+									<div class="btn-2 blue"><a href="https://personal.ruizeanmarkets.com" target="_blank"><div class="bg"></div><span>注册真实账户 <i class="fa fa-angle-double-right"></i></span></a></div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p2-10.jpg)"></div></div>
+									<div class="btn-2 blue"><a href="https://personal.ruizeanmarkets.com" target="_blank"><div class="bg"></div><span>注册模拟账户 <i class="fa fa-angle-double-right"></i></span></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

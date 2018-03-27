@@ -1,0 +1,146 @@
+<section class="form-apply form-box">
+	<div class="close" onclick="rzt.closeApplyForm();">Close</div>
+	<div class="form-box-bd">
+		<div class="box1 p-box1">
+			<div class="hd">
+				<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+				<hgroup>
+					<h2>View More Videos</h2>
+					<h3>Apply form</h3>
+				</hgroup>
+			</div>
+			<div class="bd">
+				<form class="form1" id="formid" action="<{$http_root_www}>../en/videoform" method="post">
+					<div class="row clearfix">
+						<div class="col-02 col">
+							<input type="text" placeholder="First Name*" required class="form-input1" name="firstName" id="firstName"/>
+						</div>
+						<div class="col-02 col">
+							<input type="text" placeholder="Last Name*" required class="form-input1" name="lastName" id="lastName"/>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-01 col">
+							<input type="email" placeholder="Email*" required class="form-input1" name="email" id="email"/>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-01 col">
+							<input type="tel" placeholder="Telephone*" required class="form-input1" name="telephone" id="telephone"/>
+						</div>
+					</div>
+					<div class="row"><div class="col-01 col"><div class="space-line"></div></div></div>
+					<div class="row clearfix">
+						<div class="col-01 col">
+							<div class="form-select1">
+								<select class="form-select1-select2" name="country" id="country">
+									<{foreach from=$countriesArr item=item key='key'}>
+										<option value="<{$key}>"><{$item}></option>
+									<{/foreach}>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-01 col">
+							<input type="area" placeholder="Location" class="form-input1" name="area" id="area"/>
+						</div>
+						<!--<div class="col-02 col">
+							<div class="form-select1">
+								<select class="form-select1-select2">
+									<option value="1">省</option>
+									<option value="1">省1</option>
+									<option value="1">省2</option>
+									<option value="1">省3</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-02 col">
+							<div class="form-select1">
+								<select class="form-select1-select2">
+									<option value="1">市</option>
+									<option value="1">市1</option>
+									<option value="1">市2</option>
+									<option value="1">市3</option>
+								</select>
+							</div>
+						</div>-->
+					</div>
+					<div class="row row-submit clearfix">
+						<!--<div class="col-01 col">
+							<button type="submit" class="form-submit1">提交</button>
+						</div>-->
+						<div class="col-01 col">
+							<button type="submit" class="form-submit1">Submit</button>
+							<p class="send-result" style="color:#c00;font-size:14px;text-align:center;padding:5px;"></p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="box2 p-box2" style="display:none;">
+			<div class="logo"><a href=""><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+			<div class="hd">
+				<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+				<hgroup>
+					<h2>Ruizean Markets staff will contact with you asap, be patient.</h2>
+				</hgroup>	
+			</div>
+			<div class="bd">
+				<hgroup>
+					<h4>It will be closed automatically after 5 seconds, or youo can click button to close it.</h4>
+				</hgroup>	
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	function hideForm2(){
+		$('.p-box1').hide();
+		$('.p-box2').show();
+		setTimeout(function() {
+			$('.p-box1').show();
+			$('.p-box2').hide();
+			rzt.closeApplyForm();
+		}, 5000);
+	}
+	
+	//jquery.validate
+	var jsValidateTime2 = null;
+	$("#formid").validate({
+		submitHandler: function(form) {
+			var form = form;
+			var $form = $(form);
+			var firstName = form.firstName.value;
+			var lastName = form.lastName.value;
+			var email = form.email.value;
+			var telephone = form.telephone.value;
+			var country = form.country.value;
+			var area = form.area.value;
+			
+			// Returns successful data submission message when the entered information is stored in database.
+			var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone+ '&country='+ country + '&area='+ area;
+			// AJAX Code To Submit Form.
+			$.ajax({
+				type: "POST",
+				url: "<{$http_root_www}>../en/videoform",
+				data: dataString,
+				cache: false,
+				success: function(result){
+					if(result == 1){
+						hideForm2();
+						return false;
+					}else{
+						$form.find('.send-result').html('Submit failure');
+						clearTimeout(jsValidateTime2);
+						jsValidateTime2 = setTimeout(function(){
+							$form.find('.send-result').html('');
+						}, 3000);
+					}
+				}
+			});
+			return false;
+		}
+	});
+</script>

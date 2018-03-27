@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- about -->
+	<section class="insMain page-bg-6">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>about">公司简介</a><em>&gt;</em><a href="<{$http_root_www}>fundsecurity">资金安全</a></p></div>
+				<{include file='aboutHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">资金安全</div>
+						<article class="comArticle">
+							<p>Ruizean Markets由澳大利亚证券和投资委员会授权并受其监管，牌照号：000000，按照监管机构客户资金管理规定，客户资金独立存放于澳大利亚四大银行之一的西太平洋银行（Westpac）隔离账户中，这能够确保属于客户的资金不会被用于任何其它目的。</p>
+							<p>&nbsp;</p>
+							<p>西太平洋银行（Westpac）为澳大利亚、新西兰和南太平洋的部分地区提供服务，是澳大利亚四大银行之一，总资产超过2000亿澳元，该银行为超过750万的客户提供服务。西太平洋银行（Westpac）是全球评级AA级的商业银行，也是澳洲历史上第一家银行。</p>
+							<p>&nbsp;</p>
+							<p>Ruizean Markets一如既往地保持客户资金与公司自有资金完全分离并独立。 客户账户受到严格管控，只能用于正常交易。</p>
+							<p>&nbsp;</p>
+							<p>依据高度透明度原则，Ruizean Markets定期向监管机构提供财务报告，长期保持监管所需的资金要求。</p>
+						</article>
+					</div>
+					<br />
+					<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/fundsecurity.jpg" /></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-about.js"></script>
+</body>
+</html>

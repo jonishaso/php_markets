@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-9 insMain">
+		<div class="newsList">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>product">产品介绍</a><em>&gt;</em><a href="<{$http_root_www}>marketnews">市场新闻</a></p></div>
+				<{include file='productHeader.htm'}>
+				<main class="main3">
+					<div class="comTitle">风险事件发布</div>
+					<div class="news-list clearfix">
+						<{foreach from=$wlinks item=item}>
+							<div class="item">
+								<div class="box">
+									<div class="title comTxt">
+										<hgroup>
+											<h2><a href="<{$http_root_www}>newsDetail/2/<{$item.id}>"><{$item.title}></a></h2>
+											<h3>By <{$item.author}> On  <{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}>  <{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></h3>
+										</hgroup>
+									</div>
+									<div class="article comTxt2">
+										<article class="comArticle">
+											<p><{$item.intro}></p>
+										</article>
+										<div class="more2"><a href="<{$http_root_www}>newsDetail/2/<{$item.id}>"><span class="hoverBg"><svg class="svg-btnBg svg-ele"></svg>查看更多</span></a></div>
+									</div>
+								</div>
+							</div>
+						<{/foreach}>
+					</div>
+					<div class="scroll-load" id="loading"><a href="javascript:void(0);"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/btn-01.png" /></a></div>
+				</main>
+				<aside class="side3">
+					<div class="news-list2 loopScroll">
+						<ul>
+							<{foreach from=$links item=item}>
+								<li>
+									<h2><a href="<{$item.sourceHtml}>"><{$item.title}></a></h2>
+									<p><{$item.publishedDate|date_format:"%Y"}>-<{$item.publishedDate|date_format:"%m"}>-<{$item.publishedDate|date_format:"%d"}>  <{$item.lastModifiedDate|date_format:"%H"}>:<{$item.lastModifiedDate|date_format:"%M"}>:<{$item.lastModifiedDate|date_format:"%S"}></p>
+								</li>
+							<{/foreach}>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>	
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script>
+	
+	var pageCount = '<{$page}>';
+	var pageNo = 1; //设置当前页数，全局变量
+	var state = true;
+	
+	$(function () {
+		var stop=true; 
+		$(window).scroll(function(){
+		    if(($('.footer').offset().top - $(window).scrollTop()) / $(window).height() <= 0.9 && stop == true){ 
+		    	pageNo++;
+		    	if(pageNo < pageCount){
+		    		stop = true;
+		    	}else if(pageNo == pageCount){
+		    		stop = true;
+		    		$('.scroll-load').hide();
+		    	}else if(pageCount == 1){
+		    		stop = true;
+		    		$('.scroll-load').hide();
+		    	}
+
+		        if(stop==true){ 
+		            stop=false;
+		            //var dd = '<{$ajaxUrl}>page='+pageNo;
+		            //alert("<{$ajaxUrl}>"); 
+		            $.post("<{$ajaxUrl}>"+pageNo, {start:1, n:50},function(txt){ 
+						if(txt != ''){
+							var txt = $('<div class="news-list clearfix">'+ txt +'</div>');
+							$("#loading").before(txt);
+							console.log(txt.find('.svg-btnBg').length);
+							$(txt).find('.svg-btnBg').each(function(index){
+								var date = new Date();
+								var id = 'd'+ index +'-'+ date.getTime()
+								$(this).attr('id', id);
+								var hdTitle = new SnapBtnBg('#'+id, {});
+							});
+							stop=true; 
+						}
+		            },"text"); 
+		        } 
+		    } 
+		});
+	});
+	</script>
+</body>
+</html>

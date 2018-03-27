@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-3 insMain">
+		<div class="mt4">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>tradeplatform">交易平台</a><em>&gt;</em><a href="<{$http_root_www}>mt4">Meta Trader4</a></p></div>
+				<{include file='traderHeader.htm'}>
+				<div class="main2">
+					<{if $par == 'windows'}>
+					<!-- Windows -->
+					<div class="mainBd">
+						<div class="comTitle">Windows</div>
+						<div class="picArticle clearfix">
+							<div class="pic">
+								<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-09.png" /></div>
+								<div class="btn-5 blue noShadow"><a href="https://download.mql5.com/cdn/web/11165/mt4/ruizeanmarkets4setup.exe" target="_blank"><div class="bg"></div><span class="name"><i class="fa fa-download"></i> 下载 Windows系统MT4</span></a></div>
+							</div>
+							<article class="comArticle">
+								<p>对于Windows操作系统的用户，安装MT4是非常容易的。您需要做的第一件事就是以.exe文件格式下载MT 4安装程序。一旦下载，点击.exe文件，安装向导将打开。</p>
+								<br />
+								<p>安装MT4软件与安装任何其他应用程序或软件一样简单，您只需选择安装路径并同意“条款和条件”即可。在安装结束时，您可以选择在桌面上添加MT4程序的快捷方式。</p>
+								<br />
+								<p>Ruizean Markets的MT 4客户端支持大多数Windows操作。</p>
+								<p><b>注意：最好避免在系统文件（程序文件）中安装MT4，因为有时会导致程序运行中出现问题。</b></p>
+							</article>
+						</div>
+					</div>
+					<{elseif $par == 'android'}>
+					<!-- Android -->
+					<div class="mainBd">
+						<div class="comTitle">Android</div>
+						<div class="picArticle clearfix">
+							<div class="pic">
+								<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-10.png" /></div>
+								<div class="btn-5 blue noShadow"><a href="https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4&hl=en&utm_campaign=www.metatrader4.com" target="_blank"><div class="bg"></div><span class="name"><i class="fa fa-download"></i> 下载Android系统MT4</span></a></div>
+							</div>
+							<article class="comArticle">
+								<p>Ruizean Markets的Android OS操作系统移动设备的MT 4应用程序是一个完全成熟的交易平台。它允许您在桌面PC或Android移动设备上的交易之间自由决定。您可以查看交易和订单历史，打开和分析交互式图表，执行技术分析和下单。</p>
+								<br />
+								<p>有关Android版本的MT4平台的详细信息，请点击下面的链接。</p>
+								<br />
+								
+							</article>
+						</div>
+					</div>
+					<{elseif $par == 'ios'}>
+					<!-- iPhone/iPad -->
+					<div class="mainBd">
+						<div class="comTitle">iPhone/iPad</div>
+						<div class="picArticle clearfix">
+							<div class="pic">
+								<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-11.png" /></div>
+								<div class="btn-5 blue noShadow"><a href="https://itunes.apple.com/us/app/metatrader-4/id496212596?utm_campaign=www.metatrader4.com" target="_blank"><div class="bg"></div><span class="name"><i class="fa fa-download"></i> 下载 iPhone/iPad系统MT4</span></a></div>
+							</div>
+							<article class="comArticle">
+								<p>MT4是世界上最受欢迎的外汇交易平台。从数百名经纪人和数千台服务器中选择与您的MT 4 iOS应用程序进行交易。使用技术指标和图形对象来控制您的账户交易和分析外汇市场。 </p>
+								<br />
+								<p><b>交易</b></p>
+								<p><li>金融工具实时报价</li>
+<li>全套贸易订单，包括挂单</li>
+<li>从MT4 for iPad上的图表进行交易</li>
+<li>所有类型的交易执行</li>
+<li>完成交易历史</li>
+</p>
+								<br />
+								<p><b>高级功能</b></p>
+								<p><li>高性能图表</li>
+<li>可定制图表配色方案</li>
+<li>配置图形对象和指示器的属性</li>
+<li>在MT4 for iPad上的一个窗口中显示四个图表</li>
+<li>交易水平可视化挂单上的价格，以及图表上的SL和TP值</li>
+<li>在MT 4 iPad中显示订单，交易记录，电子邮件，新闻和日志的信息窗口</li>
+<li>声音通知</li>
+<li>免费的财经新闻 - 每天数十种材料</li>
+<li>与任何注册的MQL5.community用户聊天</li>
+<li>支持桌面平台和MQL5.com社区服务的推送通知</li>
+
+</p>
+								<br />
+								<p>您可以从Apple Store访问MT4应用程序，并将其安装在iPhone，iPad和iTouch设备上，通过iPhone，iPad和iTouch上的应用程序管理MT4帐户的所有功能。</p>
+							</article>
+						</div>
+					</div>
+					<{elseif $par == 'linux'}>
+					<!-- Linux -->
+					<div class="mainBd">
+						<div class="comTitle">Linux</div>
+						<div class="picArticle clearfix">
+							<div class="pic">
+								<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-12.png" /></div>
+								<div class="btn-5 blue noShadow"><a href="https://www.mql5.com/en/articles/1358" target="_blank"><div class="bg"></div><span class="name"><i class="fa fa-download"></i> 下载Linux系统MT4</span></a></div>
+							</div>
+							<article class="comArticle">
+								
+								<p>Linux是一种基于UNIX系统的免费开源操作系统。 Linux操作系统可以在智能手机，超级计算机交易甚至一些家用电器中找到，许多人仍然喜欢使用Linux操作系统，而不是任何其他系统，对于这些客户，我们还有一个完美的MT4应用程序。 Ruizean Markets的MT4应用程序支持所有的Linux操作系统。只需点击下面的图标即可下载Linux系统MT4应用程序。</p>
+							</article>
+						</div>
+					</div>
+					<{/if}>
+					<div class="mainHd"><div class="comTitle2"><div class="line-03"><i class="i1"></i><i class="i2"></i></div>其他客户端下载</div></div>
+					<div class="mainBd">
+						<div class="btns clearfix">
+							<{if $par == 'windows'}>
+								<!-- Android -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=android"><div class="bg"></div><span class="icon"><i class="fa fa-android"></i></span><span class="name">Android <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- iPhone/iPad -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=ios"><div class="bg"></div><span class="icon"><i class="fa fa-apple"></i></span><span class="name">iPhone/iPad <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- Linux -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=linux"><div class="bg"></div><span class="icon"><i class="fa fa-linux"></i></span><span class="name">Linux <i class="fa fa-angle-double-right"></i></span></a></div>
+							<{elseif $par == 'android'}>
+								<!-- Windows -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=windows"><div class="bg"></div><span class="icon"><i class="fa fa-windows"></i></span><span class="name">Windows <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- iPhone/iPad -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=ios"><div class="bg"></div><span class="icon"><i class="fa fa-apple"></i></span><span class="name">iPhone/iPad <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- Linux -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=linux"><div class="bg"></div><span class="icon"><i class="fa fa-linux"></i></span><span class="name">Linux <i class="fa fa-angle-double-right"></i></span></a></div>
+							<{elseif $par == 'ios'}>
+								<!-- Windows -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=windows"><div class="bg"></div><span class="icon"><i class="fa fa-windows"></i></span><span class="name">Windows <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- Android -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=android"><div class="bg"></div><span class="icon"><i class="fa fa-android"></i></span><span class="name">Android <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- Linux -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=linux"><div class="bg"></div><span class="icon"><i class="fa fa-linux"></i></span><span class="name">Linux <i class="fa fa-angle-double-right"></i></span></a></div>
+							<{elseif $par == 'linux'}>
+								<!-- Windows -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=windows"><div class="bg"></div><span class="icon"><i class="fa fa-windows"></i></span><span class="name">Windows <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- Android -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=android"><div class="bg"></div><span class="icon"><i class="fa fa-android"></i></span><span class="name">Android <i class="fa fa-angle-double-right"></i></span></a></div>
+								<!-- iPhone/iPad -->
+								<div class="btn-4 blue noShadow"><a href="<{$http_root_www}>?ctl=mt4&par=ios"><div class="bg"></div><span class="icon"><i class="fa fa-apple"></i></span><span class="name">iPhone/iPad <i class="fa fa-angle-double-right"></i></span></a></div>
+							<{/if}>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

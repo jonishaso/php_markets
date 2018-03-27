@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-4 insMain">
+		<div class="mt4Use">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>tradeplatform">交易平台</a><em>&gt;</em><a href="<{$http_root_www}>mt4Use">如何使用MT4交易软件</a></p></div>
+				<{include file='traderHeader.htm'}>
+				<div class="main2 pc-main2">
+					<!-- Windows -->
+					<div class="mainHd"><div class="comTitle">手机MT4使用指南</div></div>
+					<div class="mainBd">
+						<div class="stepBtns clearfix">
+							<div class="btn-2 blue noShadow"><a href="javascript:void(0)"><div class="bg"></div><span>账户注册</span></a></div>
+							<div class="btn-2 blue noShadow"><a href="javascript:void(0)"><div class="bg"></div><span>选项设置</span></a></div>
+							<div class="btn-2 blue noShadow"><a href="javascript:void(0)"><div class="bg"></div><span>交易下单</span></a></div>
+						</div>
+						<div class="step-bd mt4Step swiper-container">
+							<div class="line"><svg class="svg-line svg-ele"></svg></div>
+							<div class="nums">1</div>
+							<div class="swiper-pagination2"></div>
+							<div class="swiper-control2 clearfix">
+								<div class="prev"><i class="fa fa-angle-left"></i></div>
+								<div class="next"><i class="fa fa-angle-right"></i></div>
+							</div>
+							<div class="swiper-wrapper clearfix">
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp1.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第一步</div>
+										<article class="step-cont comArticle">
+											<p>如果您使用的是苹果手机，那么首先您需要在APP Store 中搜索“MT4”，出现MT4图标后点击下载。（如果您的手机是安卓系统，请到“91助手”下载）</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp2.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第二步</div>
+										<article class="step-cont comArticle">
+											<p>当MT4软件下载完成后，打开MT4 软件，之后点击最后一栏设置，看到这个界面，点击“打开个人模拟账户”。如果您已经有模拟账号，点击“登陆一个已有账户”后，在搜索栏输入 RZTrader后选择RZTrader-Demo，之后根据提示输入账号和密码即可。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp3.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第三步</div>
+										<article class="step-cont comArticle">
+											<p>申请新的模拟账户时，在搜索栏中输入：RZTrader，出现 RZTrader-Demo后点击它。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp4.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第四步</div>
+										<article class="step-cont comArticle">
+											<p>填写个人信息后，选择入金金额，之后点击右上角注册。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp5.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第五步</div>
+										<article class="step-cont comArticle">
+											<p>出现以下信息后，点击右上角完成，这样就完成模拟账户注册了。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp6.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第六步</div>
+										<article class="step-cont comArticle">
+											<p>注册完成后，会到下图页，选择“高级的”选项，点击+号可添加您想要交易的货币对。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp7.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第七步</div>
+										<article class="step-cont comArticle">
+											<p>选择您要交易的货币，点击会出现下图。</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp8.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第八步</div>
+										<article class="step-cont comArticle">
+											<p>点击图表进行行情分析预览，在左上角点击可以切换时间图，M1（一分钟图）、 M5（五分钟图）、M15（15分钟图）、M30（30分钟图）、、 H1（1小时图） H4（4小时图） 、D1 （天图）、W1 （一周图）、WN（月图）</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp9.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第九步</div>
+										<article class="step-cont comArticle">
+											<p>当您确定行情走向后，点击图表屏幕右上角的交易键，会出现下图：</p>
+											<ul>
+												<li>sell为买跌，也指做空、空头</li>
+												<li>buy为买涨，也指做多、多头</li>
+												<li>buy limit：低于现价做多</li>
+												<li>sell limit：高于现价做空</li>
+												<li>sell stop：低于现价做空</li>
+												<li></li>
+											</ul>
+											<p>在市场执行下方输入手数，建议每手不要超过总资金量10%</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp10.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第十步</div>
+										<article class="step-cont comArticle">
+											<p>当下单后，会出现下图页面：</p>
+											<ul>
+												<li>a、蓝色即为盈利</li>
+												<li>b、预付款为每单的保证金</li>
+												<li>c、 结余为不包含下单部分的余额</li>
+											</ul>
+											</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp11.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第十一步</div>
+										<article class="step-cont comArticle">
+											<p>下图为您的历史数据，可以详细的知道您的交易记录，您可选择当日、当周、当月或 者自定义，同时可以看您的总体盈利有多少</p>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/stp12.jpg);"></div></div>
+									<div class="txt">
+										<div class="step-name comTitle2">第十二步</div>
+										<article class="step-cont comArticle">
+											<p>在图表页面，上方出现的
+												1：“ + ”为十字光标，方便您查看价位，价位在图表左右边
+												2：“ f ”为技术指标窗口添加，可加入您熟悉判断行情的指标，如MACD/RSI/BOLLINGER/MOVING AVERAGE等
+												3：“ f旁边 ”的是趋势指标，可加入您熟悉判断行情的趋势指标，如横线，斜线，角度线，水平线，斐波那契等</p>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main2 mobile-main2 maodian">
+					<div class="mainHd"><div class="comTitle">手机MT4使用指南</div></div>
+					<div class="mainBd-tab2">
+						<div class="mainHd">
+							<div class="comTitle">账户注册</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第一步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp1.jpg" /></div>
+								<article class="comArticle">
+									<p>如果您使用的是苹果手机，那么首先您需要在APP Store 中搜索“MT4”，出现MT4图标后点击下载。（如果您的手机是安卓系统，请到“91助手”下载）</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第二步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp2.jpg" /></div>
+								<article class="comArticle">
+									<p>当MT4软件下载完成后，打开MT4 软件，之后点击最后一栏设置，看到这个界面，点击“打开个人模拟账户”。如果您已经有模拟账号，点击“登陆一个已有账户”后，在搜索栏输入 RZTrader后选择RZTrader-Demo，之后根据提示输入账号和密码即可。</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第三步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp3.jpg" /></div>
+								<article class="comArticle">
+									<p>申请新的模拟账户时，在搜索栏中输入：RZTrader，出现 RZTrader-Demo后点击它。</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第四步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp4.jpg" /></div>
+								<article class="comArticle">
+									<p>填写个人信息后，选择入金金额，之后点击右上角注册。</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第五步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp5.jpg" /></div>
+								<article class="comArticle">
+									<p>出现以下信息后，点击右上角完成，这样就完成模拟账户注册了。</p>
+								</article>
+							</div>
+						</div>
+						<br />
+						<br />
+						<div class="mainHd">
+							<div class="comTitle">选项设置</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第六步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp6.jpg" /></div>
+								<article class="comArticle">
+									<p>注册完成后，会到下图页，选择“高级的”选项，点击+号可添加您想要交易的货币对。</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第七步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp7.jpg" /></div>
+								<article class="comArticle">
+									<p>选择您要交易的货币，点击会出现下图。</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第八步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp8.jpg" /></div>
+								<article class="comArticle">
+									<p>点击图表进行行情分析预览，在左上角点击可以切换时间图，M1（一分钟图）、 M5（五分钟图）、M15（15分钟图）、M30（30分钟图）、、 H1（1小时图） H4（4小时图） 、D1 （天图）、W1 （一周图）、WN（月图）</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第九步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp9.jpg" /></div>
+								<article class="comArticle">
+									<p>当您确定行情走向后，点击图表屏幕右上角的交易键，会出现下图：</p>
+									<ul>
+										<li>sell为买跌，也指做空、空头</li>
+										<li>buy为买涨，也指做多、多头</li>
+										<li>buy limit：低于现价做多</li>
+										<li>sell limit：高于现价做空</li>
+										<li>sell stop：低于现价做空</li>
+										<li></li>
+									</ul>
+									<p>在市场执行下方输入手数，建议每手不要超过总资金量10%</p>
+								</article>
+							</div>
+						</div>
+						<br />
+						<br />
+						<div class="mainHd">
+							<div class="comTitle">交易下单</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第十步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp10.jpg" /></div>
+								<article class="comArticle">
+									<p>当下单后，会出现下图页面：</p>
+									<ul>
+										<li>a、蓝色即为盈利</li>
+										<li>b、预付款为每单的保证金</li>
+										<li>c、 结余为不包含下单部分的余额</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第十一步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp11.jpg" /></div>
+								<article class="comArticle">
+									<p>下图为您的历史数据，可以详细的知道您的交易记录，您可选择当日、当周、当月或 者自定义，同时可以看您的总体盈利有多少</p>
+								</article>
+							</div>
+						</div>
+						<div class="mainBd">
+							<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1">第十二步 <i class="fa fa-caret-right"></i></div>
+							<div class="com-bd clearfix">
+								<div class="stpimg"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/stp12.jpg" /></div>
+								<article class="comArticle">
+									<p>在图表页面，上方出现的
+										1：“ + ”为十字光标，方便您查看价位，价位在图表左右边
+										2：“ f ”为技术指标窗口添加，可加入您熟悉判断行情的指标，如MACD/RSI/BOLLINGER/MOVING AVERAGE等
+										3：“ f旁边 ”的是趋势指标，可加入您熟悉判断行情的趋势指标，如横线，斜线，角度线，水平线，斐波那契等</p>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-mt4Use.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-8 insMain">
+		<div class="financialCalendar">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cusresource">客户资源</a><em>&gt;</em><a href="<{$http_root_www}>financialCalendar">财经日历</a></p></div>
+				<{include file='cusHeader.htm'}>
+				<div class="main2">
+					<div class="comTitle">财经日历</div>
+					<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+					<div class="mainBd">
+						<div class="financialCalendar-box">
+							<div class="financialCalendar-data">
+								<!--暂时图片代替
+								<img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-16.jpg" />-->
+								<!-- myfxbook.com economic calendar widget - Start -->
+								<div class="fxplugin">
+									<script type="text/javascript" src=https://widgets.myfxbook.com/scripts/fxCalendar.js?ps=30></script>										
+									<!-- <script type="text/javascript" src=http://widgets.myfxbook.com/scripts/fxCalendar.js?ps=16></script> -->
+									<!--<div style="color: #706f6f;font-weight: bold;font-size: 11px;font-family: Tahoma;">Powered by<a href="https://www.myfxbook.com"class="myfxbookLink" ><b style="color: #575454;"></b></a></div> -->
+									<!--script type="text/javascript">showCalendarWidget()</script-->
+								</div>
+						        <!-- myfxbook.com economic calendar widget - End -->
+						    
+							</div>
+							<div class="pendant-02"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-01.png" /></div>
+							<div class="pendant-03"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/pendant-02.png" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

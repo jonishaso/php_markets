@@ -1,0 +1,428 @@
+@charset "utf-8";
+
+.banner {
+	margin-top: -40px;
+	height: 100vh;
+	.slides {
+		height: inherit;
+		li {
+			position: relative;
+			height: inherit;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	.scrollBtn {
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		z-index: 3;
+		cursor: pointer;
+		@include translate(-50%, -50%);
+	}
+	.txt-all {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		.wrapper {
+			position: relative;
+		}
+		.earth-bg {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			span {
+				display: block;
+				width: 50%;
+				@include opacity(0.3);
+				@include translate(-50%, 20%);
+			}
+		}
+		.txt1 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-align: left;
+			@include display();
+			@include alignItems();
+			.big-log {
+				display: block;
+				width: 50%;
+			}
+		}
+		.txt2 {
+			position: absolute;
+			right: 0;
+			bottom: 130px;
+			left: 0;
+			background: rgba(nth($color2, 5), 0.38);
+			line-height: 1.8em;
+			color: nth($color, 1);
+			letter-spacing: 0.1em;
+			padding: 2em 0;
+			@include fspx($FS18);
+			span {
+				text-transform: uppercase;
+				@include fspx($FS24);
+			}
+		}
+		.swiper-pagination1 {
+			padding-top: 20px;
+		}
+		.btns {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			@include translate(0, -50%);
+			.p1 {
+				text-align: right;
+				color: nth($color, 1);
+				margin-bottom: 6px;
+				@include fspx($FS13);
+			}
+			ul {
+				li {
+					margin: 6px 0;
+				}
+			}
+		}
+	}
+}
+
+
+.introduce-01 {
+	position: relative;
+	z-index: 2;
+	background-image: url(../images/bg1.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 115px 0 415px;
+	.hd {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.pendant-01 {
+		position: absolute;
+		top: 0;
+		left: 25%;
+		width: 36%;
+		@include translate(-60%, -60%);
+	}
+	.pictxt-list-01 {
+		.item {
+			@include opacity(0);
+			@include transition(transform 0.5s linear, opacity 0.5s linear);
+			@include translate(-60%, 0);
+			@for $i from 1 through 4 {
+			  &:nth-child(#{$i}) {
+				  @include delay((4+1-$i)*0.2s);
+				}
+			}
+		}
+	}
+	&.viewIn {
+		.pictxt-list-01 {
+			.item {
+				@include opacity(1);
+				@include translate(0, 0);
+			}
+		}
+	}
+}
+
+
+.introduce-02 {
+	position: relative;
+	z-index: 3;
+	background-image: url(../images/bg2.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-bottom: 225px;
+	.pendant-02 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 27%;
+		@include translate(0, -50%);
+	}
+	.hd {
+		position: relative;
+		left: 750px;
+		padding-left: 50px;
+		@include translate(0, -60px);
+		h2 {
+			margin-bottom: 20px;
+		}
+	}
+	.bd {
+		position: relative;
+		.diagram-list {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 750px;
+			@include translate(0, -100%);
+		}
+		.info-list {
+			padding: 70px 0;
+		}
+	}
+}
+.introduce-03 {
+	position: relative;
+	z-index: 4;
+	background-image: url(../images/bg3.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.index-video {
+	position: relative;
+	margin-bottom: 140px;
+	.hd {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 715px;
+		text-align: center;
+		@include translate(0, -30%);
+		p {
+			margin-bottom: 50px;
+		}
+		.btn-2 {
+			margin-top: 25px;
+			a {
+				margin: 0 auto;
+			}
+		}
+	}
+	.bd {
+		.picbg {
+			float: right;
+			width: 715px;
+			.bg {
+				padding-top: 61.4% * 0.5;
+			}
+			.video {
+				position: absolute;
+				top: -100%;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				box-shadow: 0 10px 20px rgba(nth($color, 2), 0.5);
+				& + .video-mask {
+					top: -100%;
+				}
+			}
+		}
+	}
+}
+.index-account {
+	position: relative;
+	margin-bottom: 40px;
+	.pendant-03 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40%;
+		@include translate(50%, -40%);
+	}
+	.hd {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 50%;
+		padding-left: 130px;
+		text-align: center;
+		@include translate(0, -50%);
+		.center {
+			display: inline-block;
+			text-align: left;
+		}
+		h2:nth-child(2) {
+			margin-left: 50px;
+		}
+	}
+	.bd {
+		position: relative;
+		float: left;
+		width: 50%;
+		.picbg {
+			float: right;
+			width: 150%;
+			.bg {
+				padding-top: 65.5%;
+			}
+		}
+	}
+	.account-changebtn {
+		margin-top: 30px;
+		.chb-item {
+			margin-bottom: 20px;
+			&:nth-child(1) {
+				margin-left: 70px;
+			}
+		}
+	}
+	.account-changeinfo {
+		position: absolute;
+		top: 50%;
+		right: -130px;
+		width: 100%;
+		padding: 30px 0;
+		background-color: rgba(nth($color3, 7), 0.92);
+		@include translate(0, -50%);
+		@include gradients(left, (rgba(nth($color3, 7), 0.92) 0, rgba(nth($color3, 8), 0.92) 90%, rgba(nth($color3, 8), 0.92) 100%));
+		li {
+			line-height: 1.4em;
+			padding: 15px 0;
+			color: nth($color, 1);
+			.name,
+			.info {
+				float: left;
+				width: 50%;
+				padding: 0 1em;
+			}
+			.name {
+				font-weight: bold;
+				@include fspx($FS18);
+			}
+			.info {
+				@include fspx($FS14);
+			}
+		}
+	}
+	.account-link {
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		.btn-2 {
+			float: left;
+			margin-left: 30px;
+		}
+	}
+}
+.index-partner {
+	padding: 30px 0;
+	.hd {
+		text-align: center;
+		svg {
+			margin: 0 10px;
+		}
+	}
+	.bd {
+		position: relative;
+	}
+	.partner-list {
+		.partner-item {
+			float: left;
+			width: auto;
+			padding: 5px 0;
+			a {
+				display: block;
+				height: 50px;
+				line-height: 40px;
+				padding: 5px 30px;
+				text-align: center;
+				@include transition(all 0.3s linear);
+				&:hover {
+					background: nth($color, 1);
+					box-shadow: 0 0 4px rgba(nth($color, 2), 0.2);
+					@include translate(0, -2px);
+				}
+			}
+		}
+	}
+}
+
+.introduce-04 {
+	position: relative;
+	z-index: 5;
+	.index-platform {
+		.pic {
+			@include opacity(0);
+			@include translate(-100%, 0);
+			@include transition(transform 0.3s linear, opacity 0.3s linear);
+		}
+		.txt {
+			@include opacity(0);
+			@include translate(100%, 0);
+			@include transition(transform 0.3s linear, opacity 0.3s linear);
+		}
+	}
+	&.viewIn {
+		.index-platform {
+			.pic {
+				@include opacity(1);
+				@include translate(0%, 0);
+			}
+			.txt {
+				@include opacity(1);
+				@include translate(0%, 0);
+			}
+		}
+	}
+}
+.index-platform {
+	background-image: url(../images/bg4.jpg);
+	background-color: nth($color, 1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	.bd {
+		padding: 70px 0;
+		@include display();
+		@include alignItems();
+	}
+	.pic,
+	.txt {
+		width: 50%;
+	}
+	.pic {
+		text-align: right;
+	}
+	.txt {
+		padding-left: 80px;
+		h2 {
+			margin-bottom: 25px;
+			svg {
+				&:nth-child(3) {
+					margin-left: 50px;
+				}
+			}
+		}
+	}
+}
+.index-platform-list {
+	background: nth($color, 1);
+	padding: 20px 0;
+	.platform-item {
+		float: left;
+		width: 16.6666666%;
+		a {
+			display: block;
+			height: 80px;
+			line-height: 80px;
+			padding: 0 10px;
+			text-align: center;
+			background: nth($color, 1);
+			@include transition(all 0.3s linear);
+			&:hover {
+				@include transform(translate(0, -3px) scale(1.1, 1.1));
+			}
+		}
+	}
+}

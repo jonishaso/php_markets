@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.accountType {
+	position: relative;
+	.mainBd {
+		position: relative;
+	}
+	.svgtitle {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		@include translate(0, -50%);
+		p {
+			&:nth-child(2) {
+				margin-right: 20px;
+			}
+		}
+	}
+	.pictxt-list-02 {
+		margin-left: 236px;
+		.item {
+			margin-bottom: 0;
+		}
+	}
+	.account-changebtn {
+		position: relative;
+		z-index: 3;
+		padding: 10px 0;
+		margin-bottom: 15px;
+		.chb-item {
+			float: left;
+			margin-right: 20px;
+			a {
+				position: relative;
+				display: block;
+				font-weight: bold;
+				padding: 0.2em 1em;
+				@include fspx($FS20);
+				.svg-btnBd {
+					position: absolute;
+					top: 0;
+					left: 0;
+					path {
+						@include transition(all 0.3s linear);
+					}
+				}
+				&.active,
+				&:hover {
+					.svg-btnBd {
+						path {
+							stroke-dashoffset: 0 !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.account-changeinfo {
+		position: relative;
+		z-index: 3;
+		padding: 10px;
+		width: 70%;
+		box-shadow: -5px 5px 20px rgba(nth($color, 2), 0.2);
+		background-color: rgba(nth($color3, 7), 0.92);
+		@include gradients(left, (rgba(nth($color3, 7), 0.92) 0, rgba(nth($color3, 8), 0.92) 90%, rgba(nth($color3, 8), 0.92) 100%));
+		li {
+			line-height: 1.4em;
+			padding: 7px 0;
+			color: nth($color, 1);
+			@include fspx($FS14);
+			.name,
+			.info {
+				float: left;
+				padding: 0 1em 0 5em;
+			}
+			.name {
+				width: 40%;
+				font-weight: bold;
+			}
+			.info {
+				width: 60%;
+			}
+		}
+	}
+	.account-pic {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 70%;
+		.bg {
+			padding-top: 65.5%;
+		}
+	}
+}

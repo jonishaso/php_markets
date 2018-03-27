@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-9 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/product">Our Products</a><em>&gt;</em><a href="<{$http_root_www}>../en/demoaccount">Open a Demo Trading Account</a></p></div>
+				<{include file='productHeader.htm'}>
+				<div class="main4">
+					<div class="comTitle">Open a Demo Trading Account</div>
+					<div class="mainBd">
+						<article class="comArticle">
+							<p> Open a Demo Trading Account<a href="mailto:cs@ruizeanmarkets.com" target="_top">cs@ruizeanmarkets.com</a> </p>
+						</article>
+					</div>
+					<div class="mainHd">
+					</div>
+				</div>
+				<aside class="side4">
+					<section class="form-apply-side form-box" style="display:block;">
+						<div class="form-box-bd">
+							<div class="box1 side-box1">
+								<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Register for a demo account</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<{include file="demoForm.htm"}>
+								</div>
+							</div>
+							<div class="box2 side-box2" style="display:none;">
+								<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+								<div class="hd">
+									<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+									<hgroup>
+										<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<hgroup>
+										<h4>It will be closed automic, also you can click close button to close it.</h4>
+									</hgroup>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="quick-link">
+						<div class="hd clearfix">
+							
+							<div class="cont">Come and Join Us</div>
+						</div>
+						<div class="bd">
+							<div class="btns">
+								<div class="btn-2 blue"><a href="<{$http_root_www}>../en/demoaccount"><div class="bg"></div><span>Open Demo Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								<div class="btn-2 blue"><a href="<{$http_root_www}>../en/liveaccount"><div class="bg"></div><span>Open Live Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								
+							</div>
+						</div>
+					</section>
+				</aside>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formidForDemo").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var Name = form.name.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'Name='+ Name + '&email='+ email + '&telephone='+ telephone;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/demoContact",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+
+<head>
+		<{include file='part-head.htm'}>
+
+		<!-- <script type="text/javascript">
+			function loadXMLDoc() //ajax发送请求并显示 
+			{
+				var xmlhttp;
+				if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari 
+					xmlhttp = new XMLHttpRequest();
+				} else { // code for IE6, IE5 
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function () {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById("homeMt4").innerHTML = xmlhttp.responseText;
+					}
+				}
+				xmlhttp.open("POST", "<{$http_root_www}>../en/updateHomeMt4", true);
+				xmlhttp.send();
+				setTimeout("loadXMLDoc()", 5000); //递归调用 
+			}
+			loadXMLDoc(); //先执行一次
+		</script> -->
+		<!-- <script type="text/javascript">
+			function loadXMLDoc2() //ajax发送请求并显示 
+			{
+				var xmlhttp;
+				if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari 
+					xmlhttp = new XMLHttpRequest();
+				} else { // code for IE6, IE5 
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function () {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById("homeMetal").innerHTML = xmlhttp.responseText;
+					}
+				}
+				xmlhttp.open("POST", "<{$http_root_www}>../en/updateHomeMetal", true);
+				xmlhttp.send();
+				setTimeout("loadXMLDoc2()", 3000); //递归调用 
+			}
+			loadXMLDoc2(); //先执行一次
+		</script> -->
+		<script>
+			var bullets = null;
+			var index = 0;
+			window.addEventListener('load', function () {
+				bullets = document.getElementsByClassName("swiper-pagination-bullet");
+				// carousel();
+			})
+				
+			function carousel() {
+				if(index >= bullets.length) index = 0;
+				bullets.item(index).click();
+				index++
+				setTimeout("carousel()", 5000); 
+			}
+		</script>
+		<style>
+			#slides-container::after{
+				content: '';
+  				display: block;
+  				clear: both;
+			}
+			#testing {
+				display: -webkit-flex;
+				-webkit-flex-wrap: wrap;
+				display: flex;
+				flex-wrap: wrap;
+				display: block;
+				position: absolute;
+				right: 13%;
+				top: 0%;
+				width: 25%;
+			}
+
+			#intro {
+				color: white;
+				width: 45%;
+				background: rgba(79, 182, 225, 0);
+				position: relative;
+				left: 0%;
+				top: 0%;
+			}
+			#intro h2 {
+				font-size: 50px;
+				margin: 5% 0%;
+			}
+			#intro p {
+				font-size: 15px;
+				margin: 35px 0px;
+			}
+			#btt a {
+    			box-shadow: 0 0 0 2px #E2C26E inset;
+    			color:white;
+    			background-color: transparent;
+    			font-size: 20px;
+				padding: 10px;
+    			width: 13%;
+				text-transform: uppercase;
+			}
+
+			#btt a:hover {
+    			color: #fff;
+    			box-shadow: none;
+    			background: -webkit-linear-gradient(left,#E2C26E,#F4E3A0,#E2C26E);
+    			background: -o-linear-gradient(left,#E2C26E,#F4E3A0,#E2C26E);
+    			background: -moz-linear-gradient(left,#E2C26E,#F4E3A0,#E2C26E);
+    			background: linear-gradient(left,#E2C26E,#F4E3A0,#E2C26E);
+			}
+			@media screen and (max-width: 376px) {
+				#intro {
+					display: block;
+					position: absolute;
+					left: 0%;
+					top: 0%;
+					color: white;
+					width: 40%;
+					padding-top: 28px;
+					padding-bottom: 1%;
+					padding-left: 1%;
+					padding-right: 1%;
+					font-size: 10px;
+					margin-top: 1%;
+					margin-left: 1%;
+					margin-right:1%;
+					margin-bottom: 1%; 
+					background: rgba(79, 182, 225, 0.58);
+				}
+			}
+			#logo-container {
+				display: inline-block;
+				position: relative;
+				width: 80%;
+				
+			}
+
+			#ul {
+				display: inline-block;
+				color: white;
+			}
+
+			#ul li {
+				margin-top: 14px;
+			}
+
+			.banner .txt-all .txt2 {
+				background: transparent;
+			}
+			.txt1{
+				display: block;
+				margin: 200px 0px;
+			}
+		</style>
+</head>
+
+<body>
+	<{include file='header.htm'}>
+		<!-- Banner -->
+		<section class="banner swiper-container" style="height:620px !important">
+			<ul class="slides swiper-wrapper">
+				<!-- <{foreach from=$banners item=item}>
+					<li class="swiper-slide" style="background-image: url(<{$UPLOAD_PATH}><{$item.pic}>);"></li>
+				<{/foreach}> -->
+				<li class="swiper-slide" style="background-image: url(/data/upload/2017-02/2.jpg);">
+					<div class="txt-all">
+						<!-- <div class="earth-bg">
+							<div class="wrapper">
+								<span>
+									<img src="<{$STATIC_PATH}>ruizeanMarkets/images/svg-earth.svg" />
+								</span>
+							</div>
+						</div> -->
+						<div class="txt1">
+							<div class="wrapper clearfix" style="
+							height: 100%;">
+								<div id="intro">
+									<h2>Excellent Liquidity</h2>
+									<p>Take advantage of multiple liquidity providers offering highly competitive spreads on all products.</p>
+									<div id = "btt"><a href="<{$http_root_www}>../en/ls">learn more</a></div>
+								</div>
+								<div class="swiper-pagination swiper-pagination1"></div>
+								<div id="testing">
+									<!-- <span class="big-log"> -->
+									
+									<!-- <div class="btns" > -->
+									<div id="ul">
+										<ul class="clearfix">
+											<li>
+												<a href="<{$http_root_www}>../en/liveaccount" class="clearfix">
+													<svg class="svg-btn4 svg-ele"></svg>
+												</a>
+											</li>
+											<li>
+												<a href="<{$http_root_www}>../en/demoaccount" class="clearfix">
+													<svg class="svg-btn5 svg-ele"></svg>
+												</a>
+											</li>
+										</ul>
+										<p class="p1">
+											Committed to providing the great online
+											<br />FX trading solution
+										</p>
+									</div>
+								</div>
+							</div>>
+						</div>
+						<div class="txt2">
+							<div class="wrapper">
+								<p>
+									<span>EXPERIENCE THE DIFFERENCE
+										<{$person}>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide" style="background-image: url(/data/upload/2017-02/IB.jpg);">
+					<div class="txt-all">
+						<!-- <div class="earth-bg">
+							<div class="wrapper">
+								<span>
+									<img src="<{$STATIC_PATH}>ruizeanMarkets/images/svg-earth.svg" />
+								</span>
+							</div>
+						</div> -->
+						<div class="txt1">
+							<div class="wrapper clearfix" style="
+							height: 100%;">
+								<div id="intro">
+									<h2>Excellent Liquidity</h2>
+									<p>Take advantage of multiple liquidity providers offering highly competitive spreads on all products.</p>
+									<div id = "btt"><a href="<{$http_root_www}>../en/ls">learn more</a></div>
+								</div>
+								<div class="swiper-pagination swiper-pagination1"></div>
+								<div id="testing">
+									<!-- <span class="big-log"> -->
+									
+									<!-- <div class="btns" > -->
+									<div id="ul">
+										<ul class="clearfix">
+											<li>
+												<a href="<{$http_root_www}>../en/liveaccount" class="clearfix">
+														<svg class="svg-btn4 svg-ele" id="" width="350" height="70" viewBox="0, 0, 350, 70"><desc>Created with Snap</desc><defs><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje59x4ap5t"><stop offset="0%" stop-color="#e4c674"></stop><stop offset="50%" stop-color="#f4e3a0"></stop><stop offset="100%" stop-color="#e4c674"></stop></linearGradient><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje59x4ap5u"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="50%" stop-color="#ffffff"></stop><stop offset="100%" stop-color="#ffffff"></stop></linearGradient></defs><g><path d="M40 0L80 0L40 70L0 70Z" fill="url('#linearGradientSje59x4ap5t')"></path><path d="M80 0L350 0L310 70L40 70Z" fill="url('#linearGradientSje59x4ap5u')"></path><path d="M80 0L40 70L310 70L40 70Z" fill="url('#linearGradientSje59x4ap5t')"></path></g><g><text x="40" y="35" fill="#ffffff" style="font-size: 30px; text-anchor: middle;" transform="matrix(1,0,0,1,0,11.75)">1</text><text x="195" y="0" fill="#dab76c" style="font-size: 20px; text-anchor: middle;" transform="matrix(1,0,0,1,0,43)">Live Account</text></g><g transform="matrix(1,0,0,1,290,0)"><line x1="0" x2="10" y1="25" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="10" y1="45" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="25" y2="25" stroke="#ffffff" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="45" y2="45" stroke="#ffffff" style="stroke-width: 2;"></line></g></svg>
+												</a>
+											</li>
+											<li>
+												<a href="<{$http_root_www}>../en/demoaccount" class="clearfix">
+														<svg class="svg-btn5 svg-ele" id="svg-ele23" width="350" height="70" viewBox="0, 0, 350, 70"><desc>Created with Snap</desc><defs><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje5a0cqh6e"><stop offset="0%" stop-color="#e4c674"></stop><stop offset="50%" stop-color="#f4e3a0"></stop><stop offset="100%" stop-color="#e4c674"></stop></linearGradient><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje5a0cqh6f"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="50%" stop-color="#ffffff"></stop><stop offset="100%" stop-color="#ffffff"></stop></linearGradient></defs><g><path d="M40 0L80 0L40 70L0 70Z" fill="url('#linearGradientSje5a0cqh6e')"></path><path d="M80 0L350 0L310 70L40 70Z" fill="url('#linearGradientSje5a0cqh6f')"></path><path d="M80,0C80,0,40,70,40,70C40,70,310,70,310,70C310,70,40,70,40,70C40,70,80,0,80,0" fill="url('#linearGradientSje5a0cqh6e')"></path></g><g><text x="40" y="35" fill="#ffffff" style="font-size: 30px; text-anchor: middle;" transform="matrix(1,0,0,1,0,11.75)">2</text><text x="195" y="0" fill="#dab76c" style="font-size: 20px; text-anchor: middle;" transform="matrix(1,0,0,1,0,43)">Demo Account</text></g><g transform="matrix(1,0,0,1,290,0)"><line x1="0" x2="10" y1="25" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="10" y1="45" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="25" y2="25" stroke="#ffffff" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="45" y2="45" stroke="#ffffff" style="stroke-width: 2;"></line></g></svg>
+												</a>
+											</li>
+										</ul>
+										<p class="p1">
+											Committed to providing the great online
+											<br />FX trading solution
+										</p>
+									</div>
+								</div>
+							</div>>
+						</div>
+						<div class="txt2">
+							<div class="wrapper">
+								<p>
+									<span>EXPERIENCE THE DIFFERENCE
+										<{$person}>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="swiper-slide" style="background-image: url(/data/upload/2017-02/4.jpg);">
+					<div class="txt-all">
+						<!-- <div class="earth-bg">
+							<div class="wrapper">
+								<span>
+									<img src="<{$STATIC_PATH}>ruizeanMarkets/images/svg-earth.svg" />
+								</span>
+							</div>
+						</div> -->
+						<div class="txt1">
+							<div class="wrapper clearfix"style="
+							height: 100%;">
+
+								<div id="intro">
+									<h2>Diversified Products</h2>
+									<p>Ruizean Markets provides diversified products, including Forex, Metals and CFD's for Commodities and Indices</p>
+									<div id = "btt"><a href="<{$http_root_www}>../en/ls">learn more</a></div>
+								</div>
+								<div class="swiper-pagination swiper-pagination1"></div>
+								<div id="testing">
+									<!-- <span class="big-log"> -->
+									
+									<!-- <div class="btns" > -->
+											<div id="ul">
+													<ul class="clearfix">
+														<li>
+															<a href="<{$http_root_www}>../en/liveaccount" class="clearfix">
+																	<svg class="svg-btn4 svg-ele" id="" width="350" height="70" viewBox="0, 0, 350, 70"><desc>Created with Snap</desc><defs><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje59x4ap5t"><stop offset="0%" stop-color="#e4c674"></stop><stop offset="50%" stop-color="#f4e3a0"></stop><stop offset="100%" stop-color="#e4c674"></stop></linearGradient><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje59x4ap5u"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="50%" stop-color="#ffffff"></stop><stop offset="100%" stop-color="#ffffff"></stop></linearGradient></defs><g><path d="M40 0L80 0L40 70L0 70Z" fill="url('#linearGradientSje59x4ap5t')"></path><path d="M80 0L350 0L310 70L40 70Z" fill="url('#linearGradientSje59x4ap5u')"></path><path d="M80 0L40 70L310 70L40 70Z" fill="url('#linearGradientSje59x4ap5t')"></path></g><g><text x="40" y="35" fill="#ffffff" style="font-size: 30px; text-anchor: middle;" transform="matrix(1,0,0,1,0,11.75)">1</text><text x="195" y="0" fill="#dab76c" style="font-size: 20px; text-anchor: middle;" transform="matrix(1,0,0,1,0,43)">Live Account</text></g><g transform="matrix(1,0,0,1,290,0)"><line x1="0" x2="10" y1="25" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="10" y1="45" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="25" y2="25" stroke="#ffffff" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="45" y2="45" stroke="#ffffff" style="stroke-width: 2;"></line></g></svg>
+															</a>
+														</li>
+														<li>
+															<a href="<{$http_root_www}>../en/demoaccount" class="clearfix">
+																	<svg class="svg-btn5 svg-ele" id="svg-ele23" width="350" height="70" viewBox="0, 0, 350, 70"><desc>Created with Snap</desc><defs><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje5a0cqh6e"><stop offset="0%" stop-color="#e4c674"></stop><stop offset="50%" stop-color="#f4e3a0"></stop><stop offset="100%" stop-color="#e4c674"></stop></linearGradient><linearGradient x1="0" y1="1" x2="1" y2="0" id="linearGradientSje5a0cqh6f"><stop offset="0%" stop-color="#ffffff"></stop><stop offset="50%" stop-color="#ffffff"></stop><stop offset="100%" stop-color="#ffffff"></stop></linearGradient></defs><g><path d="M40 0L80 0L40 70L0 70Z" fill="url('#linearGradientSje5a0cqh6e')"></path><path d="M80 0L350 0L310 70L40 70Z" fill="url('#linearGradientSje5a0cqh6f')"></path><path d="M80,0C80,0,40,70,40,70C40,70,310,70,310,70C310,70,40,70,40,70C40,70,80,0,80,0" fill="url('#linearGradientSje5a0cqh6e')"></path></g><g><text x="40" y="35" fill="#ffffff" style="font-size: 30px; text-anchor: middle;" transform="matrix(1,0,0,1,0,11.75)">2</text><text x="195" y="0" fill="#dab76c" style="font-size: 20px; text-anchor: middle;" transform="matrix(1,0,0,1,0,43)">Demo Account</text></g><g transform="matrix(1,0,0,1,290,0)"><line x1="0" x2="10" y1="25" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="10" y1="45" y2="35" stroke="#dab76c" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="25" y2="25" stroke="#ffffff" style="stroke-width: 2;"></line><line x1="0" x2="0" y1="45" y2="45" stroke="#ffffff" style="stroke-width: 2;"></line></g></svg>
+															</a>
+														</li>
+													</ul>
+													<p class="p1">
+														Committed to providing the great online
+														<br />FX trading solution
+													</p>
+												</div>
+								</div>
+							</div>>
+						</div>
+						<div class="txt2">
+							<div class="wrapper">
+								<p>
+									<span>EXPERIENCE THE DIFFERENCE
+										<{$person}>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<!-- <div class="scrollBtn bannerScrollBtn">
+				<svg class="svgScrollBtn svg-ele"></svg>
+			</div> -->
+		</section>
+		<section class="introduce-01">
+			<div class="pendant-01">
+				<img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" />
+			</div>
+			<div class="wrapper">
+				<div class="hd">
+					<h2>
+						<svg class="svg-hdTitle6 svg-ele" data-txt="Welcome to&nbsp;"></svg>
+						<svg class="svg-hdTitle6 svg-ele" data-txt="Ruizean Markets"></svg>
+					</h2>
+				</div>
+				<div class="bd">
+					<div class="pictxt-list-01 clearfix">
+						<div class="item">
+							<div class="box">
+								<div class="pic picbg">
+									<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-01.jpg);"></div>
+									<div class="mask"></div>
+									<div class="border gradientBorder">
+										<span class="l"></span>
+										<span class="r"></span>
+										<span class="t"></span>
+										<span class="b"></span>
+									</div>
+								</div>
+								<div class="txt">
+									<a href="javascript:void(0);">
+										<hgroup>
+											<h2>Secure Funds</h2>
+											<p>All client deposits are securely placed in our client account with AA rated National Australia Bank here in Australia.</p>
+										</hgroup>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="box">
+								<div class="pic picbg">
+									<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-02.jpg);"></div>
+									<div class="mask"></div>
+									<div class="border gradientBorder">
+										<span class="l"></span>
+										<span class="r"></span>
+										<span class="t"></span>
+										<span class="b"></span>
+									</div>
+								</div>
+								<div class="txt">
+									<a href="javascript:void(0);">
+										<hgroup>
+											<h2>Excellent Liquidity</h2>
+											<p>Take advantage of multiple liquidity providers offering highly competitive spreads on all products.</p>
+										</hgroup>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="box">
+								<div class="pic picbg">
+									<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-03.jpg);"></div>
+									<div class="mask"></div>
+									<div class="border gradientBorder">
+										<span class="l"></span>
+										<span class="r"></span>
+										<span class="t"></span>
+										<span class="b"></span>
+									</div>
+								</div>
+								<div class="txt">
+									<a href="javascript:void(0);">
+										<hgroup>
+											<h2>Diversified Products</h2>
+											<p>Ruizean Markets provides diversified products, including Forex, Metals and CFD's for Commodities and Indices</p>
+										</hgroup>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="box">
+								<div class="pic picbg">
+									<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-04.jpg);"></div>
+									<div class="mask"></div>
+									<div class="border gradientBorder">
+										<span class="l"></span>
+										<span class="r"></span>
+										<span class="t"></span>
+										<span class="b"></span>
+									</div>
+								</div>
+								<div class="txt">
+									<a href="javascript:void(0);">
+										<hgroup>
+											<h2>Trade with Confidence</h2>
+											<p>Ruizean Markets offers clients access to the MT4 trading platform with some of the fastest execution speeds</p>
+										</hgroup>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="introduce-02">
+			<div class="pendant-02">
+				<img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart3.png" />
+			</div>
+			<div class="wrapper">
+				<div class="hd">
+				</div>
+				<div class="bd">
+					<div class="diagram-list clearfix">
+						<div class="dl-hd1">
+							<ul class="clearfix">
+								<li>
+									<div class="dh-item ">
+										<i>Forex</i>
+										<div class="gradientBorder2">
+											<span class="t"></span>
+											<span class="r"></span>
+											<span class="b"></span>
+											<span class="l"></span>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+						<div class="dl-bd clearfix">
+							<div class="diagram db-item">
+								<table>
+									<thead>
+										<tr>
+											<td>&nbsp;</td>
+											<td>BID</td>
+											<td>ASK</td>
+											<!--<td>SPREAD</td>-->
+										</tr>
+									</thead>
+									<tbody id="homeMt4">
+										<{foreach from=$symbols item=item key=key}>
+											<{if $key < 5}>
+												<tr>
+													<td>
+														<{$item.symbol|upper}>
+													</td>
+													<td>
+														<{if $item.bidarrow==1}>
+															<i class="down">
+																<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" />
+															</i>
+															<{else}>
+																<i class="up">
+																	<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" />
+																</i>
+																<{/if}>
+																	<{$item.bid}>
+													</td>
+													<td>
+														<{if $item.askarrow==1}>
+															<i class="down">
+																<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" />
+															</i>
+															<{else}>
+																<i class="up">
+																	<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" />
+																</i>
+																<{/if}>
+																	<{$item.ask}>
+													</td>
+												</tr>
+												<{/if}>
+													<{/foreach}>
+									</tbody>
+								</table>
+							</div>
+							<!-- <div class="diagram db-item">
+								<table>
+									<thead>
+										<tr>
+											<td>&nbsp;</td>
+											<td>BID</td>
+											<td>ASK</td>
+										</tr>
+									</thead>
+									<tbody id="homeMetal">
+										<{foreach from=$symbols item=item key=key}>
+											<{if $key==5 or $key==6}>
+												<tr>
+													<td>
+														<{$item.symbol|upper}>
+													</td>
+													<td>
+														<{if $item.bidarrow==1}>
+															<i class="down">
+																<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" />
+															</i>
+															<{else}>
+																<i class="up">
+																	<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" />
+																</i>
+																<{/if}>
+																	<{$item.bid}>
+													</td>
+													<td>
+														<{if $item.askarrow==1}>
+															<i class="down">
+																<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowdown.png" />
+															</i>
+															<{else}>
+																<i class="up">
+																	<img src="<{$STATIC_PATH}>ruizeanMarkets/images/arrowup.png" />
+																</i>
+																<{/if}>
+																	<{$item.ask}>
+													</td>
+												</tr>
+												<{/if}>
+													<{/foreach}>
+														<tr>
+															<td>Coming Soon</td>
+															<td>--</td>
+															<td>--</td>
+														</tr>
+														<tr>
+															<td>Coming Soon</td>
+															<td>--</td>
+															<td>--</td>
+														</tr>
+														<tr>
+															<td>Coming Soon</td>
+															<td>--</td>
+															<td>--</td>
+														</tr>
+									</tbody>
+								</table>
+							</div> -->
+							<!-- <div class="diagram db-item">
+								<table>
+									<thead>
+										<tr>
+											<td>&nbsp;</td>
+											<td>BID</td>
+											<td>ASK</td>
+										</tr>
+									</thead>
+									<tbody>
+										<{for $foo=1 to 5}>
+											<tr>
+												<td>Coming Soon</td>
+												<td>--</td>
+												<td>--</td>
+											</tr>
+											<{/for}>
+									</tbody>
+								</table>
+							</div> -->
+							<!-- <div class="diagram db-item">
+								<table>
+									<thead>
+										<tr>
+											<td>&nbsp;</td>
+											<td>BID</td>
+											<td>ASK</td>
+										</tr>
+									</thead>
+									<tbody>
+										<{for $foo=1 to 5}>
+											<tr>
+												<td>Coming Soon</td>
+												<td>--</td>
+												<td>--</td>
+											</tr>
+											<{/for}>
+									</tbody>
+								</table>
+							</div> -->
+						</div>
+
+					</div>
+					<article class="comArticle">
+						</br>
+						<p>
+							<font color="white">*The above spreads are for informational purposes only. </font>
+						</p>
+					</article>
+					<div class="info-list clearfix">
+						<ul class="clearfix">
+							<li>
+								<h2>0.1</h2>
+								<p>Spreads
+									<br />From</p>
+							</li>
+							<li>
+								<h2>
+									<{$hcv.leverage}>
+								</h2>
+								<p>Leverage
+									<br />Up To</p>
+							</li>
+							<li>
+								<h2>65+</h2>
+								<p>Trading
+									<br />Products</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="introduce-03">
+			<div class="wrapper">
+				<section class="index-account clearfix">
+					<div class="pendant-03">
+						<img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart2.png" />
+					</div>
+					<div class="hd">
+						<div class="center">
+							<h2>
+								<svg class="svg-hdTitle6 svg-ele" data-txt="TO START YOUR TRADING EXPERIENCE WITH Ruizean Markets "></svg>
+							</h2>
+							<h2>
+								<svg class="svg-hdTitle2 svg-ele" data-txt="PLEASE SELECT YOUR ACCOUNT BELOW"></svg>
+							</h2>
+							<div class="account-changebtn">
+								<div class="chb-item chb-true btn-3 white">
+									<a class="theone" <!--href="<{$http_root_www}>../en/accountType" -->>
+										<div class="bg"></div>
+										<span>Standard Account</span>
+									</a>
+								</div>
+								<div class="chb-item chb-false btn-3 white">
+									<a class="theone" <!--href="<{$http_root_www}>../en/accountType" -->>
+										<div class="bg"></div>
+										<span>Pro Account</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bd clearfix">
+						<div class="picbg">
+							<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-07.jpg);"></div>
+						</div>
+						<div class="account-changeinfo">
+							<{foreach from=$accounttype item=item}>
+								<ul>
+									<li class="clearfix">
+										<div class="name">Spreads</div>
+										<div class="info">
+											<{$item.spread}>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Leverage</div>
+										<div class="info">
+											<{$item.leverage}>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Trading Platform</div>
+										<div class="info">
+											<{$item.banks}>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Commission</div>
+										<div class="info">
+											<{$item.tradeFunds}>
+										</div>
+									</li>
+								</ul>
+							<{/foreach}>
+						</div>
+						<div class="account-link clearfix">
+							<div class="btn-2 white">
+								<a href="<{$http_root_www}>../en/liveaccount">
+									<div class="bg"></div>
+									<span>Live Account
+										<i class="fa fa-angle-right"></i>
+									</span>
+								</a>
+							</div>
+							<div class="btn-2 white">
+								<a href="<{$http_root_www}>../en/demoaccount">
+									<div class="bg"></div>
+									<span>Demo Account
+										<i class="fa fa-angle-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<section class="introduce-04">
+			<section class="index-platform">
+				<div class="wrapper">
+					<div class="bd clearfix">
+						<div class="pic">
+							<img src="<{$STATIC_PATH}>ruizeanMarkets/images/p-08.png" />
+						</div>
+						<div class="txt">
+							<h2>
+								<svg class="svg-hdTitle6 svg-ele" data-txt="MetaTrader 4"></svg>
+								<br />
+								<svg class="svg-hdTitle6 svg-ele" data-txt="Online trading platform"></svg>
+							</h2>
+							<p class="title-p">・ Easy to Use</br>
+								・ Flexible and Fast Execution</br>
+								・ Reliable and Stable</br>
+								・ Expert Advisors for Algorithmic Trading</br>
+								・ Trading Signals</br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="index-platform-list">
+				<div class="wrapper">
+					<div class="bd">
+						<div class="platform-list">
+							<div class="platform-wrapper clearfix">
+								<{foreach from=$logoredirect item=item}>
+									<div class="platform-item">
+										<a href="<{$http_root_www}>../en/deposit">
+											<img src="<{$UPLOAD_PATH}><{$item.pic|image2:126:80}>" />
+										</a>
+									</div>
+									<{/foreach}>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+		</section>
+		<{include file='footer.htm'}>
+		<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.js"></script>
+		<script src='https://player.polyv.net/script/polyvplayer.min.js'></script>
+		<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-default.js"></script>
+		
+</body>
+
+</html>

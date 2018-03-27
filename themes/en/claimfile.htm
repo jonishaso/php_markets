@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- about -->
+	<section class="insMain page-bg-6">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/about">Corporate Profile</a><em>&gt;</em><a href="<{$http_root_www}>../en/claimfile">Disclosure Documents</a></p></div>
+				<{include file='aboutHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">Disclosure Documents</div>
+						<article class="comArticle">
+							<p>Please download and read the following disclosure documents about the forex and CFD margin trading. It is important that you understand the nature of the product and know your rights and obligations trading forex  and CFD transactions.</p>
+							
+							<p>By applying for a Ruizean Markets trading account, clients agree that they have read and understood the following documents and agree to the terms and conditions contained in the files.</p>
+							<p>&nbsp;</p>
+							<{foreach from=$list item=item}>
+								<div class="pdf-hd clearfix">
+									<span class="l"><a href="<{$UPLOAD_PATH}><{$item.files}>" target="_blank"><i class="fa fa-file-pdf-o"></i> <{$item.title}></a></span>
+									<span class="r"><{$item.subTitle}></span>
+								</div>
+							<{/foreach}>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-about.js"></script>
+</body>
+</html>

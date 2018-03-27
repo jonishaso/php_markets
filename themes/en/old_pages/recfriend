@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/cobrand">Partnership</a><em>&gt;</em><a href="<{$http_root_www}>../en/recfriend">Refer a Friend</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">Referring a friend to Ruizean Markets</div>
+						<article class="comArticle">
+							<p>If you refer a friend to Ruizean Markets and if they open an account and deposit at least US $ XXXX in their account with Ruizean Markets, you will receive $XXXX! It doesn’t matter how many people you refer to Ruizean Markets, for everyone who opens an account and deposits $XXXX, you will receive $XXXX for every single referral.</p>
+						</article>
+					</div>
+					<!--div class="mainBd">
+						<div class="comTitle3">优势</div>
+						<article class="comArticle">
+							<p>与亲朋、好友以及同事一同享受交易魅力</p>
+							<p>从朋友的每笔交易中获取奖励*</p>
+							<p>*适用条款与细则</p>
+							<p>每推荐一个朋友获得xxxx！</p>
+							<p>如果您向Ruizean Markets推荐一名朋友，或者居中牵线，他们若在Ruizean Markets开户且至少入金xxxx美元，您的将会获得xxxx！并不限制推荐新客户的次数，您想推荐或者联系多少朋友都可以， 都会获得xxxx。</p>
+						</article>
+					</div-->
+					<div class="mainBd">
+						<div class="comTitle3">How to refer a friend to Ruizean Markets</div>
+						<article class="comArticle">
+							<p>All you need to do is to contact your account manager and give them the details of the person you have referred to us. We will do the rest, liaising with them, introducing them to Ruizean Markets and making sure that they can access all of our learning tools, as well as helping them to open an account. Once they have deposited $XXX into their account, you will receive a $XXXX commission.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">Contact your account manager</div>
+						<article class="comArticle">
+							<p>You can contact your account manager by phone or email. Your account manager is available 5 days a week, however our online customer support is available 24/7.</p>
+							<p>Tel: +612 9017 5230</p>
+							<p>Live chat: <a onclick="livechat();" style="cursor: pointer; cursor: hand;">click here</a></p>
+							<p>Email: <a href="mailto://cs@ruizeanmarkets.com">cs@ruizeanmarkets.com</a></p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<article class="comArticle">
+							<p>Terms and conditions: Commissions will be paid once a new customer with no existing Ruizean Markets account has opened an account, with a deposit of $XXXX. Ruizean Markets reserves the right to suspend promotions at any time or to terminate a trader participating in the IB program. Make sure you have read all the terms and conditions. For more details, click here.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

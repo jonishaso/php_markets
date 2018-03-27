@@ -1,0 +1,87 @@
+<form class="form1" action="?ctl=vpsContact" method="post" id="formid2">
+	
+	<div class="row clearfix">
+	<div class="col-01 col">
+		<div class="form-select1">
+		<p><font color="white" size="2">Select Client Type:</font></p>
+				<select class="form-select1-select2" name="area" id="area">
+				
+				<option value="Individual">Individual</option>
+  <option value="Company">Company</option>
+					
+				</select>
+			</div></div>
+
+		<div class="col-01 col">
+			<input type="text" placeholder="First Name*" required class="form-input1" name="firstName" id="firstName"/>
+		</div>
+
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="text" placeholder="Last Name*" required class="form-input1" name="lastName" id="lastName"/>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="email" placeholder="Email*" required class="form-input1" name="email" id="email"/>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="tel" placeholder="Telephone*" required class="form-input1" name="telephone" id="telephone"/>
+		</div>
+	</div>
+		<div class="row clearfix">
+		<div class="col-01 col">
+			<input type="text" placeholder="Company"  class="form-input1" name="message" id="message"/>
+		</div>
+	</div>
+	<div class="row"><div class="col-01 col"><div class="space-line"></div></div></div>
+	<div class="row clearfix">
+		<div class="col-01 col">
+			<div class="form-select1">
+			<p><font color="white" size="2">Select Wholesale Category:</font></p>
+				<select class="form-select1-select2" name="Currency" id="country">
+				<option value="I certify that I qualify under the Price or Value test">I certify that I qualify under the Price or Value test</option>
+  <option value="I certify that I qualify under the Size of Business test">I certify that I qualify under the Size of Business test</option>
+    <option value="I certify that I qualify under the Sophisticated Investor test">I certify that I qualify under the Sophisticated Investor test</option>
+	  <option value="I certify that I qualify under the Experienced Investor test">I certify that I qualify under the Experienced Investor test</option>
+	    <option value="I certify that I qualify under the Professional Investor/Wholly-owned subsidiary test">I certify that I qualify under the Professional Investor/Wholly-owned subsidiary test</option>
+					
+				</select>
+				<p><font color="white" size="1">Please refer to <a href="<{$http_root_www}>../data/upload/2017-10/20171018135808774502.pdf"><font color="white" size="1">"Wholesale Client Eligible Test"</font></a></font></p>
+			</div>
+		</div>
+	</div>
+
+		<!--<div class="col-02 col">
+			<div class="form-select1">
+				<select class="form-select1-select2">
+					<option value="1">省</option>
+					<option value="1">省1</option>
+					<option value="1">省2</option>
+					<option value="1">省3</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-02 col">
+			<div class="form-select1">
+				<select class="form-select1-select2">
+					<option value="1">市</option>
+					<option value="1">市1</option>
+					<option value="1">市2</option>
+					<option value="1">市3</option>
+				</select>
+			</div>
+		</div>-->
+	</div>
+
+
+	<div class="row row-submit clearfix">
+		<div class="col-01 col">
+			<button type="submit" class="form-submit1">Submit</button>
+			<p class="send-result" style="color:#c00;font-size:14px;text-align:center;padding:5px;"></p>
+			<!--button type="button" class="form-submit1" onclick="ajaxSub();">提交</button-->
+		</div>
+	</div>
+</form>

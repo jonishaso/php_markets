@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+	<title>
+		<{$pageTitle}>
+	</title>
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="email=no" name="format-detection" />
+	<link href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" mce_href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" rel="bookmark"
+	    type="image/x-icon" />
+	<link href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" mce_href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" rel="icon"
+	    type="image/x-icon" />
+	<link href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" mce_href="<{$STATIC_PATH}>ruizeanMarkets/favicon.ico" rel="shortcut icon"
+	    type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>ruizeanMarkets/fonts/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>ruizeanMarkets/css/all.min.css" />
+
+	<style>
+		.header {
+			top: 0px;
+		}
+
+		.side2 {
+			display: none;
+		}
+
+		@media screen and (min-width: 376px) {
+			.main4 {
+				width: 65%;
+			}
+		}
+		.modal {
+			display: block;
+			position: fixed;
+			z-index: 10;
+			padding-top: 15%;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		.modal-header {
+			box-sizing: border-box;
+			color: rgb(255, 255, 255);
+			display: block;
+			font-size: 1em;
+			font-weight: 400;
+			height: 45px;
+			line-height: 45px;
+			/* text-size-adjust: 100%; */
+			background-color: red;
+			width: 100%;
+		}
+
+		/* Modal Content */
+
+		.modal-content {
+			background-color: #fefefe;
+			margin: auto;
+			padding: 0px;
+			border: 1px solid #888;
+			width: 40%;
+		}
+
+		@media screen and (max-width: 375px) {
+			.modal-content {
+				width: 75%;
+			}
+		}
+
+		.modal-content p {
+			padding: 20px;
+			font-size: 1em;
+		}
+
+		.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header<{if $insHeader}> insHeader<{/if}>">
+		<div class="wrapper clearfix">
+			<h1 class="logo">
+				<a href="<{$http_root_www}>../en/" title="">
+					<img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" />
+				</a>
+			</h1>
+			<nav class="nav">
+				<ul class="clearfix">
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<{if $showModal}>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<header class="modal-header">
+				<span id="close" class="close">
+					&times;
+				</span>
+				<h2>Warning</h2>
+			</header>
+			<p>
+				This page will be redirected to Ruizean Markets Pty Ltd (ACN 163 551 602) website which holds AFSL No: 438402. Product of
+				FX Risk Management will be conducting under Ruizean Markets Pty Ltd.
+			</p>
+		</div>
+	</div>
+	<{/if}>
+	<section class="page-bg-6 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+
+				<div class="main4">
+					<div class="mainBd">
+						<div class="comTitle">FX Risk Management</div>
+						<article class="comArticle">
+								
+							<div class="comTitle3">FORWARD CONTRACT</div>
+							<article class="comArticle">
+								<p>
+								A forward contract is an agreement to buy or sell a fixed amount of foreign currency at an agreed rate, for a set period of time. You’ll enjoy pricing certainty by locking in a rate for future use, helping you to accurately budget, control costs and potentially protect your profit.
+								</p>
+							</article>
+
+							<div class="comTitle3">CURRENCY OPTIONS</div>
+							<article class="comArticle">
+								<p>
+									Options are a way for you to manage your foreign exchange risk, whether your business is large or small. Our products provide varying degrees of flexibility, participation, and protection to suit your unique circumstances, and our risk solutions experts will work with you to tailor an options strategy that meets your global payment needs.
+								</p>
+								<p>
+									If you have more questions about FX Risk Management, please call our support team:<br/>
+									<span>
+										<a href="tel:+61 2 9017 5206">
+											Tel：+61 2 9017 5206
+										</a>
+									</span>
+									<br/>
+									<span>
+										<a href="mailto:info@rzforex.com" class="s-email">
+											E：info@rzforex.com
+										</a>
+									</span>
+								</p>
+							</article>
+							
+							<div class="pdf-hd clearfix">
+								<span class="l">
+									<a href="<{$UPLOAD_PATH}>risk-management/RuizeanMarketPrivacyPolicyv1.0.pdf" target="_blank">
+										<i class="fa fa-file-pdf-o">
+										</i>Privacy Policy
+									</a>
+								</span>
+							</div>
+							<div class="pdf-hd clearfix">
+									<span class="l">
+										<a href="<{$UPLOAD_PATH}>risk-management/RuizeanMarketsClientComplaintForm.pdf" target="_blank">
+											<i class="fa fa-file-pdf-o">
+											</i>Client Complaint Form
+										</a>
+									</span>
+							</div>
+							<div class="pdf-hd clearfix">
+									<span class="l">
+										<a href="<{$UPLOAD_PATH}>risk-management/RuizeanMarketsComplaintsProcedures.pdf" target="_blank">
+											<i class="fa fa-file-pdf-o">
+											</i>Complaints Procedures
+										</a>
+									</span>
+							</div>
+							<div class="pdf-hd clearfix">
+								<span class="l">
+									<a href="<{$UPLOAD_PATH}>risk-management/RuizeanMarketsProductScheduleFXRiskManagement.pdf" target="_blank">
+										<i class="fa fa-file-pdf-o">
+										</i>Product Schedule FX Risk Management
+									</a>
+								</span>
+							</div>
+							<div class="pdf-hd clearfix">
+									<span class="l">
+										<a href="<{$UPLOAD_PATH}>risk-management/RZForexAccountTermsFXRiskManagement.pdf" target="_blank">
+											<i class="fa fa-file-pdf-o">
+											</i>Account Terms FX Risk Management
+										</a>
+									</span>
+							</div>
+							<div class="pdf-hd clearfix">
+									<span class="l">
+										<a href="<{$UPLOAD_PATH}>risk-management/WebsiteTermsofUseRuizeanMarkets.pdf" target="_blank">
+											<i class="fa fa-file-pdf-o">
+											</i>Website Terms of Use
+										</a>
+									</span>
+							</div>
+							<div class="pdf-hd clearfix">
+									<span class="l">
+										<a href="<{$UPLOAD_PATH}>risk-management/WholesaleClientEligibleTest.pdf" target="_blank">
+											<i class="fa fa-file-pdf-o">
+											</i>Wholesale Client Eligible Test
+										</a>
+									</span>
+							</div>
+						</article>
+					</div>
+				</div>
+				<aside class="side4">
+					<section class="form-apply-side form-box" style="display:block;">
+						<div class="form-box-bd">
+							<div class="box1 side-box1">
+								<!-- <div class="logo">
+									<a href="<{$http_root_www}>../en/">
+										<img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" />
+									</a>
+								</div> -->
+								<div class="hd">
+									<div class="line-01">
+										<i class="i1"></i>
+										<i class="i2"></i>
+									</div>
+									<hgroup>
+										<h2>
+											REQUEST A CALL BACK
+										</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<{include file="riskForm.htm"}>
+								</div>
+							</div>
+							<div class="box2 side-box2" style="display:none;">
+								<div class="logo">
+									<a href="<{$http_root_www}>../en/">
+										<img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" />
+									</a>
+								</div>
+								<div class="hd">
+									<div class="line-01">
+										<i class="i1"></i>
+										<i class="i2"></i>
+									</div>
+									<hgroup>
+										<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+									</hgroup>
+								</div>
+								<div class="bd">
+									<hgroup>
+										<h4>It will be closed automic, also you can click close button to close it.</h4>
+									</hgroup>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</aside>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- <footer class="footer"> -->
+	<section class="footer-copy">
+		<div class="wrapper clearfix">
+			<div class="left clearfix">
+				<div class="top">
+					<div class="footer-logo">
+						<a href="<{$http_root_www}>../en/">
+							<img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo.png" />
+						</a>
+					</div>
+				
+				</div>
+				<div class="clear"></div>
+				<div class="copy">
+					<p>
+						<a href="<{$http_root_www}>../en/about2">About Us</a>
+						<a href="<{$http_root_www}>../en/contactus">Contact Us</a>
+					</p>
+					<p class="title-p">Ruizean Markets Pty Ltd (Ruizean Markets) ACN 163 551 602 is licensed and regulated by the Australian Securities and
+						Investments Commission (AFSL No. 438402). Ruizean Markets only provides services to clients who meet the definition
+						of ‘wholesale’ client under the Corporations Act 2001.
+					</p>
+					</br>
+					<p class="title-p">Investing in over-the-counter derivatives and leveraged trading carry significant risks and is not suitable for all
+						investors. You could lose substantially more than your initial investment. When acquiring our derivative products,you
+						have no entitlement, right or obligation to the underlying financial asset. Ruizean Markets is not a financial adviser
+						and all services are provided on an execution only basis. Ruizean Markets is authorised to provide general advice only
+						and information is of a general nature only and does not consider your financial objectives, personal circumstances.
+					</p>
+					</br>
+					<p class="title-p">It is important for you to consider the Account terms and any other relevant Ruizean Markets documents before making
+						any financial investment decisions. 
+					</p>
+					</br>
+					<p class="title-p">
+						Ruizean Markets does not accept applications from residents of the U.S and Japan. The information on this site is not directed
+						at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- </footer> -->
+	<script>
+		var modal = document.getElementById('myModal');
+		var span = document.getElementById("close");
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formidrisk").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var message = form.message.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone + '&message=' + message;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/ibContact",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+
+</html>

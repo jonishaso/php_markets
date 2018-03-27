@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-11 insMain">
+		<div class="videos">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/edu">Education</a><em>&gt;</em><a href="<{$http_root_www}>../en/videos">Forex Educational Videos</a></p></div>
+				<{include file='eduHeader.htm'}>
+				<section class="main5 clearfix">
+					<div class="mainHd">
+						<div class="comTitle">Forex animated video</div>
+						<article class="comArticle">Look at the animation school daily transactions.</article>
+					</div>
+					<main class="main3">
+						<div class="mainBd">
+							<div class="video-wrap">
+								<div class="b">
+									<div id='video-id' class="video"></div>
+									<div class="video-mask"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo4.png"></div>
+								</div>
+								<div class="h">Lesson 1: How to become a qualified forex trader.</div>
+							</div>
+						</div>
+						<div class="mainBd" style="margin-bottom:0;">
+							<div class="swiper-control3 clearfix">
+								<div class="prev"></div>
+								<div class="next"></div>
+							</div>
+							<div class="pictxt-slider-01 swiper-container">
+								<ul class="slides swiper-wrapper">
+									<li class="item swiper-slide" data-vid="ee439689f8662ae2f4a3c2640481bf33_e" data-txt="Lesson 1: How to become a qualified forex trader.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-01.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 1</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="ee439689f8da5b586b4eb1772a2932c1_e" data-txt="Lesson 2: Understand the structure of the foreign exchange market.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-02.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 2</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="ee439689f879d0633ce2ba58d1c72e06_e" data-txt="Lesson 3: Understand the Chinese exchange market. ">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 3</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 4: Understand the basic definition of the foreign exchange market.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 4</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 5: The origin of all changes in currency exchange rates: US dollar index.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 5</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 6: The most attractive job in the world: Trading.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 6</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 7: Do you know what the overnight interest and arbitrage trade is?">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 7</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 8: Gold foreign exchange tactics: Technical Analysis.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 8</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 9: Understand the Japanese market.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 9</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 10: Using candle charts.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 10</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 11: Forex trading gold: Trend Analysis.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 11</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 12: How to find effective profit points: Support and Resistance lines.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 12</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 13: The most popular technical indicators: Moving Averages.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 13</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 14: The use of the moving average in Forex.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 14</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 15: The magical combination of numbers: golden line.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 15</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 16: Bollinger Bands.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 16</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 17: How to analyze the direction of price momentum: Oscillator.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 17</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 18: Short-term investments: KD indicators.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 18</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 19: MACD, indicator deviates.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 19</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 20: Understanding chart patterns (1)">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 20</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 21: Understanding chart patterns (2)">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 21</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 22: Profits - Fundamental Analysis (1)">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 22</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 23: Profits - Fundamental Analysis (2)">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 23</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 24: Sound money management.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 24</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 25: The importance of the informal foreign exchange dealers.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 25</p></div>
+										</div>
+									</li>
+									<li class="item swiper-slide" data-vid="" data-txt="Lesson 26: Start of Trading: MT4 software applications.">
+										<div class="box">
+											<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/v-03.jpg);"></div></div>
+											<div class="txt"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/logo3.png" /><p>Lesson 26</p></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</main>
+					<aside class="side3">
+						<div class="video-list">
+							<div class="h">Video List</div>
+							<div class="b">
+								<ul>
+									<li data-vid="ee439689f8662ae2f4a3c2640481bf33_e">Lesson 1: How to become a qualified forex trader.</li>
+									<li data-vid="ee439689f8da5b586b4eb1772a2932c1_e">Lesson 2: Understand the structure of the foreign exchange market.</li>
+									<li data-vid="ee439689f879d0633ce2ba58d1c72e06_e">Lesson 3: Understand the Chinese exchange market. </li>
+									<li data-vid="">Lesson 4: Understand the basic definition of the foreign exchange market.</li>
+									<li data-vid="">Lesson 5: The origin of all changes in currency exchange rates: US dollar index.</li>
+									<li data-vid="">Lesson 6: The most attractive job in the world: Trading.</li>
+									<li data-vid="">Lesson 7: Do you know what the overnight interest and arbitrage trade is?</li>
+									<li data-vid="">Lesson 8: Gold foreign exchange tactics: Technical Analysis.</li>
+									<li data-vid="">Lesson 9: Understand the Japanese market.</li>
+									<li data-vid="">Lesson 10: Using candle charts.</li>
+									<li data-vid="">Lesson 11: Forex trading gold: Trend Analysis.</li>
+									<li data-vid="">Lesson 12: How to find effective profit points: Support and Resistance lines.</li>
+									<li data-vid="">Lesson 13: The most popular technical indicators: Moving Averages.</li>
+									<li data-vid="">Lesson 14: The use of the moving average in Forex.</li>
+									<li data-vid="">Lesson 15: The magical combination of numbers: golden line.</li>
+									<li data-vid="">Lesson 16: Bollinger Bands.</li>
+									<li data-vid="">Lesson 17: How to analyze the direction of price momentum: Oscillator.</li>
+									<li data-vid="">Lesson 18: Short-term investments: KD indicators.</li>
+									<li data-vid="">Lesson 19: MACD, indicator deviates.</li>
+									<li data-vid="">Lesson 20: Understanding chart patterns (1)</li>
+									<li data-vid="">Lesson 21: Understanding chart patterns (2)</li>
+									<li data-vid="">Lesson 22: Profits - Fundamental Analysis (1)</li>
+									<li data-vid="">Lesson 23: Profits - Fundamental Analysis (2)</li>
+									<li data-vid="">Lesson 24: Sound money management.</li>
+									<li data-vid="">Lesson 25: The importance of the informal foreign exchange dealers.</li>
+									<li data-vid="">Lesson 26: Start of Trading: MT4 software applications.</li>
+								</ul>
+							</div>
+							<!--<div class="tip"><i class="fa fa-angle-left"></i> <i class="fa fa-angle-right"></i> 滚动查看更多</div>-->
+						</div>
+					</aside>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>	
+	<script src='http://player.polyv.net/script/polyvplayer.min.js'></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-videos.js"></script>
+		
+</body>
+</html>

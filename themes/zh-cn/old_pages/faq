@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="financialCalendar">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cusresource">客户资源</a><em>&gt;</em><a href="<{$http_root_www}>faq">常见问题</a></p></div>
+				<{include file='cusHeader.htm'}>
+				<div class="main2 maodian">
+					<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+					<div class="mainHd">
+						<div class="comTitle">常见问题</div>
+					</div>
+					<div class="mainBd-tab2">
+						<{foreach from=$faq item=item}>
+							<div class="mainBd">
+								<div class="com-hd com-hd comTitle5 qm-id clearfix" id="qm-1"><{$item.title}> <i class="fa fa-caret-right"></i></div>
+								<div class="com-bd">
+									<article class="comArticle">
+										<{$item.content}>
+									</article>
+								</div>
+							</div>
+						<{/foreach}>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

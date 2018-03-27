@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-12 insMain">
+		<div class="accountType">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/product">Our Products</a><em>&gt;</em><a href="<{$http_root_www}>../en/accounttype">Trading Account Types</a></p></div>
+				<{include file='productHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainHd">
+						<div class="comTitle">Trading Account Types</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="account-changebtn clearfix">
+							<div class="chb-item active"><a><svg class="svg-hdTitle2 svg-ele" data-txt="Standard Account"></svg><svg class="svg-btnBd svg-ele"></svg></a></div>
+							<div class="chb-item"><a><svg class="svg-hdTitle2 svg-ele" data-txt="Institutional Accounts"></svg><svg class="svg-btnBd svg-ele"></svg></a></div>
+						</div>
+						<div class="account-pic picbg">
+							<div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p-07.jpg);"></div>
+						</div>
+						<div class="account-changeinfo">
+							<{foreach from=$accounttype item=item}>
+								<ul class="clearfix">
+									<li class="clearfix">
+										<div class="name">Spreads</div>
+										<div class="info"><{$item.spread}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Trading Platform</div>
+										<div class="info"><{$item.platform}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Server location</div>
+										<div class="info"><{$item.server}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Maximum Leverage</div>
+										<div class="info"><{$item.leverage}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Minimum Deposit</div>
+										<div class="info"><{$item.lowestFund}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">The type of currency pairs</div>
+										<div class="info"><{$item.currencyClassify}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">The minimum trading volume</div>
+										<div class="info"><{$item.minTradeNum}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Trading cost</div>
+										<div class="info"><{$item.tradeFunds}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Programming language</div>
+										<div class="info"><{$item.programLang}></div>
+									</li>
+									<li class="clearfix">
+										<div class="name">Suitable group</div>
+										<div class="info"><{$item.ppl}></div>
+									</li>
+								</ul>
+							<{/foreach}>
+						</div>
+					</div>
+					<div class="mainBd clearfix">
+						<div class="svgtitle">
+							<p><svg class="svg-hdTitle2 svg-ele" data-txt="了解账户特点"></svg></p>
+							<p><svg class="svg-hdTitle2 svg-ele" data-txt="是您掌握成功的第一步"></svg></p>
+						</div>
+						<div class="pictxt-list-02 clearfix">
+							<div class="item">
+								<div class="box">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p2-09.jpg)"></div></div>
+									<div class="btn-2 blue"><a href="https://personal.ruizeanmarkets.com" target="_blank"><div class="bg"></div><span>Open Demo Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box">
+									<div class="pic picbg"><div class="bg" style="background-image:url(<{$STATIC_PATH}>ruizeanMarkets/images/p2-10.jpg)"></div></div>
+									<div class="btn-2 blue"><a href="https://personal.ruizeanmarkets.com" target="_blank"><div class="bg"></div><span>Open Live Account <i class="fa fa-angle-double-right"></i></span></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

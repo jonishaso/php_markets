@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'ADAM_CGPRO';
+    src: url('ADAM_CGPRO/ADAM_CGPRO.eot');
+    src: url('ADAM_CGPRO/ADAM_CGPRO.eot') format('embedded-opentype'),
+         url('ADAM_CGPRO/ADAM_CGPRO.woff2') format('woff2'),
+         url('ADAM_CGPRO/ADAM_CGPRO.woff') format('woff'),
+         url('ADAM_CGPRO/ADAM_CGPRO.ttf') format('truetype'),
+         url('ADAM_CGPRO/ADAM_CGPRO.svg#ADAM_CGPRO') format('svg');
+}
+@font-face {
+    font-family: 'AxisExtrabold';
+    src: url('AxisExtrabold/AxisExtrabold.eot');
+    src: url('AxisExtrabold/AxisExtrabold.eot') format('embedded-opentype'),
+         url('AxisExtrabold/AxisExtrabold.woff2') format('woff2'),
+         url('AxisExtrabold/AxisExtrabold.woff') format('woff'),
+         url('AxisExtrabold/AxisExtrabold.ttf') format('truetype'),
+         url('AxisExtrabold/AxisExtrabold.svg#AxisExtrabold') format('svg');
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="<{$SKIN_PATH}>images/global.css">
+<link rel="stylesheet" type="text/css" href="<{$SKIN_PATH}>images/main.css">
+<script type="text/javascript" src="<{$SKIN_PATH}>js/jquery.js"></script>
+<script type="text/javascript" src="<{$SKIN_PATH}>js/global.js"></script>
+<script src="<{$STATIC_PATH}>crop/crop4.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>crop/crop2.css">
+<link rel="stylesheet" type="text/css" href="<{$STATIC_PATH}>crop/Jcrop/jquery.Jcrop.css">
+<script type="text/javascript" src="<{$STATIC_PATH}>crop/Jcrop/jquery.Jcrop.js"></script>
+<{if $class.info.hasPublishdate}>
+<script src="<{$STATIC_PATH}>DatePicker/My97DatePicker/WdatePicker.js"></script>
+<{/if}>
+<{if $class.info.hasContent}>
+<script src="<{$STATIC_PATH}>/editor/ckeditor/ckeditor.js"></script>
+<script>
+$(function(){
+	CKEDITOR.replace('content', {
+		height : 350,
+		filebrowserImageUploadUrl : '?con=admin&ctl=editor&act=pic'
+	});
+});
+</script>
+<{/if}>
+<script type="text/javascript">
+function check (form)
+{
+	var name = document.getElementsByName('data[title]')[0];
+	if (name.value == '')
+	{
+		alert('<{$lang->title}><{$lang->can_not_empty}>');
+		name.focus();
+		return false;
+	}
+
+	return true;
+}
+
+
+</script>
+</head>
+
+<body>
+<div class="wrap inner clearfix">
+	<div class="container">
+		<form action="?con=admin&ctl=adv/hcv&act=edit&noback=<{$noback}>&noback2=<{$noback2}>" method="post" enctype="multipart/form-data" onsubmit="return check(this);">
+			<table class="editTable">
+				<tr class="editHdTr">
+					<td colspan="2">Home Page Product Character Value</td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">spread</td>
+					<td class="editRtTd"><input name="data[spread]" value="<{$data.spread}>" type="text" size="20" class="text" /></td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">leverage</td>
+					<td class="editRtTd"><input name="data[leverage]" value="<{$data.leverage}>" type="text" size="20" class="text" /></td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">banks</td>
+					<td class="editRtTd"><input name="data[banks]" value="<{$data.banks}>" type="text" size="20" class="text" /></td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">kindsOfProducts</td>
+					<td class="editRtTd"><input name="data[kindsOfProducts]" value="<{$data.kindsOfProducts}>" type="text" size="20" class="text" /></td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">lowestSaving</td>
+					<td class="editRtTd"><input name="data[lowestSaving]" value="<{$data.lowestSaving}>" type="text" size="20" class="text" /></td>
+				</tr>
+				<tr class="editTr">
+					<td class="editLtTd">fundsMethod</td>
+					<td class="editRtTd"><input name="data[fundsMethod]" value="<{$data.fundsMethod}>" type="text" size="20" class="text" /></td>
+				</tr>
+				
+			</table>
+			<div class="editBtn clearfix">
+				<input type="submit" value="Save" class="lnkSave" /> 
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>

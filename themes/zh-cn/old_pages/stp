@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<section class="page-bg-9 insMain">
+		<div class="accountType">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>product">产品介绍</a><em>&gt;</em><a href="<{$http_root_www}>stp">直通式交易（STP）</a></p></div>
+				<{include file='productHeader.htm'}>
+				<section class="main2 clearfix">
+					<div class="mainBd">
+						<div class="comTitle">直通式交易（STP）</div>
+						<article class="comArticle">
+							<p>STP Ruizean Markets采用市场上最佳的直通式处理交易模式，亦称无交易员平台，排除人为干预，提供稳定的交易执行力，任何时候均屏除了重复报价的可能性。透过我们的最佳市场实 践，客户可获得最透明的报价，以极小的点差进行交易。做为直通式处理交易模式的交易经纪商，客户执行的每一笔交易皆不需经由后台处理，而是实时进入多家全球顶尖银行及流通量提供商，以银行间价格进行撮合并执 行交易。我们提供技术支持的多重银行入口，得以让交易者从超过12家流通量提供商，获取超过 30 组全球货币对的优质实时串流报价，以非常具竞争力的价格，以及高度稳定及可靠的执行力进行交易。</p>
+							<p>同时，平台结合了国际先进的ECN（Electronic Communications Network）技术，能够提供源自多家国际银行的银行间流动性。交易者无需通过做市商（Market Maker）便可直接进入真实的外汇与贵金属交易世界，订单直输银行间市场，并快速自动执行。交易者不但可享受直接入市报价的透明性，还可享受公平的交易 操作和在交易活跃时享受到更小的点差。</p>
+							<p>客户使用STP的交易模式的一个最大优势，就是客户的损失不构成我们的盈利，因为我们没有交易后台接收客户的交易。根据不同的账户，我们的利润来源于点差或手续费。因此避免了客户和Ruizean Markets之间，可能因为交易结果而产主的利益冲突。 事实上，Ruizean Markets希望每一位客户都能成功盈利并长期在我们平台上进行交易，我们会尽一切可能帮助我们的客户在交易中取得成功。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">STP的优势</div>
+						<div class="pictxt-list-07 clearfix">
+							<div class="item">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="有深度的流动性"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>外汇市场的交易量以亿计算，我们众多的报价商是能够让您享受到世界上最具流动性的资金池。客户可以利用Ruizean Markets多元化的报价来源，获得全球金融市场机构流动性中50多种货币对。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="极速的交易执行"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>您所有的订单都直接接入我们的报价商，因此交易可以在一秒之内完成。Ruizean Markets运用先进的技术与报价银行连接位于纽约相邻的服务器，向客户提供低延迟的网络执行速度，以达到优异的交易速度。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item w100">
+								<div class="box">
+									<div class="txt">
+										<div class="title"><h2><a href=""><svg class="svg-hdTitle svg-ele" data-txt="极低点差"></svg></a></h2></div>
+										<div class="cont comArticle">
+											<p>您可以从我们众多的机构报价商中获得市场上最低的点差。有超过10家的国际投行和经纪商向我们提供实时报价，从而确保您的交易成本能够获得相对最好执行价格。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

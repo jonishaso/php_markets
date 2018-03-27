@@ -1,0 +1,2106 @@
+@charset "utf-8";
+
+.share {
+	.s-list {
+		float: right;
+		li {
+			float: left;
+			padding: 0 0.1rem;
+			a {
+				display: block;
+				width: 0.30rem;
+				height: 0.30rem;
+				line-height: 0.30rem;
+				text-align: center;
+				box-shadow: 0 0 0 1px nth($color, 2) inset;
+				border-radius: 50%;
+				@include fontSize($FS18);
+			}
+		}
+	}
+}
+
+.line-01 {
+	display: block;
+	width: 1rem;
+	height: 12px;
+	background: nth($color, 1);
+}
+.line-02 {
+	display: block;
+	width: 0.75rem;
+	height: 7px;
+	background: nth($color2, 1);
+}
+.line-03 {
+	display: block;
+	width: 0.4rem;
+	height: 2px;
+	background: nth($color3, 1);
+}
+.line-04 {
+	display: block;
+	width: 0.6rem;
+	height: 2px;
+	background: nth($color2, 1);
+}
+.line-05 {
+	display: block;
+	width: 0.3rem;
+	height: 4px;
+	background: nth($color, 1);
+}
+.line-06 {
+	display: block;
+	width: 1.6rem;
+	height: 6px;
+	background: nth($color2, 1);
+}
+.line-07 {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: nth($color2, 1);
+}
+.line-08 {
+	display: block;
+	width: 2.68rem;
+	height: 5px;
+	background: nth($color2, 1);
+}
+.line-09 {
+	display: block;
+	width: 1rem;
+	height: 5px;
+	background: nth($color2, 1);
+}
+.line-10 {
+	display: block;
+	width: 0.6rem;
+	height: 5px;
+	background: nth($color2, 1);
+}
+.line-11 {
+	display: block;
+	width: 3rem;
+	height: 2px;
+	background: nth($color2, 1);
+}
+
+.banner-style1 {
+	position: relative;
+	color: nth($color, 1);
+	.bg {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+	.txt {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		@include translate(0, -50%);
+	}
+	.p1 {
+		font-family: $_FF_018CAI978;
+		line-height: 1em;
+		letter-spacing: 0.1em;
+		@include fontSize($FS156);
+		@include translate(-0.1rem, 0);
+	}
+	.p2 {
+		font-family: $_FF_018CAI978;
+		line-height: 1em;
+		letter-spacing: 0.3em;
+		@include fontSize($FS39);
+	}
+	.p3 {
+		line-height: 1em;
+		@include fontSize($FS39);
+	}
+	.line-01 {
+		margin-top: 0.2rem;
+		margin-bottom: 0.3rem;
+	}
+}
+
+.btn-01 {
+	button,
+	a {
+		display: block;
+		height: 0.34rem;
+		line-height: 0.34rem;
+		text-align: center;
+		color: nth($color2, 1);
+		box-shadow: 0 0 0 2px nth($color2, 1) inset;
+		text-transform: uppercase;
+		padding: 0 0.15rem;
+		border-radius: 0.17rem;
+		@include fontSize($FS12);
+		@include transition(all 0.3s linear);
+		&:hover {
+			background: nth($color2, 1);
+			color: nth($color, 1);
+			text-decoration: none;
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+
+.btn-02 {
+	button,
+	a {
+		display: block;
+		height: 0.44rem;
+		line-height: 0.44rem;
+		text-align: center;
+		padding: 0 0.15rem;
+		box-shadow: 0 0 0 1px nth($color2, 1) inset;
+		text-transform: uppercase;
+		border-radius: 4px;
+		color: nth($color2, 1);
+		font-family: $_FF_014CAI978;
+		letter-spacing: 0.2em;
+		@include fontSize($FS16);
+		@include transition(all 0.3s linear);
+		&:hover {
+			background: nth($color2, 1);
+			color: nth($color, 1);
+			text-decoration: none;
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+
+.btn-03 {
+	button,
+	a {
+		display: block;
+		height: 0.44rem;
+		line-height: 0.44rem;
+		text-align: center;
+		padding: 0 0.15rem;
+		box-shadow: 0 0 0 2px nth($color, 2) inset;
+		text-transform: uppercase;
+		color: nth($color, 2);
+		font-family: $_FF_018CAI978;
+		letter-spacing: 0.2em;
+		@include fontSize($FS16);
+		&:hover {
+			background: nth($color, 2);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-04 {
+	button,
+	a {
+		display: block;
+		height: 0.44rem;
+		line-height: 0.44rem;
+		text-align: center;
+		padding: 0 0.15rem;
+		text-transform: uppercase;
+		text-decoration: underline;
+		color: nth($color, 2);
+		font-family: $_FF_018CAI978;
+		letter-spacing: 0.2em;
+		@include fontSize($FS16);
+		&:hover {
+			background: nth($color, 2);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-05 {
+	button,
+	a {
+		display: block;
+		height: 0.58rem;
+		line-height: 0.58rem;
+		text-align: center;
+		padding: 0 0.2rem;
+		text-transform: uppercase;
+		color: nth($color2, 1);
+		letter-spacing: 0.2em;
+		border: 1px solid nth($color2, 1);
+		//box-shadow: 0 0 0 1px nth($color2, 1) inset;
+		@include fontSize($FS20);
+		&:hover {
+			background: nth($color, 2);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-06 {
+	button,
+	a {
+		display: block;
+		height: 0.42rem;
+		line-height: 0.42rem;
+		text-align: center;
+		padding: 0 0.2rem;
+		text-transform: uppercase;
+		color: nth($color2, 1);
+		letter-spacing: 0.2em;
+		border: 1px solid nth($color2, 1);
+		//box-shadow: 0 0 0 1px nth($color2, 1) inset;
+		@include fontSize($FS26);
+		&:hover {
+			background: nth($color, 2);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-07 {
+	button,
+	a {
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		padding: 0 1em;
+		text-transform: uppercase;
+		color: nth($color2, 1);
+		@include fontSize($FS26);
+		&:hover {
+			background: nth($color, 2) !important;
+			color: nth($color, 1) !important;
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+	&.bg-01 {
+		button,
+		a {
+			background: nth($color3, 6);
+			color: nth($color, 1);
+		}
+	}
+	&.bg-02 {
+		button,
+		a {
+			background: nth($color2, 1);
+			color: nth($color, 1);
+		}
+	}
+}
+.btn-08 {
+	button,
+	a {
+		display: block;
+		height: 2.6em;
+		line-height: 2.6em;
+		text-align: center;
+		padding: 0 1em;
+		text-transform: uppercase;
+		color: nth($color4, 5);
+		background: nth($color2, 1);
+		@include fontSize($FS36);
+		&:hover {
+			background: nth($color3, 6);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-09 {
+	button,
+	a {
+		display: block;
+		height: 1.8em;
+		line-height: 1.8em;
+		text-align: center;
+		padding: 0 1em;
+		color: nth($color, 2);
+		border-radius: 4px;
+		box-shadow: 0 0 0 1px nth($color, 2);
+		@include fontSize($FS18);
+		&:hover {
+			background: nth($color, 2);
+			color: nth($color, 1);
+		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		@include appearance();
+	}
+}
+.btn-10 {
+	height: 2em;
+	line-height: 2em;
+	color: nth($color4, 8);
+	border-radius: 1em;
+	box-shadow: 0 0 0 1px nth($color4, 8);
+	padding: 0 1em;
+	@include fontSize($FS20);
+	&.active {
+		color: nth($color2, 1);
+		box-shadow: 0 0 0 1px nth($color2, 1);
+	}
+}
+
+.hd-01 {
+	text-align: center;
+	color: nth($color2, 1);
+	margin-bottom: 1.3rem;
+	h2 {
+		color: nth($color2, 1);
+		margin-bottom: 0.15rem;
+		@include fontSize($FS30);
+	}
+	p {
+		span {
+			position: relative;
+			font-family: $_FF_005CAI978;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			@include fontSize($FS11, 3);
+			.line-02 {
+				position: absolute;
+				right: 100%;
+				top: 50%;
+				@include translate(-0.5rem, -50%);
+			}
+		}
+	}
+}
+
+.hd-02 {
+	text-align: center;
+	h2 {
+		color: nth($color, 2);
+		margin-bottom: 0.2rem;
+		font-family: $_FF_014CAI978;
+		@include fontSize($FS30, 2);
+	}
+	p {
+		span {
+			position: relative;
+			text-transform: uppercase;
+			color: nth($color2, 1);
+			@include fontSize($FS20);
+			.line-04 {
+				position: absolute;
+				right: 100%;
+				top: 50%;
+				@include translate(-0.5rem, -50%);
+			}
+		}
+	}
+}
+
+.hd-03 {
+	h2 {
+		font-family: $_FF_005CAI978;
+		color: nth($color, 2);
+		@include fontSize($FS22, 2);
+	}
+}
+
+.hd-04 {
+	h2 {
+		span {
+			display: inline-block;
+			height: 2em;
+			line-height: 2em;
+			background: nth($color2, 1);
+			color: nth($color, 1);
+			padding: 0 0.25rem;
+			@include fontSize($FS28);
+		}
+	}
+}
+.hd-05 {
+	h2 {
+		line-height: 1.2em;
+		color: nth($color2, 1);
+		@include fontSize($FS46);
+	}
+}
+.hd-06 {
+	@include fontSize($FS39);
+	color: nth($color2, 1);
+	line-height: 1.2em;
+	h2 {
+		font-family: $_FF_018CAI978;
+		margin-bottom: 0.4em;
+		span {
+			position: relative;
+			.line-11 {
+				position: absolute;
+				left: 100%;
+				top: 50%;
+				@include translate(30%, -50%);
+			}
+		}
+	}
+}
+.hd-07 {
+	font-family: $_FF_014CAI978;
+	color: nth($color2, 1);
+	h2 {
+		line-height: 1.2em;
+		margin-bottom: 0.1em;
+		@include fontSize($FS120);
+	}
+}
+
+.h-t1 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	@include fontSize($FS39);
+}
+.h-t2 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	font-family: $_FF_014CAI978;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	@include fontSize($FS22);
+}
+.h-t3 {
+	position: relative;
+	line-height: 1.4em;
+	color: nth($color3, 1);
+	font-family: $_FF_014CAI978;
+	text-transform: uppercase;
+	padding-left: 0.5rem;
+	letter-spacing: 0.2em;
+	@include fontSize($FS18);
+	.line-03 {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include translate(0, -50%);
+	}
+}
+.h-t4 {
+	line-height: 1.4em;
+	color: nth($color2, 2);
+	@include fontSize($FS12);
+}
+.h-t5 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	@include fontSize($FS16);
+}
+.h-t6 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	@include fontSize($FS26);
+}
+.h-t7 {
+	line-height: 1.8em;
+	color: nth($color2, 3);
+	@include fontSize($FS16);
+}
+.h-t8 {
+	line-height: 1.2em;
+	color: nth($color2, 1);
+	@include fontSize($FS36);
+}
+.h-t9 {
+	line-height: 1.8em;
+	color: nth($color2, 3);
+	@include fontSize($FS14);
+}
+.h-t10 {
+	line-height: 1.4em;
+	color: nth($color, 2);
+	@include fontSize($FS56);
+}
+.h-t11 {
+	@extend .h-t8;
+	@include fontSize($FS30);
+}
+.h-t12 {
+	line-height: 1.2em;
+	color: nth($color, 2);
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS39);
+}
+.h-t13 {
+	line-height: 1.2em;
+	color: nth($color2, 1);
+	@include fontSize($FS30);
+}
+.h-t14 {
+	line-height: 1.2em;
+	color: nth($color, 2);
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS68);
+}
+.h-t15 {
+	line-height: 1.6em;
+	color: nth($color2, 3);
+	@include fontSize($FS24);
+}
+.h-t16 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	@include fontSize($FS33);
+}
+.h-t17 {
+	line-height: 2.5em;
+	color: nth($color3, 5);
+	padding: 0 1em;
+	background: rgba(nth($color, 2), 0.55);
+	@include fontSize($FS20);
+	&:hover {
+		color: nth($color, 1);
+		background: rgba(nth($color, 2), 1);
+	}
+	&.active {
+		background: rgba(nth($color, 2), 1);
+	}
+}
+.h-t18 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	@include fontSize($FS52);
+}
+.h-t19 {
+	line-height: 1.4em;
+	color: nth($color2, 1);
+	@include fontSize($FS20);
+}
+.h-t20 {
+	line-height: 1.4em;
+	color: nth($color2, 3);
+	@include fontSize($FS22);
+}
+
+.h-num {
+	width: 0.72rem;
+	height: 0.72rem;
+	line-height: 0.72rem;
+	box-shadow: 0 0 0 1px nth($color2, 7);
+	text-align: center;
+	border-radius: 0.1rem;
+	font-family: $_FF_042CAI978;
+	color: nth($color, 2);
+	@include fontSize($FS16, 2);
+}
+.h-num2 {
+	line-height: 1em;
+	font-family: $_FF_014CAI978;
+	color: nth($color2, 1);
+	@include fontSize($FS80);
+}
+
+.picbg {
+	position: relative;
+	.bg {
+		position: relative;
+		z-index: 2;
+		padding-top: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}
+.letter {
+	font-family: $_FF_020CAI978;
+	color: nth($color2, 1);
+	@include fontSize($FS420);
+}
+.h-value {
+	margin-bottom: 0.8rem;
+	font-family: $_FF_014CAI978;
+	color: nth($color2, 1);
+	@include fontSize($FS30);
+	i {
+		font-style: normal;
+	}
+	span {
+		font-size: 200%;
+	}
+}
+
+
+/******** list 列表模式 Begin *********/
+.list-01 {
+	ul {
+		li {
+			position: relative;
+			float: left;
+			width: 50%;
+			padding: 0.15rem 0 0.15rem 0.95rem;
+			margin: 0.15rem 0;
+			.h-num {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				@include translate(0, -50%);
+			}
+		}
+	}
+}
+
+.list-02 {
+	ul {
+		li {
+			float: left;
+			width: 33.333333333%;
+			padding: 0.25rem 0;
+			&.col3 {
+				width: 33.333333333%;
+			}
+			&.col2 {
+				width: 50%;
+			}
+			&.col1 {
+				width: 100%;
+			}
+			a {
+				position: relative;
+				display: block;
+				padding: 0.1rem 0.6rem;
+				.left {
+					float: left;
+					width: 0.6rem;
+				}
+				.right {
+					height: 1.4em * 2;
+					overflow: hidden;
+				}
+				&:hover {
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						width: 3px;
+						background: nth($color3, 6);
+					}
+				}
+			}
+		}
+	}
+}
+/******** list 列表模式 End *********/
+
+
+/******** pictxt 图文列表模式 Begin *********/
+.picbg-slider {
+	position: relative;
+	.owl-controls {
+		position: absolute;
+		left: 0.4rem;
+		bottom: 0.4rem;
+	}
+}
+
+
+.pictxt-list {
+	.pictxt-item {
+		position: relative;
+		margin-bottom: 2.8rem;
+		.pic {
+			width: 50%;
+			&:before {
+				content: '';
+				position: absolute;
+				background: nth($color2, 5);
+			}
+			.bg {
+				padding-top: 61%;
+			}
+		}
+		.txt {
+			position: absolute;
+			top: 50%;
+			width: 50%;
+			@include translate(0, -50%);
+			.h-t1 {
+				margin-bottom: 0.3rem;
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			.h-t2 {
+				margin-bottom: 0.2rem;
+			}
+			.h-t3 {
+				margin-bottom: 0.7rem;
+			}
+			.btn-02 {
+				a {
+					display: inline-block;
+				}
+			}
+		}
+		&:nth-child(odd) {
+			.pic {
+				float: left;
+				&:before {
+					top: 45%;
+					right: 70%;
+					bottom: -40%;
+					left: -15%;
+				}
+			}
+			.txt {
+				left: 50%;
+				padding: 0.6rem 0.6rem 0.6rem 1.8rem;
+			}
+		}
+		&:nth-child(even) {
+			.pic {
+				float: right;
+				&:before {
+					top: 45%;
+					right: -15%;
+					bottom: -40%;
+					left: 30%;
+				}
+			}
+			.txt {
+				right: 50%;
+				padding: 0.6rem 1.8rem 0.6rem 0.6rem;
+			}
+		}
+	}
+}
+
+
+.pictxt-list2 {
+	.pictxt-item {
+		position: relative;
+		margin-bottom: 1rem;
+		.pic {
+			margin-left: 50%;
+			width: 25%;
+		}
+		.txt {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 50%;
+			text-align: center;
+			@include translate(0, -50%);
+			.h-t1 {
+				margin-bottom: 0.15rem;
+			}
+			.h-t2 {
+				margin-bottom: 0.25rem;
+			}
+			.btns {
+				display: inline-block;
+				.btn-03,
+				.btn-04 {
+					float: left;
+					margin: 0 0.15rem;
+				}
+			}
+		}
+	}
+}
+
+
+.pictxt-list3 {
+	.pictxt-item {
+		padding: 0.75rem 0;
+		.box {
+			position: relative;
+		}
+		.txt {
+			position: absolute;
+			top: 50%;
+			width: $wrapWidth - 6.07rem;
+			padding: 0 1.4rem;
+			@include translate(0, -50%);
+			.title {
+				.h-t8 {
+					display: block;
+					height: 1.2em * 2;
+					line-height: 1.2em;
+					overflow: hidden;
+					&:hover {
+						text-decoration: underline;
+						color: nth($color3, 1);
+					}
+				}
+				.h-t11 {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			.h-t9 {
+				max-height: 1.6em * 4;
+				line-height: 1.6em;
+				overflow: hidden;
+			}
+			.btn-05 {
+				a {
+					display: inline-block;
+				}
+			}
+			.h-num2 {
+				@include fontSize($FS56);
+			}
+		}
+		&.pictxt-big {
+			text-align: center;
+			.txt {
+				left: 0;
+				.title {
+					margin-bottom: 0.2rem;
+				}
+				.line-07 {
+					margin-bottom: 0.45rem;
+				}
+				.h-t7 {
+					margin-bottom: 0.45rem;
+				}
+				.h-t9 {
+					margin-bottom: 0.5rem;
+				}
+				.btn-05 {
+					margin-bottom: 0.7rem;
+				}
+			}
+			.pic {
+				float: right;
+				width: 6.07rem;
+				.bg {
+					padding-top: 120%;
+				}
+			}
+		}
+		&.pictxt-small {
+			.txt {
+				right: 0;
+				width: $wrapWidth - 5.66rem;
+				.title {
+					margin-bottom: 0.2rem;
+				}
+				.line-07 {
+					margin-bottom: 0.15rem;
+				}
+				.h-t7 {
+					margin-bottom: 0.2rem;
+				}
+				.h-t9 {
+					margin-bottom: 0.3rem;
+				}
+				.h-num2 {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					@include translate(0, -50%);
+				}
+			}
+			.pic {
+				float: left;
+				width: 5.66rem;
+				.bg {
+					padding-top: 72.5%;
+				}
+			}
+		}
+	}
+}
+
+.pictxt-list4 {
+	margin-top: -0.5rem;
+	.pictxt-item {
+		padding: 1.25rem 0;
+		.box {
+			position: relative;
+			.pic {
+				width: 50%;
+				&.px-553x745 {
+					padding: 0 0 0 1rem;
+					.bg {
+						padding-top: 134%;
+					}
+				}
+				&.px-728x450 {
+					padding: 0 0.2rem;
+					.bg {
+						padding-top: 62%;
+					}
+				}
+				&.px-616x616 {
+					padding: 0 0.5rem 0 0.2rem;
+					.bg {
+						padding-top: 100%;
+					}
+				}
+			}
+			.txt {
+				position: absolute;
+				top: 50%;
+				width: 50%;
+				padding: 0 0.2rem;
+				text-align: center;
+				@include translate(0, -50%);
+				.h-t14 {
+					margin-bottom: 0.15rem;
+				}
+				.h-t12 {
+					margin-bottom: 0.15rem;
+				}
+				.h-t13 {
+					margin-bottom: 0.3rem;
+				}
+				.line-08,
+				.line-09 {
+					margin: 0 auto;
+					margin-bottom: 0.3rem;
+					@include transition(all 0.3s linear);
+				}
+				.btn-04 {
+					display: inline-block;
+				}
+				&:hover {
+					.line-08,
+					.line-09 {
+						@include scale(1.2, 1);
+					}
+				}
+			}
+		}
+		&:nth-child(odd) {
+			.pic {
+				float: left;
+			}
+			.txt {
+				right: 0;
+			}
+		}
+		&:nth-child(even) {
+			.pic {
+				float: right;
+			}
+			.txt {
+				left: 0;
+			}
+		}
+		&:first-child {
+			.pic {
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 1rem;
+					background: nth($color2, 1);
+					padding-bottom: 100%;
+					@include translate(-1rem, 1rem);
+				}
+			}
+		}
+		&:last-child {
+			.pic {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					background: nth($color2, 4);
+					padding-bottom: 100%;
+					@include translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}
+
+
+.pictxt-list5 {
+	.pictxt-item {
+		padding: 2rem 0;
+		.box {
+			position: relative;
+		}
+		.letter {
+			position: absolute;
+			top: 0;
+			z-index: 2;
+		}
+		.pic {
+			position: relative;
+			width: 55%;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 60%;
+				z-index: 1;
+				padding-bottom: 100%;
+				width: 100%;
+				background: nth($color3, 4);
+			}
+			a {
+				display: block;
+				position: relative;
+				z-index: 2;
+			}
+			.bg {
+				padding-top: 52%;
+			}
+			.h-t17 {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: 3;
+			}
+		}
+		.txt {
+			position: absolute;
+			top: 50%;
+			width: 45%;
+			@include translate(0, -50%);
+			.h-t16 {
+				height: 1em;
+				line-height: 1em;
+				margin-bottom: 0.25rem;
+				overflow: hidden;
+			}
+			.h-t2 {
+				height: 1em;
+				line-height: 1em;
+				margin-bottom: 0.3rem;
+				overflow: hidden;
+			}
+			.h-t9 {
+				height: 1.8em * 4;
+				margin-bottom: 0.3rem;
+				overflow: hidden;
+			}
+			.btns {
+				.btn-03,
+				.btn-04 {
+					float: left;
+					margin-right: 0.25rem;
+				}
+			}
+		}
+		&:nth-child(odd) {
+			.letter {
+				left: 0;
+				@include translate(-50%, -40%);
+			}
+			.pic {
+				float: left;
+				&:before {
+					left: 0;
+					@include translate(-20%, -50%);
+				}
+			}
+			.txt {
+				right: 0;
+				padding-left: 0.65rem;
+			}
+		}
+		&:nth-child(even) {
+			.letter {
+				right: 0;
+				@include translate(50%, -40%);
+			}
+			.pic {
+				float: right;
+				&:before {
+					right: 0;
+					@include translate(20%, -50%);
+				}
+			}
+			.txt {
+				left: 0;
+				padding-right: 0.65rem;
+			}
+		}
+	}
+}
+
+.pictxt-list6 {
+	.pictxt-item {
+		padding: 1.5rem 0;
+		.box {
+			position: relative;
+		}
+		.letter {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			@include translate(-50%, -40%);
+		}
+		.pic {
+			float: left;
+			position: relative;
+			width: 50%;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				padding-bottom: 50%;
+				width: 50%;
+				background: nth($color3, 4);
+				@include translate(-20%, -20%);
+			}
+			.slides {
+				z-index: 3;
+			}
+			a {
+				display: block;
+				position: relative;
+			}
+			.bg {
+				padding-top: 104%;
+			}
+		}
+		.txt {
+			float: right;
+			width: 50%;
+			padding-left: 1.2rem;
+			.h-t18 {
+				margin-bottom: 0.2rem;
+			}
+			.h-t16 {
+				margin-bottom: 0.3rem;
+			}
+			.line-10 {
+				margin-bottom: 0.7rem;
+			}
+			.btn-06 {
+				margin-bottom: 0.3rem;
+				a {
+					display: inline-block;
+				}
+			}
+			.h-t9 {
+				height: 1.8em * 5;
+				margin-bottom: 0.6rem;
+				overflow: hidden;
+			}
+			.h-value {
+				margin-bottom: 0.8rem;
+			}
+			.btns {
+				.btn-07 {
+					float: left;
+					margin-right: 0.2rem;
+				}
+			}
+		}
+	}
+}
+.pictxt-list7 {
+	margin-bottom: 0.7rem;
+	.pictxt-item {
+		float: left;
+		width: 50%;
+		.box {
+			padding: 0.2rem;
+		}
+		.pic {
+			.bg {
+				padding-top: 89.33333%;
+			}
+		}
+		.txt {
+			a {
+				height: 3em;
+				line-height: 3em;
+				display: block;
+				text-align: center;
+				overflow: hidden;
+				&:hover {
+					background: nth($color2, 1);
+					color: nth($color, 1);
+				}
+			}
+		}
+	}
+}
+
+.loadMore {
+	a {
+		display: block;
+		height: 2.5em;
+		line-height: 2.5em;
+		color: nth($color2, 1);
+		text-align: center;
+		border: 1px solid nth($color2, 1);
+		text-align: center;
+		@include fontSize($FS30);
+		&:hover {
+			background-color: nth($color2, 1);
+			color: nth($color, 1);
+		}
+	}
+}
+.backTop {
+	position: fixed;
+	right: 0.4rem;
+	bottom: 0.4rem;
+	z-index: 6;
+	@include transition(all 0.3s linear);
+	@include translate(0, 100%);
+	@include opacity(0);
+	&.hide {
+		@include translate(0, 100%);
+		@include opacity(0);
+	}
+	&.show {
+		@include translate(0, 0);
+		@include opacity(1);
+	}
+	a {
+		display: block;
+		width: 0.74rem;
+		height: 0.74rem;
+		background-image: url(../images/backTop.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		&:hover {
+			@include opacity(0.9);
+		}
+	}
+}
+
+/******** pictxt 图文列表模式 End *********/
+
+
+
+/******** Form 表单样式 Begin *********/
+.col {
+	float: left;
+	&.col-01 {
+		float: none;
+		width: 100%;
+	}
+	&.col-02 {
+		width: 50%;
+	}
+	&.col-03 {
+		width: 33.333333%;
+	}
+	&.col-04 {
+		width: 25%;
+	}
+}
+.form-input {
+	width: 100%;
+	height: 2.2em;
+	line-height: 2.2em;
+	box-shadow: 0 0 0 2px nth($color3, 4) inset;
+	border: none;
+	background: nth($color, 1);
+	color: nth($color2, 3);
+	padding: 0 20px;
+	@include fontSize($FS20);
+	@include appearance();
+}
+.form-input2 {
+	width: 100%;
+	height: 2.2em;
+	line-height: 2.2em;
+	box-shadow: 0 0 0 2px nth($color2, 1) inset;
+	border: none;
+	background: nth($color, 1);
+	color: nth($color2, 1);
+	padding: 0 20px;
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS24);
+	@include appearance();
+}
+.form-input3 {
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	border: none;
+	border-bottom: 2px solid rgba(nth($color, 1), 0.39);
+	background: none;
+	color: rgba(nth($color, 1), 0.39);
+	padding: 0;
+	font-family: $_FF_Arial;
+	@include fontSize($FS20);
+	@include appearance();
+}
+.form-input4 {
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: none;
+	border-bottom: 1px solid nth($color2, 1);
+	background: none;
+	color: nth($color2, 1);
+	padding: 0;
+	font-family: $_FF_Arial;
+	@include fontSize($FS20);
+	@include appearance();
+}
+.form-input5 {
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: 1px solid nth($color3, 2);
+	background: nth($color, 1);
+	border-radius: 0.25rem;
+	padding: 0 0.25rem;
+	color: nth($color2, 1);
+	font-family: $_FF_MicrosoftYahei;
+	@include fontSize($FS18);
+	@include appearance();
+}
+.form-textarea {
+	width: 100%;
+	height: 1.6em*6;
+	line-height: 1.6em;
+	box-shadow: 0 0 0 2px nth($color3, 4) inset;
+	border: none;
+	background: nth($color, 1);
+	color: nth($color2, 3);
+	padding: (2.2em-1.6em) / 2 20px;
+	@include fontSize($FS20);
+	@include appearance();
+}
+.form-textarea2 {
+	width: 100%;
+	height: 1.6em*6;
+	line-height: 1.6em;
+	box-shadow: 0 0 0 2px nth($color2, 1) inset;
+	border: none;
+	background: nth($color, 1);
+	color: nth($color2, 1);
+	padding: (2.2em-1.6em) / 2 20px;
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS24);
+	@include appearance();
+}
+.form-textarea3 {
+	width: 100%;
+	height: 1.6em*6;
+	line-height: 1.6em;
+	border: none;
+	border-bottom: 2px solid rgba(nth($color, 1), 0.39);
+	background: none;
+	color: rgba(nth($color, 1), 0.39);
+	padding: 0;
+	font-family: $_FF_Arial;
+	@include fontSize($FS20);
+	@include appearance();
+}
+.form-btn {
+	display: block;
+	width: 1.86rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	margin: 0 auto;
+	border: none;
+	background: nth($color2, 2);
+	color: nth($color, 1);
+	text-align: center;
+	cursor: pointer;
+	@include fontSize($FS26);
+	@include appearance();
+	&:hover {
+		background: nth($color3, 6);
+	}
+}
+.form-btn2 {
+	display: block;
+	width: 1.86rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: none;
+	background: nth($color2, 1);
+	color: nth($color, 1);
+	text-align: center;
+	cursor: pointer;
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS20);
+	@include appearance();
+	&:hover {
+		background: nth($color3, 6);
+	}
+}
+.form-btn3 {
+	display: block;
+	width: 100%;
+	height: 2.4em;
+	line-height: 2.4em;
+	border: none;
+	background: nth($color4, 6);
+	color: rgba(nth($color, 1), 0.39);
+	text-align: center;
+	cursor: pointer;
+	@include fontSize($FS28);
+	@include appearance();
+	&:hover {
+		background: nth($color3, 6);
+		color: nth($color4, 6);
+	}
+}
+.form-btn4 {
+	display: block;
+	width: 1.86rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: none;
+	background: nth($color2, 1);
+	color: nth($color, 1);
+	text-align: center;
+	cursor: pointer;
+	font-family: $_FF_014CAI978;
+	@include fontSize($FS20);
+	@include appearance();
+	&:hover {
+		background: nth($color3, 6);
+	}
+}
+.form-btn5 {
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: 1px solid nth($color5, 6);
+	background: nth($color5, 6);
+	border-radius: 0.25rem;
+	padding: 0 0.25rem;
+	text-align: center;
+	color: nth($color, 1);
+	font-family: $_FF_MicrosoftYahei;
+	cursor: pointer;
+	@include fontSize($FS18);
+	@include appearance();
+}
+.form-btn6 {
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border: 1px solid nth($color5, 7);
+	background: nth($color, 1);
+	border-radius: 0.25rem;
+	padding: 0 0.25rem;
+	text-align: center;
+	color: nth($color2, 1);
+	font-family: $_FF_MicrosoftYahei;
+	cursor: pointer;
+	@include fontSize($FS18);
+	@include appearance();
+}
+.form-radio1,
+.form-check1 {
+	@include appearance();
+	position: relative;
+	width: 0.34rem;
+	height: 0.34rem;
+	line-height: 0.34rem;
+	text-align: center;
+	border-radius: 50%;
+	border: none;
+	background: none;
+	cursor: pointer;
+	vertical-align: middle;
+	&:before,
+	&:after,
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+	&:before,
+	&::before {
+		background-color: nth($color2, 1);
+	}
+	&:after,
+	&::after {
+		background-image: url(../images/i-02-02.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+	}
+	&:hover {
+		&:before,
+		&::before {
+			background-color: nth($color, 2);
+		}
+	}
+	&:checked {
+		&:before,
+		&::before {
+			background-color: nth($color4, 3);
+		}
+	}
+}
+.form-radio2,
+.form-check2 {
+	@include appearance();
+	position: relative;
+	width: 0.24rem;
+	height: 0.24rem;
+	line-height: 0.24rem;
+	text-align: center;
+	border-radius: 3px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	vertical-align: middle;
+	&:before,
+	&:after,
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+	}
+	&:before,
+	&::before {
+		width: 100%;
+		height: 100%;
+		background-color: nth($color4, 6);
+		@include translate(-50%, -50%);
+	}
+	&:after,
+	&::after {
+		width: 45%;
+		height: 45%;
+		background-color: rgba(nth($color, 1), 0.39);
+		@include translate(-50%, -50%);
+	}
+	&:checked {
+		&:before,
+		&::before {
+			background-color: nth($color3, 6);
+		}
+		&:after,
+		&::after {
+			background: nth($color4, 6);
+		}
+	}
+}
+.form-check2-font {
+	display: inline-block;
+	height: 0.24rem;
+	line-height: 0.24rem;
+	color: rgba(nth($color, 1), 0.39);
+	@include fontSize($FS18);
+}
+.form-radio-hidden,
+.form-check-hidden {
+	display: none;
+}
+
+input[type="checkbox"]:checked + .form-check5 {
+	&:after,
+	&::after {
+		background-color: nth($color5, 8);
+	}
+}
+
+.form-radio5,
+.form-check5 {
+	display: inline-block;
+	@include appearance();
+	position: relative;
+	width: 0.18rem;
+	height: 0.18rem;
+	line-height: 0.18rem;
+	text-align: center;
+	border-radius: 50%;
+	border: none;
+	background: none;
+	cursor: pointer;
+	vertical-align: middle;
+	&:before,
+	&:after,
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+	}
+	&:before,
+	&::before {
+		width: 100%;
+		height: 100%;
+		border: 1px solid nth($color3, 2);
+		@include translate(-50%, -50%);
+	}
+	&:after,
+	&::after {
+		width: 45%;
+		height: 45%;
+		background-color: none;
+		@include translate(-50%, -50%);
+	}
+}
+/******** Form 表单样式 End *********/
+
+
+
+
+/******** tab 选项卡 Begin *********/
+.tab-hd1 {
+	.th-split,
+	.th-item {
+		float: left;
+		line-height: 1.8em;
+		color: nth($color2, 1);
+		font-family: $_FF_014CAI978;
+		text-transform: uppercase;
+    	text-align: center;
+		@include fontSize($FS26);
+	}
+	.th-split {
+		margin: 0 0.4rem;
+	}
+	.th-item {
+		float: left;
+		&:hover {
+			color: nth($color3, 1);
+		}
+		&.active {
+			background: nth($color2, 1);
+			color: nth($color, 1);
+			padding: 0 1.4em;
+		}
+	}
+}
+.tab-hd2 {
+	.th-box {
+		float: left;
+		position: relative;
+		box-shadow: 0 0 0 1px nth($color, 2) inset;
+		.th-line {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 0;
+			background: nth($color, 2);
+			@include transition(left 0.3s linear);
+		}
+		.th-item {
+			position: relative;
+			z-index: 2;
+			float: left;
+			line-height: 2.2em;
+			color: nth($color, 2);
+			padding: 0 1em;
+			@include fontSize($FS20);
+			&.active {
+				color: nth($color3, 7);
+			}
+		}
+	}
+}
+.tab-hd3 {
+	.th-item {
+		float: left;
+		line-height: 1.5em;
+		color: rgba(nth($color, 1), 0.56);
+		padding: 0 0.3rem;
+		margin-right: 0.5em;
+		border-radius: 1.5em * 0.5;
+		cursor: pointer;
+		@include fontSize($FS30);
+		&.active {
+			background: rgba(nth($color, 1), 0.2);
+		}
+	}
+}
+/******** tab 选项卡 End *********/
+
+
+
+/******** accordion 手风琴 Begin *********/
+.accordion {
+	.accordion-item {
+		margin-bottom: 2px;
+		&.active {
+			margin-bottom: 0.2rem;
+			.accordion-hd {
+				.h-t6 {
+					color: nth($color2, 1);
+				}
+				.r {
+					.fa {
+						@include transform(translate(-50%, -50%) rotate(0deg));
+					}
+				}
+			}
+		}
+	}
+	.accordion-hd {
+		position: relative;
+		background: nth($color2, 5);
+		padding: 0.15rem 1rem 0.15rem 0.2rem;
+		.h-t6 {
+			color: nth($color2, 3);
+		}
+		.r {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 0.8rem;
+			color: nth($color4, 2);
+			cursor: pointer;
+			@include fontSize($FS30);
+			.fa {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%, -50%) rotate(-90deg));
+				@include transition(transform 0.3s linear);
+			}
+			&:hover {
+				background: nth($color3, 6);
+				color: nth($color, 1);
+			}
+		}
+	}
+}
+/******** accordion 手风琴 End *********/
+
+
+/******** option-card 选项卡片 Begin *********/
+.option-card {
+	label {
+		cursor: pointer;
+	}
+	.oc-bd {
+		position: relative;
+		padding: 0.5rem 0.7rem 0.5rem 0.2rem;
+		box-shadow: 0 0 0 1px nth($color3, 2) inset;
+		.l {
+			float: left;
+			width: 1.3rem;
+			text-align: center;
+		}
+		.r {
+			padding-left: 1.3rem;
+		}
+		.h-t6,
+		.h-t8 {
+			height: 0.4rem;
+			line-height: 0.4rem;
+			margin-bottom: 0.1rem;
+			overflow: hidden;
+		}
+		.h-t8 {
+			line-height: 0.5rem;
+			font-family: $_FF_014CAI978;
+		}
+		.h-t7 {
+			height: 1em;
+			line-height: 1em;
+			overflow: hidden;
+		}
+		.choose {
+			position: absolute;
+			top: 50%;
+			right: 0.7rem * 0.5;
+			@include translate(50%, -50%);
+		}
+	}
+}
+/******** option-card 选项卡片 End *********/
+
+
+/******** package 选项包 Begin *********/
+.package-bd {
+	margin-bottom: 0.3rem;
+	.h-t6,
+	.h-t17,
+	.price,
+	.form-btn4 {
+		height: 0.4rem;
+		line-height: 0.4rem;
+	}
+	.h-t6,
+	.h-t17,
+	.price {
+		float: left;
+		margin-right: 0.18rem;
+	}
+	.price {
+		.t1 {
+			float: left;
+			@include fontSize($FS18);
+		}
+		.t2 {
+			float: left;
+			margin-right: 0.15rem;
+			@include fontSize($FS24);
+		}
+		.t3 {
+			float: left;
+			color: nth($color2, 3);
+			@include fontSize($FS16);
+		}
+	}
+	.hidden {
+		display: none;
+	}
+	.package-list {
+		padding-left: 2rem;
+		li {
+			margin-bottom: 0.1rem;
+		}
+	}
+}
+/******** package 选项包 End *********/
+
+
+
+/******** course-info 课程信息 Begin *********/
+.course-info {
+	padding: 0.35rem 0;
+	.row {
+		margin-bottom: 0.2rem;
+		.l {
+			float: left;
+			width: 2.2rem;
+		}
+		.r {
+			display: block;
+			padding-left: 2.2rem;
+		}
+	}
+	.tab-hd {
+		margin-bottom: 0.1rem;
+		.th-item {
+			float: left;
+			margin-right: 0.3rem;
+		}
+	}
+	.tab-bd {
+		.tb-item {
+			.h-t5 {
+				color: nth($color5, 1);
+			}
+		}
+	}
+	.course-info-calendar {
+		margin: 0;
+		width: 4rem;
+		.flatpickr-calendar {
+			width: 4rem;
+		}
+		.flatpickr-day {
+			height: 4rem * 1 / 7;
+			line-height: 4rem * 1 / 7;
+		}
+		.flatpickr-weekdays {
+			padding: 0.2rem 0;
+		}
+		.flatpickr-month {
+			height: 0.5rem;
+			line-height: 0.5rem;
+		}
+	}
+}
+/******** course-info 课程信息 End *********/
+
+
+
+
+/******** student-list-info 学生信息 Begin *********/
+.student-list-info {
+	color: nth($color2, 1);
+	line-height: 1.6em;
+	padding: 0.35rem 0;
+	@include fontSize($FS18);
+	.row {
+		margin-bottom: 0.4rem;
+		.l {
+			float: left;
+		}
+		.r {
+			float: right;
+		}
+	}
+	.title {
+		margin-bottom: 0.1rem;
+	}
+	.title2 {
+		border-bottom: 1px dotted nth($color2, 3);
+		padding-bottom: 0.1rem;
+		color: nth($color2, 3);
+	}
+}
+.student-info {
+	margin-bottom: 0.2rem;
+	.lump {
+		float: left;
+		@include fontSize($FS20);
+		&:nth-child(1) {
+			width: 10%;
+		}
+		&:nth-child(2) {
+			width: 10%;
+		}
+		&:nth-child(3) {
+			width: 25%;
+		}
+		&:nth-child(4) {
+			width: 35%;
+		}
+		&:nth-child(5) {
+			width: 20%;
+		}
+		em,
+		span {
+			float: left;
+		}
+		span {
+			color: nth($color2, 3);
+			margin-right: 0.12rem;
+		}
+		a {
+			display: inline-block;
+			box-shadow: 0 0 0 1px nth($color2, 1) inset;
+			color: nth($color2, 1);
+			padding: 0 1em;
+			cursor: pointer;
+			@include fontSize($FS16);
+			&:hover {
+				background: nth($color2, 1);
+				color: nth($color, 1);
+			}
+		}
+	}
+}
+
+.student-list-other {
+	margin-bottom: 0.3rem;
+}
+
+.student-add-cont {
+	width: 70%;
+	border: 1px dashed nth($color2, 1);
+	padding: 0.2rem 0;
+	.row-box {
+		margin-bottom: 0.3rem;
+		.col {
+			padding: 0 0.3rem;
+		}
+	}
+	.btn-05 {
+		float: left;
+		width: 1.6rem;
+		margin-right: 0.2rem;
+	}
+}
+/******** student-list-info 学生信息 End *********/
+
+
+
+/******** course-payment 付款信息 Begin *********/
+.course-payment {
+	padding: 0.35rem 0;
+	.row {
+		margin-bottom: 0.4rem;
+	}
+	.row-box {
+		.col {
+			margin-bottom: 0.2rem;
+		}
+	}
+	.promocode {
+		.form-input4 {
+			float: left;
+			width: 2.1rem;
+			text-align: center;
+			margin-right: 0.55rem;
+		}
+		.form-btn2 {
+			float: left;
+		}
+	}
+	.promo-style {
+		.l {
+			float: left;
+			width: 1.7rem;
+		}
+		.r {
+			display: block;
+			padding-left: 1.7rem;
+		}
+		label {
+			float: left;
+			margin-right: 0.56rem;
+			input {
+				display: none;
+			}
+			span {
+				display: block;
+				height: 0.66rem;
+				line-height: 0.66rem;
+				border: 1px solid nth($color2, 1);
+				border-radius: 0.66rem * 0.5;
+				overflow: hidden;
+				img {
+					max-height: 100%;
+				}
+			}
+		}
+	}
+	.promo-card {
+		width: 50%;
+	}
+}
+/******** course-payment 付款信息 End *********/

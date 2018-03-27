@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cobrand">合作伙伴</a><em>&gt;</em><a href="<{$http_root_www}>ib">IB代理经纪商</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main4">
+					<div class="mainBd">
+						<div class="comTitle">IB代理经纪商</div>
+						<article class="comArticle">
+							<p>我们的介绍经纪人（IB）计划旨在奖励将机构客户转交给Ruizean Markets的交易者。一旦新客户开立真正的交易账户并将资金存入该账户，您将根据客户的交易活动收到佣金，该交易核算将自动存入您的佣金账户。随着时间的推移，您可以累积的佣金数额没有限制，这是理想的和额外的收入来源。这些转介费用是可定制的，以满足您的独特业务需求。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">IB代理支持</div>
+						<article class="comArticle">
+							<p>当您成为我们的IB计划的成员时，您将可以访问我们经验丰富的支持人员，他们将回答您的任何问题。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">客户跟进系统</div>
+						<article class="comArticle">
+							<p>您引用Ruizean Markets的所有客户都将被分配具有跟踪代码的特定客户编号，以便记录所有交易，确保您始终收到正确的佣金金额。</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">专属IB经理</div>
+						<article class="comArticle">
+							<p> IB经理可随时向IB代理成员提交给我们的新客户提供指导。他们将协助您的客户开立账户，并提供持续的咨询管理和支持。</p>
+						</article>
+					</div>
+					
+					
+				</div>
+				<!-- ib form start -->
+					<aside class="side4">
+						<section class="form-apply-side form-box" style="display:block;">
+							<div class="form-box-bd">
+								<div class="box1 side-box1">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>申请IB代理经纪商</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<{include file="ibForm.htm"}>
+									</div>
+								</div>
+								<div class="box2 side-box2" style="display:none;">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<hgroup>
+											<h4>It will be closed automic, also you can click close button to close it.</h4>
+										</hgroup>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="quick-link">
+							<div class="hd clearfix">
+								
+								<div class="cont">立即加入我们</div>
+							</div>
+							<div class="bd">
+								<div class="btns">
+									<div class="btn-2 blue"><a href="<{$http_root_www}>../en/demoaccount"><div class="bg"></div><span>注册模拟账户  <i class="fa fa-angle-double-right"></i></span></a></div>
+									<div class="btn-2 blue"><a href="<{$http_root_www}>../en/liveaccount"><div class="bg"></div><span>注册真实账户  <i class="fa fa-angle-double-right"></i></span></a></div>
+									
+								</div>
+							</div>
+						</section>
+					</aside>
+					<!-- ib form end -->
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formid2").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var message = form.message.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone + '&message=' + message;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/ibContact",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

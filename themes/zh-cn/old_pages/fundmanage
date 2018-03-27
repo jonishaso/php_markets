@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>">首页</a><em>&gt;</em><a href="<{$http_root_www}>cobrand">合作伙伴</a><em>&gt;</em><a href="<{$http_root_www}>whitecoop">资金管理</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">Money Manager</div>
+						<article class="comArticle">
+							<p>Ruizean Markets的资金管理项目向有授权的资金管理人提供超过90种的外汇，指数和商品差价合约的金融产品，他们可以向现有客户群提供此类产品的交易，或是吸引新的客户加入他们的资金管理。我们提供深度流动性的市场所带来的超低点差，即时和准确的交易执行以及使用屡获殊荣的MetaTrader 4交易平台。在这些优势之上，您的资金享有最高级别的安全性，所有资金存放在澳洲顶级银行的隔离信托账户中。并且Ruizean Markets提供了一个不可缺少的工具，允许交易员在一个平台上进行多账户的管理。</p>
+							<p>多账户管理是一种安装在MT4平台中的软件，使基金管理人仅需一键即可执行大额的交易，自动将交易分配到下面的个人账户。</p>
+							<p>交易多种产品的机会</p>
+							<p>多种分配客户账户的方式
+							<p>通过主账户进行不同策略的交易</p>
+							<p>接受所有订单类型</p>
+							<p>欢迎EA的使用</p>
+							<p>用户友好的MT4交易平台</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+</body>
+</html>

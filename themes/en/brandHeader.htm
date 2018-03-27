@@ -1,0 +1,28 @@
+<div class="side2 scrollFixed">
+	<div class="pendant-01"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/chart1.png" /></div>
+	<nav class="nav4">
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/cobrand"><span><svg class="svg-btnBg svg-ele"></svg>Referral Programs</span></a></li>
+			<{if $active == "ib"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/ib"><span>Introducing Broker</span></a></li>
+		</ul>
+		<ul>
+			<li class="h"><a href="<{$http_root_www}>../en/cobrand"><span><svg class="svg-btnBg svg-ele"></svg>Broker Solutions</span></a></li>
+			<{if $active == "whitecoop"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/whitecoop"><span>White Label Partner</span></a></li>
+			<{if $active == "whitecoop"}><li class="b active"><{else}><li class="b"><{/if}><a href="<{$http_root_www}>../en/ls"><span>Liquidity Solutions</span></a></li>
+			
+		</ul>
+	</nav>
+	<{include file='accountUrl.htm'}>
+</div>
+
+<div class="mobile-nav"> 
+	<select onchange="window.location=this.value">
+		<optgroup label="Referral Programs">
+			<option <{if $active == "ib"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/ib">Introducing Broker</option>
+		</optgroup>
+		<optgroup label="Broker Solutions">
+			<option <{if $active == "whitecoop"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/whitecoop">White Label Partner</option>
+			<option <{if $active == "whitecoop"}>selected="selected"<{/if}> value="<{$http_root_www}>../en/ls">Liquidity Solutions</option>			
+		</optgroup>
+	</select>
+</div>

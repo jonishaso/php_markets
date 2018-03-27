@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- about -->
+	<section class="insMain page-bg-6">
+		<div class="about">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/about">Corporate Profile</a><em>&gt;</em><a href="<{$http_root_www}>../en/fundsecurity">Funds Security</a></p></div>
+				<{include file='aboutHeader.htm'}>
+				<div class="main2">
+					<div class="mainBd">
+						<div class="comTitle">Funds Security</div>
+						<article class="comArticle">
+							<p>Ruizean Markets is authorized by the Australian Securities and Investments Commission and subject to its supervision, license number: 000000. This is in accordance with the regulatory bodys client money regulations, ensuring the independence of client funds deposited in the four major banks.</p>
+							<p>&nbsp;</p>
+							<p>We use segregated accounts, to ensure that customer funds are not used for any other purpose. Westpac, is one Australias four major banks and covers Australia, New Zealand and the South Pacific. It has total assets of over 200 billion Australian dollars and has more than 7.5 million customers. Westpac is a commercial bank holding a global AA rating and has a long standing history in Australia.</p>
+							<p>&nbsp;</p>
+							<p>Ruizean Markets maintains the companys own funds independently and separately from our clients funds, all customer accounts are kept under strict control and can only be used for normal trading. To uphold transparency, we file periodic financial reports to the regulatory agencies, giving our customers complete confidence in the safety and security of their funds.</p>
+						</article>
+					</div>
+					<br />
+					<div class="img"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/fundsecurity.jpg" /></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<{include file='form.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/page-about.js"></script>
+</body>
+</html>

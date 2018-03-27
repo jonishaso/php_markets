@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<{include file='part-head.htm'}>
+</head>
+<body>
+	<{include file='header.htm'}>
+	<!-- logreg -->
+	<section class="page-bg-6 insMain">
+		<div class="vpsHosting">
+			<div class="wrapper clearfix">
+				<div class="location"><p class="clearfix"><a href="<{$http_root_www}>../en/">Home</a><em>&gt;</em><a href="<{$http_root_www}>../en/cobrand">Partnership</a><em>&gt;</em><a href="<{$http_root_www}>../en/ib">Introducing Broker</a></p></div>
+				<{include file='brandHeader.htm'}>
+				<div class="main4">
+					<div class="mainBd">
+						<div class="comTitle">Introducing Broker (IB) Program</div>
+						<article class="comArticle">
+							<p>Our Introducing Brokers (IB) program is designed to reward traders who refer wholesale clients to Ruizean Markets. Once a new client has opened a real trading account and deposited funds into this account, you will receive a commission based on your client’s trading activities which will be automatically deposited into your account. </p>
+							<p>There is no limit to the amount of commissions you can accumulate over time, making this an ideal and additional source of income. These referral fees are customizable to meet your unique business requirements.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">IB Support</div>
+						<article class="comArticle">
+							<p>When you become a member of our IB program, you will have access to our experienced support personnel, who will answer any of your questions.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">Customer tracking system</div>
+						<article class="comArticle">
+							<p>All customers who you refer to Ruizean Markets are assigned a specific customer number with a tracking code, so that all of their transactions are recorded, ensuring that you receive the correct amount of remuneration at all times.</p>
+						</article>
+					</div>
+					<div class="mainBd">
+						<div class="comTitle3">Exclusive IB Manager</div>
+						<article class="comArticle">
+							<p>An IB manager is always available for advice or guidance to new customers referred to us by our IB program members. They will help your referred customers to open an account and provide ongoing management and support.</p>
+						</article>
+					</div>
+					
+					
+				</div>
+				<!-- ib form start -->
+					<aside class="side4">
+						<section class="form-apply-side form-box" style="display:block;">
+							<div class="form-box-bd">
+								<div class="box1 side-box1">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>Apply for Introducing Broker</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<{include file="ibForm.htm"}>
+									</div>
+								</div>
+								<div class="box2 side-box2" style="display:none;">
+									<div class="logo"><a href="<{$http_root_www}>../en/"><img src="<{$STATIC_PATH}>ruizeanMarkets/images/form-box-logo.png" /></a></div>
+									<div class="hd">
+										<div class="line-01"><i class="i1"></i><i class="i2"></i></div>
+										<hgroup>
+											<h2>Ruizean Markets staff will contact you as soon as possible. Please be patient.</h2>
+										</hgroup>
+									</div>
+									<div class="bd">
+										<hgroup>
+											<h4>It will be closed automic, also you can click close button to close it.</h4>
+										</hgroup>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="quick-link">
+							<div class="hd clearfix">
+								
+								<div class="cont">Come and Join Us</div>
+							</div>
+							<div class="bd">
+								<div class="btns">
+									<div class="btn-2 blue"><a href="<{$http_root_www}>../en/demoaccount"><div class="bg"></div><span>Open Demo Account <i class="fa fa-angle-double-right"></i></span></a></div>
+									<div class="btn-2 blue"><a href="<{$http_root_www}>../en/liveaccount"><div class="bg"></div><span>Open Live Account <i class="fa fa-angle-double-right"></i></span></a></div>
+									
+								</div>
+							</div>
+						</section>
+					</aside>
+					<!-- ib form end -->
+			</div>
+		</div>
+	</section>
+	<{include file='footer.htm'}>
+	<script type="text/javascript" src="<{$STATIC_PATH}>ruizeanMarkets/js/all.min.js"></script>
+	<{include file='form.htm'}>
+	<script type="text/javascript">
+		function hideForm1(){
+			$('.side-box1').hide();
+			$('.side-box2').show();
+			setTimeout(function() {
+				$('.side-box1').show();
+				$('.side-box2').hide();
+			}, 5000);
+		}
+		
+		//jquery.validate
+		var jsValidateTime1 = null;
+		$("#formid2").validate({
+			submitHandler: function(form) {
+				var form = form;
+				var $form = $(form);
+				var firstName = form.firstName.value;
+				var lastName = form.lastName.value;
+				var email = form.email.value;
+				var telephone = form.telephone.value;
+				var message = form.message.value;
+				
+				// Returns successful data submission message when the entered information is stored in database.
+				var dataString = 'firstName='+ firstName + '&lastName='+ lastName + '&email='+ email + '&telephone='+ telephone + '&message=' + message;
+				// AJAX Code To Submit Form.
+				$.ajax({
+					type: "POST",
+					url: "<{$http_root_www}>../en/ibContact",
+					data: dataString,
+					cache: false,
+					success: function(result){
+						if(result == 1){
+							hideForm1();
+							return false;
+						}else{
+							$form.find('.send-result').html('Submit Failure');
+							clearTimeout(jsValidateTime1);
+							jsValidateTime1 = setTimeout(function(){
+								$form.find('.send-result').html('');
+							}, 3000);
+						}
+					}
+				});
+				return false;
+			}
+		});
+	</script>
+</body>
+</html>

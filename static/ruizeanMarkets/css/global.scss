@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+figure {
+	margin:0;
+	padding:0;
+}
+textarea {
+	resize:none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%; font-weight:normal;
+}
+a,
+label{
+	outline:none;
+	color: inherit;
+}
+address,
+cite,
+dfn,
+em,
+var {
+	font-style:normal
+}
+ul,
+ol {
+	list-style:none;
+}
+fieldset,
+img {
+	border: 0;
+	vertical-align:bottom;
+}
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure{
+	display:block;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+* {
+	@include boxSizing();
+}
+*:after,
+*:before {
+	display:block;
+	@include boxSizing();
+}
+*:focus {
+	outline:none;
+}
+.clear {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.clearfix {
+	*zoom:1
+}
+
+.cssTable {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.cssTd {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+
+
+$_FF_hya3gjm : 'hya3gjm','Microsoft Yahei','STHeiti Light';
+$_FF_005CAI978 : '005CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_006CAI978 : '006CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_014CAI978 : '014CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_018CAI978 : '018CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_020CAI978 : '020CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_042CAI978 : '042CAI978','Microsoft Yahei','STHeiti Light';
+$_FF_047CAI978 : '047CAI978','Microsoft Yahei','STHeiti Light';
+
+$space : 0.3rem;
+$wrapWidth : 14.2rem;
+$wrapWidth2 : 12.4rem;
+$wrapWidth3 : 10.8rem;
+
+$color : #ffffff #000000 !default;
+$color2 : #333333 #666666 #999999 #F2F2F2 #F6F6F6 #F8F8F8 #EEEEEE #FCFCFC !default;
+$color3 : #966e45 #F0F0F0 #EDEDED #F5F5F5 #e9e9e9 #CC9A4A #dbdbdb #2d2d2d !default;
+$color4 : #888888 #B4B4B4 #CD9A4B #D9D9D9 #cccccc #6E3A3E #EFEFEF #c8c8c8 !default;
+$color5 : #cecece #C6C6C6 #DFDFDF #966E45 #896543 #987762 #CCCCCC #D29560 !default;
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { outline: none; }
+
+html {
+	width:100%;
+	height:100%;
+	font-size:100px;
+	@include textSizeAdjust();
+}
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $_FF_MicrosoftYahei;
+	word-wrap:break-word;
+	@include fontSize($FS14);
+}
+body {
+	height: 100%;
+	color: nth($color, 2);
+	margin:0 auto;
+	background: nth($color, 1);
+	overflow-x: hidden;
+}
+#skrollr-body {
+	padding-top: 1.9rem;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+img {
+	@include display(inline-flex);
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+.wrapper {
+	position: relative;
+	width: $wrapWidth;
+	margin: 0 auto;
+}
+.wrapper2 {
+	position: relative;
+	width: $wrapWidth2;
+	margin: 0 auto;
+}
+.wrapper3 {
+	position: relative;
+	width: $wrapWidth3;
+	margin: 0 auto;
+}
